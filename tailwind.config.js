@@ -1,7 +1,7 @@
 module.exports = {
   content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
-    "./src/components/**/*.{js,ts,jsx,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -27,12 +27,16 @@ module.exports = {
           'light': '#E5DFFF',
           'normal': '#6200EE'
         },
-        'grays': {
+        'gray': {
           'primary': '#212121',
           'secondary': '#666666',
           'placeholder': '#8A8D91',
           'disabled': '#BCC0C4',
           'divider': '#E4E4E4'
+        },
+        'white': {
+          'normal': '#fff',
+          'soft': '#f5f5f5'
         }
       }
     },
