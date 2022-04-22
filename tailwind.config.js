@@ -37,6 +37,9 @@ module.exports = {
         'white': {
           'normal': '#fff',
           'soft': '#f5f5f5'
+        },
+        'card': {
+          'normal': '#F5F3EF'
         }
       }
     },
