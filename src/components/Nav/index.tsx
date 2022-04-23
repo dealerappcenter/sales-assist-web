@@ -11,7 +11,6 @@ import { Button } from '@components/Buttons';
 import Logo from '@src/assets/logo.svg';
 
 import { useResponsive } from '@hooks/useResponsive';
-import { useClickOutside } from '@hooks/useClickOutside';
 
 export const Nav: React.FC = () => {
     const { devices } = useResponsive();
@@ -19,7 +18,7 @@ export const Nav: React.FC = () => {
 
     return (
         <>
-            <nav className="py-6 px-5 container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">
+            <nav className="py-6  container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">
                 <div className='flex items-center justify-between w-full'>
                     <ul className='flex items-center'>
                         {/* logo */}
