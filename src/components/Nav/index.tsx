@@ -19,7 +19,7 @@ export const Nav: React.FC = () => {
 
     return (
         <>
-            <nav className="py-6 px-5 container mx-auto mb-[3em] flex-col lg:flex-row flex justify-between relative">
+            <nav className="py-6 px-5 container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">
                 <div className='flex items-center justify-between w-full'>
                     <ul className='flex items-center'>
                         {/* logo */}
@@ -28,8 +28,6 @@ export const Nav: React.FC = () => {
                             <Link href='/'>
                                 <a>
                                     <Image
-                                        width={164}
-                                        height={48}
                                         src={Logo}
                                         alt="logo"
                                     />
