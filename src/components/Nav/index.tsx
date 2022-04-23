@@ -1,41 +1,83 @@
+import { useRef, useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { MdKeyboardArrowDown } from 'react-icons/md';
+
+import { motion, AnimatePresence } from 'framer-motion';
+
 import { routes } from '@src/utils/routes';
-import { NavLink } from '@src/components/NavLink';
-import { Button } from '../Buttons';
+import { NavLink } from '@components/NavLink';
+import { Button } from '@components/Buttons';
+import Logo from '@src/assets/logo.svg';
+
+import { useResponsive } from '@hooks/useResponsive';
+import { useClickOutside } from '@hooks/useClickOutside';
 
 export const Nav: React.FC = () => {
+    const { devices } = useResponsive();
+    const { isDesktop } = devices;
+
     return (
-        <nav className="py-6 container mx-auto mb-[3em] flex justify-between">
-            <ul className='flex'>
-                <li>
-                    <h1>Logo</h1>
-                </li>
-                {routes.map(route => {
-                    return <li key={route.path}>
-                        <Link passHref href={route.path}>
-                            <NavLink>
-                                {route.name}
-                            </NavLink>
-                        </Link>
-                    </li>
-                })}
-            </ul>
+        <>
+            <nav className="py-6 px-5 container mx-auto mb-[3em] flex-col lg:flex-row flex justify-between relative">
+                <div className='flex items-center justify-between w-full'>
+                    <ul className='flex items-center'>
+                        {/* logo */}
+                        <li className='mb-2'>
 
-            <ul className='flex'>
-                <li>
-                    <a href="/some-where">
-                        <NavLink>
-                            Login
-                        </NavLink>
-                    </a>
-                </li>
+                            <Link href='/'>
+                                <a>
+                                    <Image
+                                        width={164}
+                                        height={48}
+                                        src={Logo}
+                                        alt="logo"
+                                    />
+                                </a>
+                            </Link>
+                        </li>
 
-                <li>
-                    <Button className='px-3'>
-                        Book Demo
-                    </Button>
-                </li>
-            </ul>
-        </nav>
+                        {/* if desktop else destroy it */}
+                        {isDesktop && routes.map(route => {
+                            return <li key={route.path}>
+                                <Link passHref href={route.path}>
+                                    <NavLink>
+                                        {route.name}
+                                    </NavLink>
+                                </Link>
+                            </li>
+                        })}
+                    </ul>
+
+                    <ul className='flex items-center'>
+                        {/* if desktop else destroy it */}
+                        {isDesktop && <>
+                            <li>
+                                <a href="/some-where">
+                                    <NavLink>
+                                        Login
+                                    </NavLink>
+                                </a>
+                            </li>
+
+                            <li>
+                                <Button className='px-3'>
+                                    Book Demo
+                                </Button>
+                            </li>
+                        </>}
+
+                        {/* if tablet or mobile else destroy it */}
+                        {!isDesktop &&
+                            <li>
+                                <button>
+                                    <MdKeyboardArrowDown className='text-4xl' />
+                                </button>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            </nav>
+        </>
     )
 }
