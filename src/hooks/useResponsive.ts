@@ -45,5 +45,5 @@ export function useResponsive() {
     }, [width]);
 
 
-    return { devices }
+    return { ...devices }
 }
