@@ -19,7 +19,7 @@ export const HowItWorks = () => {
 
 
     useEffect(() => {
-        if(progress === 90) {
+        if(progress === 100) {
             startProgress()
             if (currentCard.current >= 2) {
                 currentCard.current = 0
@@ -28,7 +28,7 @@ export const HowItWorks = () => {
             }
         }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [progress, currentCard])    
+    }, [progress, currentCard])
 
     useEffect(() => {
         if (inView && isDesktop) {
@@ -37,7 +37,7 @@ export const HowItWorks = () => {
             controls.start("hidden");
         }
     }, [controls, inView, isDesktop]);
-    
+
 
     function clickOnCard(card: number) {
         return () => {
@@ -45,14 +45,14 @@ export const HowItWorks = () => {
 
             startProgress();
         }
-    } 
+    }
 
     return (
-        <main ref={ref} className='px-4 py-6 lg:px-12 lg:py-20 container mx-auto'>
-            <h1 className="text-gray-primary mb-4">How it works</h1>
+        <main ref={ref} className='container px-4 py-6 mx-auto lg:px-12 lg:py-20'>
+            <h1 className="mb-4 text-gray-primary">How it works</h1>
             <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>
-            <div className='flex flex-col lg:flex-row  py-4 md:px-4 lg:px-12 md:py-12'>
-                {isDesktop && <div className='w-fit'>
+            <div className='flex flex-col py-4 lg:flex-row md:px-4 lg:px-12 md:py-12'>
+                {isDesktop && <div className='flex flex-col gap-6 w-fit'>
                     {
                         cardData.map((data, i) => {
                             return <AnimatedCard

@@ -20,7 +20,7 @@ export function useProgress(props: UseProgressProps) {
 
             interval++;
 
-            if (interval <= 90) {
+            if (interval <= 100) {
                 setProgress(interval)
                 return
             }
@@ -40,7 +40,7 @@ export function useProgress(props: UseProgressProps) {
             timer = setInterval(() => {
                 interval++;
 
-                if (interval <= 90) {
+                if (interval <= 100) {
                     setProgress(interval)
                     return
                 }
