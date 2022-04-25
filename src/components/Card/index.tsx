@@ -18,7 +18,7 @@ export const Card: React.FC<CardProps> = (props) => {
     >
       <div className='flex p-2 h-full'>
         <div className='flex justify-center'>
-          <div className='w-10 h-10 md:w-20 lg:w-20 rounded-full'>
+          <div className='w-14 h-14 md:w-20 lg:w-20 rounded-full'>
             <Image src={icon} alt={title} />
           </div>
         </div>
