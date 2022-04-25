@@ -48,7 +48,7 @@ export const HowItWorks = () => {
     } 
 
     return (
-        <main ref={ref} className='lg:h-screen px-4 py-6 lg:py-20 container mx-auto'>
+        <main ref={ref} className='px-4 py-6 lg:px-12 lg:py-20 container mx-auto'>
             <h1 className="text-gray-primary mb-4">How it works</h1>
             <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>
             <div className='flex flex-col lg:flex-row  py-4 md:px-4 lg:px-12 md:py-12'>
