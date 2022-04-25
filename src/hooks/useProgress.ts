@@ -28,7 +28,7 @@ export function useProgress(props: UseProgressProps) {
             clearInterval(timer)
             interval = 0;
 
-        }, 100)
+        }, 40)
     }
 
 

@@ -12,13 +12,11 @@ interface AnimatedCardProps {
   isActive?: boolean,
   progress?: number,
   onClick?: () => void,
-  onHoverStart?: () => void
-  onHoverEnd?: () => void
 }
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
-  const { delay = 0, controls, title, sub, icon, isActive, progress, onClick, onHoverStart, onHoverEnd } = props;
-  const baseClasses = classNames("my-6 group rounded-2xl cursor-pointer w-full md:w-[27rem] h-[8.5rem] flex overflow-hidden duration-400", 
+  const { delay = 0, controls, title, sub, icon, isActive, progress, onClick } = props;
+  const baseClasses = classNames("mb-6 group rounded-2xl cursor-pointer w-full md:w-[27rem] h-[8.5rem] flex overflow-hidden duration-400", 
     {'bg-card-normal': isActive },
     {'opacity-50': !isActive}
   );
@@ -28,8 +26,6 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
     <motion.div
       initial="hidden"
       animate={controls}
-      onMouseEnter={onHoverStart}
-      onMouseLeave={onHoverEnd}
       variants={{
         ...fadeInLeft,
         visible: {

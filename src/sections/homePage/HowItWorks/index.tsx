@@ -1,13 +1,14 @@
 import { useAnimation, } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 import { useInView } from "react-intersection-observer";
-import { AnimatedCard } from '@src/components/AnimatedCard';
+
+import { AnimatedCard, Card } from 'src/components';
 import { useResponsive } from '@hooks/useResponsive';
 import { LightBull, HandShake, Message } from '@src/assets';
 import { useProgress } from '@src/hooks/useProgress';
 
 export const HowItWorks = () => {
-    const [ref, inView] = useInView({ triggerOnce: true });
+    const [ref, inView] = useInView();
     const controls = useAnimation();
     const { isDesktop } = useResponsive();
     const currentCard = useRef(0);
@@ -30,13 +31,13 @@ export const HowItWorks = () => {
     }, [progress, currentCard])    
 
     useEffect(() => {
-        if (inView) {
+        if (inView && isDesktop) {
             controls.start("visible");
         } else {
             controls.start("hidden");
         }
-    }, [controls, inView]);
-
+    }, [controls, inView, isDesktop]);
+    
 
     function clickOnCard(card: number) {
         return () => {
@@ -47,10 +48,10 @@ export const HowItWorks = () => {
     } 
 
     return (
-        <main ref={ref} className='lg:h-screen px-4 py-20 container mx-auto'>
+        <main ref={ref} className='lg:h-screen px-4 py-6 lg:py-20 container mx-auto'>
             <h1 className="text-gray-primary mb-4">How it works</h1>
             <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>
-            <div className='flex flex-col lg:flex-row  px-4 lg:px-12 py-12'>
+            <div className='flex flex-col lg:flex-row  py-4 md:px-4 lg:px-12 md:py-12'>
                 {isDesktop && <div className='w-fit'>
                     {
                         cardData.map((data, i) => {
@@ -70,11 +71,22 @@ export const HowItWorks = () => {
                 </div>}
 
                 {isDesktop && <div className='flex-grow'>
-                    <div className='bg-gray-disabled/30 h-full max-w-md mx-auto rounded-lg'>
+                    <div className='bg-gray-disabled/30 h-full md:w-[20rem] max-w-md mx-auto rounded-lg'>
                     </div>
                 </div>}
-            </div>
 
+
+                {!isDesktop && (
+                    cardData.map((data, i) => {
+                        return <Card
+                            key={i}
+                            title={data.title}
+                            sub={data.sub}
+                            icon={data.icon}
+                        />
+                    })
+                )}
+            </div>
         </main>
     )
 }
