@@ -13,9 +13,7 @@ import Logo from '@src/assets/logo.svg';
 import { useResponsive } from '@hooks/useResponsive';
 
 export const Nav: React.FC = () => {
-    const { devices } = useResponsive();
-    const { isDesktop } = devices;
-
+    const { isDesktop } = useResponsive();
     return (
         <>
             <nav className="py-6  container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">

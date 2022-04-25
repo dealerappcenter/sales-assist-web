@@ -1,57 +1,32 @@
 import React from 'react'
-import { motion, AnimationControls } from 'framer-motion';
-import { fadeInLeft } from '@src/utils/animations';
 import classNames from 'classnames';
+import Image from 'next/image';
 
 interface CardProps {
-  controls: AnimationControls;
-  delay?: number;
   title: string;
   sub: string,
   icon: string // path
-  isActive?: boolean
 }
 
-
-
 export const Card: React.FC<CardProps> = (props) => {
-  const { delay = 0, controls, title, sub, icon, isActive } = props;
-  const baseClasses = classNames("my-6 group rounded-2xl cursor-pointer w-full md:w-[27rem] h-[8.5rem] flex overflow-hidden", 
-    {'bg-card-normal': isActive },
-    {'opacity-30': !isActive}
-  );
-
-  const progress = classNames("h-0 w-6 bg-orange-normal duration-300 rounded-bl rounded-br", 
-    {'group-hover:h-[5rem]': isActive}
-  )
-
+  const { title, sub, icon } = props;
+  const baseClasses = classNames("mb-6 rounded-2xl bg-card-normal cursor-pointer w-full  md:h-[8.5rem] flex overflow-hidden duration-400");
 
   return (
-    <motion.div
-      initial="hidden"
-      animate={controls}
-      variants={{
-        ...fadeInLeft,
-        visible: {
-          ...fadeInLeft.visible,
-          transition: {
-            ...fadeInLeft.visible.transition,
-            delay
-          }
-        }
-      }}
+    <div
       className={baseClasses}
     >
-      <div className={progress} />
       <div className='flex p-2 h-full'>
-        <div className='flex px-4 justify-center p-4'>
-          <div className='h-20 w-20 rounded-full bg-orange-normal'></div>
+        <div className='flex justify-center'>
+          <div className='w-14 h-14 md:w-20 lg:w-20 rounded-full'>
+            <Image src={icon} alt={title} />
+          </div>
         </div>
-        <div className='h-full py-2'>
+        <div className='h-full py-2 px-4'>
           <h3 className='text-sm font-semibold text-gray-primary'>{title}</h3>
           <p className='text-gray-secondary text-sm'>{sub}</p>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
