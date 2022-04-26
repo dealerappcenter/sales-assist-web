@@ -23,10 +23,11 @@ export const Nav: React.FC = () => {
                         <li className='mb-2'>
 
                             <Link href='/'>
-                                <a>
+                                <a className='h-20 w-20 relative'>
                                     <Image
                                         src={Logo}
                                         alt="logo"
+                                        layout='responsive'
                                     />
                                 </a>
                             </Link>
