@@ -20,14 +20,12 @@ export const Nav: React.FC = () => {
                 <div className='flex items-center justify-between w-full'>
                     <ul className='flex items-center'>
                         {/* logo */}
-                        <li className='mb-2'>
-
+                        <li className='flex items-center justify-center'>
                             <Link href='/'>
-                                <a className='h-20 w-20 relative'>
+                                <a className='mt-2 lg:mt-0'>
                                     <Image
                                         src={Logo}
                                         alt="logo"
-                                        layout='responsive'
                                     />
                                 </a>
                             </Link>
@@ -65,7 +63,7 @@ export const Nav: React.FC = () => {
 
                         {/* if tablet or mobile else destroy it */}
                         {!isDesktop &&
-                            <li>
+                            <li className='flex items-center justify-center'>
                                 <button>
                                     <MdKeyboardArrowDown className='text-4xl' />
                                 </button>
