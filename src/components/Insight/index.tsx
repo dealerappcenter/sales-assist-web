@@ -3,7 +3,7 @@ import classNames from 'classnames';
 
 interface InsightProp {
     text: string,
-    className?: string
+    className?: string,
 }
 
 export const Insight: React.FC<React.PropsWithChildren<InsightProp>> = ({ text, children, className }) => {
@@ -14,8 +14,8 @@ export const Insight: React.FC<React.PropsWithChildren<InsightProp>> = ({ text, 
                 <MdInsights className="text-2xl" />
                 <h4 className="ml-3 font-bold">{text}</h4>
             </div>
-            <div>
-                <p>{children}</p>
+            <div className="pl-12 md:p-0">
+                <p className="text-gray-secondary">{children}</p>
             </div>
         </div>
     )

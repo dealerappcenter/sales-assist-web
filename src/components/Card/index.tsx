@@ -1,30 +1,31 @@
 import React from 'react'
 import classNames from 'classnames';
-import Image from 'next/image';
 
+type Kind = 'orange' | 'purple' | 'normal'
 interface CardProps {
   title: string;
-  sub: string,
-  icon: string // path
+  sub: string;
+  className?: string;
+  kind?: Kind 
 }
 
 export const Card: React.FC<CardProps> = (props) => {
-  const { title, sub, icon } = props;
-  const baseClasses = classNames("mb-6 rounded-2xl bg-card-normal cursor-pointer w-full  md:h-[8.5rem] flex overflow-hidden duration-400");
-
+  const { title, sub, className, kind = 'normal' } = props;
+  const cardClasses = classNames("mb-6 h-[25rem] w-[20rem] rounded-2xl bg-card-normal overflow-hidden cursor-pointer  md:h-[8.5rem] flex duration-400 items-end", 
+    {'bg-gradient-to-b from-[#FF333366] to-[#FF990066]':  kind === 'orange'},
+    {'bg-gradient-to-b from-[#3360FF66] to-[#8B00AE66]':  kind === 'purple'},
+  className
+  );
   return (
-    <div
-      className={baseClasses}
-    >
-      <div className='flex p-2 h-full'>
-        <div className='flex justify-center'>
-          <div className='w-14 h-14 md:w-20 lg:w-20 rounded-full'>
-            <Image src={icon} alt={title} />
+    <div className='block mr-6'>
+      <div
+        className={cardClasses}
+      >
+        <div className='flex p-2 bg-white-normal/20'>
+          <div className='h-full py-2 px-4'>
+            <h3 className='text-sm font-semibold text-gray-primary'>{title}</h3>
+            <p className='text-gray-secondary text-sm'>{sub}</p>
           </div>
-        </div>
-        <div className='h-full py-2 px-4'>
-          <h3 className='text-sm font-semibold text-gray-primary'>{title}</h3>
-          <p className='text-gray-secondary text-sm'>{sub}</p>
         </div>
       </div>
     </div>

@@ -15,12 +15,17 @@
   }
 
   h2 {
-    @apply text-xl
+    @apply text-xl;
   }
 
   h3 {
-    @apply text-lg
+    @apply text-lg;
   }
+
+  *::-webkit-scrollbar {
+   @apply w-0;
+  }
+  
 }
 
 @layer utilities {
@@ -52,3 +57,4 @@
     background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
   }
 }
+
