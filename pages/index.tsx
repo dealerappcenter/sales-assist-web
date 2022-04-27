@@ -1,10 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { Hero } from '@src/sections/homePage/Cover';
-import { HowItWorks } from '@src/sections/homePage/HowItWorks';
-import { Benefits } from '@src/sections/homePage/Benefits';
-import { SalesTeams } from '@src/sections/homePage/SalesTeams';
-import { Sales } from '@src/sections/homePage/Sales';
+import { Hero, HowItWorks, Benefits, SalesTeams, Sales } from '@src/sections/homePage/';
+import { Footer } from '@src/components/Footer';
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +21,8 @@ const Home: NextPage = () => {
       <SalesTeams />
 
       <Sales />
+
+      <Footer />
     </>
   )
 }

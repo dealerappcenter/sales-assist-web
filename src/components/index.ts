@@ -8,3 +8,4 @@ export * from './Insight';
 export * from './Quote';
 export * from './Avatar';
 export * from './Testimonial'
+export * from './Footer'
