@@ -30,7 +30,7 @@
 
 @layer utilities {
   .clip {
-    clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 0, 100% 70%, 0% 100%);
   }
 
   .animate-border {
@@ -43,7 +43,6 @@
   }
 
   .c-font {
-    font-family: 'Facebook Sans', sans-serif;
     font-family: 'Facebook Narrow App', sans-serif;
   }
   

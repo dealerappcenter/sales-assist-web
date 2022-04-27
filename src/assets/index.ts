@@ -8,6 +8,7 @@ import Ship from './ship.svg';
 import Toyota from './toyota.svg';
 import HeroImage from './ANI_HeroImage.svg'
 import { Hero } from './hero';
+import QuoteMark from './quote.svg';
 
 export {
     Logo,
@@ -19,5 +20,6 @@ export {
     Ship,
     Toyota,
     HeroImage,
-    Hero
+    Hero,
+    QuoteMark
 }
