@@ -5,7 +5,7 @@ export const SalesTeams = () => {
     <section className='md:h-[60vh] flex flex-col relative text-white-normal'>
       <div className='inset-0 bg-gray-primary clip absolute -z-[1]'></div>
       <div className='container py-6 mx-auto px-4 lg:px-12 lg:py-20 h-full flex flex-col'>
-        <h1>Sales teams love Salesassist!</h1>
+        <h1>Sales teams love SalesAssist!</h1>
 
         <div className='flex-grow py-12'>
           <Testimonial
