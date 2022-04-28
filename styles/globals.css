@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/facebook-sans');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -13,16 +15,45 @@
   }
 
   h2 {
-    @apply text-xl
+    @apply text-xl;
   }
 
   h3 {
-    @apply text-lg
+    @apply text-lg;
   }
+
+  *::-webkit-scrollbar {
+   @apply w-0;
+  }
+  
 }
 
 @layer utilities {
   .clip {
-    clip-path: polygon(0 0%, 100% 0, 100% 50%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 0, 100% 70%, 0% 100%);
+  }
+
+  .animate-border {
+    background: linear-gradient(90deg, white 50%, transparent 50%);
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    background-size: 15px 2px, 15px 2px, 2px 15px, 2px 15px;
+    background-position: 0px 0px, 200px 100px, 0px 100px, 200px 0px;
+    padding: 2px;
+    animation: border-dance 4s infinite linear;
+  }
+
+  .c-font {
+    font-family: 'Facebook Narrow App', sans-serif;
+  }
+  
+}
+
+@keyframes border-dance {
+  0% {
+    background-position: 0px 0px, 300px 116px, 0px 150px, 216px 0px;
+  }
+  100% {
+    background-position: 300px 0px, 0px 116px, 0px 0px, 216px 150px;
   }
 }
+

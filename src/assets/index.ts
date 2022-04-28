@@ -6,6 +6,11 @@ import Message from './message.svg';
 import Saleor from './saleor.svg';
 import Ship from './ship.svg';
 import Toyota from './toyota.svg';
+import HeroImage from './ANI_HeroImage.svg'
+import { Hero } from './hero';
+import QuoteMark from './quote.svg';
+import Pc from './Pc.png';
+import Mobile from './mobile.svg';
 
 export {
     Logo,
@@ -15,5 +20,10 @@ export {
     Message,
     Saleor,
     Ship,
-    Toyota
+    Toyota,
+    HeroImage,
+    Hero,
+    QuoteMark,
+    Pc,
+    Mobile
 }

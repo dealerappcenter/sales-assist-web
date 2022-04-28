@@ -1,8 +1,8 @@
 import { Button, Nav } from 'src/components';
 import Image from 'next/image';
-import Toyota from '@src/assets/toyota.svg';
-import Saleor from '@src/assets/saleor.svg';
-import Banner from '@src/assets/banner.svg';
+import { Toyota, Saleor, HeroImage } from '@src/assets';
+import { AnimatedHero } from '@src/components/AnimatedHero';
+
 
 const trusted = [
     Toyota,
@@ -23,7 +23,7 @@ export const Hero = () => {
                 </div>
                 <div className='lg:w-[60%] flex items-center justify-center order-1 lg:order-2'>
                     <Image
-                        src={Banner}
+                        src={HeroImage}
                         alt='Banner'
                     />
                 </div>
