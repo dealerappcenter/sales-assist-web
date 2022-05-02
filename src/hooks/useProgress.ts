@@ -46,7 +46,7 @@ export function useProgress() {
             clearInterval(local)
             interval = 0;
 
-        }, 50)
+        }, 40)
     }
 
     function stopCount() {
