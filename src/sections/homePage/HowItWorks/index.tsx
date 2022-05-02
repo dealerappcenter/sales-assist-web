@@ -6,8 +6,10 @@ import { useResponsive } from '@hooks/useResponsive';
 import {  Icons } from '@src/assets';
 import { useProgress } from '@src/hooks/useProgress';
 import { useInView } from 'react-intersection-observer'
+// 
 import { InteractAnimation } from '@src/components/HowitWorksAnimations/Interact';
 import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer';
+import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
 
 export const HowItWorks = () => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
@@ -79,6 +81,7 @@ export const HowItWorks = () => {
                     <div className='bg-gray-disabled/20 h-full md:w-[20rem] max-w-md mx-auto rounded-lg flex items-center justify-center p-4'>
                         {inView && currentCard.current === 0 && <InteractAnimation />}
                         {inView && currentCard.current === 1 && <CustomerAnimation />}
+                        {inView && currentCard.current === 2 && <SalesAnimation />}
                     </div>
                 </div>
             </div>}
