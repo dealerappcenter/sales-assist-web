@@ -1,8 +1,7 @@
 import { useResponsive } from '@hooks/useResponsive';
 import { useMemo } from 'react';
-import { motion } from 'framer-motion';
 
-export const DashedAnimation = ({ progress }: { progress: number}) => {
+export const DashedAnimation = ({ progress }: { progress: number }) => {
     const { isMobile } = useResponsive();
     const variant = useMemo(() => {
         if (isMobile) {
@@ -11,16 +10,15 @@ export const DashedAnimation = ({ progress }: { progress: number}) => {
         return "M 65,50 200,150 20,250 z" // [[x1, x2], [y1,y1], []]
     }, [isMobile]);
 
-
     return (<div className="absolute inset-0">
-        <svg className="w-full h-4/5" viewBox="0 0 250 250" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d={variant}
-                strokeWidth="3"
-                strokeDasharray={10}
-                className='path stroke-white-soft/50'
-            />
-        </svg>
+        {!isMobile && <svg version="1.1" className="w-full h-4/5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 250 250" enableBackground="new 0 0 250 250" xmlSpace="preserve">
+            <path className="fill-[none] stroke-white-normal/50" strokeLinecap="round" strokeWidth={3} strokeLinejoin='miter' strokeMiterlimit={4} d={variant} strokeDasharray={10} />
+            <path className="fill-[none] stroke-gray-primary" strokeLinecap="round" strokeWidth={4} strokeLinejoin='miter' strokeMiterlimit={4} d={variant} strokeDasharray={655} strokeDashoffset={-progress} />
+        </svg>}
+
+        {isMobile && <svg version="1.1" className="w-full h-4/5" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 250 250" enableBackground="new 0 0 250 250" xmlSpace="preserve">
+            <path className="fill-[none] stroke-white-normal/50" strokeLinecap="round" strokeWidth={3} strokeLinejoin='miter' strokeMiterlimit={4} d={variant} strokeDasharray={10} />
+        </svg>}
     </div>
 
     )

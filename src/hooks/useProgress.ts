@@ -2,9 +2,11 @@ import { useState, useEffect } from 'react';
 
 
 let timer: NodeJS.Timer;
+let local: NodeJS.Timer;
 
 export function useProgress() {
     const [progressLeft, setProgress] = useState(1);
+    const [count, setCount] = useState(1);
 
 
     function startProgress() {
@@ -27,7 +29,31 @@ export function useProgress() {
         }, 100)
     }
 
+    function startCount({ count, startAt = 0 }: {count: number, startAt: number}) {
+        clearInterval(local);
 
-    return { progressLeft, startProgress }
+        let interval = startAt;
+
+        local = setInterval(() => {
+            
+            interval++
+            
+            if (interval <= count) {
+                setCount(interval)
+                return
+            }
+
+            clearInterval(local)
+            interval = 0;
+
+        }, 50)
+    }
+
+    function stopCount() {
+        clearInterval(local)
+    }
+
+
+    return { progressLeft, startProgress, count, startCount, stopCount }
 
 }
