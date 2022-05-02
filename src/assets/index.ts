@@ -1,29 +1,41 @@
 import Logo from './logo.svg';
-import Apps from './Apps.svg';
-import HandShake from './handshake.svg'
-import LightBull from './lightbull.svg';
-import Message from './message.svg';
+import WLogo from './WLogo.svg';
 import Saleor from './saleor.svg';
-import Ship from './ship.svg';
 import Toyota from './toyota.svg';
-import HeroImage from './ANI_HeroImage.svg'
-import { Hero } from './hero';
 import QuoteMark from './quote.svg';
 import Pc from './Pc.png';
 import Mobile from './mobile.svg';
+import HeroImage from './Hero.svg';
+
+//icons
+import CompleteSales from './CompletSales_Icon.svg'
+import Interact from './Interact_Icon.svg'
+import AddSales from './AddSales_Icon.svg';
+import Business from  './Business_Icon.svg';
+import Costumer from './Customer_Icon.svg';
+import Sales from './Sales_Icon.svg';
+
 
 export {
     Logo,
-    Apps,
-    HandShake,
-    LightBull,
-    Message,
     Saleor,
-    Ship,
     Toyota,
-    HeroImage,
-    Hero,
     QuoteMark,
     Pc,
-    Mobile
+    Mobile,
+    HeroImage
+}
+
+export const logoVariants = {
+    dark: Logo,
+    white: WLogo
+}
+
+export const Icons = {
+    CompleteSales,
+    Interact,
+    AddSales,
+    Business,
+    Costumer,
+    Sales
 }

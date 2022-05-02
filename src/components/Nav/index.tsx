@@ -18,7 +18,7 @@ export const Nav: React.FC = () => {
         <>
             <nav className="py-6  container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">
                 <div className='flex items-center justify-between w-full'>
-                    <ul className='flex items-center'>
+                    <ul className='flex items-center gap-6'>
                         {/* logo */}
                         <li className='flex items-center justify-center'>
                             <Link href='/'>

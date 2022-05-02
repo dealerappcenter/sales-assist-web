@@ -4,10 +4,11 @@ import classNames from 'classnames';
 interface InsightProp {
     text: string,
     className?: string,
+    isActive?: boolean,
 }
 
-export const Insight: React.FC<React.PropsWithChildren<InsightProp>> = ({ text, children, className }) => {
-    const baseClass = classNames('', className);
+export const Insight: React.FC<React.PropsWithChildren<InsightProp>> = ({ text, children, className, isActive }) => {
+    const baseClass = classNames('duration-400', {'opacity-40': !isActive}, className);
     return (
         <div className={baseClass}>
             <div className="flex items-center mb-4">

@@ -13,33 +13,35 @@ export const Sales = () => {
                         Book Demo
                     </Button>
                 </div>
-                <div className='md:flex-grow flex-grow-0 relative flex items-center w-full px-12 md:px-24 md:w-fit'>
-                    <div className='absolute z-10 bottom-0 left-0 w-20 h-32 md:w-48 md:h-auto'>
+                <div className='md:flex-grow flex-grow-0 relative flex items-center justify-center  w-fit'>
+                    <div className='relative w-fit'>
+                        <div className='absolute z-10 bottom-0 -left-6 md:-left-16 w-20 h-32 md:w-48 md:h-auto'>
+                            <motion.div
+                                initial={{ opacity: 0, x: -100, y: 100 }}
+                                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                                transition={{
+                                    duration: 1.5,
+                                    delay: .7
+                                }}
+                                viewport={{ once: true }}
+                                className="relative h-full w-20 md:w-3/4 "
+                            >
+                                <Image src={Mobile} layout="responsive" alt='app' />
+                            </motion.div>
+                        </div>
                         <motion.div
-                            initial={{ opacity: 0, x: -100, y: 100 }}
-                            whileInView={{ opacity: 1, x: 0, y: 0 }}
+                            initial={{ opacity: 0, y: 100 }}
+                            whileInView={{ opacity: 1, y: 0 }}
                             transition={{
-                                duration: 1.5,
-                                delay: .7
+                                duration: 1
                             }}
                             viewport={{ once: true }}
-                            className="relative h-full w-20 md:w-auto "
                         >
-                            <Image src={Mobile} layout="responsive" alt='app' />
+                            <div className='w-56 h-auto relative md:w-full md:h-full'>
+                                <Image src={Pc} alt='desktop' />
+                            </div>
                         </motion.div>
                     </div>
-                    <motion.div
-                        initial={{ opacity: 0, y: 100 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{
-                            duration: 1
-                        }}
-                        viewport={{ once: true }}
-                    >
-                        <div className='w-56 h-auto relative md:w-full md:h-full'>
-                            <Image src={Pc} alt='desktop' />
-                        </div>
-                    </motion.div>
                 </div>
             </div>
         </section>

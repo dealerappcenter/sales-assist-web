@@ -34,9 +34,9 @@ export function useResponsive() {
 
     useEffect(() => {
         if (width) {
-            if (width < 640) {
+            if (width < 750) {
                 handleDevice('isMobile', true);
-            } else if (width >= 640 && width < 1024) {
+            } else if (width >= 750 && width < 1024) {
                 handleDevice('isTablet', true);
             } else if (width >= 1024) {
                 handleDevice('isDesktop', true)

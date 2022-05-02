@@ -10,21 +10,23 @@ interface IconBoxProps {
 }
 export const IconBox: React.FC<IconBoxProps> = (props) => {
     const { text, icon, isActive, className, onClick } = props;
-    const baseClass = classNames('w-fit h-fit text-center duration-700 transition-all bg-gray-primary', 
+    const baseClass = classNames('w-fit h-fit text-center duration-700 transition-all bg-gray-primary',
         { 'opacity-90': !isActive },
         className
     );
-    const imageClass = classNames('flex items-center justify-center w-16 h-16 lg:h-24 lg:w-24 rounded-full p-1 border-2 overflow-hidden', {
+    const imageClass = classNames('relative flex items-center justify-center h-24 w-24 rounded-full p-1 border-[4px] transition-all duration-500 overflow-hidden', {
         'border-orange-link': isActive,
         'border-transparent': !isActive
     });
 
-    const textClass = classNames('my-2 font-medium', {'opacity-50': !isActive})
+    const textClass = classNames('my-2 font-medium transition-all duration-500', { 'opacity-50': !isActive })
 
     return (
         <button className={baseClass} onClick={onClick}>
             <div className={imageClass}>
-                <Image className='duration-700 bg-gray-primary' src={icon} alt={text} />
+                <div className='bg-card-normal w-full h-full rounded-full flex items-center justify-center'>
+                    <Image width={64} height={64} className='bg-' src={icon} alt={text} />
+                </div>
             </div>
             <p className={textClass}>{text}</p>
         </button>

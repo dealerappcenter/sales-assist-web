@@ -8,9 +8,16 @@ export enum RouteNames {
     whySalesAssist = 'Why SalesAssist',
     pricing = 'Pricing',
     about = 'About us',
+    qAndA = 'Q&A',
+    howItWorks = 'How it works',
+    Benefits = 'Benefits',
+    actions = 'Actions',
+    bookADemo = 'BookADemo',
+    legal = 'Legal',
+    policy = 'Privacy Policy',
 }
 
-export type Route = { path: string, name: string};
+export type Route = { path: string, name: string };
 export type Routes = Array<Route>;
 
 /**
@@ -30,3 +37,37 @@ export const routes: Routes = [
         name: RouteNames.about
     }
 ]
+
+
+const salesAssist = {
+    title: 'SalesAssist',
+    links: [
+        { path: '', name: RouteNames.howItWorks },
+        { path: '', name: RouteNames.Benefits },
+        { path: '', name: RouteNames.actions },
+        { path: '', name: RouteNames.pricing },
+        { path: '', name: RouteNames.qAndA },
+    ]
+}
+
+const company = {
+    title: 'Company',
+    links: [
+        { path: '', name: RouteNames.about },
+        { path: '', name: RouteNames.bookADemo },
+    ]
+}
+
+const contact = {
+    title: 'Contact Us',
+    links: [
+        { path: 'mailto:', name: 'example@salesassist.io' },
+        { path: 'tel:', name: '+1202020202' },
+    ]
+}
+
+export const footerLinks = {
+    salesAssist,
+    company,
+    contact,
+}

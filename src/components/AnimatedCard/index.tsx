@@ -1,46 +1,30 @@
 import React from 'react'
-import { motion, AnimationControls } from 'framer-motion';
-import { fadeInLeft } from '@src/utils/animations';
 import classNames from 'classnames';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 interface AnimatedCardProps {
-  controls: AnimationControls;
-  delay?: number;
   title: string;
   sub: string,
   icon: string // path
   isActive?: boolean,
-  progress?: number,
+  progress: number,
   onClick?: () => void,
 }
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
-  const { delay = 0, controls, title, sub, icon, isActive, progress, onClick } = props;
+  const { title, sub, icon, isActive, progress, onClick } = props;
   const baseClasses = classNames("group rounded-2xl cursor-pointer w-full md:w-[27rem] h-[8.5rem] flex overflow-hidden duration-400",
     {'bg-card-normal': isActive },
     {'opacity-50': !isActive}
   );
-  const progressClass = classNames("h-full w-6 duration-300 rounded-bl rounded-br");
-
+  const progressClass = classNames("h-full  w-6 duration-300 rounded-bl rounded-br");
   return (
-    <motion.div
-      initial="hidden"
-      animate={controls}
-      variants={{
-        ...fadeInLeft,
-        visible: {
-          ...fadeInLeft.visible,
-          transition: {
-            ...fadeInLeft.visible.transition,
-            delay,
-          }
-        }
-      }}
+    <button
       className={baseClasses}
       onClick={onClick}
     >
       <div className={progressClass}>
-        {isActive && <div className='w-full h-0 rounded-lg bg-orange-normal' style={{ height: `${progress}%` }} />}
+        {isActive && <div style={{ transform: `translate(0, -${progress}%)`}} className='w-full h-full rounded-lg bg-orange-normal transition-all duration-300'  />}
       </div>
       <div className='flex h-full p-2'>
         <div className='flex justify-center p-4 px-4'>
@@ -48,11 +32,11 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
             <Image src={icon} alt={title} />
           </div>
         </div>
-        <div className='h-full py-2'>
+        <div className='h-full py-2 text-left'>
           <h3 className='text-sm font-semibold text-gray-primary'>{title}</h3>
           <p className='text-sm text-gray-secondary'>{sub}</p>
         </div>
       </div>
-    </motion.div>
+    </button>
   )
 }
