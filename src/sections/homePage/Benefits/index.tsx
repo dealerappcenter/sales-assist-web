@@ -73,7 +73,7 @@ export const Benefits = () => {
               />
 
               {isTablet || isDesktop || isMobile && <IconBox
-                text="Costumer"
+                text="Customer"
                 icon={Icons.Costumer}
                 isActive={isActive(2)}
                 onClick={clickOnIcon(2)}
@@ -81,7 +81,7 @@ export const Benefits = () => {
             </div>
             {(isDesktop || isTablet) && <div className="w-full flex items-center">
               <IconBox
-                text="Costumer"
+                text="Customer"
                 icon={Icons.Costumer}
                 isActive={isActive(2)}
                 onClick={clickOnIcon(2)}
