@@ -24,7 +24,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
       onClick={onClick}
     >
       <div className={progressClass}>
-        {isActive && <div style={{ transform: `translate(0, -${progress}%)`}} className='w-full h-full rounded-lg bg-orange-normal transition-all duration-300'  />}
+        {isActive && <div style={{ transform: `translate(0, -${progress}%)`}} className='w-full h-full rounded-lg bg-orange-normal transform-gpu transition-all duration-300'  />}
       </div>
       <div className='flex h-full p-2'>
         <div className='flex justify-center p-4 px-4'>

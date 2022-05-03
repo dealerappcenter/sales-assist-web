@@ -16,7 +16,7 @@ export const Avatar: React.FC<AvatarProps> = (props) => {
             <div className='flex items-center w-fit'>
                 <div className=''>
                     <div className='h-10 w-10 md:h-20 md:w-20 rounded-full bg-white-normal/25 overflow-hidden relative'>
-                        {image && <Image src={image} alt='' layout="fill" objectFit="contain"/>}
+                        {image && <Image blurDataURL="" src={image} alt='' layout="fill" objectFit="contain"/>}
                     </div>
                 </div>
                 <div className='py-2 ml-4 flex justify-center flex-col'>

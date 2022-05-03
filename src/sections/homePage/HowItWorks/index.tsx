@@ -6,8 +6,10 @@ import { useResponsive } from '@hooks/useResponsive';
 import {  Icons } from '@src/assets';
 import { useProgress } from '@src/hooks/useProgress';
 import { useInView } from 'react-intersection-observer'
+// 
 import { InteractAnimation } from '@src/components/HowitWorksAnimations/Interact';
 import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer';
+import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
 
 export const HowItWorks = () => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
@@ -42,13 +44,13 @@ export const HowItWorks = () => {
     }
 
     return (
-        <main className='container  py-6 mx-auto lg:px-12 lg:py-20 overflow-x-auto'>
+        <main ref={ref} className='container  py-6 mx-auto lg:px-12 lg:py-20 overflow-x-auto'>
             <div className='px-4 md-px-0 mb-2'>
                 <h1 className="mb-4 text-gray-primary">How it works</h1>
                 <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>
             </div>
 
-            {isDesktop && <div ref={ref} className='flex flex-col py-4 lg:flex-row md:px-4 lg:px-12 md:py-12'>
+            {isDesktop && <div className='flex flex-col py-4 lg:flex-row md:px-4 lg:px-12 md:py-12'>
                 <div className='flex flex-col gap-6 w-fit'>
                     {
                         cardData.map((data, i) => {
@@ -79,6 +81,7 @@ export const HowItWorks = () => {
                     <div className='bg-gray-disabled/20 h-full md:w-[20rem] max-w-md mx-auto rounded-lg flex items-center justify-center p-4'>
                         {inView && currentCard.current === 0 && <InteractAnimation />}
                         {inView && currentCard.current === 1 && <CustomerAnimation />}
+                        {inView && currentCard.current === 2 && <SalesAnimation />}
                     </div>
                 </div>
             </div>}

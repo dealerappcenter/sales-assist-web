@@ -51,3 +51,9 @@
   stroke-dashoffset: 1000;
 
 }
+
+.r-path {
+  -webkit-animation: dash 15s linear infinite;
+  stroke-dashoffset: -1000;
+
+}
