@@ -84,3 +84,16 @@ export const fadeDownRight = {
         }
     }
 }
+
+export const fade = {
+    start: {
+        opacity: 0,
+    },
+    stop: {
+        opacity: 1,
+        transition: {
+            duration: 1,
+            ease: 'linear'
+        }
+    }
+}
