@@ -47,7 +47,7 @@ export const Benefits = () => {
       currentStatus.current = 'one'
     } else if (count >= 370 && count <= 410) {
       currentStatus.current = 'two'
-    } else if (count >= 550 && count <= 590) {
+    } else if (count >= 550 && count <= 590 || count >= 1 && count <= 40) {
       currentStatus.current = 'tree'
     } else {
       currentStatus.current = 'idle'
@@ -63,7 +63,7 @@ export const Benefits = () => {
     }
   }
 
-  const isActive = (at: number) => currentCard.current === at && isDesktop;
+  const isActive = (at: number) => currentCard.current === at;
 
   return (
     <section ref={ref} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
@@ -90,6 +90,7 @@ export const Benefits = () => {
                 icon={Icons.Sales}
                 isActive={isActive(1)}
                 onClick={clickOnIcon(1, 168)}
+                className='order-2 md:order-1'
               />
 
               {isTablet || isDesktop || isMobile && <IconBox
@@ -111,7 +112,7 @@ export const Benefits = () => {
         </div>
 
         <div className="md:w-1/2 w-full py-12 flex-col flex gap-12">
-          {insightsData[currentCard.current].bulletPoint.map(point => {
+          {insightsData[currentCard.current]?.bulletPoint.map(point => {
             return <motion.div key={point.title} initial='start' animate='stop' variants={fade}>
               <Insight text={point.title} isActive>
                 {point.description}
