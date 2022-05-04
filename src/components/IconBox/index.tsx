@@ -16,7 +16,6 @@ export const IconBox: React.FC<IconBoxProps> = (props) => {
     const imageClass = classNames('relative flex items-center justify-center h-24 w-24 rounded-full p-1 border-[4px] transition-all duration-500 overflow-hidden', {
         'border-orange-link': isActive,
         'border-transparent': !isActive,
-        'opacity-90': !isActive
     });
 
     const textClass = classNames('my-2 font-medium transition-all duration-500', { 'opacity-50': !isActive })

@@ -26,7 +26,7 @@ export const Sales = () => {
                                 viewport={{ once: true }}
                                 className="relative h-full w-20 md:w-3/4 "
                             >
-                                <Image src={Mobile} layout="responsive" alt='app' />
+                                <Image placeholder='blur' blurDataURL={Mobile} src={Mobile} layout="responsive" alt='app' />
                             </motion.div>
                         </div>
                         <motion.div
