@@ -20,7 +20,7 @@ export const FooterList: React.FC<FooterLinkProps> = (props) => {
             {!hideTitle && <h3 className={titleClass} style={{ wordBreak: 'keep-all'}}>{title}</h3>}
             <ul className='text-gray-secondary text-[.9rem] md:text-base'>
                 {links.map((link, i) => <li className='text-left' key={link.name + i} style={{ wordBreak: 'break-all'}}>
-                    <NavLink className='px-0' hideProgress>
+                    <NavLink className='px-0 text-sm' hideProgress>
                         {link.name}
                     </NavLink>
                 </li>)}

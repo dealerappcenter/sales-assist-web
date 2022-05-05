@@ -45,7 +45,7 @@ export const Nav: React.FC = () => {
 
                     <ul className='flex items-center'>
                         {/* if desktop else destroy it */}
-                        {isDesktop && <>
+                        {/* {isDesktop && <>
                             <li>
                                 <a href="/some-where">
                                     <NavLink>
@@ -59,16 +59,16 @@ export const Nav: React.FC = () => {
                                     Book Demo
                                 </Button>
                             </li>
-                        </>}
+                        </>} */}
 
                         {/* if tablet or mobile else destroy it */}
-                        {!isDesktop &&
+                        {/* {!isDesktop &&
                             <li className='flex items-center justify-center'>
                                 <button>
                                     <MdKeyboardArrowDown className='text-4xl' />
                                 </button>
                             </li>
-                        }
+                        } */}
                     </ul>
                 </div>
             </nav>

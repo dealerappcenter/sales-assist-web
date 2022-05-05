@@ -24,18 +24,18 @@ export type Routes = Array<Route>;
  * NOTE: order is important here since this arr will be used to map all the routes in the nav;
  */
 export const routes: Routes = [
-    {
-        path: Paths.whySalesAssist,
-        name: RouteNames.whySalesAssist
-    },
-    {
-        path: Paths.pricing,
-        name: RouteNames.pricing
-    },
-    {
-        path: Paths.about,
-        name: RouteNames.about
-    }
+    // {
+    //     path: Paths.whySalesAssist,
+    //     name: RouteNames.whySalesAssist
+    // },
+    // {
+    //     path: Paths.pricing,
+    //     name: RouteNames.pricing
+    // },
+    // {
+    //     path: Paths.about,
+    //     name: RouteNames.about
+    // }
 ]
 
 
