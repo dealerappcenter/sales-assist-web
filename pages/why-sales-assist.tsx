@@ -1,6 +1,13 @@
-import { WhySalesAssistHero } from "@src/sections/WhySalesAssist";
 import { NextPage } from "next";
 import Head from "next/head";
+import { 
+    WhySalesAssistHero,
+    WhySalesAssistSalesProcess, 
+    WhySalesAssistIteration,WhySalesAssistSimplifySales,
+    WhySalesAssistCompleteSalesFaster,
+    WhySalesAssistCompletingSalesIsPainless,
+} from "@src/sections/WhySalesAssist";
+import { Footer } from "@src/components";
 
 const WhySalesAssist: NextPage = () => {
     return (<>
@@ -11,6 +18,18 @@ const WhySalesAssist: NextPage = () => {
         </Head>
 
         <WhySalesAssistHero />
+
+        <WhySalesAssistSalesProcess/>
+
+        <WhySalesAssistIteration />
+
+        <WhySalesAssistSimplifySales />
+
+        <WhySalesAssistCompleteSalesFaster />
+
+        <WhySalesAssistCompletingSalesIsPainless />
+
+        <Footer kind="dark" />
     </>)
 };
 

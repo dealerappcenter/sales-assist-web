@@ -24,7 +24,7 @@ export const IconBox: React.FC<IconBoxProps> = (props) => {
         <button className={baseClass} onClick={onClick}>
             <div className={imageClass}>
                 <div className='bg-card-normal w-full h-full rounded-full flex items-center justify-center'>
-                    <Image width={64} height={64} className='bg-' src={icon} alt={text} />
+                    <Image width={64} height={64} src={icon} alt={text} />
                 </div>
             </div>
             <p className={textClass}>{text}</p>
