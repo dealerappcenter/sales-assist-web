@@ -9,9 +9,14 @@ export const WhySalesAssistSimplifySales = () => {
                 <div className="border border-dashed flex-grow">
                     <div className="border p-2"></div>
 
+                    {/* todo this should be animated */}
                     <div className="flex">
                         <div>
-                            {/* TODO: Place a computer here */}
+                            {/* TODO: Place a computer here, probably an image or video. */}
+                        </div>
+
+                        <div className="">
+
                         </div>
                     </div>
                 </div>

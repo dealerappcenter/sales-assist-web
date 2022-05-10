@@ -17,6 +17,7 @@ export const WhySalesAssistIteration = () => {
                             {t}
                         </button>)}
                     </div>
+                    
                     <div className="flex-grow flex flex-col gap-6">
                         <div className="flex-grow"></div>
                         <div className="flex items-center flex-col justify-center gap-2">
