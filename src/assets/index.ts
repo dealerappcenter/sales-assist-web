@@ -15,7 +15,6 @@ import Business from  './Business_Icon.svg';
 import Costumer from './Customer_Icon.svg';
 import Sales from './Sales_Icon.svg';
 import SalesExample from './why-sales-assits.svg'
-import App from './App.svg';
 
 export {
     Logo,
@@ -26,7 +25,6 @@ export {
     Mobile,
     HeroImage,
     SalesExample,
-    App
 }
 
 export const logoVariants = {

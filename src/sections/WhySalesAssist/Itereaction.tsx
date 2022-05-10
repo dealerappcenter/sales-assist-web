@@ -1,6 +1,5 @@
 import { MdInsights, MdKeyboardArrowDown } from "react-icons/md"
 import Image from 'next/image';
-import { App } from '@src/assets';
 
 export const WhySalesAssistIteration = () => {
     return (
