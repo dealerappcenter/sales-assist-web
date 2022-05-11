@@ -14,7 +14,7 @@ import AddSales from './AddSales_Icon.svg';
 import Business from  './Business_Icon.svg';
 import Costumer from './Customer_Icon.svg';
 import Sales from './Sales_Icon.svg';
-
+import SalesExample from './why-sales-assits.svg'
 
 export {
     Logo,
@@ -23,7 +23,8 @@ export {
     QuoteMark,
     Pc,
     Mobile,
-    HeroImage
+    HeroImage,
+    SalesExample,
 }
 
 export const logoVariants = {

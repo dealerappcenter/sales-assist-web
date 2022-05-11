@@ -3,7 +3,6 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { MdKeyboardArrowDown } from 'react-icons/md';
 
-import { motion, AnimatePresence } from 'framer-motion';
 
 import { routes } from '@src/utils/routes';
 import { NavLink } from '@components/NavLink';
@@ -11,9 +10,12 @@ import { Button } from '@components/Buttons';
 import Logo from '@src/assets/logo.svg';
 
 import { useResponsive } from '@hooks/useResponsive';
+import { useRouter } from 'next/router';
 
 export const Nav: React.FC = () => {
     const { isDesktop } = useResponsive();
+    const router = useRouter();
+
     return (
         <>
             <nav className="py-6  container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">
@@ -35,7 +37,7 @@ export const Nav: React.FC = () => {
                         {isDesktop && routes.map(route => {
                             return <li key={route.path}>
                                 <Link passHref href={route.path}>
-                                    <NavLink>
+                                    <NavLink isActive={route.path === router.asPath}>
                                         {route.name}
                                     </NavLink>
                                 </Link>
