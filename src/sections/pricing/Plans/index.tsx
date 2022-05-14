@@ -59,7 +59,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
                 </div>
                 }
 
-                {!isClicked && <button onClick={onClick} className="mx-auto max-w-4xl p-4 py-6 md:w-full bg-white-normal rounded-lg flex items-center justify-center gap-1">
+                {!isClicked && <button onClick={onClick} className="mx-auto max-w-4xl p-4 py-6 md:w-full bg-white-normal rounded-lg flex items-center justify-center gap-1 border md:border-none">
                     See Full Feature Comparison <MdArrowDropDown />
                 </button>}
             </div>
