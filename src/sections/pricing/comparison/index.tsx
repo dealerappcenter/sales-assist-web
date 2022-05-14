@@ -4,12 +4,12 @@ import { MdCheck } from 'react-icons/md';
 export const PricingComparison = () => {
     return (
         <section className='px- py-6 lg:px-12 lg:py-12 bg-white-normal'>
-            <div className='container mx-auto text-gray-primary flex flex-col gap-12 mb-6'>
-                <div className='px-4'>
+            <div className='container mx-auto text-gray-primary flex flex-col gap-12 mb-6 lg:px-12 md:px-6 px-4'>
+                <div className=''>
                     <h1 className="mb-4">{PlansInfo.title}</h1>
                     <h4 className="text-gray-secondary">{PlansInfo.description}</h4>
                 </div>
-                <div className='px-4 relative bg-white-normal'>
+                <div className='relative bg-white-normal'>
                     <div className='w-full sticky md:relative top-0'>
                         <div className='flex items-center bg-white-normal'>
                             <div className='w-1/2 p-4 hidden md:block'></div>

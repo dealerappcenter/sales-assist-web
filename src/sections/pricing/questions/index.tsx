@@ -3,7 +3,7 @@ import Questions from '@src/mocks/pricing/questions.json';
 export const PricingQuestions = () => {
     return (
         <section className='bg-white-normal'>
-            <div className='container mx-auto py-12 px-4 flex flex-col gap-6'>
+            <div className='container mx-auto py-12 flex flex-col gap-6 lg:px-12 md:px-6 px-4'>
                 <h1>{Questions.title}</h1>
 
                 <div className='flex flex-col gap-6 mb-6'>
