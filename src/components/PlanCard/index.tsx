@@ -7,7 +7,7 @@ interface PlanCardProps {
 
 export const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
   return (
-    <div key={plan.name} className='p-4 flex flex-col gap-6 bg-white-normal md:w-1/3 lg:w-[22%] h-full rounded-xl'>
+    <div key={plan.name} className='p-4 flex flex-col gap-6 bg-white-normal md:w-1/3 h-full rounded-xl'>
     <div className=""><SiHackthebox className="text-xl" /></div>
     <div className="text-gray-secondary">
         <h1 className="text-gray-primary mb-2 font-semibold">{plan.name}</h1>
