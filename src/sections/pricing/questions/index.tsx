@@ -17,6 +17,7 @@ export const PricingQuestions = () => {
 
                 <div className='w-full px-6 flex-wrap md:px-12 py-8 flex items-center justify-between rounded-lg bg-gradient-to-br from-[#F87129] via-[#F87129] to-[#FFA742] text-white-normal'>
                     <h1 className='text-xl font-semibold'>{Questions.banner.text}</h1>
+                    <div className='my-6 border-2 border-transparent'></div>
                     <button className='p-2 px-3 font-medium rounded-md bg-white-normal text-orange-link'>
                         {Questions.banner.button}
                     </button>

@@ -16,11 +16,11 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
 
     return (
         <section className='h-full flex flex-col bg-white-normal md:bg-white-soft md:pb-12'>
-            <div className='px-4 flex-grow container flex items-center justify-start flex-col gap-5 mx-auto max-w-4xl'>
-                {(isDesktop || isTablet) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[32rem]'>
+            <div className='px-4 flex-grow container flex items-center justify-start flex-col gap-5 mx-auto'>
+                {(isDesktop) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[32rem]'>
                     {PricingData.plans.map(plan => <PlanCard key={plan.name} plan={plan} />)}
                 </div>}
-                {isMobile && <div className="py-2 w-full">
+                {(isMobile || isTablet) && <div className="py-2 w-full">
                     <div className="w-full flex items-center">
                         {PricingData.plans.map((plan, i) => {
                             return <div key={plan.name} className='w-full flex flex-col'>
@@ -51,7 +51,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
                             <h3 className="text-gray-primary font-medium">{PricingData.plans[current].features.name}:</h3>
                             {PricingData.plans[current].features.perks.map(perk => {
                                 return <div className="flex gap-2 items-center" key={perk}>
-                                    <MdCheck/> {perk}
+                                    <MdCheck className="text-green-600" /> {perk}
                                 </div>
                             })}
                         </div>
@@ -59,7 +59,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
                 </div>
                 }
 
-                {!isClicked && <button onClick={onClick} className="mx-auto max-w-4xl p-4 py-6 md:w-full bg-white-normal rounded-lg flex items-center justify-center gap-1 border md:border-none">
+                {!isClicked && <button onClick={onClick} className="p-4 py-6 md:w-full bg-white-normal rounded-lg flex items-center justify-center gap-1 border md:border-none">
                     See Full Feature Comparison <MdArrowDropDown />
                 </button>}
             </div>
