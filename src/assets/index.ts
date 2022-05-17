@@ -15,11 +15,22 @@ import Business from  './Business_Icon.svg';
 import Costumer from './Customer_Icon.svg';
 import Sales from './Sales_Icon.svg';
 import SalesExample from './why-sales-assits.svg'
-
+import FocusOnImpact from './SA__Focus on impact.svg';
+import StayOpen from './SA__Stay open.svg';
+import ProductSupport from './SA__Profound Support.svg';
+import TakeBoldSteps from './SA__Take bold steps.svg';
+import RadicalResourcefulness from './SA__Radical Resourcefoulnes.svg';
+import EveryoneIsAnOwner from './SA__Everyone is an owner.svg';
+import Remotely from './SA__Remote Illustration.svg';
+import FaceToFace from './SA__Face to Face Illustration.svg';
+import Online from './SA__Online Illustration.svg'
 // plans 
 import AdvancePlan from './SA__Advanced_Plan.svg';
 import EnterPrisePlan from './SA__Enterprise_Plan.svg';
 import EssentialsPlan from './SA__Essentials_Plan.svg';
+
+// map
+import WorldMap from './SA__World Map.svg';
 
 export {
     Logo,
@@ -30,6 +41,7 @@ export {
     Mobile,
     HeroImage,
     SalesExample,
+    WorldMap
 }
 
 export const logoVariants = {
@@ -51,3 +63,18 @@ export const plansIcons = {
     EnterPrisePlan,
     EssentialsPlan
 }
+
+export const aboutUsIcons = [
+    { code: "FOI", path: FocusOnImpact },
+    { code: "SO", path: StayOpen },
+    { code: "PS", path: ProductSupport },
+    { code: "TBS", path: TakeBoldSteps },
+    { code: "RR", path: RadicalResourcefulness },
+    { code: "EO", path: EveryoneIsAnOwner },
+]
+
+export const easySteps = [
+    { code: "RMTLY", path: Remotely },
+    { code: "FTOF", path: FaceToFace },
+    { code: "OLN", path: Online },
+]

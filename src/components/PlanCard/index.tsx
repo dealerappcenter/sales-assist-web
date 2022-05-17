@@ -1,24 +1,15 @@
 import { MdCheck, MdArrowDropDown } from "react-icons/md";
 import { SiHackthebox } from "react-icons/si";
 import { plansIcons } from '@src/assets';
-import Image from "next/image";
+import { buildIcon } from '@src/utils/icons';
 interface PlanCardProps {
     plan: Plan
 }
 
 export const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
-    function getPlanIcon(code: string) {
-        const currentPlan = plansIcon.find(e => e.code === code);
-
-        if (currentPlan) {
-            return <Image width={64} height={64} alt={currentPlan.code} src={currentPlan.icon}/>
-        }
-
-        return <SiHackthebox className="text-xl" />
-    }
   return (
     <div key={plan.name} className='p-4 flex flex-col gap-6 bg-white-normal w-full h-full rounded-xl'>
-    <div className="w-16 h-16">{getPlanIcon(plan.code)}</div>
+    <div className="w-16 h-16">{buildIcon({ data: plansIcon, code: plan.code, fallback: <SiHackthebox className="text-xl" />, size: { width: 64, height: 64 }})}</div>
     <div className="text-gray-secondary">
         <h1 className="text-gray-primary mb-2 font-semibold">{plan.name}</h1>
         <div className="flex items-center gap-2 mb-1">
@@ -64,8 +55,8 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
 }
 
 
-const plansIcon: { code: string, icon: string }[] = [
-    { code: "ADVC", icon: plansIcons.AdvancePlan },
-    { code: "ENTPRS", icon: plansIcons.EnterPrisePlan },
-    { code: "ESS", icon: plansIcons.EssentialsPlan },
+const plansIcon: { code: string, path: string }[] = [
+    { code: "ADVC", path: plansIcons.AdvancePlan },
+    { code: "ENTPRS", path: plansIcons.EnterPrisePlan },
+    { code: "ESS", path: plansIcons.EssentialsPlan },
 ]

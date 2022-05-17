@@ -1,6 +1,8 @@
+import { SiHackthebox } from "react-icons/si";
 import { Nav } from "@src/components"
+import { buildIcon } from "@src/utils/icons";
 import AboutUsData from "src/mocks/aboutUs/hero.json";
-
+import { aboutUsIcons } from '@src/assets';
 
 export const AboutUsHero: React.FC = () => {
     return (
@@ -16,9 +18,9 @@ export const AboutUsHero: React.FC = () => {
                     <h2 className="text-gray-primary md:text-4xl font-semibold mb-4">{AboutUsData.our_values.name}</h2>
                     <div className="flex items-center flex-wrap gap-4 w-full ">
                         {AboutUsData.our_values.values.map(value => {
-                            return <div className="p-4 flex bg-white-normal items-start justify-center w-[32%] gap-4 h-28 rounded-lg" key={value.code}>
-                                <div className="w-1/5  h-16">
-                                   
+                            return <div className="p-4 flex bg-white-normal items-start justify-center w-full md:w1/2 lg:w-[32%] gap-4 h-28 rounded-lg" key={value.code}>
+                                <div className="w-1/5  h-16 flex items-center justify-center">
+                                    {buildIcon({ data: aboutUsIcons, code: value.code, fallback: <SiHackthebox className="text-xl" />})}
                                 </div>
                                 <div className="flex-grow w-[80%]">
                                     <h4 className="font-medium">{value.title}</h4>
