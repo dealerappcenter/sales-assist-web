@@ -1,4 +1,3 @@
-import { useRef, useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { MdKeyboardArrowDown } from 'react-icons/md';
@@ -11,14 +10,20 @@ import Logo from '@src/assets/logo.svg';
 
 import { useResponsive } from '@hooks/useResponsive';
 import { useRouter } from 'next/router';
+import classNames from 'classnames';
 
-export const Nav: React.FC = () => {
+
+interface NavProps {
+    className?: string
+}
+
+export const Nav: React.FC<NavProps> = ({ className }) => {
     const { isDesktop } = useResponsive();
     const router = useRouter();
-
+    const classes = classNames('py-6 px-4 container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative', className)
     return (
         <>
-            <nav className="py-6 px-4 container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative">
+            <nav className={classes}>
                 <div className='flex items-center justify-between w-full'>
                     <ul className='flex items-center gap-6'>
                         {/* logo */}

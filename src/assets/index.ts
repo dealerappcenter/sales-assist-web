@@ -16,6 +16,11 @@ import Costumer from './Customer_Icon.svg';
 import Sales from './Sales_Icon.svg';
 import SalesExample from './why-sales-assits.svg'
 
+// plans 
+import AdvancePlan from './SA__Advanced_Plan.svg';
+import EnterPrisePlan from './SA__Enterprise_Plan.svg';
+import EssentialsPlan from './SA__Essentials_Plan.svg';
+
 export {
     Logo,
     Saleor,
@@ -39,4 +44,10 @@ export const Icons = {
     Business,
     Costumer,
     Sales
+}
+
+export const plansIcons = {
+    AdvancePlan,
+    EnterPrisePlan,
+    EssentialsPlan
 }

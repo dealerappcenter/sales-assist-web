@@ -1,0 +1,15 @@
+{
+    "title": "Our Team",
+    "team": {
+        "title": "Team members",
+        "members": 10
+    },
+    "founded": {
+        "title": "Founded in",
+        "year": 2020
+    },
+    "countries": {
+        "title": "Countries represented",
+        "countries": 3
+    }
+}

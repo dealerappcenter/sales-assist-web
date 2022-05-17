@@ -31,7 +31,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
     return (
         <section className='h-full flex flex-col bg-white-normal md:bg-white-soft md:pb-12'>
             <div className='flex-grow container flex items-center justify-start flex-col gap-5 mx-auto lg:px-12 md:px-6 px-4'>
-                {(isDesktop) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[32rem]'>
+                {(isDesktop) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[35rem]'>
                     {PricingData.plans.map((plan, i) => <motion.div className="w-1/2 h-full" initial={{ translateY: 100, opacity: 0 }} transition={{ duration: .5, ease: 'linear', delay: getDelay(i) }} viewport={{ once: true }} animate={{ translateY: 0, opacity: 1 }}  key={plan.name}>
                         <PlanCard plan={plan} />
                     </motion.div>)}

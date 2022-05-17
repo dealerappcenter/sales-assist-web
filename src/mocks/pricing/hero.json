@@ -4,6 +4,7 @@
     "plans": [
         {
             "name": "Essentials",
+            "code": "ESS",
             "price_per_year": "$1200",
             "price_per_month": "$199",
             "price_per_user": "$99/mo added user",
@@ -24,6 +25,7 @@
         },
         {
             "name": "Advance",
+            "code": "ADVC",
             "price_per_year": "$3600",
             "price_per_month": "$599",
             "price_per_user": "$99/mo added user",
@@ -46,6 +48,7 @@
         },
         {
             "name": "Enterprise",
+            "code": "ENTPRS",
             "price_per_year": "$8400",
             "price_per_month": "$1399",
             "price_per_user": "$99/mo added user",
