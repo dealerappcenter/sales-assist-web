@@ -54,7 +54,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
                         {/* if desktop else destroy it */}
                         {isDesktop && <>
                             <li>
-                                <a href="/some-where">
+                                <a href="https://app.salesassist.io/">
                                     <NavLink>
                                         Login
                                     </NavLink>

@@ -39,7 +39,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                         />
                     </div>
                     {/* links */}
-                    <div className='flex-grow lg:w-1/2 h-full flex justify-between gap-6 px-2 md:py-2 flex-wrap md:flex-nowrap'>
+                    <div className='flex-grow lg:w-1/2 h-full flex justify-between gap-4 px-2 md:py-2 flex-wrap md:flex-nowrap'>
                         <FooterList
                             kind={kind}
                             className='hidden md:block'
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                     {/* useful links */}
                     <div className='w-1/6 border block md:hidden'></div>
                     <div className='md:w-1/2 h-full flex items-start md:gap-6 md:justify-start flex-col md:flex-row text-gray-secondary'>
-                        {['Legal', 'Privacy Policy', 'Manage Cookie Preference'].map((link) => <NavLink hideProgress key={link} className='px-0'>
+                        {['Privacy Policy'].map((link) => <NavLink hideProgress key={link} className='px-0'>
                             {link}
                         </NavLink>)}
                     </div>

@@ -12,7 +12,7 @@ export enum RouteNames {
     howItWorks = 'How it works',
     Benefits = 'Benefits',
     actions = 'Actions',
-    bookADemo = 'BookADemo',
+    bookADemo = 'Book a demo',
     legal = 'Legal',
     policy = 'Privacy Policy',
 }
