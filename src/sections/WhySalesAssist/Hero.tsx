@@ -17,7 +17,7 @@ export const WhySalesAssistHero = () => {
           {
             listOfCards.map(singleCard => {
               return <div className='block lg:w-1/5' key={singleCard.id}>
-                <div className='p-4 rounded-md w-full lg:w-[15rem]  h-52 bg-white-normal'>
+                <div className='p-4 rounded-md w-[15rem]  h-52 bg-white-normal'>
                   <div className='w-12 h-12 rounded-full'>
                     {buildIcon({ data: whySalesAssistHero, code: singleCard.code, fallback: <></> })}
                   </div>
