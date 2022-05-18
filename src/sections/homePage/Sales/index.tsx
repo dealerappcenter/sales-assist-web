@@ -5,7 +5,7 @@ import { Pc, Mobile } from '@src/assets';
 
 export const Sales = () => {
     return (
-        <section className='py-12 px-4 flex flex-col relative'>
+        <section className='py-12 px-4 flex flex-col relative bg-white-normal'>
             <div className='container gap-6 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-center items-center md:items-start px-4 lg:px-12 lg:py-12 h-full flex'>
                 <div className='w-fit '>
                     <h1>Start simplifying your sales</h1>

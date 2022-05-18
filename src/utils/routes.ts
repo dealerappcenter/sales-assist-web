@@ -42,27 +42,27 @@ export const routes: Routes = [
 const salesAssist = {
     title: 'SalesAssist',
     links: [
-        { path: '', name: RouteNames.howItWorks },
-        { path: '', name: RouteNames.Benefits },
-        { path: '', name: RouteNames.actions },
-        { path: '', name: RouteNames.pricing },
-        { path: '', name: RouteNames.qAndA },
+        { path: '/', name: RouteNames.howItWorks },
+        { path: '/', name: RouteNames.Benefits },
+        { path: Paths.whySalesAssist, name: RouteNames.actions },
+        { path: Paths.pricing, name: RouteNames.pricing },
+        { path: Paths.pricing, name: RouteNames.qAndA },
     ]
 }
 
 const company = {
     title: 'Company',
     links: [
-        { path: '', name: RouteNames.about },
-        { path: '', name: RouteNames.bookADemo },
+        { path: '/about-us', name: RouteNames.about },
+        { path: 'https://calendly.com/salesasssit?primary_color=f1621a', name: RouteNames.bookADemo },
     ]
 }
 
 const contact = {
     title: 'Contact Us',
     links: [
-        { path: 'mailto:', name: 'example@salesassist.io' },
-        { path: 'tel:', name: '+1202020202' },
+        { path: 'mailto:example@salesassist.io', name: 'example@salesassist.io' },
+        { path: 'tel:+1202020202', name: '+1202020202' },
     ]
 }
 
