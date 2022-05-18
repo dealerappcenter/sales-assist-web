@@ -58,7 +58,7 @@ export const WhySalesAssistIteration = () => {
                             </div>
                             <MdKeyboardArrowDown />
                             {isOpen && <div className="rounded-lg bg-[#2a2a2a] shadow-md absolute top-14 left-0 w-full z-10">
-                                {types.map((t, i) => <button onClick={handleOperation(i)} key={t} className='p-4 w-full text-white-normal flex items-center gap-2 '>
+                                {types.map((t, i) => <button onClick={handleOperation(i)} key={i} className='p-4 w-full text-white-normal flex items-center gap-2 '>
                                     <MdInsights className="md:text-2xl" />
                                     <span className="text-left font-medium text-sm"> {t}</span>
                                 </button>)}
@@ -69,7 +69,7 @@ export const WhySalesAssistIteration = () => {
                     <div className="flex-grow flex flex-col gap-6">
                         {data[isActive] && (
                             <>
-                                <div className="flex-grow flex items-center justify-center">
+                                <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center">
                                     {data[isActive].code}
                                 </div>
                                 <div className="flex items-center flex-col justify-center gap-2">

@@ -32,8 +32,10 @@ export const WhySalesAssistSimplifySales = () => {
     }, [progressLeft, currentStep]);
 
     const getClasses = (step: number) => {
-        return classNames("w-fit md:w-1/5 h-10 flex p-4 rounded-full  justify-center items-center duration-500 transition-all",
-            { 'bg-orange-normal': currentStep.current === step })
+        return classNames("w-fit md:w-1/5 h-10 flex p-4 rounded-full justify-center items-center duration-500 transition-all",
+            { 'bg-orange-normal': currentStep.current === step },
+            { 'bg-gray-aux': currentStep.current !== step },
+        )
     }
 
     function clickOnCard(step: number) {
@@ -68,7 +70,7 @@ export const WhySalesAssistSimplifySales = () => {
                     <div ref={ref} className="flex items-center">
                         {data.map((d, i) => {
                             if (currentStep.current !== i) {
-                                return <></>
+                                return null
                             }
                             return <motion.div initial='start' animate='stop' variants={fade} key={d.id} className='w-full flex items-center'>
                                 <motion.div initial={{ opacity: 0, translateX: -300 }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: 1, ease: 'linear' }} className='w-full md:w-1/2 px-6'>

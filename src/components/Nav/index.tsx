@@ -62,9 +62,11 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
                             </li>
 
                             <li>
-                                <Button className='px-3'>
-                                    Book Demo
-                                </Button>
+                                <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
+                                    <Button className='px-3'>
+                                        Book Demo
+                                    </Button>
+                                </a>
                             </li>
                         </>}
 
