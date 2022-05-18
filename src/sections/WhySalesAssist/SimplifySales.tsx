@@ -1,7 +1,49 @@
 import Image from 'next/image';
+import { useEffect, useRef } from 'react';
 import { SalesExample } from '@src/assets';
+import { useResponsive } from '@hooks/useResponsive';
+import { useProgress } from '@hooks/useProgress';
+import { useInView } from 'react-intersection-observer';
+import classNames from 'classnames';
+import { motion } from 'framer-motion';
+import { fade } from '@src/utils/animations';
 
 export const WhySalesAssistSimplifySales = () => {
+    const { } = useResponsive();
+    const [ref, inView] = useInView({ triggerOnce: true });
+    const { progressLeft, startProgress } = useProgress();
+    const currentStep = useRef<number>(0);
+
+    useEffect(() => {
+        startProgress()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inView]);
+
+    useEffect(() => {
+        if (progressLeft === 0) {
+            startProgress()
+            if (currentStep.current >= 2) {
+                currentStep.current = 0
+            } else {
+                currentStep.current = currentStep.current + 1;
+            }
+        }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [progressLeft, currentStep]);
+
+    const getClasses = (step: number) => {
+        return classNames("w-fit md:w-1/5 h-10 flex p-4 rounded-full  justify-center items-center duration-500 transition-all",
+            { 'bg-orange-normal': currentStep.current === step })
+    }
+
+    function clickOnCard(step: number) {
+        return () => {
+            currentStep.current = step
+
+            startProgress();
+        }
+    }
+
     return (
         <section className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
             <div className='container mx-auto text-white-normal flex flex-col gap-6 md:gap-12'>
@@ -11,27 +53,45 @@ export const WhySalesAssistSimplifySales = () => {
                 </div>
                 <div className="flex-grow gap-6 md:gap-12 flex flex-col">
                     <div className="p-2 flex w-full justify-between items-center gap-4">
-                        <button className="w-fit md:w-1/5 h-10 flex p-4 rounded-full bg-orange-normal justify-center items-center">1 <span className="hidden md:block">. Chose a template</span></button>
-                        <span className="w-1/5 h-1 rounded-full bg-orange-link"></span>
-                        <button className="w-fit md:w-1/5 h-10 flex p-4 rounded-full bg-white-normal/25 justify-center items-center">2 <span className="hidden md:block">. Customize</span></button>
-                        <span className="w-1/5 h-1 rounded-full bg-white-normal/25"></span>
-                        <button className="w-fit md:w-1/5 h-10 flex p-4 rounded-full bg-white-normal/25 justify-center items-center">3 <span className="hidden md:block">. Add to action panel</span></button>
+                        <button className={getClasses(0)} onClick={clickOnCard(0)}>1 <span className="hidden md:block">. Chose a template</span></button>
+                        <div className="w-1/5 h-1 rounded-full bg-white-normal/25 overflow-hidden">
+                            {currentStep.current === 0 && <div style={{ transform: `translateX(${-progressLeft}%)` }} className='bg-orange-link w-full h-full rounded-full'></div>}
+                        </div>
+                        <button className={getClasses(1)} onClick={clickOnCard(1)}>2 <span className="hidden md:block">. Customize</span></button>
+                        <div className="w-1/5 h-1 rounded-full bg-white-normal/25 overflow-hidden">
+                            {currentStep.current === 1 && <div style={{ transform: `translateX(${-progressLeft}%)` }} className='bg-orange-link w-full h-full rounded-full'></div>}
+                        </div>
+                        <button className={getClasses(2)} onClick={clickOnCard(2)}>3 <span className="hidden md:block">. Add to action panel</span></button>
                     </div>
 
                     {/* todo this should be animated */}
-                    <div className="flex items-center">
-                        <div className='w-full md:w-1/2 px-6'>
-                            {/* TODO: Place a computer here, probably an image or video. */}
-                            <Image src={SalesExample} alt='example'/>
-                        </div>
+                    <div ref={ref} className="flex items-center">
+                        {data.map((d, i) => {
+                            if (currentStep.current !== i) {
+                                return <></>
+                            }
+                            return <motion.div initial='start' animate='stop' variants={fade} key={d.id} className='w-full flex items-center'>
+                                <motion.div initial={{ opacity: 0, translateX: -300 }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: 1, ease: 'linear' }} className='w-full md:w-1/2 px-6'>
+                                    <Image src={d.image} alt='example' />
+                                </motion.div>
 
-                        <div className="text-white-normal w-1/2 hidden md:block">
-                            <h3>Choose off-the-shelf Sales Actions</h3>
-                            <p className='text-gray-secondary'>description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign. </p>
-                        </div>
+                                <motion.div initial={{ opacity: 0, translateX: 300 }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: 1, ease: 'linear' }}  className="text-white-normal w-1/2 hidden md:block">
+                                    <h3>{d.title}</h3>
+                                    <p className='text-gray-secondary'>
+                                        {d.desc}
+                                    </p>
+                                </motion.div>
+                            </motion.div>
+                        })}
                     </div>
                 </div>
             </div>
         </section>
     )
 }
+
+const data = [
+    { id: '1Choose', image: SalesExample, title: 'Choose off-the-shelf Sales Actions', desc: 'description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.' },
+    { id: '2Choose', image: SalesExample, title: 'Choose off-the-shelf Sales Actions', desc: 'description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.' },
+    { id: '3Choose', image: SalesExample, title: 'Choose off-the-shelf Sales Actions', desc: 'description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.' }
+]
