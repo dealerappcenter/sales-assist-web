@@ -1,6 +1,6 @@
 import { useMemo, useState } from "react"
 import { useProgress } from '@hooks/useProgress';
-import { DashedAnimation } from '@components/AnimatedTriangle/index';
+import { DashedAnimation } from '@src/animations/AnimatedTriangle/index';
 
 const Sandbox = () => {
   const [step, setStep] = useState(0)

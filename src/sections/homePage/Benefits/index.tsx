@@ -4,7 +4,7 @@ import { useResponsive, useProgress } from "@src/hooks";
 import { useRef, useEffect } from "react";
 import { Icons } from 'src/assets'
 import { useInView } from 'react-intersection-observer'
-import { DashedAnimation } from "@src/components/AnimatedTriangle";
+import { DashedAnimation } from "@src/animations/AnimatedTriangle";
 import { motion } from 'framer-motion';
 import { fade } from '@src/utils/animations';
 

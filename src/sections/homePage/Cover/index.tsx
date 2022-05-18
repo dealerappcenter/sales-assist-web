@@ -1,7 +1,7 @@
 import { Button, Nav } from 'src/components';
 import Image from 'next/image';
 import { Toyota, Saleor, HeroImage  } from '@src/assets';
-import { AnimatedHero } from '@src/components/AnimatedHero';
+import { AnimatedHero } from '@src/animations/AnimatedHero';
 import { useResponsive } from '@hooks/useResponsive';
 const trusted = [
     Toyota,
