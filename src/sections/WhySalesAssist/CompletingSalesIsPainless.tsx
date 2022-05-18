@@ -1,5 +1,8 @@
 import { Button } from "@src/components"
 import { BsBarChartFill } from 'react-icons/bs'
+import { buildIcon } from '@src/utils/icons';
+import { simplifySales } from '@src/assets/'
+
 export const WhySalesAssistCompletingSalesIsPainless = () => {
     return (
         <section className='py-12 px-4 flex flex-col relative bg-gray-primary text-white-normal'>
@@ -15,7 +18,7 @@ export const WhySalesAssistCompletingSalesIsPainless = () => {
                         benefitsData.map((data) => {
                             return <div key={data.title} className='flex flex-col w-full md:w-2/3 gap-4'>
                                 <div>
-                                 <BsBarChartFill />
+                                 {buildIcon({ data: simplifySales, code: data.code, fallback: <BsBarChartFill />, size: { width: 56, height: 56} })}
                                 </div>
                                 <div>
                                     <h3 className="font-medium">{data.title}</h3>
@@ -31,7 +34,7 @@ export const WhySalesAssistCompletingSalesIsPainless = () => {
 }
 
 const benefitsData = [
-    { title: 'Frictionless Interaction', desc: 'Give customers what they have come to expect, a seamless end-to-end journey.'},
-    { title: 'Real-time Notification', desc: 'Have your salespeople take action at the precise moment, when customers are engaging.'},
-    { title: 'Complete Integration', desc: 'Let SalesAssist do all the heavy lifting and give back valuable time to your salespeople.'} 
+    { code: 'FI', title: 'Frictionless Interaction', desc: 'Give customers what they have come to expect, a seamless end-to-end journey.'},
+    { code: 'RLTN', title: 'Real-time Notification', desc: 'Have your salespeople take action at the precise moment, when customers are engaging.'},
+    { code: 'CI', title: 'Complete Integration', desc: 'Let SalesAssist do all the heavy lifting and give back valuable time to your salespeople.'} 
 ]

@@ -62,3 +62,39 @@ body {
 
 }
 
+@keyframes translateInfinite {
+  100% { transform: translateX(calc(-120px * 12));}
+}
+
+.infinity-x {
+  width: 180px;
+  animation: translateInfinite 25s linear infinite;
+}
+
+.infinity-x-container {
+  width: calc(120px * 24);
+  position: relative;
+  @apply flex justify-center items-start;
+}
+
+.slider-container {
+  @apply w-full;
+}
+
+.slider-inside {
+  @apply overflow-hidden relative;
+}
+.slider-inside::after, .slider-inside::before {
+  content: " ";
+  @apply absolute z-10 w-[100px] h-full;
+}
+.slider-inside::after{
+  top: 0;
+  right: 0;
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}
+.slider-inside::before{
+  top: 0;
+  left: 0;
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+}

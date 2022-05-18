@@ -24,6 +24,14 @@ import EveryoneIsAnOwner from './SA__Everyone is an owner.svg';
 import Remotely from './SA__Remote Illustration.svg';
 import FaceToFace from './SA__Face to Face Illustration.svg';
 import Online from './SA__Online Illustration.svg'
+import Frictionless from './SA__Frictionless interaction.svg'
+import RealTime from './SA__Real time Notification.svg'
+import Complete from './SA__Complete integration.svg'
+import CompleteSalesFaster from './SA__Complete sales faster.svg';
+import CutWork from "./SA__Cut everyone's work.svg"
+import ProvideBetter from './SA__Provide better experience.svg';
+import LowerCost from './SA__Lower Operating Costs.svg';
+
 // plans 
 import AdvancePlan from './SA__Advanced_Plan.svg';
 import EnterPrisePlan from './SA__Enterprise_Plan.svg';
@@ -77,4 +85,34 @@ export const easySteps = [
     { code: "RMTLY", path: Remotely },
     { code: "FTOF", path: FaceToFace },
     { code: "OLN", path: Online },
+]
+
+export const simplifySales = [
+    { code: 'FI', path: Frictionless },
+    { code: 'RLTN', path: RealTime },
+    { code: 'CI', path: Complete },
+]
+
+export const whySalesAssistHero = [
+    { code: 'CSF', path: CompleteSalesFaster },
+    { code: 'CEW', path: CutWork },
+    { code: 'PBE', path: ProvideBetter },
+    { code: 'LOC', path: LowerCost },
+]
+
+const business = [
+    // "Automotive",
+    // "Medical Equipment",
+    // "SaaS",
+    // "Insurance",
+    // "Real Estate",
+    // "Machinery",
+    // "Advertising"
+   { code: "ATMTV", path: '' },
+   { code: "MDQ", path: '' },
+   { code: "SAAS", path: '' },
+   { code: "INSRC", path: '' },
+   { code: "RLST", path: '' },
+   { code: "MCHRY", path: '' },
+   { code: "ADVRTNG", path: '' },
 ]
