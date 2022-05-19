@@ -1,8 +1,7 @@
 import classNames from 'classnames';
-import { NavLink } from '../NavLink/index';
-import { useResponsive } from '../../hooks/useResponsive';
-import Link from 'next/link';
-import { RouteNames, Paths } from '../../utils/routes';
+import { NavLink } from '@src/components/NavLink';
+import NextLink from 'next/link';
+import { RouteNames } from '@src/utils/routes';
 
 export interface FooterLinkProps {
     title: string,
@@ -20,18 +19,18 @@ export const FooterList: React.FC<FooterLinkProps> = (props) => {
 
     const renderBookDemo = (name: string, path: string) => (
         <a key={path} href={path} target='_blank' rel='noreferrer'>
-            <NavLink className='px-0' hideProgress>
+            <p className='px-0'>
                 {name}
-            </NavLink>
+            </p>
         </a>
     );
 
     const renderLink = (name: string, path: string) => (
-        <Link passHref href={path}>
+        <NextLink passHref href={path}>
             <NavLink className='px-0' hideProgress>
                 {name}
             </NavLink>
-        </Link>
+        </NextLink>
     );
 
     return (
