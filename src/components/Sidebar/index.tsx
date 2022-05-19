@@ -42,7 +42,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                 <ul className='w-full flex flex-col gap-3'>
                     {routes.map((route, i) => {
                         return <li key={route.path + route.name + i}>
-                            <button onClick={navigateTo(route.path)}>
+                            <button onClick={navigateTo(route.path)} className='w-full text-left'>
                                 <NavLink className='text-xl'>
                                     {route.name}
                                 </NavLink>
@@ -51,7 +51,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                     })}
                     <hr />
                     <li>
-                        <button onClick={closeSideBar}>
+                        <button onClick={closeSideBar} className='text-left w-full'>
                             <a href="https://app.salesassist.io/">
                                 <NavLink className='text-xl'>
                                     Login
@@ -61,7 +61,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                     </li>
                     <hr />
                     <li>
-                        <button onClick={closeSideBar}>
+                        <button onClick={closeSideBar} className='text-left w-full'>
                             <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
                                 <NavLink className='text-xl'>
                                     Book Demo
