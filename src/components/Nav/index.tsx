@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { MdKeyboardArrowDown } from 'react-icons/md';
+import { MdKeyboardArrowDown, MdMenu } from 'react-icons/md';
 
 
 import { routes } from '@src/utils/routes';
@@ -80,7 +80,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
                         {!isDesktop && !isOpen &&
                             <li className='flex items-center justify-center'>
                                 <button onClick={handleSideBar}>
-                                    <MdKeyboardArrowDown className='text-4xl' />
+                                    <MdMenu className='text-4xl' />
                                 </button>
                             </li>
                         }

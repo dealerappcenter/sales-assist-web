@@ -26,8 +26,8 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
     }
 
     return <>
-        {isOpen ? <div onClick={closeSideBar} className='bg-black/30 fixed inset-0 z-50'>
-            <motion.div initial={{ opacity: 0, translateX: '-100%' }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: .3, ease: 'linear' }} className='fixed inset-0  z-[60] p-6 bg-white-normal w-3/4 h-full flex-col flex gap-6'>
+        {isOpen ? <div onClick={closeSideBar} className='bg-black/30 fixed inset-0 z-50 flex justify-end'>
+            <motion.div initial={{ opacity: 0, translateX: '100%' }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: .3, ease: 'linear' }} className='p-6 bg-white-normal w-3/4 h-full flex-col flex gap-6'>
                 <div className='w-full flex items-center justify-center'>
                     <button onClick={navigateTo('/')}>
                         <a className='mt-2 lg:mt-0'>

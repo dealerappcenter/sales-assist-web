@@ -101,7 +101,7 @@ const PrivacyPolicy: NextPage = () => {
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.contact.name}</h1>
             {PolicyData?.data.contact.description.map((paragraph, i) => <p className="" key={paragraph}>{paragraph} {i === lastContact &&
-              PolicyData?.data.contact.links.map((link) => <a href={link} target='_blank' rel="noreferrer" className="text-orange-link" key={link}>{link}</a>)
+              PolicyData?.data.contact.links.map((link) => <a href={'mailto:'+link} className="text-orange-link" key={link}>{link}</a>)
             }</p>)}
           </div>
         </div>

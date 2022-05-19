@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { FooterList } from './FooterList';
 import { footerLinks } from '../../utils/routes';
 import { NavLink } from '@components/NavLink';
+import Link from 'next/link';
 
 interface FooterProps {
     className?: string,
@@ -63,9 +64,13 @@ export const Footer: React.FC<FooterProps> = (props) => {
                     {/* useful links */}
                     <div className='w-1/6 border block md:hidden'></div>
                     <div className='md:w-1/2 h-full flex items-start md:gap-6 md:justify-start flex-col md:flex-row text-gray-secondary'>
-                        {['Privacy Policy'].map((link) => <NavLink hideProgress key={link} className='px-0'>
-                            {link}
-                        </NavLink>)}
+                        {[{ name: 'Privacy Policy', path: 'privacy-policy'}].map((link) => <Link key={link.path} passHref href={link.path}>
+                            <NavLink hideProgress
+                                className='px-0'>
+                                {link.name}
+                            </NavLink>
+                        </Link>)
+                        }
                     </div>
 
                     {/* social media */}
