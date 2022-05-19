@@ -5,7 +5,6 @@ import Toyota from './toyota.svg';
 import QuoteMark from './quote.svg';
 import Pc from './Pc.png';
 import Mobile from './mobile.svg';
-import HeroImage from './Hero.svg';
 
 //icons
 import CompleteSales from './CompletSales_Icon.svg'
@@ -39,6 +38,7 @@ import EssentialsPlan from './SA__Essentials_Plan.svg';
 
 // map
 import WorldMap from './SA__World Map.svg';
+import HeroImage from './ANI_HeroImage.svg';
 
 export {
     Logo,
@@ -47,9 +47,9 @@ export {
     QuoteMark,
     Pc,
     Mobile,
-    HeroImage,
     SalesExample,
-    WorldMap
+    WorldMap,
+    HeroImage
 }
 
 export const logoVariants = {

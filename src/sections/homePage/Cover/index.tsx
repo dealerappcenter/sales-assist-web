@@ -1,16 +1,14 @@
 import { Button, Nav } from 'src/components';
 import Image from 'next/image';
 import { Toyota, Saleor, HeroImage  } from '@src/assets';
-import { AnimatedHero } from '@src/animations/AnimatedHero';
 import { useResponsive } from '@hooks/useResponsive';
+import { AnimatedBackGround } from '@src/animations/AnimatedBackground';
 const trusted = [
     Toyota,
     Saleor,
     Toyota,
     Saleor
 ]
-
-
 
 export const Hero = () => {
     const { isMobile, isDesktop, isTablet } = useResponsive();
@@ -28,7 +26,7 @@ export const Hero = () => {
                 </div>
                 <div className='lg:w-[50%] md:px-16 px-12 flex items-center justify-center order-1 lg:order-2'>
                     <div className='w-[90%]'>
-                        {isDesktop && <AnimatedHero />}
+                        {isDesktop && <AnimatedBackGround />}
                         {(isMobile || isTablet) && <Image src={HeroImage} alt='' />}
                     </div>
                 </div>
