@@ -16,3 +16,7 @@ type Plan = {
         perks: string[];
     };
 }
+
+type Section = {
+    id?: string
+}

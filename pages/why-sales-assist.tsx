@@ -23,7 +23,7 @@ const WhySalesAssist: NextPage = () => {
 
         <WhySalesAssistIteration />
 
-        <WhySalesAssistSimplifySales />
+        <WhySalesAssistSimplifySales id='actions'/>
 
         <WhySalesAssistCompleteSalesFaster />
 

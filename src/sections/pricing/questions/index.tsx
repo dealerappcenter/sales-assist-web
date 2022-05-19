@@ -1,8 +1,8 @@
 import Questions from '@src/mocks/pricing/questions.json';
 
-export const PricingQuestions = () => {
+export const PricingQuestions: React.FC<Section> = ({ id }) => {
     return (
-        <section className='bg-white-normal'>
+        <section id={id} className='bg-white-normal'>
             <div className='container mx-auto py-12 flex flex-col gap-6 lg:px-12 md:px-6 px-4'>
                 <h1>{Questions.title}</h1>
 

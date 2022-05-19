@@ -42,11 +42,11 @@ export const routes: Routes = [
 const salesAssist = {
     title: 'SalesAssist',
     links: [
-        { path: '/', name: RouteNames.howItWorks },
-        { path: '/', name: RouteNames.Benefits },
-        { path: Paths.whySalesAssist, name: RouteNames.actions },
+        { path: '/#how-it-works', name: RouteNames.howItWorks },
+        { path: '/#benefits', name: RouteNames.Benefits },
+        { path: `${Paths.whySalesAssist}/#actions`, name: RouteNames.actions },
         { path: Paths.pricing, name: RouteNames.pricing },
-        { path: Paths.pricing, name: RouteNames.qAndA },
+        { path: `${Paths.pricing}/#Q&A`, name: RouteNames.qAndA },
     ]
 }
 

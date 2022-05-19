@@ -18,9 +18,9 @@ export const AboutUsHero: React.FC = () => {
                     <h2 className="text-gray-primary md:text-4xl font-semibold mb-4">{AboutUsData.our_values.name}</h2>
                     <div className="flex items-center flex-wrap gap-4 w-full ">
                         {AboutUsData.our_values.values.map(value => {
-                            return <div className="p-4 flex bg-white-normal items-start justify-center w-full md:w1/2 lg:w-[32%] gap-4 h-28 rounded-lg" key={value.code}>
-                                <div className="w-1/5  h-16 flex items-center justify-center">
-                                    {buildIcon({ data: aboutUsIcons, code: value.code, fallback: <SiHackthebox className="text-xl" />})}
+                            return <div className="p-4 flex bg-white-normal items-center justify-center w-full md:w1/2 lg:w-[32%] gap-4 h-28 rounded-lg" key={value.code}>
+                                <div className="w-1/5  h-full flex items-center justify-center">
+                                    {buildIcon({ data: aboutUsIcons, code: value.code, fallback: <SiHackthebox className="text-xl" />, size: { width: 64, height: 64 }})}
                                 </div>
                                 <div className="flex-grow w-[80%]">
                                     <h4 className="font-medium">{value.title}</h4>

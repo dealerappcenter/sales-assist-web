@@ -11,7 +11,7 @@ import { InteractAnimation } from '@src/components/HowitWorksAnimations/Interact
 import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer';
 import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
 
-export const HowItWorks = () => {
+export const HowItWorks: React.FC<Section> = ({ id }) => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
     const currentCard = useRef(0);
     const [ref, inView] = useInView();
@@ -44,7 +44,7 @@ export const HowItWorks = () => {
     }
 
     return (
-        <main ref={ref} className='container  py-6 mx-auto lg:px-12 lg:py-20 overflow-x-auto'>
+        <main id={id} ref={ref} className='container  py-6 mx-auto lg:px-12 lg:py-20 overflow-x-auto'>
             <div className='px-4 md-px-0 mb-2'>
                 <h1 className="mb-4 text-gray-primary">How it works</h1>
                 <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>

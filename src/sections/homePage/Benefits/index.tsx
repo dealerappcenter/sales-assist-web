@@ -8,7 +8,7 @@ import { DashedAnimation } from "@src/animations/AnimatedTriangle";
 import { motion } from 'framer-motion';
 import { fade } from '@src/utils/animations';
 
-export const Benefits = () => {
+export const Benefits: React.FC<Section> = ({ id }) => {
   const { isDesktop, isTablet, isMobile } = useResponsive();
   const currentCard = useRef(0);
   const currentStatus = useRef<'one' | 'two' | 'tree' | 'idle'>('idle');
@@ -66,7 +66,7 @@ export const Benefits = () => {
   const isActive = (at: number) => currentCard.current === at;
 
   return (
-    <section ref={ref} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
+    <section id={id} ref={ref} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
       <div className='container mx-auto text-white-normal'>
         <h1 className="mb-4">Here’s how everyone involved benefits</h1>
         <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>

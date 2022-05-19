@@ -8,7 +8,7 @@ import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import { fade } from '@src/utils/animations';
 
-export const WhySalesAssistSimplifySales = () => {
+export const WhySalesAssistSimplifySales: React.FC<Section> = ({ id }) => {
     const { } = useResponsive();
     const [ref, inView] = useInView({ triggerOnce: true });
     const { progressLeft, startProgress } = useProgress();
@@ -47,7 +47,7 @@ export const WhySalesAssistSimplifySales = () => {
     }
 
     return (
-        <section className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
+        <section id={id} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
             <div className='container mx-auto text-white-normal flex flex-col gap-6 md:gap-12'>
                 <div className="">
                     <h1 className="mb-4">Simplify Sales With Sales Actions</h1>
