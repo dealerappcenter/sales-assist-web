@@ -27,7 +27,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
             <div className="h-full container mx-auto flex-grow flex gap-6 flex-col md:px-12 py-6 px-4">
                 {/* footer left panel */}
                 <div className='h-1/2 w-full flex justify-between md:gap-4 md:items-center'>
-                    <div className='md:w-fit lg:w-1/2 h-full px-2 md:py-2 relative mb-auto'>
+                    <div className='w-full md:w-fit lg:w-1/2 h-full px-2 md:py-2 relative mb-auto'>
                         <Image src={logo} alt='logo' />
                         <h4 className='hidden md:block text-xs text-gray-secondary'>© Shiplove Inc. {new Date().getFullYear()} All Rights Reserved</h4>
                         <FooterList

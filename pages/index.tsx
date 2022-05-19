@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <HowItWorks id='how-it-works'/>
+      <HowItWorks id='how-it-works' />
 
       <Benefits id='benefits' />
 

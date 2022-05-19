@@ -47,7 +47,7 @@ export const WhySalesAssistSimplifySales: React.FC<Section> = ({ id }) => {
     }
 
     return (
-        <section id={id} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
+        <section id={id} className='overflow-hidden px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
             <div className='container mx-auto text-white-normal flex flex-col gap-6 md:gap-12'>
                 <div className="">
                     <h1 className="mb-4">Simplify Sales With Sales Actions</h1>
