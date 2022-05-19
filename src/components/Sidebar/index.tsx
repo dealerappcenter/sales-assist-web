@@ -39,33 +39,27 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                     </button>
                 </div>
                 {/* menu */}
-                <ul className='w-full flex flex-col gap-3'>
+                <ul className='w-full flex flex-col gap-4'>
                     {routes.map((route, i) => {
                         return <li key={route.path + route.name + i}>
-                            <button onClick={navigateTo(route.path)} className='w-full text-left'>
-                                <NavLink className='text-xl'>
-                                    {route.name}
-                                </NavLink>
+                            <button onClick={navigateTo(route.path)} className='w-full text-left px-4 py-2 text-xl'>
+                                {route.name}
                             </button>
                         </li>
                     })}
                     <hr />
                     <li>
-                        <button onClick={closeSideBar} className='text-left w-full'>
+                        <button onClick={closeSideBar} className='w-full text-left px-4 text-xl'>
                             <a href="https://app.salesassist.io/">
-                                <NavLink className='text-xl'>
-                                    Login
-                                </NavLink>
+                                Login
                             </a>
                         </button>
                     </li>
                     <hr />
                     <li>
-                        <button onClick={closeSideBar} className='text-left w-full'>
+                        <button onClick={closeSideBar} className='w-full text-left px-4 text-xl'>
                             <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
-                                <NavLink className='text-xl'>
-                                    Book Demo
-                                </NavLink>
+                                Book Demo
                             </a>
                         </button>
                     </li>
