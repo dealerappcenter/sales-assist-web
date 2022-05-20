@@ -38,6 +38,7 @@ export const routes: Routes = [
     }
 ]
 
+export const calendlyLink = 'https://calendly.com/salesasssit?primary_color=f1621a';
 
 const salesAssist = {
     title: 'SalesAssist',
@@ -54,7 +55,7 @@ const company = {
     title: 'Company',
     links: [
         { path: '/about-us', name: RouteNames.about },
-        { path: 'https://calendly.com/salesasssit?primary_color=f1621a', name: RouteNames.bookADemo },
+        { path: calendlyLink, name: RouteNames.bookADemo },
     ]
 }
 

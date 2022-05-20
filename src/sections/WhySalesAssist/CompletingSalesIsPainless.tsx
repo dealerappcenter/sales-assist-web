@@ -2,6 +2,7 @@ import { Button } from "@src/components"
 import { BsBarChartFill } from 'react-icons/bs'
 import { buildIcon } from '@src/utils/icons';
 import { simplifySales } from '@src/assets/'
+import { calendlyLink } from "@src/utils/routes";
 
 export const WhySalesAssistCompletingSalesIsPainless = () => {
     return (
@@ -10,7 +11,7 @@ export const WhySalesAssistCompletingSalesIsPainless = () => {
                 <div className='w-full md:w-fit'>
                     <h1>Start simplifying your sales</h1>
 
-                    <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
+                    <a href={calendlyLink} target="_blank" rel="noreferrer">
                         <Button className='px-2 mt-4 md:px-3'>
                             Book Demo
                         </Button>

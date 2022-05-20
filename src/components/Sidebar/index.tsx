@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import Logo from '@src/assets/logo.svg';
 import Image from 'next/image'
-import { routes } from '@src/utils/routes';
+import { calendlyLink, routes } from '@src/utils/routes';
 import { NavLink } from '../NavLink';
 import { useRouter } from 'next/router';
 import { Route } from '../../utils/routes';
@@ -58,7 +58,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                     <hr />
                     <li>
                         <button onClick={closeSideBar} className='w-full text-left px-4 text-xl'>
-                            <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
+                            <a href={calendlyLink} target="_blank" rel="noreferrer">
                                 Book Demo
                             </a>
                         </button>

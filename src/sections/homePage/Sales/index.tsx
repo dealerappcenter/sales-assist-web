@@ -2,6 +2,7 @@ import { Button } from '@src/components'
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { Pc, Mobile } from '@src/assets';
+import { calendlyLink } from '@src/utils/routes';
 
 export const Sales = () => {
     return (
@@ -10,7 +11,7 @@ export const Sales = () => {
                 <div className='w-fit '>
                     <h1>Start simplifying your sales</h1>
 
-                    <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
+                    <a href={calendlyLink} target="_blank" rel="noreferrer">
                         <Button className='px-2 mt-4 md:px-3'>
                             Book Demo
                         </Button>

@@ -3,7 +3,7 @@ import NextLink from 'next/link';
 import { MdKeyboardArrowDown, MdMenu } from 'react-icons/md';
 
 
-import { routes } from '@src/utils/routes';
+import { calendlyLink, routes } from '@src/utils/routes';
 import { NavLink } from '@components/NavLink';
 import { Button } from '@components/Buttons';
 import Logo from '@src/assets/logo.svg';
@@ -68,7 +68,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
                             </li>
 
                             <li>
-                                <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
+                                <a href={calendlyLink} target="_blank" rel="noreferrer">
                                     <Button className='px-3'>
                                         Book Demo
                                     </Button>

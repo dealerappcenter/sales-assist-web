@@ -1,4 +1,5 @@
 import Questions from '@src/mocks/pricing/questions.json';
+import { calendlyLink } from '@src/utils/routes';
 
 export const PricingQuestions: React.FC<Section> = ({ id }) => {
     return (
@@ -19,7 +20,7 @@ export const PricingQuestions: React.FC<Section> = ({ id }) => {
                     <h1 className='text-xl font-semibold'>{Questions.banner.text}</h1>
                     <div className='my-6 border-2 border-transparent'></div>
                     
-                    <a href="https://calendly.com/salesasssit?primary_color=f1621a" target="_blank" rel="noreferrer">
+                    <a href={calendlyLink} target="_blank" rel="noreferrer">
                         <button className='p-2 px-3 font-medium rounded-md bg-white-normal text-orange-link'>
                             {Questions.banner.button}
                         </button>

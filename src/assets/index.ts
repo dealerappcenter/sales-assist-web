@@ -1,3 +1,5 @@
+import { v4 as uuid } from 'uuid';
+
 import Logo from './logo.svg';
 import WLogo from './WLogo.svg';
 import Saleor from './saleor.svg';
@@ -39,6 +41,11 @@ import EssentialsPlan from './SA__Essentials_Plan.svg';
 // map
 import WorldMap from './SA__World Map.svg';
 import HeroImage from './ANI_HeroImage.svg';
+
+import Alberic from './support/alberic.png';
+import CarAuto from './support/CarAuto Logo.png';
+import Miracle from './support/Miracle Logo.png';
+import MurphyAG from './support/MurphyAG.png';
 
 export {
     Logo,
@@ -115,4 +122,11 @@ const business = [
    { code: "RLST", path: '' },
    { code: "MCHRY", path: '' },
    { code: "ADVRTNG", path: '' },
+]
+
+export const partners = [
+    { id: uuid(), path: Alberic },
+    { id: uuid(), path: CarAuto },
+    { id: uuid(), path: Miracle },
+    { id: uuid(), path: MurphyAG },
 ]
