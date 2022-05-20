@@ -7,12 +7,12 @@ export enum Paths {
 export enum RouteNames {
     whySalesAssist = 'Why SalesAssist',
     pricing = 'Pricing',
-    about = 'About us',
+    about = 'About Us',
     qAndA = 'Q&A',
-    howItWorks = 'How it works',
+    howItWorks = 'How it Works',
     Benefits = 'Benefits',
     actions = 'Actions',
-    bookADemo = 'Book a demo',
+    bookADemo = 'Book Demo',
     legal = 'Legal',
     policy = 'Privacy Policy',
 }
@@ -61,8 +61,8 @@ const company = {
 const contact = {
     title: 'Contact Us',
     links: [
-        { path: 'mailto:example@salesassist.io', name: 'example@salesassist.io' },
-        { path: 'tel:+1202020202', name: '+1202020202' },
+        { path: 'mailto:help@salesassist.io', name: 'help@salesassist.io' },
+        // { path: 'tel:+1202020202', name: '+1202020202' },
     ]
 }
 

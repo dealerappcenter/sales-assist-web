@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useClickOutside } from '@hooks/useClickOutside';
 import { useResponsive } from '@hooks/useResponsive';
 
-export const WhySalesAssistIteration = () => {
+export const WhySalesAssistIteration:React.FC<Section> = ({ id }) => {
     const [isActive, setIsActive] = useState<number>(0);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const optionContainer = useRef<HTMLDivElement | null>(null);
@@ -34,10 +34,10 @@ export const WhySalesAssistIteration = () => {
     }
 
     return (
-        <section className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
+        <section id={id} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
             <div className='container mx-auto text-white-normal flex flex-col gap-12'>
                 <div>
-                    <h1 className="mb-4">A Sales Action for every Interaction</h1>
+                    <h1 className="mb-4">A Sales Action For Every Interaction</h1>
                     <h4 className="text-gray-secondary">No matter your sales process, SalesAssist has a Sales Action to streamline your customer facing interactions, from eSignatures to document collection to e-forms.</h4>
                 </div>
 

@@ -22,7 +22,9 @@ const PrivacyPolicy: NextPage = () => {
         <div className="container mx-auto py-12 flex flex-col gap-6 lg:px-12 md:px-6 px-4 text-gray-primary">
           {/*  */}
           <div className="flex flex-col gap-6">
-            <h1 className="font-bold text-xl">{PolicyData.data.policy.name}</h1>
+            <div className="text-center">
+              <h1 className="font-bold text-4xl">{PolicyData.data.policy.name}</h1>
+            </div>
             {PolicyData?.data.policy.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}

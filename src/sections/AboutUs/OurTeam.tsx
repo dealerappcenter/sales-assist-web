@@ -1,8 +1,11 @@
 import OurTeamData from '@src/mocks/aboutUs/ourTeam.json';
 import { WorldMap } from '@src/assets';
 import Image from 'next/image';
+import { useResponsive } from '@hooks/useResponsive';
+import { AnimatedWorldMap } from '../../animations/WorldMap/index';
 
 export const AboutUsOurTeam = () => {
+    const { isDesktop, isMobile, isTablet } = useResponsive();
     return (
         <section className='px-4 pt-6 lg:px-12 lg:pt-32 bg-gray-primary'>
             <div className='px-4 md:px-6 lg:px-12 flex-grow container mx-auto gap-6 flex flex-col'>
@@ -23,11 +26,12 @@ export const AboutUsOurTeam = () => {
                         </h3>
                     </div>
                     <div className='w-full md:w-[70%] order-1 md:order-2 flex items-center'>
-                        <Image src={WorldMap} alt='map'/>
+                        {(isMobile || isTablet) && <Image src={WorldMap} alt='map'/>}
+                        {isDesktop && <AnimatedWorldMap /> }
                     </div>
                 </div>
                 <div className='w-full flex items-center justify-center mt-6'>
-                    <div className='w-[12%] rounded-full bg-orange-normal p-1'></div>
+                    <div className='w-[20%] md:w-[12%] rounded-full bg-orange-normal p-1'></div>
                 </div>
             </div>
         </section>

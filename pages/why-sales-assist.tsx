@@ -21,9 +21,9 @@ const WhySalesAssist: NextPage = () => {
 
         <WhySalesAssistSalesProcess/>
 
-        <WhySalesAssistIteration />
+        <WhySalesAssistIteration id='actions'/>
 
-        <WhySalesAssistSimplifySales id='actions'/>
+        <WhySalesAssistSimplifySales />
 
         <WhySalesAssistCompleteSalesFaster />
 
