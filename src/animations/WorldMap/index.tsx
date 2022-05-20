@@ -1,7 +1,9 @@
 import React from 'react'
 
-export const WorldMap = () => {
+export const AnimatedWorldMap = () => {
   return (
-    <div>WorldMap</div>
+    <div>
+
+    </div>
   )
 }
