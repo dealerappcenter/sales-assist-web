@@ -14,9 +14,9 @@ const Home: NextPage = () => {
 
       <Hero />
 
-      <HowItWorks/>
+      <HowItWorks id='how-it-works' />
 
-      <Benefits />
+      <Benefits id='benefits' />
 
       <SalesTeams />
 

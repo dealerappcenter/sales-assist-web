@@ -1,0 +1,13 @@
+{
+    "team": [
+        { "name": "Snow", "title": "Co-founder & CPO", "social": "" },
+        { "name": "Max Castro", "title": "Co-founder & CTO", "social": "" },
+        { "name": "Jow Perez", "title": "Co-founder & CEO", "social": "" },
+        { "name": "Rogelio Morey", "title": "Software Engineer", "social": "" },
+        { "name": "Ocean Yuan", "title": "Software Engineer", "social": "" },
+        { "name": "Samuel Mancebo", "title": "Software Engineer", "social": "" },
+        { "name": "Bryan Astacio", "title": "Software Engineer", "social": "" },
+        { "name": "Santo Mota", "title": "Software Engineer", "social": "" },
+        { "name": "YY", "title": "Product Designer", "social": "" }
+    ]
+}

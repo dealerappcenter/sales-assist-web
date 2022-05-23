@@ -1,0 +1,37 @@
+{
+    "questions": [
+        {
+            "question": "Who Is SalesAssist For?",
+            "answer": "Sales managers and AEs/CSMs who need to optimize their sales process to reach growing revenue targets. Those who value being efficient and providing an exceptional experience to their customers."
+        },
+        {
+            "question": "Does SalesAssist integrate with my systems?",
+            "answer": "YES. We provide 300+ integrations out of the box with all of your favorite applications. For other applications that we don’t have in the integration marketplace, SalesAssist can build a custom integration as an add-on service or $100/month per integration. Otherwise you can use our open API. See Integrations & API page for more details."
+        },
+        {
+            "question": "What's the difference between a marketplace integration and a custom integration?",
+            "answer": "A marketplace integration allows you to integrate SalesAssist with any of the 300+ existing integrations. For any other application that is not in the integration marketplace, our team can create a custom integration. There is no development cost to add a custom integration, just an add-on cost of $100/month per custom integration."
+        },
+        {
+            "question": "Can I see SalesAssist before buying? How Much Is It?",
+            "answer": "Yes! Simply click “Book Demo”. For pricing, see our Pricing Page or talk to us today. What’s the difference between annual and monthly billing?"
+        },
+        {
+            "question": "What’s the difference between annual and monthly billing?",
+            "answer": "The difference is how often you pay your subscription fee. With monthly billing, you will be charged on the same day each month. With annual billing, you are charged once for the whole year."
+        },
+        {
+            "question": "Are there any long term contracts?",
+            "answer": "NO! SalesAssist is a subscription based software that you can cancel at any time. We believe that the best contract is your continued success with our platform."
+        },
+        {
+            "question": "Which payment methods do you accept?",
+            "answer": "There are different ways to pay for SalesAssist including major credit cards, debit cards and PayPal."
+        }
+    ],
+    "title": "Frequently asked questions",
+    "banner": {
+        "text": "Let’s simplify your sales",
+        "button": "Book Demo"
+    }
+}

@@ -1,15 +1,9 @@
 import { Button, Nav } from 'src/components';
 import Image from 'next/image';
-import { Toyota, Saleor, HeroImage  } from '@src/assets';
-import { AnimatedHero } from '@src/components/AnimatedHero';
+import { partners, HeroImage  } from '@src/assets';
 import { useResponsive } from '@hooks/useResponsive';
-const trusted = [
-    Toyota,
-    Saleor,
-    Toyota,
-    Saleor
-]
-
+import { AnimatedBackGround } from '@src/animations/AnimatedBackground';
+import { calendlyLink } from '@src/utils/routes';
 
 
 export const Hero = () => {
@@ -22,11 +16,13 @@ export const Hero = () => {
                 <div className='lg:w-[40%] lg:p-12 flex flex-col justify-center h-full order-2 lg:order-1 items-center lg:items-start'>
                     <h1 className='text-4xl lg:text-5xl lg:leading-[3.5rem] font-bold mx-auto text-gray-primary mb-6'>The Sales Completion Platform</h1>
                     <p className='text-gray-secondary mb-6 w-full lg:w-[80%]'>An easier, faster way to complete the entire sales process with mobile-first eSignatures, document collection, ID verification, e-forms, payment and much more.</p>
-                    <Button className='lg:text-lg'>See what we’re building - Book Demo!</Button>
+                    <a href={calendlyLink} target="_blank" rel="noreferrer">
+                        <Button className='lg:text-lg'>See what we’re building - Book Demo!</Button>
+                    </a>
                 </div>
                 <div className='lg:w-[50%] md:px-16 px-12 flex items-center justify-center order-1 lg:order-2'>
                     <div className='w-[90%]'>
-                        {isDesktop && <AnimatedHero />}
+                        {isDesktop && <AnimatedBackGround />}
                         {(isMobile || isTablet) && <Image src={HeroImage} alt='' />}
                     </div>
                 </div>
@@ -34,9 +30,9 @@ export const Hero = () => {
             <div className='h-[35%] container mx-auto flex flex-col items-center py-12'>
                 <h2 className='mb-[3rem]'>Trusted by</h2>
                 <div className='flex justify-evenly w-full items-center flex-wrap'>
-                    {trusted.map((t) => {
-                        return <div key={Date.now() * Math.random()} className="p-4">
-                            <Image className='m-12' alt={'trusted'} src={t}  />
+                    {partners.map((t) => {
+                        return <div key={t.id} className="p-4 w-40">
+                            <Image className='m-12' alt={'trusted'} src={t.path}  />
                         </div>
                     })}
                 </div>

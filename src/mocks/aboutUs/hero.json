@@ -1,0 +1,15 @@
+{
+    "title": "We’re building a simpler way to complete the sale",
+    "description": "At SalesAssist, our mission is to make sales interactions between salespeople and customers frictionless.",
+    "our_values": {
+        "name": "Our Values",
+        "values": [
+            { "code": "FOI", "title": "Focus on Impact", "description": "What matters is the level of impact"},
+            { "code": "SO", "title": "Stay Open", "description": "An open heart and mind is our source of power"},
+            { "code": "PS", "title": "Profound Support", "description": "We are responsible for the success of each other – we succeed together"},
+            { "code": "TBS", "title": "Take Bold Steps", "description": "Think big. Start small. Fail forward"},
+            { "code": "RR", "title": "Radical Resourcefulness", "description": "We have everything we need to succeed – it’s about finding the unseen"},
+            { "code": "EO", "title": "Everyone is an Owner", "description": "We all share the same passion for the product, company and customers"}
+        ]
+    }
+}
