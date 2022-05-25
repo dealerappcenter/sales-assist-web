@@ -12,11 +12,11 @@ export const Quote: React.FC<React.PropsWithChildren<QuoteProps>> = (props) => {
 
     return (<div className={baseClass}>
         <div className='flex h-full'>
-            <div className='flex h-full items-start w-24 relative'>
+            <div className='flex h-full items-start w-14 relative'>
                 <Image src={QuoteMark} alt='' />
             </div>
             <p className='px-4 text-xs md:text-2xl h-full text-center'>{children}</p>
-            <div className='flex h-full items-end w-24 mt-auto relative'>
+            <div className='flex h-full items-end w-14 mt-auto relative'>
                 <Image className='transform rotate-180' src={QuoteMark} alt='' />
             </div>
         </div>

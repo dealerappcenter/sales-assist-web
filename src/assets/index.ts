@@ -12,7 +12,7 @@ import Mobile from './mobile.svg';
 import CompleteSales from './CompletSales_Icon.svg'
 import Interact from './Interact_Icon.svg'
 import AddSales from './AddSales_Icon.svg';
-import Business from  './Business_Icon.svg';
+import Business from './Business_Icon.svg';
 import Costumer from './Customer_Icon.svg';
 import Sales from './Sales_Icon.svg';
 import SalesExample from './why-sales-assits.svg'
@@ -115,13 +115,13 @@ const business = [
     // "Real Estate",
     // "Machinery",
     // "Advertising"
-   { code: "ATMTV", path: '' },
-   { code: "MDQ", path: '' },
-   { code: "SAAS", path: '' },
-   { code: "INSRC", path: '' },
-   { code: "RLST", path: '' },
-   { code: "MCHRY", path: '' },
-   { code: "ADVRTNG", path: '' },
+    { code: "ATMTV", path: '' },
+    { code: "MDQ", path: '' },
+    { code: "SAAS", path: '' },
+    { code: "INSRC", path: '' },
+    { code: "RLST", path: '' },
+    { code: "MCHRY", path: '' },
+    { code: "ADVRTNG", path: '' },
 ]
 
 export const partners = [
@@ -129,4 +129,10 @@ export const partners = [
     { id: uuid(), path: CarAuto },
     { id: uuid(), path: Miracle },
     { id: uuid(), path: MurphyAG },
+]
+
+export const howItWorksIcons = [
+    { "code": "HIW-ASA", path: Icons.AddSales },
+    { "code": "HIW-IWC", path: Icons.Interact },
+    { "code": "HIW-CTS", path: Icons.CompleteSales }
 ]
