@@ -1,9 +1,9 @@
 import { buildIcon } from '@src/utils/icons';
 import { easySteps } from '@src/assets';
 
-export const WhySalesAssistCompleteSalesFaster: React.FC<Section<WhySalesAssistCompleteSalesFaster>> = ({ data }) => {
+export const WhySalesAssistCompleteSalesFaster: React.FC<Section<WhySalesAssistCompleteSalesFaster>> = ({ data, id }) => {
     return (
-        <section className="bg-white-normal">
+        <section id={id} className="bg-white-normal">
             <div className='container py-6 mx-auto lg:px-12 lg:py-20 overflow-x-auto'>
                 <div className='px-4 md-px-0 mb-2'>
                     <h1 className="mb-4 text-gray-primary">{data.title}</h1>

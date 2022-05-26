@@ -1,9 +1,9 @@
 import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
-import { 
+import {
     WhySalesAssistHero,
-    WhySalesAssistSalesProcess, 
-    WhySalesAssistIteration,WhySalesAssistSimplifySales,
+    WhySalesAssistSalesProcess,
+    WhySalesAssistIteration, WhySalesAssistSimplifySales,
     WhySalesAssistCompleteSalesFaster,
     WhySalesAssistCompletingSalesIsPainless,
 } from "@src/sections/WhySalesAssist";
@@ -19,15 +19,15 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <WhySalesAssistHero {...{data: hero}} />
+        <WhySalesAssistHero {...{ data: hero }} />
 
-        <WhySalesAssistSalesProcess {...{ data: salesProcess }}/>
+        <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
 
-        <WhySalesAssistIteration {...{ data: actions }} id='actions'/>
+        <WhySalesAssistIteration {...{ data: actions }} id='actions' />
 
-        <WhySalesAssistSimplifySales {...{ data: simplifySales}}  />
+        <WhySalesAssistSimplifySales {...{ data: simplifySales }} />
 
-        <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }}/>
+        <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }} id='complete-sales-faster-anywhere' />
 
         <WhySalesAssistCompletingSalesIsPainless {...{ data: completeSalesPainless }} />
 
@@ -42,8 +42,8 @@ export const getStaticProps: GetStaticProps = async (context) => {
     const data = getWhySalesAssistSections();
 
     return {
-      props: {
-          ...data
-      }
+        props: {
+            ...data
+        }
     }
-  }
+}

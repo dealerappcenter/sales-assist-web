@@ -4,12 +4,12 @@
     "our_values": {
         "name": "Our Values",
         "values": [
-            { "code": "FOI", "title": "Focus On Impact", "desc": "What matters is the level of impact."},
+            { "code": "FOI", "title": "Focus on Impact", "desc": "What matters is the level of impact."},
             { "code": "SO", "title": "Stay Open", "desc": "An open heart and mind is our source of power."},
             { "code": "PS", "title": "Profound Support", "desc": "We are responsible for the success of each other – we succeed together."},
             { "code": "TBS", "title": "Take Bold Steps", "desc": "Think big. Start small. Fail forward."},
             { "code": "RR", "title": "Radical Resourcefulness", "desc": "We have everything we need to succeed – it’s about finding the unseen path."},
-            { "code": "EO", "title": "Everyone Is An Owner", "desc": "We all share the same passion for the product, company, and customers."}
+            { "code": "EO", "title": "Everyone is an Owner", "desc": "We all share the same passion for the product, company, and customers."}
         ]
     }
 }

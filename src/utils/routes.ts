@@ -45,7 +45,7 @@ const salesAssist = {
     links: [
         { path: '/#how-it-works', name: RouteNames.howItWorks },
         { path: '/#benefits', name: RouteNames.Benefits },
-        { path: '', name: 'Use Cases' },
+        { path: `${Paths.whySalesAssist}/#complete-sales-faster-anywhere`, name: 'Use Cases' },
         { path: `${Paths.whySalesAssist}/#actions`, name: RouteNames.actions },
         { path: Paths.pricing, name: RouteNames.pricing },
         { path: `${Paths.pricing}/#Q&A`, name: RouteNames.qAndA },

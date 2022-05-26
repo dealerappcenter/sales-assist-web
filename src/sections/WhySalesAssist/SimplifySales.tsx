@@ -6,10 +6,9 @@ import { useProgress } from '@hooks/useProgress';
 import { useInView } from 'react-intersection-observer';
 import classNames from 'classnames';
 import { motion } from 'framer-motion';
-import { fade } from '@src/utils/animations';
+import { fade, fadeInRight } from '@src/utils/animations';
 
 export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplifySalesSection>> = ({ id, data }) => {
-    const { } = useResponsive();
     const [ref, inView] = useInView({ triggerOnce: true });
     const { progressLeft, startProgress } = useProgress();
     const currentStep = useRef<number>(0);
@@ -72,17 +71,17 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
                             if (currentStep.current !== i) {
                                 return null
                             }
-                            return <motion.div initial='start' animate='stop' variants={fade} key={d.id} className='w-full flex items-center'>
-                                <motion.div initial={{ opacity: 0, translateY: 300 }} animate={{ opacity: 1, translateY: 0 }} transition={{ duration: 1, ease: 'linear' }} className='w-full md:w-1/2 px-6'>
+                            return <motion.div initial={{ opacity: 0, translateX: 300 }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: 2, ease: "easeInOut"}} key={d.id} className='w-full flex items-center'>
+                                <div className='w-full md:w-1/2 px-6'>
                                     <Image src={d.image} alt='example' />
-                                </motion.div>
+                                </div>
 
-                                <motion.div initial={{ opacity: 0, translateX: 300 }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: 1, ease: 'linear' }}  className="text-white-normal w-1/2 hidden md:block">
+                                <div  className="text-white-normal w-1/2 hidden md:block">
                                     <h3>{d.title}</h3>
                                     <p className='text-gray-secondary'>
                                         {d.desc}
                                     </p>
-                                </motion.div>
+                                </div>
                             </motion.div>
                         })}
                     </div>

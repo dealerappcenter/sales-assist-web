@@ -14,6 +14,7 @@
     "framer-motion": "^6.3.0",
     "lodash.omit": "^4.5.0",
     "next": "12.1.5",
+    "popmotion": "^11.0.3",
     "postcss": "^8.4.12",
     "react": "18.0.0",
     "react-calendly": "^4.0.1",

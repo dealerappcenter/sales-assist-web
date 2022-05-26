@@ -9,8 +9,8 @@ export const WhySalesAssistHero: React.FC<Section<WhySalesAssistHeroSection>> = 
       <Nav />
       <div className='flex-grow container mx-auto flex items-center justify-center flex-col gap-12'>
         <div className='text-center bold w-full'>
-          <h1 className='text-gray-primary md:text-4xl font-bold mb-6'>End long and painful sales completion process</h1>
-          <p className='mx-auto md:px-6 text-gray-secondary text-sm md:text-base max-w-5xl'>Customers hate being bounced from phone call to inbox to branch, and your team hates wasting valuable time to complete the sale. SalesAssist helps you deliver a sleek, mobile experience that your customers start and finish from their phones, while giving valuable time back to your team.</p>
+          <h1 className='text-gray-primary md:text-4xl font-bold mb-6'>{data.title}</h1>
+          <p className='mx-auto md:px-6 text-gray-secondary text-sm md:text-base max-w-5xl'>{data.desc}</p>
         </div>
         <div className='relative overflow-x-auto overflow-y-hidden w-full flex gap-2 md:items-center md:justify-center pb-12'>
           {/* list of things here */}

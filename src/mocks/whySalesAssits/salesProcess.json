@@ -10,10 +10,6 @@
             "name": "Medical Equipment"
         },
         {
-            "code": "SAAS",
-            "name": "SaaS"
-        },
-        {
             "code": "INSRC",
             "name": "Insurance"
         },
