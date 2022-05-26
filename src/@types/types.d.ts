@@ -13,6 +13,7 @@ type Plan = {
         perks: string[];
     };
 }
+
 interface Industry {
     code: string,
     name: string

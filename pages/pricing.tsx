@@ -19,7 +19,7 @@ const Pricing: NextPage = () => {
             onClick={handleIsFull}
         />
         {isFull && <PricingComparison />}
-        <PricingQuestions id='Q&A'/>
+        <PricingQuestions data={{}} id='Q&A'/>
         <Footer />
     </>
 }

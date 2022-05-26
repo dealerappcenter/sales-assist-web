@@ -1,7 +1,7 @@
 import Questions from '@src/mocks/pricing/questions.json';
 import { calendlyLink } from '@src/utils/routes';
 
-export const PricingQuestions: React.FC<Section> = ({ id }) => {
+export const PricingQuestions: React.FC<Section<any>> = ({ id }) => {
     return (
         <section id={id} className='bg-white-normal'>
             <div className='container mx-auto py-12 flex flex-col gap-6 lg:px-12 md:px-6 px-4'>
