@@ -45,6 +45,7 @@ const salesAssist = {
     links: [
         { path: '/#how-it-works', name: RouteNames.howItWorks },
         { path: '/#benefits', name: RouteNames.Benefits },
+        { path: '', name: 'Use Cases' },
         { path: `${Paths.whySalesAssist}/#actions`, name: RouteNames.actions },
         { path: Paths.pricing, name: RouteNames.pricing },
         { path: `${Paths.pricing}/#Q&A`, name: RouteNames.qAndA },
@@ -63,7 +64,7 @@ const contact = {
     title: 'Contact Us',
     links: [
         { path: 'mailto:help@salesassist.io', name: 'help@salesassist.io' },
-        // { path: 'tel:+1202020202', name: '+1202020202' },
+        { path: '#', name: '251 Little Falls Drive, Wilmington, Delaware 19808' },
     ]
 }
 

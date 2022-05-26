@@ -64,7 +64,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                     {/* useful links */}
                     <div className='w-1/6 border block md:hidden'></div>
                     <div className='md:w-1/2 h-full flex items-start md:gap-6 md:justify-start flex-col md:flex-row text-gray-secondary'>
-                        {[{ name: 'Privacy Policy', path: 'privacy-policy'}].map((link) => <Link key={link.path} passHref href={link.path}>
+                        {[{ name: 'Privacy Policy', path: '/privacy-policy'}].map((link) => <Link key={link.path} passHref href={link.path}>
                             <NavLink hideProgress
                                 className='px-0'>
                                 {link.name}
@@ -77,7 +77,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                     <div className='md:w-1/2 h-full flex justify-end gap-2 md:gap-6 flex-col md:flex-row w-full md:pb-12'>
                         <h4 className='block md:hidden text-xs text-gray-secondary'>© Shiplove Inc. {new Date().getFullYear()} All Rights Reserved</h4>
                         <div className='flex gap-6 w-full flex-wrap md:justify-end'>
-                            {[1, 2, 3, 4].map((_, i) => <span key={i} className='p-2 h-10 w-10 bg-gray-secondary/40 rounded' />)}
+                            {[1, 2, 3].map((_, i) => <span key={i} className='p-2 h-10 w-10 bg-gray-secondary/40 rounded' />)}
                         </div>
                     </div>
                 </div>
