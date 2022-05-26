@@ -1,4 +1,6 @@
-import { motion } from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
+import { InView, useInView } from 'react-intersection-observer';
+import { useEffect } from 'react';
 
 const pathVariants = {
     hidden: {
@@ -14,11 +16,22 @@ const pathVariants = {
 };
 
 export const AnimatedWorldMap = () => {
-    return (
-        <motion.svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 3695.99 2052.03" xmlSpace="preserve">
+    const [ref, inVew] = useInView({ triggerOnce: true });
+    const control = useAnimation();
 
+    useEffect(() => {
+        if (inVew) {
+            control.start('visible')
+        } else {
+            control.stop()
+        }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [inVew])
+
+    return (
+        <motion.svg ref={ref} version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 3695.99 2052.03" xmlSpace="preserve">
             <g id="country-1">
-                <motion.path initial="hidden" animate="visible" variants={pathVariants} className="c" d="M326.46,757.85c-6.44,0-11.66-5.22-11.66-11.66s5.22-11.66,11.66-11.66s11.66,5.22,11.66,11.66
+                <motion.path animate={control} initial="hidden"  variants={pathVariants} className="c" d="M326.46,757.85c-6.44,0-11.66-5.22-11.66-11.66s5.22-11.66,11.66-11.66s11.66,5.22,11.66,11.66
                S332.9,757.85,326.46,757.85z M373.1,746.19c0-6.44-5.22-11.66-11.66-11.66s-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
                S373.1,752.63,373.1,746.19z M408.07,746.19c0-6.44-5.22-11.66-11.66-11.66s-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
                S408.07,752.63,408.07,746.19z M443.05,746.19c0-6.44-5.22-11.66-11.66-11.66s-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
@@ -260,7 +273,7 @@ export const AnimatedWorldMap = () => {
                S862.79,1277.3,862.79,1270.86z"/>
             </g>
             <g id="country-2">
-                <motion.path initial="hidden" animate="visible" variants={pathVariants} className="c" d="M2320.19,722.87c-6.44,0-11.66-5.22-11.66-11.66s5.22-11.66,11.66-11.66c6.44,0,11.66,5.22,11.66,11.66
+                <motion.path initial="hidden" animate={control} variants={pathVariants} className="c" d="M2320.19,722.87c-6.44,0-11.66-5.22-11.66-11.66s5.22-11.66,11.66-11.66c6.44,0,11.66,5.22,11.66,11.66
                S2326.63,722.87,2320.19,722.87z M2366.83,711.22c0-6.44-5.22-11.66-11.66-11.66s-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
                S2366.83,717.65,2366.83,711.22z M2401.81,711.22c0-6.44-5.22-11.66-11.66-11.66s-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
                S2401.81,717.65,2401.81,711.22z M2436.79,711.22c0-6.44-5.22-11.66-11.66-11.66s-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
@@ -716,7 +729,7 @@ export const AnimatedWorldMap = () => {
                c-6.44,0-11.66,5.22-11.66,11.66c0,6.44,5.22,11.66,11.66,11.66C2956.23,1387.45,2961.45,1382.23,2961.45,1375.79z"/>
             </g>
             <g id="rest">
-                <motion.path initial="hidden" animate="visible" variants={pathVariants} className="d" d="M1060.99,58.3c-6.44,0-11.66-5.22-11.66-11.66s5.22-11.66,11.66-11.66s11.66,5.22,11.66,11.66S1067.43,58.3,1060.99,58.3
+                <motion.path initial="hidden" animate={control} variants={pathVariants} className="d" d="M1060.99,58.3c-6.44,0-11.66-5.22-11.66-11.66s5.22-11.66,11.66-11.66s11.66,5.22,11.66,11.66S1067.43,58.3,1060.99,58.3
                z M1107.63,46.64c0-6.44-5.22-11.66-11.66-11.66c-6.44,0-11.66,5.22-11.66,11.66s5.22,11.66,11.66,11.66
                C1102.41,58.3,1107.63,53.08,1107.63,46.64z M1142.61,46.64c0-6.44-5.22-11.66-11.66-11.66c-6.44,0-11.66,5.22-11.66,11.66
                s5.22,11.66,11.66,11.66C1137.39,58.3,1142.61,53.08,1142.61,46.64z M1177.59,46.64c0-6.44-5.22-11.66-11.66-11.66
