@@ -1,12 +1,13 @@
 {
     "title": "Our Team",
+    "desc": "We’re a tight knit team doing big things",
     "team": {
         "title": "Team members",
-        "members": 10
+        "members": 9
     },
     "founded": {
         "title": "Founded in",
-        "year": 2020
+        "year": 2021
     },
     "countries": {
         "title": "Countries represented",

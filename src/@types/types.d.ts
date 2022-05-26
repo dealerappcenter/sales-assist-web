@@ -169,3 +169,52 @@ type WhySalesAssistSections = {
     completeSalesFaster: WhySalesAssistCompleteSalesFaster,
     completeSalesPainless: WhySalesAssistCompleteSalesPainlessSection
 }
+
+/** about us sections */
+
+interface AboutUsHero {
+    title:      string;
+    desc:       string;
+    our_values: OurValues;
+}
+
+interface OurValues {
+    name:   string;
+    values: Point[];
+}
+
+interface AboutUsOurTeam {
+    title:     string;
+    desc:      string;
+    team:      Team;
+    founded:   Founded;
+    countries: Countries;
+}
+interface Countries {
+    title:     string;
+    countries: number;
+}
+interface Founded {
+    title: string;
+    year:  number;
+}
+interface Team {
+    title:   string;
+    members: number;
+}
+interface AboutUsTeamMembers {
+    team: TeamMembers[];
+}
+
+interface TeamMembers {
+    name:   string;
+    title:  string;
+    social: string;
+}
+
+
+type AboutUsSections = {
+    hero: AboutUsHero,
+    ourTeam: AboutUsOurTeam,
+    team: AboutUsTeamMembers
+}
