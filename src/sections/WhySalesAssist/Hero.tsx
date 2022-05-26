@@ -3,7 +3,7 @@ import { whySalesAssistHero } from '@src/assets';
 import { buildIcon } from '@src/utils/icons';
 
 
-export const WhySalesAssistHero = () => {
+export const WhySalesAssistHero: React.FC<Section<WhySalesAssistHeroSection>> = ({ data }) => {
   return (
     <header className='h-full px-4 flex flex-col bg-white-soft lg:pb-12'>
       <Nav />
@@ -15,7 +15,7 @@ export const WhySalesAssistHero = () => {
         <div className='relative overflow-x-auto overflow-y-hidden w-full flex gap-2 md:items-center md:justify-center pb-12'>
           {/* list of things here */}
           {
-            listOfCards.map(singleCard => {
+            data.reasons.map(singleCard => {
               return <div className='block lg:w-1/5' key={singleCard.code}>
                 <div className='p-4 rounded-md w-[15rem]  h-52 bg-white-normal'>
                   <div className='w-12 h-12 rounded-full'>
@@ -23,7 +23,7 @@ export const WhySalesAssistHero = () => {
                   </div>
                   <div className='pt-2'>
                     <h1 className='text-sm font-semibold'>{singleCard.title}</h1>
-                    <p className='text-sm text-gray-secondary'>{singleCard.des}</p>
+                    <p className='text-sm text-gray-secondary'>{singleCard.desc}</p>
                   </div>
                 </div>
               </div>
@@ -34,11 +34,3 @@ export const WhySalesAssistHero = () => {
     </header>
   )
 }
-
-
-const listOfCards: { code: string, title: string, des: string, id: number }[] = [
-  { code: "CSF", id: 1, title: 'Complete sales faster', des: 'Have customers complete the process in real time with mobile web apps shared via text. ' },
-  { code: 'CEW', id: 2, title: 'Cut everyone’s work', des: 'Give customers what they have come to expect, a seamless end-to-end journey.' },
-  { code: 'PBE', id: 3, title: 'Provide better experience', des: 'Give customers what they have come to expect, a seamless end-to-end journey.' },
-  { code: 'LOC', id: 4, title: 'Lower operating costs', des: 'Give customers what they have come to expect, a seamless end-to-end journey.' },
-]

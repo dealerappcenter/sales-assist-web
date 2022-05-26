@@ -47,6 +47,17 @@ import CarAuto from './support/CarAuto Logo.png';
 import Miracle from './support/Miracle Logo.png';
 import MurphyAG from './support/MurphyAG.png';
 
+// industries
+import Automotive from './saless/Icons3_Automotive.svg';
+import MedicalEquipment from './saless/Icons3_Medical Equipment.svg'
+import SaaS from './saless/Icons3_SaaS.svg';
+import Insurance from './saless/Icons3_Insurance.svg';
+import RealState from './saless/Icons3_Real Estate.svg';
+import Machinery from './saless/Icons3_Machinery.svg';
+import Advertising from './saless/Icons3_Advertising.svg';
+import FinancialServices from './saless/Icons3_Financial Services.svg';
+
+
 export {
     Logo,
     Saleor,
@@ -107,23 +118,6 @@ export const whySalesAssistHero = [
     { code: 'LOC', path: LowerCost },
 ]
 
-const business = [
-    // "Automotive",
-    // "Medical Equipment",
-    // "SaaS",
-    // "Insurance",
-    // "Real Estate",
-    // "Machinery",
-    // "Advertising"
-    { code: "ATMTV", path: '' },
-    { code: "MDQ", path: '' },
-    { code: "SAAS", path: '' },
-    { code: "INSRC", path: '' },
-    { code: "RLST", path: '' },
-    { code: "MCHRY", path: '' },
-    { code: "ADVRTNG", path: '' },
-]
-
 export const partners = [
     { id: uuid(), path: Alberic },
     { id: uuid(), path: CarAuto },
@@ -136,3 +130,15 @@ export const howItWorksIcons = [
     { "code": "HIW-IWC", path: Icons.Interact },
     { "code": "HIW-CTS", path: Icons.CompleteSales }
 ]
+
+export const industries = [
+    { code: "ATMTV", path: Automotive },
+    { code: "MDQ", path: MedicalEquipment },
+    { code: "SAAS", path: SaaS },
+    { code: "INSRC", path: Insurance },
+    { code: "RLST", path: RealState },
+    { code: "MCHRY", path: Machinery },
+    { code: "ADVRTNG", path: Advertising },
+    { code: "FNALSVC", path: FinancialServices }
+]
+

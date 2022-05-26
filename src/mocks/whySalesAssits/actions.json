@@ -1,0 +1,62 @@
+{
+    "title": "A Sales Action For Every Interaction",
+    "desc": "No matter what your sales process is, SalesAssist has a Sales Action to streamline your customer facing interactions, from e-Signatures to document collection to e-Forms.",
+    "actions": [
+        {
+            "name": "e-Signature",
+            "code": "e-Signature",
+            "title": "Make e-Signatures fast, easy, mobile",
+            "desc": "Send customers agreements for e-Signatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.",
+            "url": null,
+            "delay": 0
+        },
+        {
+            "name": "Get Docs",
+            "code": "Get Docs",
+            "title": "Collect documents in real-time",
+            "desc": "Allow customers to upload documents on the spot with their mobile device. Stop chasing customers to scan and upload documents and increase the speed and completion rate.",
+            "url": null,
+            "delay": 0.2
+        },
+        {
+            "name": "e-Form",
+            "code": "e-Form",
+            "title": "Make all your forms smart",
+            "desc": "Reduce unnecessary errors, increase the completion rate and shorten the form fill time, with forms that are made for mobile completion and are fully integrated with all of your existing systems.",
+            "url": null,
+            "delay": 0.4
+        },
+        {
+            "name": "Product Sharing",
+            "code": "Product Sharing",
+            "title": "Better remote sales",
+            "desc": "Share product visuals and details while speaking with customers to ensure they are fully informed and excited about what they're purchasing.",
+            "url": null,
+            "delay": 0.6
+        },
+        {
+            "name": "Content Sharing",
+            "code": "Content Sharing",
+            "title": "Share images, videos, articles",
+            "desc": "Keep the conversation moving forward with focused content pages that share necessary information to complete the sale.",
+            "url": null,
+            "delay": 0.8
+        },
+        {
+            "code": "Request Referrals",
+            "name": "Request Referrals",
+            "title": "Maximize each relationship",
+            "desc": "Make it easy for customers to refer friends and family. As soon as customers share a referral a new opportunity is created and assigned in your CRM.",
+            "url": null,
+            "delay": 1
+        },
+        {
+            "code": "Get Reviews",
+            "name": "Get Reviews",
+            "title": "Easily collect reviews",
+            "desc": "Make it extremely easy for your customers to leave a review. Send personalized text/email links that customers can tap and instantly leave reviews on their platform of choice.",
+            "url": null,
+            "delay": 1.2
+        }
+    ]
+}

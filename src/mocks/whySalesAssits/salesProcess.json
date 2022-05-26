@@ -1,0 +1,37 @@
+{
+    "title": "Built For Every Sales Process",
+    "industries": [
+        {
+            "code": "ATMTV",
+            "name": "Automotive"
+        },
+        {
+            "code": "MDQ",
+            "name": "Medical Equipment"
+        },
+        {
+            "code": "SAAS",
+            "name": "SaaS"
+        },
+        {
+            "code": "INSRC",
+            "name": "Insurance"
+        },
+        {
+            "code": "RLST",
+            "name": "Real Estate"
+        },
+        {
+            "code": "MCHRY",
+            "name": "Machinery"
+        },
+        {
+            "code": "ADVRTNG",
+            "name": "Advertising"
+        },
+        {
+            "code": "FNALSVC",
+            "name": "Financial Services"
+        }
+    ]
+}

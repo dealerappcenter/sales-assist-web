@@ -1,4 +1,4 @@
-import { NextPage } from "next";
+import { GetStaticProps, NextPage } from "next";
 import Head from "next/head";
 import { 
     WhySalesAssistHero,
@@ -8,8 +8,10 @@ import {
     WhySalesAssistCompletingSalesIsPainless,
 } from "@src/sections/WhySalesAssist";
 import { Footer } from "@src/components";
+import { getWhySalesAssistSections } from "@src/mocks/whySalesAssits";
 
-const WhySalesAssist: NextPage = () => {
+const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
+    const { hero, salesProcess, actions, simplifySales, completeSalesFaster, completeSalesPainless } = props;
     return (<>
         <Head>
             <title>Wy SalesAssist</title>
@@ -17,17 +19,17 @@ const WhySalesAssist: NextPage = () => {
             <link rel="icon" href="/favicon.ico" />
         </Head>
 
-        <WhySalesAssistHero />
+        <WhySalesAssistHero {...{data: hero}} />
 
-        <WhySalesAssistSalesProcess/>
+        <WhySalesAssistSalesProcess {...{ data: salesProcess }}/>
 
-        <WhySalesAssistIteration id='actions'/>
+        <WhySalesAssistIteration {...{ data: actions }} id='actions'/>
 
-        <WhySalesAssistSimplifySales />
+        <WhySalesAssistSimplifySales {...{ data: simplifySales}}  />
 
-        <WhySalesAssistCompleteSalesFaster />
+        <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }}/>
 
-        <WhySalesAssistCompletingSalesIsPainless />
+        <WhySalesAssistCompletingSalesIsPainless {...{ data: completeSalesPainless }} />
 
         <Footer kind="dark" />
     </>)
@@ -35,3 +37,13 @@ const WhySalesAssist: NextPage = () => {
 
 
 export default WhySalesAssist;
+
+export const getStaticProps: GetStaticProps = async (context) => {
+    const data = getWhySalesAssistSections();
+
+    return {
+      props: {
+          ...data
+      }
+    }
+  }

@@ -13,7 +13,10 @@ type Plan = {
         perks: string[];
     };
 }
-
+interface Industry {
+    code: string,
+    name: string
+}
 interface Section<T> {
     id?: string,
     data: T
@@ -74,10 +77,95 @@ type SimplifySection = {
     cta: string
 }
 
+// home page types
 type HomePageSections = {
     hero: Hero,
     HowItWork: HowItWorksSection,
     benefits: BenefitsSection,
     salesTeam: SalesTeamSection,
     simplifySales: SimplifySection
+}
+
+/** Why sales assist page types */
+
+type WhySalesAssistHeroSection = {
+    title:   string;
+    desc:    string;
+    reasons: Reason[];
+}
+
+type WhySalesAssistSalesProcessSection = {
+    title: string,
+    industries: Array<Industry>
+}
+
+interface WhySalesAssistActionsSection {
+    title:   string;
+    desc:    string;
+    actions: SalesAction[];
+}
+
+interface WhySalesAssistSimplifySalesSection {
+    title:     string;
+    desc:      string;
+    options:   Options;
+    show_case: ShowCase[];
+}
+
+interface Options {
+    select:    string;
+    customize: string;
+    add:       string;
+}
+
+interface ShowCase {
+    url:   null | string;
+    title: string;
+    desc:  string;
+}
+
+
+
+interface SalesAction {
+    name:  string;
+    title: string;
+    desc:  string;
+    url:  null | string;
+    code: string;
+    delay: number
+}
+
+
+type Reason = {
+    code:  string;
+    title: string;
+    desc:  string;
+}
+
+interface WhySalesAssistCompleteSalesFaster {
+    title:   string;
+    reasons: Reason[];
+}
+
+
+interface WhySalesAssistCompleteSalesPainlessSection {
+    title:         string;
+    cta:           string;
+    bullet_points: Point[];
+}
+
+interface Point {
+    code:  string;
+    title: string;
+    desc:  string;
+}
+
+
+type WhySalesAssistSections = {
+    hero: WhySalesAssistHeroSection,
+    salesProcess: WhySalesAssistSalesProcessSection,
+    actions: WhySalesAssistActionsSection,
+    simplifySales: WhySalesAssistSimplifySalesSection,
+    completeSalesFaster: WhySalesAssistCompleteSalesFaster,
+    completeSalesPainless: WhySalesAssistCompleteSalesPainlessSection
 }

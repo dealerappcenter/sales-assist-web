@@ -10,3 +10,4 @@ export * from './Avatar';
 export * from './Testimonial'
 export * from './Footer'
 export * from './TeamIcon';
+export * from './Industries';

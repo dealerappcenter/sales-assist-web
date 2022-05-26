@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useClickOutside } from '@hooks/useClickOutside';
 import { useResponsive } from '@hooks/useResponsive';
 
-export const WhySalesAssistIteration:React.FC<Section> = ({ id }) => {
+export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSection>> = ({ id, data }) => {
     const [isActive, setIsActive] = useState<number>(0);
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const optionContainer = useRef<HTMLDivElement | null>(null);
@@ -37,13 +37,13 @@ export const WhySalesAssistIteration:React.FC<Section> = ({ id }) => {
         <section id={id} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
             <div className='container mx-auto text-white-normal flex flex-col gap-12'>
                 <div>
-                    <h1 className="mb-4">A Sales Action For Every Interaction</h1>
-                    <h4 className="text-gray-secondary">No matter your sales process, SalesAssist has a Sales Action to streamline your customer facing interactions, from eSignatures to document collection to e-forms.</h4>
+                    <h1 className="mb-4">{data.title}</h1>
+                    <h4 className="text-gray-secondary">{data.desc}</h4>
                 </div>
 
                 <div className="flex-grow flex lg:gap-12 flex-col md:flex-row">
                     {isDesktop && <div className="w-1/4 md:flex flex-col gap-6 hidden">
-                        {data.map((t, i) => <motion.button initial={{ translateX: -300, opacity: 0 }} whileInView={{ translateX: 0, opacity: 1 }} viewport={{ once: true }} transition={{duration: 1, ease: 'linear', delay: t.delay}}onClick={handleIsActive(i)} key={t.code} className={getClasses(i)}>
+                        {data.actions.map((t, i) => <motion.button initial={{ translateX: -300, opacity: 0 }} whileInView={{ translateX: 0, opacity: 1 }} viewport={{ once: true }} transition={{duration: 1, ease: 'linear', delay: t.delay}}onClick={handleIsActive(i)} key={t.code} className={getClasses(i)}>
                             <MdInsights className="md:text-2xl" />
                             <span className="text-left font-medium text-sm"> {t.code}</span>
                         </motion.button>)}
@@ -54,27 +54,27 @@ export const WhySalesAssistIteration:React.FC<Section> = ({ id }) => {
                         <button onClick={handleIsOpen} className='relative border border-gray-disabled rounded-lg px-4 py-3 w-full flex items-center justify-between'>
                             <div className="flex items-center gap-2">
                                 <MdInsights className="text-2xl" />
-                                {types[isActive]}
+                                {data.actions[isActive].name}
                             </div>
                             <MdKeyboardArrowDown />
                             {isOpen && <div className="rounded-lg bg-[#2a2a2a] shadow-md absolute top-14 left-0 w-full z-10">
-                                {types.map((t, i) => <button onClick={handleOperation(i)} key={i} className='p-4 w-full text-white-normal flex items-center gap-2 '>
+                                {data.actions.map((t, i) => <button onClick={handleOperation(i)} key={t.code} className='p-4 w-full text-white-normal flex items-center gap-2 '>
                                     <MdInsights className="md:text-2xl" />
-                                    <span className="text-left font-medium text-sm"> {t}</span>
+                                    <span className="text-left font-medium text-sm"> {t.name}</span>
                                 </button>)}
                             </div>}
                         </button>
                     </div>}
 
                     <div className="flex-grow flex flex-col gap-6">
-                        {data[isActive] && (
+                        {data.actions[isActive] && (
                             <>
                                 <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center">
-                                    {data[isActive].code}
+                                    {data.actions[isActive].code}
                                 </div>
                                 <div className="flex items-center flex-col justify-center gap-2">
-                                    <h3 className="font-bold">{data[isActive].title}</h3>
-                                    <p className="text-sm max-w-2xl w-fit text-center text-gray-secondary">{data[isActive].desc}</p>
+                                    <h3 className="font-bold">{data.actions[isActive].title}</h3>
+                                    <p className="text-sm max-w-2xl w-fit text-center text-gray-secondary">{data.actions[isActive].desc}</p>
                                 </div>
                             </>
                         )}
@@ -84,26 +84,3 @@ export const WhySalesAssistIteration:React.FC<Section> = ({ id }) => {
         </section>
     )
 }
-
-const types = [
-    "e-Signature",
-    "Get Docs",
-    "e-Form",
-    "Product Sharing",
-    "Content Sharing",
-    "Secure Payments",
-    "Request Referrals",
-    "Get Reviews"
-]
-
-const data = [
-    { code: "e-Signature", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: 0 },
-    { code: "Get Docs", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: .2 },
-    { code: "e-Form", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: .4 },
-    { code: "Product Sharing", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: .6 },
-    { code: "Content Sharing", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay:  .8 },
-    { code: "Secure Payments", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: 1 },
-    { code: "Request Referrals", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: 1.2 },
-    { code: "Request Referrals", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: 1.4 },
-    { code: "Get Reviews", title: 'Make e-Signatures fast, easy, mobile', desc: 'Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.', path: '', delay: 1.6 },
-]
