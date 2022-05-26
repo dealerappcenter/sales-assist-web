@@ -6,7 +6,7 @@ type Plan = {
     price_per_user: string;
     perks: {
         name: string;
-        perk: string;
+        perk: string | number;
     }[];
      features: {
         name: string;
