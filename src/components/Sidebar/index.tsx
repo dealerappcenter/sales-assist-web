@@ -48,13 +48,15 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                         </li>
                     })}
                     <hr />
-                    <li>
+                    {/* 
+                        NOTE: We're not deleting this now, it might come back after SalesAssist app gets mobile friendly
+                        <li>
                         <button onClick={closeSideBar} className='w-full text-left px-4 text-xl'>
                             <a href="https://app.salesassist.io/">
                                 Login
                             </a>
                         </button>
-                    </li>
+                    </li> */}
                     <hr />
                     <li>
                         <button onClick={closeSideBar} className='w-full text-left px-4 text-xl'>
