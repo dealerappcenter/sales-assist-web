@@ -56,7 +56,7 @@ import RealState from './saless/Icons3_Real Estate.svg';
 import Machinery from './saless/Icons3_Machinery.svg';
 import Advertising from './saless/Icons3_Advertising.svg';
 import FinancialServices from './saless/Icons3_Financial Services.svg';
-
+export * from './team';
 
 export {
     Logo,

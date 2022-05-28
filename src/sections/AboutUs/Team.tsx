@@ -7,12 +7,12 @@ export const AboutUsTeam: React.FC<Section<AboutUsTeamMembers>> = ({ data }) => 
                 <div className='w-full flex items-center justify-center flex-col gap-6 text-white-normal md:h-[20rem]'>
                     {/* first row */}
                     <div className='w-full flex flex-wrap items-center justify-center gap-2'>
-                        {data.team.slice(0, 4).map((team) => <TeamIcon key={team.social} link={team.social} name={team.name} title={team.title}/>)}
+                        {data.team.slice(0, 4).map((team) => <TeamIcon code={team.code} key={team.social} link={team.social} name={team.name} title={team.title}/>)}
                     </div>
                     
                     {/* first row */}
-                    <div className='w-full flex flex-wrap items-center justify-center gap-6'>
-                        {data.team.slice(4, data.team.length).map((team) => <TeamIcon key={team.social} link={team.social} name={team.name} title={team.title}/>)}
+                    <div className='w-full flex flex-wrap items-center justify-center gap-2'>
+                        {data.team.slice(4, data.team.length).map((team) => <TeamIcon code={team.code} key={team.social} link={team.social} name={team.name} title={team.title}/>)}
                     </div>
                     
                 </div>

@@ -1,17 +1,20 @@
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import { SalesExample } from '@src/assets';
-import { useResponsive } from '@hooks/useResponsive';
 import { useProgress } from '@hooks/useProgress';
 import { useInView } from 'react-intersection-observer';
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
-import { fade, fadeInRight } from '@src/utils/animations';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as TSwiper } from 'swiper';
 
 export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplifySalesSection>> = ({ id, data }) => {
     const [ref, inView] = useInView({ triggerOnce: true });
     const { progressLeft, startProgress } = useProgress();
     const currentStep = useRef<number>(0);
+
+    const currentSwiper = useRef<TSwiper | undefined>(undefined);
+    const swipeInstance = currentSwiper.current;
 
     useEffect(() => {
         startProgress()
@@ -19,16 +22,18 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     }, [inView]);
 
     useEffect(() => {
-        if (progressLeft === 0) {
+        if (progressLeft === 0 && swipeInstance) {
             startProgress()
             if (currentStep.current >= 2) {
                 currentStep.current = 0
+                swipeInstance.slideTo(0)
             } else {
                 currentStep.current = currentStep.current + 1;
+                swipeInstance.slideNext()
             }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [progressLeft, currentStep]);
+    }, [progressLeft, currentStep, swipeInstance]);
 
     const getClasses = (step: number) => {
         return classNames("w-fit h-10 flex p-4 rounded-full justify-center items-center duration-500 transition-all",
@@ -40,7 +45,7 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     function clickOnCard(step: number) {
         return () => {
             currentStep.current = step
-
+            if (swipeInstance) swipeInstance.slideTo(step)
             startProgress();
         }
     }
@@ -65,25 +70,34 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
                         <button className={getClasses(2)} onClick={clickOnCard(2)}>3 <span className="hidden md:block">. {data.options.add}</span></button>
                     </div>
 
-                    {/* todo this should be animated */}
                     <div ref={ref} className="flex items-center">
-                        {choose.map((d, i) => {
-                            if (currentStep.current !== i) {
-                                return null
-                            }
-                            return <motion.div initial={{ opacity: 0, translateX: 300 }} animate={{ opacity: 1, translateX: 0 }} transition={{ duration: 2, ease: "easeInOut"}} key={d.id} className='w-full flex items-center'>
-                                <div className='w-full md:w-1/2 px-6'>
-                                    <Image src={d.image} alt='example' />
-                                </div>
+                        <Swiper
+                            slidesPerView={1}
+                            speed={600}
+                            onSwiper={sw => currentSwiper.current = sw}
+                            onSlideChange={ev => {
+                                if (ev.activeIndex === choose.length + 1) {    
+                                    clickOnCard(0)();
+                                }
+                                clickOnCard(ev.activeIndex)();
+                            }}
+                        >
+                            {choose.map((d) => <SwiperSlide key={d.id}>
+                                <div key={d.id} className='w-full flex items-center'>
+                                    <div className='w-full md:w-1/2 px-6 relative'>
+                                        <Image src={d.image} alt='example' />
+                                    </div>
 
-                                <div  className="text-white-normal w-1/2 hidden md:block">
-                                    <h3>{d.title}</h3>
-                                    <p className='text-gray-secondary'>
-                                        {d.desc}
-                                    </p>
+                                    <div className="text-white-normal w-1/2 hidden md:block">
+                                        <h3>{d.title}</h3>
+                                        <p className='text-gray-secondary'>
+                                            {d.desc}
+                                        </p>
+                                    </div>
                                 </div>
-                            </motion.div>
-                        })}
+                            </SwiperSlide>
+                            )}
+                        </Swiper>
                     </div>
                 </div>
             </div>

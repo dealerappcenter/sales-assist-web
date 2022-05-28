@@ -211,6 +211,7 @@ interface TeamMembers {
     name:   string;
     title:  string;
     social: string;
+    code?:  string;
 }
 
 
