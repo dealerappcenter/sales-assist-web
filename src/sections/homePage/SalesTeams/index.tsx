@@ -1,20 +1,56 @@
-import React from 'react'
 import { Testimonial } from '@src/components';
-export const SalesTeams = () => {
-  return (
-    <section className='md:h-[60vh] flex flex-col relative text-white-normal'>
-      <div className='inset-0 bg-gray-primary clip absolute -z-[1]'></div>
-      <div className='container py-6 mx-auto px-4 lg:px-12 lg:py-20 h-full flex flex-col'>
-        <h1>Sales teams love SalesAssist!</h1>
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as TSwiper } from 'swiper';
+import { useRef, useState } from 'react';
+import classNames from 'classnames';
 
-        <div className='flex-grow py-12'>
-          <Testimonial
-            image='https://images.unsplash.com/photo-1640951613773-54706e06851d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1480&q=80'
-            title='Nik Sharma'
-            subTitle='Founder & CEO of Sharma Brands'
+export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
+  const currentSwiper = useRef<TSwiper | undefined>(undefined);
+  const swipeInstance = currentSwiper.current;
+  const [active, setActive] = useState(0);
+
+  function to(idx: number) {
+    return () => {
+      if (swipeInstance) swipeInstance.slideTo(idx);
+    }
+  }
+
+  function dots(idx: number) {
+      return classNames('p-1 rounded-full bg-white-normal', 
+        {'opacity-50': idx !== active}
+      )
+  }
+
+  return (
+    <section  className='md:h-[70vh] flex flex-col relative text-white-normal pb-24'>
+      <div className='inset-0 bg-gray-primary clip absolute -z-[1]'></div>
+      <div className='inset-0 bg-white-normal absolute -z-[2]'></div>
+      <div className='container py-6 mx-auto px-4 lg:px-12 lg:py-20 h-full flex flex-col gap-6'>
+        <h1 className='mb-6'>{data.title}</h1>
+        <div className='relative flex items-center justify-center gap-6 w-full select-none'>
+          <Swiper
+            slidesPerView={1}
+            speed={600}
+            onSwiper={sw => currentSwiper.current = sw}
+            onSlideChange={ev => setActive(ev.activeIndex)}
           >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime corrupti corporis accusamus voluptas odio aperiam ab ex modi, doloremque qui. Pariatur hic fugiat voluptatum blanditiis accusantium ipsam! Quod, totam rem.
-          </Testimonial>
+            {data.quotes?.map(quote => {
+              return <SwiperSlide key={quote.thoughts}>
+                <Testimonial
+                  className='w-full'
+                  title={quote.author}
+                  subTitle={quote.position}
+                >
+                  {quote.thoughts}
+                </Testimonial>
+              </SwiperSlide>
+            })}
+          </Swiper>
+        </div>
+        <div className='flex items-center justify-center gap-2'>
+          {data.quotes?.map((quote, i) => {
+            return <button key={quote.thoughts} onClick={to(i)} className={dots(i)}></button>
+          })}
         </div>
       </div>
     </section>

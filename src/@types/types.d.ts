@@ -1,0 +1,222 @@
+type Plan = {
+    name: string;
+    code: string;
+    price_per_year: string;
+    price_per_month: string;
+    price_per_user: string;
+    perks: {
+        name: string;
+        perk: string | number;
+    }[];
+     features: {
+        name: string;
+        perks: string[];
+    };
+}
+
+interface Industry {
+    code: string,
+    name: string
+}
+interface Section<T> {
+    id?: string,
+    data: T
+}
+
+type Kind = 'orange' | 'purple' | 'normal' | string
+
+type Hero = {
+    title:  string;
+    desc:   string;
+    button: string;
+    trusted: string;
+}
+
+type HowItWorksSection = {
+    title:   string;
+    desc:    string;
+    actions: Action[];
+}
+
+type Action = {
+    code:  string;
+    title: string;
+    desc:  string;
+    kind:  Kind;
+    delay: number;
+}
+
+type BenefitsSection  = {
+    title:    string;
+    benefits: Benefit[];
+}
+
+type Benefit  = {
+    kind:          string;
+    bullet_points: BulletPoint[];
+}
+
+type BulletPoint  = {
+    title: string;
+    desc:  string;
+}
+
+interface SalesTeamSection {
+    title:  string;
+    quotes: Quote[];
+}
+
+interface Quote {
+    thoughts: string;
+    author:     string;
+    position: string;
+    url:      null | string;
+}
+
+type SimplifySection = {
+    title: string,
+    cta: string
+}
+
+// home page types
+type HomePageSections = {
+    hero: Hero,
+    HowItWork: HowItWorksSection,
+    benefits: BenefitsSection,
+    salesTeam: SalesTeamSection,
+    simplifySales: SimplifySection
+}
+
+/** Why sales assist page types */
+
+type WhySalesAssistHeroSection = {
+    title:   string;
+    desc:    string;
+    reasons: Reason[];
+}
+
+type WhySalesAssistSalesProcessSection = {
+    title: string,
+    industries: Array<Industry>
+}
+
+interface WhySalesAssistActionsSection {
+    title:   string;
+    desc:    string;
+    actions: SalesAction[];
+}
+
+interface WhySalesAssistSimplifySalesSection {
+    title:     string;
+    desc:      string;
+    options:   Options;
+    show_case: ShowCase[];
+}
+
+interface Options {
+    select:    string;
+    customize: string;
+    add:       string;
+}
+
+interface ShowCase {
+    url:   null | string;
+    title: string;
+    desc:  string;
+}
+
+
+
+interface SalesAction {
+    name:  string;
+    title: string;
+    desc:  string;
+    url:  null | string;
+    code: string;
+    delay: number
+}
+
+
+type Reason = {
+    code:  string;
+    title: string;
+    desc:  string;
+}
+
+interface WhySalesAssistCompleteSalesFaster {
+    title:   string;
+    reasons: Reason[];
+}
+
+
+interface WhySalesAssistCompleteSalesPainlessSection {
+    title:         string;
+    cta:           string;
+    bullet_points: Point[];
+}
+
+interface Point {
+    code:  string;
+    title: string;
+    desc:  string;
+}
+
+
+type WhySalesAssistSections = {
+    hero: WhySalesAssistHeroSection,
+    salesProcess: WhySalesAssistSalesProcessSection,
+    actions: WhySalesAssistActionsSection,
+    simplifySales: WhySalesAssistSimplifySalesSection,
+    completeSalesFaster: WhySalesAssistCompleteSalesFaster,
+    completeSalesPainless: WhySalesAssistCompleteSalesPainlessSection
+}
+
+/** about us sections */
+
+interface AboutUsHero {
+    title:      string;
+    desc:       string;
+    our_values: OurValues;
+}
+
+interface OurValues {
+    name:   string;
+    values: Point[];
+}
+
+interface AboutUsOurTeam {
+    title:     string;
+    desc:      string;
+    team:      Team;
+    founded:   Founded;
+    countries: Countries;
+}
+interface Countries {
+    title:     string;
+    countries: number;
+}
+interface Founded {
+    title: string;
+    year:  number;
+}
+interface Team {
+    title:   string;
+    members: number;
+}
+interface AboutUsTeamMembers {
+    team: TeamMembers[];
+}
+
+interface TeamMembers {
+    name:   string;
+    title:  string;
+    social: string;
+    code?:  string;
+}
+
+
+type AboutUsSections = {
+    hero: AboutUsHero,
+    ourTeam: AboutUsOurTeam,
+    team: AboutUsTeamMembers
+}

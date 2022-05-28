@@ -1,7 +1,7 @@
 export * from './Nav';
 export * from './Buttons';
 export * from './NavLink';
-export * from './AnimatedCard';
+export * from '../animations/AnimatedCard';
 export * from './Card';
 export * from './IconBox';
 export * from './Insight';
@@ -9,3 +9,5 @@ export * from './Quote';
 export * from './Avatar';
 export * from './Testimonial'
 export * from './Footer'
+export * from './TeamIcon';
+export * from './Industries';

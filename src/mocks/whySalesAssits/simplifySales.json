@@ -1,0 +1,12 @@
+{
+    "title": "Customize Your Own Sales Actions",
+    "desc": "SalesAssist aims to help businesses across all industries. We let businesses build customized, no-code workflow steps using our simple graphical user interface web portal, based on your own needs and logic.",
+    "options": {
+        "select": "Select a Sales Action template" ,
+        "customize": "Customize your own" ,
+        "add": "Add to your Action Panel" 
+    },
+    "show_case": [
+        { "url": null, "title": "", "desc": "" }
+    ]
+}

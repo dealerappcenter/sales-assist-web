@@ -2,17 +2,19 @@ import React from 'react'
 import classNames from 'classnames';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import { buildIcon } from '../../utils/icons';
+import { howItWorksIcons } from '@src/assets';
 interface AnimatedCardProps {
   title: string;
   sub: string,
-  icon: string // path
+  code: string // path
   isActive?: boolean,
   progress: number,
   onClick?: () => void,
 }
 
 export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
-  const { title, sub, icon, isActive, progress, onClick } = props;
+  const { title, sub, code, isActive, progress, onClick } = props;
   const baseClasses = classNames("group rounded-2xl cursor-pointer w-full md:w-[27rem] h-[8.5rem] flex overflow-hidden duration-400",
     {'bg-card-normal': isActive },
     {'opacity-50': !isActive}
@@ -29,7 +31,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
       <div className='flex h-full p-2'>
         <div className='flex justify-center p-4 px-4'>
           <div className='w-20 h-20 rounded-full'>
-            <Image src={icon} alt={title} />
+            {buildIcon({ data: howItWorksIcons, code, fallback: <></>, size: { width: 64, height: 64 }})}
           </div>
         </div>
         <div className='h-full py-2 text-left'>

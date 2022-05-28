@@ -1,7 +1,6 @@
 import React from 'react'
 import classNames from 'classnames';
 
-type Kind = 'orange' | 'purple' | 'normal'
 interface CardProps {
   title: string;
   sub: string;

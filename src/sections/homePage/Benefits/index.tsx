@@ -4,11 +4,12 @@ import { useResponsive, useProgress } from "@src/hooks";
 import { useRef, useEffect } from "react";
 import { Icons } from 'src/assets'
 import { useInView } from 'react-intersection-observer'
-import { DashedAnimation } from "@src/components/AnimatedTriangle";
+import { DashedAnimation } from "@src/animations/AnimatedTriangle";
 import { motion } from 'framer-motion';
 import { fade } from '@src/utils/animations';
 
-export const Benefits = () => {
+
+export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
   const { isDesktop, isTablet, isMobile } = useResponsive();
   const currentCard = useRef(0);
   const currentStatus = useRef<'one' | 'two' | 'tree' | 'idle'>('idle');
@@ -66,10 +67,9 @@ export const Benefits = () => {
   const isActive = (at: number) => currentCard.current === at;
 
   return (
-    <section ref={ref} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
+    <section id={id} ref={ref} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
       <div className='container mx-auto text-white-normal'>
-        <h1 className="mb-4">Here’s how everyone involved benefits</h1>
-        <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4>
+        <h1 className="mb-4">{data.title}</h1>
       </div>
       <div className="text-white-normal container mx-auto flex-grow flex gap-6 md:gap-2 flex-col md:flex-row md:px-12">
         <div className="md:w-1/2 w-full md:h-full  pt-12 relative flex items-center justify-center">
@@ -111,11 +111,11 @@ export const Benefits = () => {
           </div>
         </div>
 
-        <div className="md:w-1/2 w-full py-12 flex-col flex gap-12">
-          {insightsData[currentCard.current]?.bulletPoint.map(point => {
+        <div className="md:w-1/2 w-full py-12 flex-col flex gap-12 md:h-[30rem]">
+          {data.benefits[currentCard.current]?.bullet_points.map(point => {
             return <motion.div key={point.title} initial='start' animate='stop' variants={fade}>
               <Insight text={point.title} isActive>
-                {point.description}
+                {point.desc}
               </Insight>
             </motion.div>
           })}
@@ -124,30 +124,3 @@ export const Benefits = () => {
     </section>
   )
 }
-
-const insightsData = [
-  {
-    id: 1,
-    bulletPoint: [
-      { title: 'More sales', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-      { title: 'Improve nps', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-      { title: 'Save money', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-    ]
-  },
-  {
-    id: 2,
-    bulletPoint: [
-      { title: 'Complete sales faster', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-      { title: 'Less mundane work', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-      { title: 'Reduce errors', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-    ],
-  },
-  {
-    id: 3,
-    bulletPoint: [
-      { title: 'Reduce friction', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-      { title: 'Save time', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-      { title: 'Happy customer', description: ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus atque maiores numquam illum eveniet labore voluptatibus repellendus saepe quis adipisci impedit vel nesciunt commodi minima, facere quam aut, eligendi sit.' },
-    ]
-  }
-]

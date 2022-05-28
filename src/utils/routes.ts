@@ -7,12 +7,12 @@ export enum Paths {
 export enum RouteNames {
     whySalesAssist = 'Why SalesAssist',
     pricing = 'Pricing',
-    about = 'About us',
+    about = 'About Us',
     qAndA = 'Q&A',
-    howItWorks = 'How it works',
+    howItWorks = 'How it Works',
     Benefits = 'Benefits',
     actions = 'Actions',
-    bookADemo = 'BookADemo',
+    bookADemo = 'Book Demo',
     legal = 'Legal',
     policy = 'Privacy Policy',
 }
@@ -38,31 +38,33 @@ export const routes: Routes = [
     // }
 ]
 
+export const calendlyLink = 'https://calendly.com/salesasssit?primary_color=f1621a';
 
 const salesAssist = {
     title: 'SalesAssist',
     links: [
-        { path: '', name: RouteNames.howItWorks },
-        { path: '', name: RouteNames.Benefits },
-        { path: '', name: RouteNames.actions },
-        { path: '', name: RouteNames.pricing },
-        { path: '', name: RouteNames.qAndA },
+        { path: '/#how-it-works', name: RouteNames.howItWorks },
+        { path: '/#benefits', name: RouteNames.Benefits },
+        { path: `${Paths.whySalesAssist}/#complete-sales-faster-anywhere`, name: 'Use Cases' },
+        { path: `${Paths.whySalesAssist}/#actions`, name: RouteNames.actions },
+        { path: Paths.pricing, name: RouteNames.pricing },
+        { path: `${Paths.pricing}/#Q&A`, name: RouteNames.qAndA },
     ]
 }
 
 const company = {
     title: 'Company',
     links: [
-        { path: '', name: RouteNames.about },
-        { path: '', name: RouteNames.bookADemo },
+        { path: '/about-us', name: RouteNames.about },
+        { path: calendlyLink, name: RouteNames.bookADemo },
     ]
 }
 
 const contact = {
     title: 'Contact Us',
     links: [
-        { path: 'mailto:', name: 'example@salesassist.io' },
-        { path: 'tel:', name: '+1202020202' },
+        { path: 'mailto:help@salesassist.io', name: 'help@salesassist.io' },
+        { path: '#', name: '251 Little Falls Drive, Wilmington, Delaware 19808' },
     ]
 }
 
