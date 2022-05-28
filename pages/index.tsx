@@ -1,25 +1,28 @@
-import type { NextPage } from 'next'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
 import { Hero, HowItWorks, Benefits, SalesTeams, Sales } from '@src/sections/homePage/';
 import { Footer } from '@src/components/Footer';
+import { getHomePageSections } from '@src/mocks/Home/index';
 
-const Home: NextPage = () => {
+const Home: NextPage<HomePageSections> = (props) => {
+  const { hero, HowItWork, benefits, salesTeam, simplifySales } = props;
   return (
     <>
       <Head>
         <title>SalesAssist</title>
-        <meta name="description" content="An easier, faster way to complete the sales process with mobile-first e-Signatures, document collection, ID verification, e-Forms, payment and much more" />
+        <meta name="description" content={hero.desc} />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Hero />
+      <Hero {...{heroData: hero}}/>
 
-      {/* <HowItWorks/>
+      {/* <HowItWorks {...{data: HowItWork }} id='how-it-works' />
 
-      <Benefits />
+      <Benefits {...{ data: benefits }} id='benefits' />
 
-      <SalesTeams />
+      <SalesTeams {...{ data: salesTeam}} />
 
-      <Sales />
+      <Sales {...{ data: simplifySales}} />
 
       <Footer /> */}
     </>
@@ -27,3 +30,12 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export const getStaticProps: GetStaticProps = async (context) => {
+  const data = getHomePageSections();
+  return {
+    props: {
+      ...data
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+    "title": "Complete Sales Faster Anywhere",
+    "reasons": [
+        {
+            "code": "RMTLY",
+            "title": "Remotely",
+            "desc": "Enable your salespeople to complete remote sales more efficiently by collecting e-Forms, e-Signatures, ID verifications, payments, etc., right from their CRM."
+        },
+        {
+            "code": "FTOF",
+            "title": "Face-To-Face",
+            "desc": "Upgrade the face-to-face sales interactions during onsite visits by digitizing steps in the sales process – collecting e-Forms, e-Signatures, documents, payments, etc. – from your CRM or SalesAssist Mobile App."
+        },
+        {
+            "code": "OLN",
+            "title": "Digital Retail",
+            "desc": "Do the heavy lifting for your salespeople by embedding customized workflows anywhere that interface with customers on their behalf."
+        }
+    ]
+}

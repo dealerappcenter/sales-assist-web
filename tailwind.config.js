@@ -32,7 +32,8 @@ module.exports = {
           'secondary': '#666666',
           'placeholder': '#8A8D91',
           'disabled': '#BCC0C4',
-          'divider': '#E4E4E4'
+          'divider': '#E4E4E4',
+          'aux': '#2a2a2a'
         },
         'white': {
           'normal': '#fff',

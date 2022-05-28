@@ -1,0 +1,9 @@
+{
+    "title": "How It Works",
+    "desc": "3 easy steps to unify and streamline customer interactions throughout your sales process.",
+    "actions": [
+        { "code": "HIW-ASA", "title": "Add Sales Actions", "desc": "Create an Action Panel for your team on our web portal, by choosing from existing Sales Actions or customize your own.", "kind": "orange", "delay": 0 },
+        { "code": "HIW-IWC", "title": "Interact With Customer", "desc": "Text/email Sales Actions to customers from your CRM & from our Mobile App. Customers can easily review and submit info right from their mobile device.", "kind": "purple", "delay": 0.5 },
+        { "code": "HIW-CTS", "title": "Complete the Sale", "desc": "Automatically import everything directly into your CRM and other existing platforms. Close the deal & Onboard clients without any heavy lifting.", "kind": "normal", "delay": 0.8 }
+    ]   
+}
