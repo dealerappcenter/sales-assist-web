@@ -21,7 +21,6 @@ export const TeamIcon: React.FC<TeamIconProps> = ({ src, title, name, link, code
           data: team,
           code,
           fallback: <></>,
-          size: { width: 64, height: 64 },
           objectFit: 'cover',
           layout: 'fill'
         })

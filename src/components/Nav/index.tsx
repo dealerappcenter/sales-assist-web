@@ -78,7 +78,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
 
                         {/* if tablet or mobile else destroy it */}
                         {!isDesktop && !isOpen &&
-                            <li className='flex items-center justify-center'>
+                            <li className='flex items-center justify-center md:hidden'>
                                 <button onClick={handleSideBar}>
                                     <MdMenu className='text-4xl' />
                                 </button>

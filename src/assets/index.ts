@@ -13,8 +13,8 @@ import CompleteSales from './CompletSales_Icon.svg'
 import Interact from './Interact_Icon.svg'
 import AddSales from './AddSales_Icon.svg';
 import Business from './Business_Icon.svg';
-import Costumer from './Customer_Icon.svg';
-import Sales from './Sales_Icon.svg';
+import Costumer from './SA_Customer_Icon.svg';
+import Sales from './SA_Sales_Icon.svg';
 import SalesExample from './why-sales-assits.svg'
 import FocusOnImpact from './SA__Focus on impact.svg';
 import StayOpen from './SA__Stay open.svg';

@@ -24,8 +24,7 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
                 </div>
                 <div className='lg:w-[50%] md:px-16 px-12 flex items-center justify-center order-1 lg:order-2'>
                     <div className='w-[90%]'>
-                        {isDesktop && <AnimatedBackGround />}
-                        {(isMobile || isTablet) && <Image src={HeroImage} alt='' />}
+                        <AnimatedBackGround />
                     </div>
                 </div>
             </div>

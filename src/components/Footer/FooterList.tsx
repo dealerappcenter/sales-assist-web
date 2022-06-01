@@ -38,7 +38,8 @@ export const FooterList: React.FC<FooterLinkProps> = (props) => {
             {!hideTitle && <h3 className={titleClass} style={{ wordBreak: 'keep-all' }}>{title}</h3>}
             <ul className='text-gray-secondary text-[.9rem] md:text-base '>
                 {links.map((link, i) => <li className='text-left' key={link.name + i} style={{ wordBreak: 'break-all' }}>
-                    {link.name === RouteNames.bookADemo ? renderBookDemo(link.name, link.path) : renderLink(link.name, link.path)}
+                    {link.path !== '#' && (link.name === RouteNames.bookADemo ? renderBookDemo(link.name, link.path) : renderLink(link.name, link.path))}
+                    {link.path === '#' && link.name}
                 </li>)}
             </ul>
         </div>

@@ -1,28 +1,52 @@
 import { Testimonial } from '@src/components';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as TSwiper } from 'swiper';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import classNames from 'classnames';
+import { useInView } from 'react-intersection-observer';
+import { useProgress } from '@src/hooks';
 
 export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
   const currentSwiper = useRef<TSwiper | undefined>(undefined);
   const swipeInstance = currentSwiper.current;
   const [active, setActive] = useState(0);
+  const [ref, inView] = useInView({ triggerOnce: true });
+  const { progressLeft, startProgress } = useProgress();
+  const currentStep = useRef<number>(0);
+
+  useEffect(() => {
+    startProgress()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [inView]);
+
+  useEffect(() => {
+    if (progressLeft === 0 && swipeInstance) {
+      startProgress()
+      if (swipeInstance.activeIndex === data.quotes.length - 1) {
+        swipeInstance.slideTo(0)
+      } else {
+        swipeInstance.slideNext()
+        setActive(swipeInstance.activeIndex);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [progressLeft, swipeInstance]);
 
   function to(idx: number) {
     return () => {
       if (swipeInstance) swipeInstance.slideTo(idx);
+      currentStep.current = idx;
     }
   }
 
   function dots(idx: number) {
-      return classNames('p-1 rounded-full bg-white-normal', 
-        {'opacity-50': idx !== active}
-      )
+    return classNames('p-1 rounded-full bg-white-normal p-4',
+      { 'opacity-50': idx !== active }
+    )
   }
 
   return (
-    <section  className='md:h-[70vh] flex flex-col relative text-white-normal pb-24'>
+    <section ref={ref} className='md:h-[70vh] flex flex-col relative text-white-normal pb-24'>
       <div className='inset-0 bg-gray-primary clip absolute -z-[1]'></div>
       <div className='inset-0 bg-white-normal absolute -z-[2]'></div>
       <div className='container py-6 mx-auto px-4 lg:px-12 lg:py-20 h-full flex flex-col gap-6'>
