@@ -84,7 +84,7 @@ export const Icons = {
     Sales
 }
 
-export const plansIcons = {
+export const plansIcon = {
     AdvancePlan,
     EnterPrisePlan,
     EssentialsPlan
@@ -142,3 +142,8 @@ export const industries = [
     { code: "FNALSVC", path: FinancialServices }
 ]
 
+export const plansIcons: { code: string, path: string }[] = [
+    { code: "ADVC", path: plansIcon.AdvancePlan },
+    { code: "ENTPRS", path: plansIcon.EnterPrisePlan },
+    { code: "ESS", path: plansIcon.EssentialsPlan },
+]

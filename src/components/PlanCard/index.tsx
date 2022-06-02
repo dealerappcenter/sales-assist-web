@@ -2,30 +2,76 @@ import { MdCheck, MdArrowDropDown } from "react-icons/md";
 import { SiHackthebox } from "react-icons/si";
 import { plansIcons } from '@src/assets';
 import { buildIcon } from '@src/utils/icons';
+import { Counter } from "../Counter";
+import { useState, useEffect } from 'react';
 interface PlanCardProps {
-    plan: Plan
+    plan: Plan,
+    add?: () => {}
+    remove?: () => {},
+    annually?: boolean,
 }
 
-export const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
+export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true,  }) => {
+    const [price, setPrice] = useState<number>(plan.starting_at.year);
+    const [pricePerUser, setPricePerUser] = useState<number>(plan.price_per_user.year)
+    const [users, setUsers] = useState<number>(plan.users)
+   
+
+    useEffect(() => {
+        if (annually) {
+            setUsers(plan.users)
+            setPricePerUser(plan.price_per_user.year);
+            setPrice(plan.starting_at.year);
+        } else {
+            setUsers(plan.users)
+            setPricePerUser(plan.price_per_user.month);
+            setPrice(plan.starting_at.month);
+        }
+    }, [annually, plan]);
+
+    
+    function removeUsers() {
+        if (plan.users === users) return;
+
+        setUsers(prev => prev - 1);
+        setPrice(prev => prev - pricePerUser);
+    }
+
+    function addUsers() {
+        if (plan.limit === users) return;
+        setUsers(prev => prev + 1);
+        setPrice(prev => prev + pricePerUser);
+        
+    }
+
   return (
     <div key={plan.name} className='p-4 flex flex-col gap-6 bg-white-normal w-full h-full rounded-xl'>
-    <div className="w-16 h-16">{buildIcon({ data: plansIcon, code: plan.code, fallback: <SiHackthebox className="text-xl" />, size: { width: 64, height: 64 }})}</div>
+    <div className="w-16 h-16">{buildIcon({ data: plansIcons, code: plan.code, fallback: <SiHackthebox className="text-xl" />, size: { width: 64, height: 64 }})}</div>
     <div className="text-gray-secondary">
         <h1 className="text-gray-primary mb-2 font-semibold">{plan.name}</h1>
-        <div className="flex items-center gap-2 mb-1">
+        <p className="text-sm">{plan.desc}</p>
+        <div className="w-10 h-[2px] bg-gray-placeholder/50 rounded-sm my-2" />
+        {!plan.custom && <div className="flex flex-col items-start gap-1 my-2">
+            <p className="text-sm">{plan.starting_at?.name}</p>
             <span className="text-gray-primary flex items-end">
-                <h1 className="font-semibold">{plan.price_per_year}</h1>
-                /yr
+                <h1 className="font-semibold">${price}</h1>
+                /mo
             </span>
-            | or
-            <h4 className="text-base text-gray-primary mt-1">
-                <span className="font-semibold">
-                    {plan.price_per_month}
-                </span>
-                /m
-            </h4>
-        </div>
-        <p className="text-gray-secondary text-sm">{plan.price_per_user}</p>
+            <Counter 
+                enable={{
+                    remove: plan.users === users,
+                    add: plan.limit === users
+                }}
+                add={addUsers}
+                remove={removeUsers}
+            >{users} users</Counter>
+        </div>}
+           
+        {plan.custom && <div className="text-gray-primary my-2 mb-5">
+            <p className="text-gray-secondary">{plan.custom.contact_us}</p>
+            <h1 className="font-semibold">{plan.custom.pricing}</h1>
+            <p className="text-gray-secondary">{plan.custom.users}</p>
+        </div>}
     </div>
     <hr />
     {/* perks */}
@@ -53,10 +99,3 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan }) => {
 </div>
   )
 }
-
-
-const plansIcon: { code: string, path: string }[] = [
-    { code: "ADVC", path: plansIcons.AdvancePlan },
-    { code: "ENTPRS", path: plansIcons.EnterPrisePlan },
-    { code: "ESS", path: plansIcons.EssentialsPlan },
-]
