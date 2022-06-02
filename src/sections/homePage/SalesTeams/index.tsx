@@ -40,7 +40,7 @@ export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
   }
 
   function dots(idx: number) {
-    return classNames('p-1 rounded-full bg-white-normal p-4',
+    return classNames('p-[.35rem] rounded-full bg-white-normal duration-500 transition-all',
       { 'opacity-50': idx !== active }
     )
   }
