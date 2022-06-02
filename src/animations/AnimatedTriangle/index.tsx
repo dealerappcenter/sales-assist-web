@@ -28,7 +28,7 @@ export const DashedAnimation: React.FC<DashedAnimationsProps> = ({ active = 'idl
 
         {isMobile && <svg viewBox="0 0 150 150" className='p-4'>
             <line className={lineOne} strokeDasharray={4} strokeWidth={.5} x1="85" y1="25" x2="115" y2="70" />
-            <line className={lineTow} strokeDasharray={4} strokeWidth={.5} x1="30" y1="83" x2="100" y2="83" />
+            <line className={lineTow} strokeDasharray={4} strokeWidth={.5} x1="30" y1="85" x2="100" y2="85" />
             <line className={lineThree} strokeDasharray={4} strokeWidth={.5} x1="35" y1="75" x2="75" y2="0" />
         </svg>}
     </div>

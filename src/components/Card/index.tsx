@@ -10,7 +10,7 @@ interface CardProps {
 
 export const Card: React.FC<CardProps> = (props) => {
   const { title, sub, className, kind = 'normal' } = props;
-  const cardClasses = classNames("mb-6 h-[25rem] w-[20rem] rounded-2xl bg-card-normal overflow-hidden cursor-pointer flex duration-400 items-end", 
+  const cardClasses = classNames("mb-6 h-[25rem] w-[22rem] rounded-2xl bg-card-normal overflow-hidden cursor-pointer flex duration-400 items-end", 
     {'bg-gradient-to-b from-[#FF333366] to-[#FF990066]':  kind === 'orange'},
     {'bg-gradient-to-b from-[#3360FF66] to-[#8B00AE66]':  kind === 'purple'},
   className

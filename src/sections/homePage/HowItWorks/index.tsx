@@ -3,7 +3,6 @@ import { useEffect, useRef } from 'react';
 
 import { AnimatedCard, Card } from 'src/components';
 import { useResponsive } from '@hooks/useResponsive';
-import {  Icons } from '@src/assets';
 import { useProgress } from '@src/hooks/useProgress';
 import { useInView } from 'react-intersection-observer'
 // 
@@ -11,12 +10,18 @@ import { InteractAnimation } from '@src/components/HowitWorksAnimations/Interact
 import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer';
 import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper as TSwiper } from 'swiper';
+
 export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
     const currentCard = useRef(0);
     const [ref, inView] = useInView();
 
     const { progressLeft, startProgress } = useProgress();
+
+    const currentSwiper = useRef<TSwiper | undefined>(undefined);
+    const swipeInstance = currentSwiper.current;
 
     useEffect(() => {
         startProgress()
@@ -28,12 +33,14 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
             startProgress()
             if (currentCard.current >= 2) {
                 currentCard.current = 0
+                swipeInstance?.slideTo(0)
             } else {
                 currentCard.current = currentCard.current + 1;
+                swipeInstance?.slideNext()
             }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [progressLeft, currentCard]);
+    }, [progressLeft, currentCard, swipeInstance]);
 
     function clickOnCard(card: number) {
         return () => {
@@ -86,42 +93,33 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                 </div>
             </div>}
 
-            {(isMobile || isTablet) && <div className='relative  overflow-y-hidden overflow-x-auto flex px-4'>
-                {data.actions.map((k, index) => {
-                    return <Card
-                        kind={k.kind}
-                        key={index}
-                        title={k.title}
-                        sub={k.desc}
-                    />
+            {(isMobile || isTablet) && <div className='relative  overflow-y-hidden overflow-x-auto flex px-4 items-center justify-center'>
+                <Swiper
+                    slidesPerView={1}
+                    speed={600}
+                    onSwiper={sw => currentSwiper.current = sw}
+                    onSlideChange={ev => {
+                        if (ev.activeIndex === data.actions.length + 1) {
+                            clickOnCard(0)();
+                        }
+                        clickOnCard(ev.activeIndex)();
+                    }}
+                >
+                    {data.actions.map((k, index) => {
+                        return <SwiperSlide key={index + k.kind}>
+                            <Card
+                                kind={k.kind}
+                                key={index}
+                                title={k.title}
+                                sub={k.desc}
+                                className='shadow'
+                            />
+                        </SwiperSlide>
 
-                })}
+                    })}
+                </Swiper>
             </div>}
 
         </main>
     )
 }
-
-const cardData = [
-    {
-        title: 'Add sales actions',
-        sub: 'Create an Action Panel for your sales team, by choosing from existing Actions or customize your own, from eSignatures to document collocation to e-forms.',
-        icon: Icons.AddSales,
-        delay: 0,
-        kind: 'orange'
-    },
-    {
-        title: 'Interact with Customers',
-        sub: 'Streamline the sales process by texting customers Sales Actions, so they can easily and quickly review, complete and submit right from their mobile device.',
-        icon: Icons.Interact,
-        delay: 0.5,
-        kind: 'purple'
-    },
-    {
-        title: 'Complete the Sales',
-        sub: 'Close the deal without any heavy lifting, automatically importing everything directly into your CRM and all other existing platforms.',
-        icon: Icons.CompleteSales,
-        delay: 0.8,
-        kind: 'normal'
-    },
-]
