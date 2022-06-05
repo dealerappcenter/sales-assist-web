@@ -13,7 +13,7 @@ interface CounterProps {
 export const Counter: FC<PropsWithChildren<CounterProps>> = ({ children, enable = { remove: true, add: false }, add, remove }) => {
     return (
         <div className="flex gap-4">
-            <button onClick={remove} disabled={enable.remove} className='p-2 rounded-full disabled:bg-gray-disabled/20'>
+            <button onClick={remove} disabled={enable.remove} className='p-2 rounded-full disabled:bg-gray-disabled/20 bg-orange-normal/20'>
                 <MdRemove />
             </button>
             <h3>

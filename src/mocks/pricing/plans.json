@@ -2,8 +2,8 @@
     "title": "Full feature comparison",
     "description": "Simple pricing structure with no upfront commitment or implementation costs. Flexibility built for organizations of any industry, use case, and size.",
     "plans_names": [
-        { "name": "Essentials", "price": "$600"},
-        { "name": "Advance", "price": "$3600"},
+        { "name": "Essential", "price": "$600"},
+        { "name": "Advanced", "price": "$3600"},
         { "name": "Enterprise", "price": "$4800"}
     ], 
     "features": [

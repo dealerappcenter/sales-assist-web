@@ -37,7 +37,9 @@ export const PricingComparison = () => {
                                             <MdCheck />
                                         </div>
                                     } else if (perk === 'no') {
-                                        return <div className='w-1/3 md:w-1/2'></div>
+                                        return <div className='w-1/3 md:w-1/2'>
+                                            <MdCheck />
+                                        </div>
                                     } else {
                                         return <p className='w-1/3 md:w-1/2 text-center'>{perk}</p>
                                     }

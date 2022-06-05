@@ -78,7 +78,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
                     <Button onClick={handleIsAnnually('year')} badge="20% off" badgeClassName="-top-4 -left-5 bg-[#F2994A] w-fit px-2" className={buttonClass(currentActive === 'year')}>Billed Annually</Button>
                     <Button onClick={handleIsAnnually('month')} className={buttonClass(currentActive === 'month')}>Billed Monthly</Button>
                 </div>
-                {(isDesktop) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[40rem]'>
+                {(isDesktop) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[42rem]'>
                     {PricingData.plans.map((plan, i) => <motion.div className="w-1/2 h-full" initial={{ translateY: 100, opacity: 0 }} transition={{ duration: .5, ease: 'linear', delay: getDelay(i) }} viewport={{ once: true }} animate={{ translateY: 0, opacity: 1 }} key={plan.name}>
                         <PlanCard plan={plan} annually={currentActive === 'year'} />
                     </motion.div>)}

@@ -3,7 +3,7 @@
     "description": "Simple pricing structure with no upfront commitment or implementation costs. Flexibility built for organizations of any industry, use case, and size.",
     "plans": [
         {
-            "name": "Essentials",
+            "name": "Essential",
             "desc": "For small teams with simple sales completion process",
             "code": "ESS",
             "price_per_user": {
@@ -18,9 +18,9 @@
             "users": 1,
             "limit": 3,
             "perks": [
-                { "name": "users", "perk": 3},
+                { "name": "users", "perk": "Up to 3"},
                 { "name": "Sales actions", "perk": 5},
-                { "name": "Market place integrations", "perk": 1}
+                { "name": "Marketplace integration", "perk": 1}
             ],
             "features": {
                 "name": "Features",
@@ -35,7 +35,7 @@
             }
         },
         {
-            "name": "Advance",
+            "name": "Advanced",
             "desc": "Everything you need to simplify and streamline any sales completion process",
             "code": "ADVC",
             "users": 4,
@@ -50,7 +50,7 @@
                 "month": 599
             },
             "perks": [
-                { "name": "users", "perk": "4-14"},
+                { "name": "users", "perk": "For 4-14"},
                 { "name": "Sales actions", "perk": 10},
                 { "name": "Market place integrations", "perk": 3}
             ],
