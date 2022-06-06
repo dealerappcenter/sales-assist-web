@@ -29,7 +29,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
     }, [inView]);
 
     useEffect(() => {
-        if (progressLeft === 0) {
+        if (progressLeft === 0 && swipeInstance) {
             startProgress()
             if (currentCard.current >= 2) {
                 currentCard.current = 0
@@ -93,33 +93,23 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                 </div>
             </div>}
 
-            {(isMobile || isTablet) && <div className='relative  overflow-y-hidden overflow-x-auto flex px-4 items-center justify-center'>
-                <Swiper
-                    slidesPerView={1}
-                    speed={600}
-                    onSwiper={sw => currentSwiper.current = sw}
-                    onSlideChange={ev => {
-                        if (ev.activeIndex === data.actions.length + 1) {
-                            clickOnCard(0)();
+            {(isMobile || isTablet) && <div className='relative overflow-y-hidden overflow-x-auto flex px-4'>
+                {data.actions.map((k, index) => {
+                    return <Card
+                        kind={k.kind}
+                        key={index}
+                        title={k.title}
+                        sub={k.desc}
+                        className='shadow'
+                    >
+                        {[
+                            <InteractAnimation key='InteractAnimation' />,
+                            <CustomerAnimation key='CustomerAnimation' />,
+                            <SalesAnimation key='SalesAnimation' />][index]
                         }
-                        clickOnCard(ev.activeIndex)();
-                    }}
-                >
-                    {data.actions.map((k, index) => {
-                        return <SwiperSlide key={index + k.kind}>
-                            <Card
-                                kind={k.kind}
-                                key={index}
-                                title={k.title}
-                                sub={k.desc}
-                                className='shadow'
-                            />
-                        </SwiperSlide>
-
-                    })}
-                </Swiper>
+                    </Card>
+                })}
             </div>}
-
         </main>
     )
 }

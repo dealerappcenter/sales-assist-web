@@ -68,15 +68,18 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
     }
 
     function buttonClass(isActive: boolean) {
-        return classNames({ 'bg-white-normal text-orange-normal font-semibold': !isActive });
+        return classNames('p-4 py-2 rounded-md font-semibold duration-500 transition-all relative', { 'bg-white-normal text-orange-normal': !isActive }, {'bg-orange-normal text-white-normal': isActive});
     }
 
     return (
         <section className='h-full flex flex-col bg-white-normal md:bg-white-soft md:pb-12'>
             <div className='flex-grow container flex items-center justify-start flex-col gap-5 mx-auto lg:px-12 md:px-6 px-4'>
                 <div className="flex items-center justify-center gap-6 py-6 md:py-0 h-[4rem]">
-                    <Button onClick={handleIsAnnually('year')} badge="20% off" badgeClassName="-top-4 -left-5 bg-[#F2994A] w-fit px-2" className={buttonClass(currentActive === 'year')}>Billed Annually</Button>
-                    <Button onClick={handleIsAnnually('month')} className={buttonClass(currentActive === 'month')}>Billed Monthly</Button>
+                    <button onClick={handleIsAnnually('year')} className={buttonClass(currentActive === 'year')}>
+                        <span className="absolute -left-6 -top-4 bg-[#F2994A] px-3 rounded-xl text-white-normal">25 off</span>
+                        Billed Annually
+                    </button>
+                    <button onClick={handleIsAnnually('month')} className={buttonClass(currentActive === 'month')}>Billed Monthly</button>
                 </div>
                 {(isDesktop) && <div className='hidden relative overflow-x-auto overflow-y-hidden w-full md:flex gap-5 md:items-start md:justify-center h-[42rem]'>
                     {PricingData.plans.map((plan, i) => <motion.div className="w-1/2 h-full" initial={{ translateY: 100, opacity: 0 }} transition={{ duration: .5, ease: 'linear', delay: getDelay(i) }} viewport={{ once: true }} animate={{ translateY: 0, opacity: 1 }} key={plan.name}>

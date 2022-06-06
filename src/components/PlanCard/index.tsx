@@ -47,31 +47,35 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true, }) =>
     return (
         <div key={plan.name} className='p-4 flex flex-col gap-4 bg-white-normal w-full h-full rounded-xl'>
             <div className="w-16 h-16">{buildIcon({ data: plansIcons, code: plan.code, fallback: <SiHackthebox className="text-xl" />, size: { width: 64, height: 64 } })}</div>
-            <div className="text-gray-secondary h-1/3">
-                <h1 className="text-gray-primary mb-2 font-semibold">{plan.name}</h1>
-                <p className="text-sm">{plan.desc}</p>
-                <div className="w-10 h-[2px] bg-gray-placeholder/50 rounded-sm my-2" />
-                {!plan.custom && <div className="flex flex-col items-start gap-1 my-2 h-[45%] justify-between">
-                    <p className="text-sm">{plan.starting_at?.name}</p>
-                    <span className="text-gray-primary flex items-end">
-                        <h1 className="font-semibold">${price}</h1>
-                        /mo
-                    </span>
-                    <Counter
-                        enable={{
-                            remove: plan.users === users,
-                            add: plan.limit === users
-                        }}
-                        add={addUsers}
-                        remove={removeUsers}
-                    >{users} Users</Counter>
-                </div>}
+            <div className="text-gray-secondary h-1/3 flex flex-col ">
+                <div className="h-1/2 ">
+                    <h1 className="text-gray-primary mb-1 font-semibold">{plan.name}</h1>
+                    <p className="text-sm">{plan.desc}</p>
+                </div>
+                <div className="w-10 h-[3px] bg-gray-placeholder/50 rounded-sm" />
+                <div className="flex items-start">
+                    {!plan.custom && <div className="flex flex-col items-start gap-1 my-2 h-[45%] justify-between">
+                        <p className="text-sm">{plan.starting_at?.name}</p>
+                        <span className="text-gray-primary flex items-end">
+                            <h1 className="font-semibold">${price}</h1>
+                            /mo
+                        </span>
+                        <Counter
+                            enable={{
+                                remove: plan.users === users,
+                                add: plan.limit === users
+                            }}
+                            add={addUsers}
+                            remove={removeUsers}
+                        >{users} Users</Counter>
+                    </div>}
 
-                {plan.custom && <div className="text-gray-primary my-2 h-[45%] flex flex-col gap-2">
-                    <p className="text-gray-secondary text-sm">{plan.custom.contact_us}</p>
-                    <h3 className="font-semibold">{plan.custom.pricing}</h3>
-                    <p className="text-gray-secondary text-sm">{plan.custom.users}</p>
-                </div>}
+                    {plan.custom && <div className="text-gray-primary my-2 h-[45%] flex flex-col gap-2">
+                        <p className="text-gray-secondary text-sm">{plan.custom.contact_us}</p>
+                        <h3 className="font-semibold">{plan.custom.pricing}</h3>
+                        <p className="text-gray-secondary text-sm">{plan.custom.users}</p>
+                    </div>}
+                </div>
             </div>
             <hr />
             {/* perks */}
