@@ -143,7 +143,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
                         </div>
 
                         <div className="my-4 mb-6">
-                            <h3 className="text-gray-primary font-medium">{PricingData.plans[current].features.name}:</h3>
+                            <h3 className="text-gray-primary font-medium">{PricingData.plans[current].features.name}</h3>
                             {PricingData.plans[current].features.perks.map(perk => {
                                 return <div className="flex gap-2 items-center" key={perk}>
                                     <MdCheck className="text-green-600" /> {perk}

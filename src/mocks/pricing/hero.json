@@ -55,7 +55,7 @@
                 { "name": "Market place integrations", "perk": 3}
             ],
             "features": {
-                "name": "All features from Essentials+",
+                "name": "All features from Essential, plus:",
                 "perks": [
                     "CRM Embedded Extension",
                     "Two-way CRM sync",
@@ -82,18 +82,16 @@
             "custom": {
                 "contact_us": "Contact us",
                 "pricing": "Custom pricing",
-                "users": "Unlimited users"
+                "users": "unlimited users"
             },
             "perks": [
-                { "name": "users", "perk": "15+"},
-                { "name": "Sales actions", "perk": 10},
+                { "name": "users", "perk": "For 15+"},
+                { "name": "Sales Actions", "perk": "Unlimited"},
                 { "name": "Market place integrations", "perk": "Unlimited"}
             ],
             "features": {
-                "name": "All features from Essentials+",
+                "name": "All features from Advanced, plus:",
                 "perks": [
-                    "Unlimited Sales Actions",
-                    "Custom Actions",
                     "Dedicated Account Management"
                 ]
             }

@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 import { useClickOutside } from '@hooks/useClickOutside';
 import { useResponsive } from '@hooks/useResponsive';
+import Image from 'next/image';
 
 export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSection>> = ({ id, data }) => {
     const [isActive, setIsActive] = useState<number>(0);
@@ -69,8 +70,10 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                     <div className="flex-grow flex flex-col gap-6">
                         {data.actions[isActive] && (
                             <>
-                                <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center">
-                                    {data.actions[isActive].code}
+                                <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center relative px-10">
+                                    {/* {data.actions[isActive].url && <div className='relative w-[42%] h-full overflow-hidden'>
+                                        <Image src={data.actions[isActive].url || ''} layout='fill' alt={data.actions[isActive].name}/>
+                                    </div>} */}
                                 </div>
                                 <div className="flex items-center flex-col justify-center gap-2">
                                     <h3 className="font-bold">{data.actions[isActive].title}</h3>

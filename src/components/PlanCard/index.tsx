@@ -67,7 +67,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true, }) =>
                             }}
                             add={addUsers}
                             remove={removeUsers}
-                        >{users} Users</Counter>
+                        >{users} users</Counter>
                     </div>}
 
                     {plan.custom && <div className="text-gray-primary my-2 h-[45%] flex flex-col gap-1">
