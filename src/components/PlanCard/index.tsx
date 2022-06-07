@@ -81,7 +81,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true, }) =>
             {/* perks */}
             <ul className="text-sm text-gray-primary">
                 {plan.perks.map(perk => <li key={perk.name} className='last:mb-0 mb-2'>
-                    <span className="font-semibold">
+                    <span className="font-">
                         {perk.perk}
                     </span> {' '}
                     <span className="text">
