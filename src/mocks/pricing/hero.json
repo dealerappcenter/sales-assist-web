@@ -52,7 +52,7 @@
             "perks": [
                 { "name": "users", "perk": "For 4-14"},
                 { "name": "Sales actions", "perk": 10},
-                { "name": "Market place integrations", "perk": 3}
+                { "name": "Marketplace integrations", "perk": 3}
             ],
             "features": {
                 "name": "All features from Essential, plus:",
@@ -82,12 +82,12 @@
             "custom": {
                 "contact_us": "Contact us",
                 "pricing": "Custom pricing",
-                "users": "unlimited users"
+                "users": "Unlimited users"
             },
             "perks": [
                 { "name": "users", "perk": "For 15+"},
                 { "name": "Sales Actions", "perk": "Unlimited"},
-                { "name": "Market place integrations", "perk": "Unlimited"}
+                { "name": "Marketplace integrations", "perk": "Unlimited"}
             ],
             "features": {
                 "name": "All features from Advanced, plus:",
