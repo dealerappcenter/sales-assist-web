@@ -57,7 +57,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true, }) =>
                     {!plan.custom && <div className="flex flex-col items-start gap-1 my-2 h-[45%] justify-between">
                         <p className="text-sm">{plan.starting_at?.name}</p>
                         <span className="text-gray-primary flex items-end">
-                            <h1 className="font-semibold">${price}</h1>
+                            <h3 className="font-semibold">${price}</h3>
                             /mo
                         </span>
                         <Counter
@@ -70,7 +70,7 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true, }) =>
                         >{users} Users</Counter>
                     </div>}
 
-                    {plan.custom && <div className="text-gray-primary my-2 h-[45%] flex flex-col gap-2">
+                    {plan.custom && <div className="text-gray-primary my-2 h-[45%] flex flex-col gap-1">
                         <p className="text-gray-secondary text-sm">{plan.custom.contact_us}</p>
                         <h3 className="font-semibold">{plan.custom.pricing}</h3>
                         <p className="text-gray-secondary text-sm">{plan.custom.users}</p>

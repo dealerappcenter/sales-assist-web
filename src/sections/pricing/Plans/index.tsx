@@ -68,7 +68,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
     }
 
     function buttonClass(isActive: boolean) {
-        return classNames('p-4 py-2 rounded-md font-semibold duration-500 transition-all relative', { 'bg-white-normal text-orange-normal': !isActive }, {'bg-orange-normal text-white-normal': isActive});
+        return classNames('p-4 py-2 rounded-md font-semibold duration-500 transition-all relative shadow', { 'bg-white-normal text-orange-normal': !isActive }, {'bg-orange-normal text-white-normal': isActive});
     }
 
     return (
@@ -76,7 +76,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
             <div className='flex-grow container flex items-center justify-start flex-col gap-5 mx-auto lg:px-12 md:px-6 px-4'>
                 <div className="flex items-center justify-center gap-6 py-6 md:py-0 h-[4rem]">
                     <button onClick={handleIsAnnually('year')} className={buttonClass(currentActive === 'year')}>
-                        <span className="absolute -left-6 -top-4 bg-[#F2994A] px-3 rounded-xl text-white-normal">25 off</span>
+                        <span className="absolute -left-6 -top-4 bg-[#F2994A] px-3 rounded-lg text-white-normal text-sm font-normal">25% off</span>
                         Billed Annually
                     </button>
                     <button onClick={handleIsAnnually('month')} className={buttonClass(currentActive === 'month')}>Billed Monthly</button>

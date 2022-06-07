@@ -33,7 +33,7 @@ export const TeamIcon: React.FC<TeamIconProps> = ({ src, title, name, link, code
             <RiLinkedinBoxFill />
           </a>
         </div>
-        <p className='text-gray-secondary text-sm md:text-base'>{title}</p>
+        <p className='text-gray-secondary text-sm text-center'>{title}</p>
       </div>
     </div>
   )
