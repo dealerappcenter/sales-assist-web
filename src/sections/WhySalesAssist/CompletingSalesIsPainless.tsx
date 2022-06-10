@@ -26,7 +26,7 @@ export const WhySalesAssistCompletingSalesIsPainless: React.FC<Section<WhySalesA
                                 </div>
                                 <div>
                                     <h3 className="font-medium">{k.title}</h3>
-                                    <p className="text-gray-secondary">{k.desc}</p>
+                                    <p className="">{k.desc}</p>
                                 </div>
                             </div>
                         })

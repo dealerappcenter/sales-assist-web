@@ -7,6 +7,8 @@
         "add": "Add to your Action Panel" 
     },
     "show_case": [
-        { "url": null, "title": "", "desc": "" }
+        { "option": "Select a Sales Action template", "url": "/assets/ActionBuilder/Step1.png", "title": "Select a Sales Action template", "desc": "Choose off-the-shelf Sales Action templates from our evergrowing Template Library. " },
+        { "option": "Customize your own", "url": "/assets/ActionBuilder/Step2.png", "title": "Customize your own", "desc": "Modify texts, images, logos, documents, and page layout on the Sales Actions based on your needs." },
+        { "option": "Add to your Action Panel", "url": "/assets/ActionBuilder/Step3.png", "title": "Add to your Action Panel", "desc": "Turn on and off Sales Actions on the Action Panel and list them in the sequence you prefer." }
     ]
 }

@@ -39,7 +39,7 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
             <div className='container mx-auto text-white-normal flex flex-col gap-12'>
                 <div>
                     <h1 className="mb-4">{data.title}</h1>
-                    <h4 className="text-gray-secondary">{data.desc}</h4>
+                    <h4 className="text-white-normal">{data.desc}</h4>
                 </div>
 
                 <div className="flex-grow flex lg:gap-12 flex-col md:flex-row">
@@ -71,13 +71,13 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                         {data.actions[isActive] && (
                             <>
                                 <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center relative px-10">
-                                    {/* {data.actions[isActive].url && <div className='relative w-[42%] h-full overflow-hidden'>
-                                        <Image src={data.actions[isActive].url || ''} layout='fill' alt={data.actions[isActive].name}/>
-                                    </div>} */}
+                                    {data.actions[isActive].url && <div className='relative h-full overflow-hidden flex items-center'>
+                                        <Image src={data.actions[isActive].url || ''} width={229} height={460} alt={data.actions[isActive].name}/>
+                                    </div>}
                                 </div>
                                 <div className="flex items-center flex-col justify-center gap-2">
                                     <h3 className="font-bold">{data.actions[isActive].title}</h3>
-                                    <p className="text-sm max-w-2xl w-fit text-center text-gray-secondary">{data.actions[isActive].desc}</p>
+                                    <p className="text-sm max-w-2xl w-fit text-center ">{data.actions[isActive].desc}</p>
                                 </div>
                             </>
                         )}

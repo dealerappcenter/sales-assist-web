@@ -26,7 +26,7 @@ export const PricingComparison = () => {
                         return <div key={feature.name} className=' first:bg-white-normal even:bg-[#F5F6F8] text-gray-primary p-4 py-6 flex flex-col md:flex-row items-center'>
                             <div className='md:w-1/2 gap-2 md:gap-0 flex items-start py-4 flex-col'>
                                 <h3 className='font-medium'>{feature.name}</h3>
-                                {/* <p className='text-gray-secondary text-sm'>{feature.sub_name}</p> */}
+                                <p className='text-gray-secondary text-sm'>{feature.sub_name}</p>
                             </div>
                             <div className='flex w-full items-center justify-center'>
                                 {feature.perks.map(perk => {

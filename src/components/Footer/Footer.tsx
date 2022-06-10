@@ -30,7 +30,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                 <div className='h-1/2 w-full flex justify-between md:gap-4 md:items-center'>
                     <div className='w-full md:w-fit lg:w-1/2 h-full px-2 md:py-2 relative mb-auto'>
                         <Image src={logo} alt='logo' />
-                        <h4 className='hidden md:block text-xs text-gray-secondary'>© Shiplove Inc. {new Date().getFullYear()} All Rights Reserved</h4>
+                        <h4 className='hidden md:block text-xs'>© Shiplove Inc. {new Date().getFullYear()} All Rights Reserved</h4>
                         <FooterList
                             kind={kind}
                             hideTitle
@@ -63,7 +63,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
                 <div className='flex-col md:flex-row flex-grow md:border-t w-full flex md:items-start md:justify-between gap-6 px-2 md:px-0 md:py-2'>
                     {/* useful links */}
                     <div className='w-1/6 border block md:hidden'></div>
-                    <div className='md:w-1/2 h-full flex items-start md:gap-6 md:justify-start flex-col md:flex-row text-gray-secondary'>
+                    <div className='md:w-1/2 h-full flex items-start md:gap-6 md:justify-start flex-col md:flex-row '>
                         {[{ name: 'Privacy Policy', path: '/privacy-policy'}].map((link) => <Link key={link.path} passHref href={link.path}>
                             <NavLink hideProgress
                                 className='px-0'>

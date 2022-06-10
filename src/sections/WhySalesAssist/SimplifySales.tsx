@@ -36,7 +36,7 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     }, [progressLeft, currentStep, swipeInstance]);
 
     const getClasses = (step: number) => {
-        return classNames("w-fit h-10 flex p-4 rounded-full justify-center items-center duration-500 transition-all",
+        return classNames("w-fit h-fit flex py-2 px-4 rounded-full justify-center items-center duration-500 transition-all",
             { 'bg-orange-normal': currentStep.current === step },
             { 'bg-gray-aux': currentStep.current !== step },
         )
@@ -51,11 +51,11 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     }
 
     return (
-        <section id={id} className='overflow-hidden px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
+        <section id={id} className='overflow-hidden px-4 py-12 lg:px-12 lg:py-32 bg-gray-primary'>
             <div className='container mx-auto text-white-normal flex flex-col gap-6 md:gap-12'>
                 <div className="">
                     <h1 className="mb-4">{data.title}</h1>
-                    <h4 className="text-gray-secondary">{data.desc}</h4>
+                    <h4 className="">{data.desc}</h4>
                 </div>
                 <div className="flex-grow gap-6 md:gap-12 flex flex-col">
                     <div className="p-2 flex w-full justify-between items-center gap-4">
@@ -82,15 +82,16 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
                                 clickOnCard(ev.activeIndex)();
                             }}
                         >
-                            {choose.map((d) => <SwiperSlide key={d.id}>
-                                <div key={d.id} className='w-full flex items-center'>
-                                    <div className='w-full md:w-1/2 px-6 relative'>
-                                        <Image src={d.image} alt='example' />
+                            {data.show_case.map((d, i) => <SwiperSlide key={d.url}>
+                                <div key={d.url} className='w-full flex items-center justify-center flex-col md:flex-row gap-4 md:gap-12'>
+                                    <div className="md:hidden block w-[80%]">{i + 1}. {d.option}</div>
+                                    <div className='w-[80%] md:w-full md:px-6 relative h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[30rem] rounded-xl md:rounded-3xl overflow-hidden flex items-center'>
+                                        <Image src={d.url} layout='fill' alt='example' />
                                     </div>
 
-                                    <div className="text-white-normal w-1/2 hidden md:block">
-                                        <h3>{d.title}</h3>
-                                        <p className='text-gray-secondary'>
+                                    <div className="text-white-normal w-[80%]">
+                                        <h2 className='mb-2'>{d.title}</h2>
+                                        <p className='text-sm'>
                                             {d.desc}
                                         </p>
                                     </div>

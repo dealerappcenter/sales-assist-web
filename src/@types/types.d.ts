@@ -139,9 +139,10 @@ interface Options {
 }
 
 interface ShowCase {
-    url:   null | string;
+    url:   string;
     title: string;
     desc:  string;
+    option: string;
 }
 
 

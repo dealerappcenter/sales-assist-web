@@ -21,7 +21,7 @@ export const Avatar: React.FC<AvatarProps> = (props) => {
                 </div>
                 <div className='py-2 ml-4 flex justify-center flex-col'>
                     <h1 className='text-sm md:text-lg'>{title}</h1>
-                    <p className='text-gray-secondary text-xs md:text-md'>{subTitle}</p>
+                    <p className='text-white-normal text-xs md:text-md'>{subTitle}</p>
                 </div>
             </div>
         </div>
