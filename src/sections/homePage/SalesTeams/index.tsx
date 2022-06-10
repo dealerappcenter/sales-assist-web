@@ -64,6 +64,7 @@ export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
                   className='w-full'
                   title={quote.author}
                   subTitle={quote.position}
+                  image={quote.url}
                 >
                   {quote.thoughts}
                 </Testimonial>

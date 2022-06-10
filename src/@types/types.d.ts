@@ -89,7 +89,7 @@ interface Quote {
     thoughts: string;
     author:     string;
     position: string;
-    url:      null | string;
+    url:      string;
 }
 
 type SimplifySection = {

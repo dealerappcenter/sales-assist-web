@@ -1,3 +1,5 @@
+import { BsLinkedin } from 'react-icons/bs';
+
 export enum Paths {
     whySalesAssist = '/why-sales-assist',
     pricing = '/pricing',
@@ -67,6 +69,10 @@ const contact = {
         { path: '#', name: '251 Little Falls Drive, Wilmington, Delaware 19808' },
     ]
 }
+
+export const social = [
+    { url: 'https://www.linkedin.com/company/getsalesassist', icon: <BsLinkedin />}
+]
 
 export const footerLinks = {
     salesAssist,

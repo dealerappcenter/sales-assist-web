@@ -3,7 +3,7 @@ import { logoVariants } from '@src/assets'
 import { useMemo } from 'react';
 import Image from 'next/image';
 import { FooterList } from './FooterList';
-import { footerLinks } from '../../utils/routes';
+import { footerLinks, social } from '@src/utils/routes';
 import { NavLink } from '@components/NavLink';
 import Link from 'next/link';
 
@@ -22,6 +22,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
         className
     );
     const logo = useMemo(() => kind === 'dark' ? logoVariants.white : logoVariants.dark, [kind]);
+    const socialClasses = classNames('text-3xl text-white-normal rounded', {'bg-withe-normal': kind === 'dark'}, {'bg-gray-primary': kind === 'light'})
 
     return (
         <footer className={baseClasses}>
@@ -77,7 +78,9 @@ export const Footer: React.FC<FooterProps> = (props) => {
                     <div className='md:w-1/2 h-full flex justify-end gap-2 md:gap-6 flex-col md:flex-row w-full md:pb-12'>
                         <h4 className='block md:hidden text-xs text-gray-secondary'>© Shiplove Inc. {new Date().getFullYear()} All Rights Reserved</h4>
                         <div className='flex gap-6 w-full flex-wrap md:justify-end'>
-                            {[1, 2, 3].map((_, i) => <span key={i} className='p-2 h-10 w-10 bg-gray-secondary/40 rounded' />)}
+                            {social.map((s, i) => <a key={i} href={s.url} target='_blank' rel='noreferrer' className={socialClasses}>
+                                {s.icon}
+                            </a>)}
                         </div>
                     </div>
                 </div>

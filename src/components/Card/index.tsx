@@ -21,7 +21,7 @@ export const Card: React.FC<React.PropsWithChildren<CardProps>> = (props) => {
       <div
         className={cardClasses}
       >
-        <div className='px-4 pt-4 w-[90%] flex items-center justify-center'>
+        <div className='px-4 pt-4 w-[90%] flex items-center justify-center h-[80%] relative border'>
           {props.children}
         </div>
         <div className='flex p-2 bg-white-normal/20 flex-grow'>
