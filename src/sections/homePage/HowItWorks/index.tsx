@@ -10,7 +10,6 @@ import { InteractAnimation } from '@src/components/HowitWorksAnimations/Interact
 import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer';
 import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
 
-import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as TSwiper } from 'swiper';
 
 export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) => {
@@ -94,10 +93,10 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
             </div>}
 
             {(isMobile || isTablet) && <div className='relative overflow-y-hidden overflow-x-auto flex px-4'>
-                {data.actions.map((k, index) => {
+                {data.actions.map((k, i) => {
                     return <Card
                         kind={k.kind}
-                        key={index}
+                        key={i}
                         title={k.title}
                         sub={k.desc}
                         className='shadow'
@@ -105,7 +104,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                         {[
                             <InteractAnimation key='InteractAnimation' />,
                             <CustomerAnimation key='CustomerAnimation' />,
-                            <SalesAnimation key='SalesAnimation' />][index]
+                            <SalesAnimation key='SalesAnimation' />][i]
                         }
                     </Card>
                 })}

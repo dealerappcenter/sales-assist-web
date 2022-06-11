@@ -22,7 +22,7 @@ export const DashedAnimation: React.FC<DashedAnimationsProps> = ({ active = 'idl
 
         {isTablet && <svg viewBox="0 0 150 150" className='p-4'>
             <line className={lineOne} strokeDasharray={3} strokeWidth={.5} x1="55" y1="20" x2="115" y2="85" />
-            <line className={lineTow} strokeDasharray={3} strokeWidth={.5} x1="30" y1="150" x2="120" y2="90" />
+            <line className={lineTow} strokeDasharray={3} strokeWidth={.5} x1="30" y1="130" x2="110" y2="70" />
             <line className={lineThree} strokeDasharray={3} strokeWidth={.5} x1="15" y1="135" x2="35" y2="45" />
         </svg>}
 

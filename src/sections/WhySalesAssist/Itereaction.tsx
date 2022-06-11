@@ -42,7 +42,7 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                     <h4 className="text-white-normal">{data.desc}</h4>
                 </div>
 
-                <div className="flex-grow flex lg:gap-12 flex-col md:flex-row">
+                <div className="flex-grow flex lg:gap-12 flex-col lg:flex-row">
                     {isDesktop && <div className="w-1/4 md:flex flex-col gap-6 hidden">
                         {data.actions.map((t, i) => <motion.button initial={{ translateX: -300, opacity: 0 }} whileInView={{ translateX: 0, opacity: 1 }} viewport={{ once: true }} transition={{duration: 1, ease: 'linear', delay: t.delay}}onClick={handleIsActive(i)} key={t.code} className={getClasses(i)}>
                             <MdInsights className="md:text-2xl" />
@@ -50,7 +50,7 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                         </motion.button>)}
                     </div>}
 
-                    {(isMobile || isTablet) && <div ref={optionContainer}  className="md:hidden flex gap-4 flex-col">
+                    {(isMobile || isTablet) && <div ref={optionContainer}  className="lg:hidden flex gap-4 flex-col mb-12">
                         <h4 className="font-medium text-sm">Select an option</h4>
                         <button onClick={handleIsOpen} className='relative border border-gray-disabled rounded-lg px-4 py-3 w-full flex items-center justify-between'>
                             <div className="flex items-center gap-2">
