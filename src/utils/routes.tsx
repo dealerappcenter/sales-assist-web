@@ -1,3 +1,5 @@
+import { BsLinkedin } from 'react-icons/bs';
+
 export enum Paths {
     whySalesAssist = '/why-sales-assist',
     pricing = '/pricing',
@@ -24,18 +26,18 @@ export type Routes = Array<Route>;
  * NOTE: order is important here since this arr will be used to map all the routes in the nav;
  */
 export const routes: Routes = [
-    // {
-    //     path: Paths.whySalesAssist,
-    //     name: RouteNames.whySalesAssist
-    // },
-    // {
-    //     path: Paths.pricing,
-    //     name: RouteNames.pricing
-    // },
-    // {
-    //     path: Paths.about,
-    //     name: RouteNames.about
-    // }
+    {
+        path: Paths.whySalesAssist,
+        name: RouteNames.whySalesAssist
+    },
+    {
+        path: Paths.pricing,
+        name: RouteNames.pricing
+    },
+    {
+        path: Paths.about,
+        name: RouteNames.about
+    }
 ]
 
 export const calendlyLink = 'https://calendly.com/salesasssit?primary_color=f1621a';
@@ -67,6 +69,10 @@ const contact = {
         { path: '#', name: '251 Little Falls Drive, Wilmington, Delaware 19808' },
     ]
 }
+
+export const social = [
+    { url: 'https://www.linkedin.com/company/getsalesassist', icon: <BsLinkedin />}
+]
 
 export const footerLinks = {
     salesAssist,

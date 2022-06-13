@@ -13,8 +13,8 @@ import CompleteSales from './CompletSales_Icon.svg'
 import Interact from './Interact_Icon.svg'
 import AddSales from './AddSales_Icon.svg';
 import Business from './Business_Icon.svg';
-import Costumer from './Customer_Icon.svg';
-import Sales from './Sales_Icon.svg';
+import Costumer from './SA_Customer_Icon.svg';
+import Sales from './SA_Sales_Icon.svg';
 import SalesExample from './why-sales-assits.svg'
 import FocusOnImpact from './SA__Focus on impact.svg';
 import StayOpen from './SA__Stay open.svg';
@@ -48,14 +48,8 @@ import Miracle from './support/Miracle Logo.png';
 import MurphyAG from './support/MurphyAG.png';
 
 // industries
-import Automotive from './saless/Icons3_Automotive.svg';
-import MedicalEquipment from './saless/Icons3_Medical Equipment.svg'
-import SaaS from './saless/Icons3_SaaS.svg';
-import Insurance from './saless/Icons3_Insurance.svg';
-import RealState from './saless/Icons3_Real Estate.svg';
-import Machinery from './saless/Icons3_Machinery.svg';
-import Advertising from './saless/Icons3_Advertising.svg';
-import FinancialServices from './saless/Icons3_Financial Services.svg';
+
+export * from './saless';
 export * from './team';
 
 export {
@@ -84,7 +78,7 @@ export const Icons = {
     Sales
 }
 
-export const plansIcons = {
+export const plansIcon = {
     AdvancePlan,
     EnterPrisePlan,
     EssentialsPlan
@@ -131,14 +125,10 @@ export const howItWorksIcons = [
     { "code": "HIW-CTS", path: Icons.CompleteSales }
 ]
 
-export const industries = [
-    { code: "ATMTV", path: Automotive },
-    { code: "MDQ", path: MedicalEquipment },
-    { code: "SAAS", path: SaaS },
-    { code: "INSRC", path: Insurance },
-    { code: "RLST", path: RealState },
-    { code: "MCHRY", path: Machinery },
-    { code: "ADVRTNG", path: Advertising },
-    { code: "FNALSVC", path: FinancialServices }
-]
 
+
+export const plansIcons: { code: string, path: string }[] = [
+    { code: "ADVC", path: plansIcon.AdvancePlan },
+    { code: "ENTPRS", path: plansIcon.EnterPrisePlan },
+    { code: "ESS", path: plansIcon.EssentialsPlan },
+]

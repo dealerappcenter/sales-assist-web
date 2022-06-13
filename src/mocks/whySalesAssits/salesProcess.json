@@ -1,5 +1,5 @@
 {
-    "title": "Built For Every Sales Process",
+    "title": "Built for Every Sales Process",
     "industries": [
         {
             "code": "ATMTV",
@@ -8,6 +8,10 @@
         {
             "code": "MDQ",
             "name": "Medical Equipment"
+        },
+        {
+            "code": "SAAS",
+            "name": "SaaS"
         },
         {
             "code": "INSRC",

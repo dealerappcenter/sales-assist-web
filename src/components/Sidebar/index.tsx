@@ -57,7 +57,7 @@ export const SideBar: React.FC<SideBarProps> = ({ isOpen, onClose }) => {
                             </a>
                         </button>
                     </li> */}
-                    <hr />
+                    {/* <hr /> */}
                     <li>
                         <button onClick={closeSideBar} className='w-full text-left px-4 text-xl'>
                             <a href={calendlyLink} target="_blank" rel="noreferrer">

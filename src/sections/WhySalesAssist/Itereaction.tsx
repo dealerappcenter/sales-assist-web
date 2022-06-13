@@ -5,6 +5,7 @@ import classNames from "classnames";
 
 import { useClickOutside } from '@hooks/useClickOutside';
 import { useResponsive } from '@hooks/useResponsive';
+import Image from 'next/image';
 
 export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSection>> = ({ id, data }) => {
     const [isActive, setIsActive] = useState<number>(0);
@@ -38,10 +39,10 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
             <div className='container mx-auto text-white-normal flex flex-col gap-12'>
                 <div>
                     <h1 className="mb-4">{data.title}</h1>
-                    <h4 className="text-gray-secondary">{data.desc}</h4>
+                    <h4 className="text-white-normal">{data.desc}</h4>
                 </div>
 
-                <div className="flex-grow flex lg:gap-12 flex-col md:flex-row">
+                <div className="flex-grow flex lg:gap-12 flex-col lg:flex-row">
                     {isDesktop && <div className="w-1/4 md:flex flex-col gap-6 hidden">
                         {data.actions.map((t, i) => <motion.button initial={{ translateX: -300, opacity: 0 }} whileInView={{ translateX: 0, opacity: 1 }} viewport={{ once: true }} transition={{duration: 1, ease: 'linear', delay: t.delay}}onClick={handleIsActive(i)} key={t.code} className={getClasses(i)}>
                             <MdInsights className="md:text-2xl" />
@@ -49,7 +50,7 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                         </motion.button>)}
                     </div>}
 
-                    {(isMobile || isTablet) && <div ref={optionContainer}  className="md:hidden flex gap-4 flex-col">
+                    {(isMobile || isTablet) && <div ref={optionContainer}  className="lg:hidden flex gap-4 flex-col mb-12">
                         <h4 className="font-medium text-sm">Select an option</h4>
                         <button onClick={handleIsOpen} className='relative border border-gray-disabled rounded-lg px-4 py-3 w-full flex items-center justify-between'>
                             <div className="flex items-center gap-2">
@@ -69,12 +70,14 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                     <div className="flex-grow flex flex-col gap-6">
                         {data.actions[isActive] && (
                             <>
-                                <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center">
-                                    {data.actions[isActive].code}
+                                <div className="h-[30rem] md:h-auto flex-grow flex items-center justify-center relative px-10">
+                                    {data.actions[isActive].url && <div className='relative h-full overflow-hidden flex items-center'>
+                                        <Image src={data.actions[isActive].url || ''} width={229} height={460} alt={data.actions[isActive].name}/>
+                                    </div>}
                                 </div>
                                 <div className="flex items-center flex-col justify-center gap-2">
                                     <h3 className="font-bold">{data.actions[isActive].title}</h3>
-                                    <p className="text-sm max-w-2xl w-fit text-center text-gray-secondary">{data.actions[isActive].desc}</p>
+                                    <p className="text-sm max-w-2xl w-fit text-center ">{data.actions[isActive].desc}</p>
                                 </div>
                             </>
                         )}
