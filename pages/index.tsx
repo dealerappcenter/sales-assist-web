@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Hero, HowItWorks, Benefits, SalesTeams, Sales } from '@src/sections/homePage/';
 import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
+import { GA } from '@src/components/Analitiycs';
 
 const Home: NextPage<HomePageSections> = (props) => {
   const { hero, HowItWork, benefits, salesTeam, simplifySales } = props;
@@ -13,6 +14,7 @@ const Home: NextPage<HomePageSections> = (props) => {
         <meta name="description" content={hero.desc} />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <GA />
 
       <Hero {...{heroData: hero}}/>
 
