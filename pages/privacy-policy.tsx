@@ -3,6 +3,7 @@ import { NextPage } from "next"
 import Head from "next/head"
 import PolicyData from '@src/mocks/PrivacyPolicy/policy.json';
 import classNames from 'classnames';
+import { GA } from "@src/components/Analitiycs";
 
 const PrivacyPolicy: NextPage = () => {
   const lastPayment = PolicyData?.data.payment.description.length - 1 || 0;
@@ -15,6 +16,7 @@ const PrivacyPolicy: NextPage = () => {
         <meta name="description" content="we respect the privacy rights of our users and recognize the importance of protecting the personal information we collect about you. Our Privacy Policy is designed to help you understand what information we collect and how we use and share that information." />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <GA />
       <header>
         <Nav />
       </header>

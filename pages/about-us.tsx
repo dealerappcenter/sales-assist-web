@@ -1,4 +1,5 @@
 import { Footer } from "@src/components"
+import { GA } from "@src/components/Analitiycs";
 import { getAboutUsSections } from "@src/mocks/aboutUs";
 import { AboutUsHero, AboutUsOurTeam, AboutUsTeam } from "@src/sections/AboutUs"
 import { GetStaticProps, NextPage } from 'next';
@@ -13,6 +14,7 @@ export const AboutUs: NextPage<AboutUsSections> = (props) => {
         <meta name="description" content={hero.desc} />
         <link rel="icon" href="/favicon.png" />
       </Head>
+      <GA />
       <AboutUsHero {...{ data: hero }}/>
       <AboutUsOurTeam {...{ data: ourTeam }}/>
       <AboutUsTeam  {...{ data: team }} />

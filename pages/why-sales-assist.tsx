@@ -9,6 +9,7 @@ import {
 } from "@src/sections/WhySalesAssist";
 import { Footer } from "@src/components";
 import { getWhySalesAssistSections } from "@src/mocks/whySalesAssits";
+import { GA } from "@src/components/Analitiycs";
 
 const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
     const { hero, salesProcess, actions, simplifySales, completeSalesFaster, completeSalesPainless } = props;
@@ -18,7 +19,7 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
             <meta name="description" content="Customers hate being bounced from phone call to inbox to branch, and your team hates wasting valuable time to complete the sale. SalesAssist helps you deliver a sleek, mobile experience that your customers start and finish from their phones, while giving valuable time back to your team." />
             <link rel="icon" href="/favicon.png" />
         </Head>
-
+        <GA />
         <WhySalesAssistHero {...{ data: hero }} />
 
         <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
