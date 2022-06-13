@@ -76,16 +76,16 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
                             speed={600}
                             onSwiper={sw => currentSwiper.current = sw}
                             onSlideChange={ev => {
-                                if (ev.activeIndex === choose.length + 1) {    
+                                if (ev.activeIndex === data.show_case.length + 1) {    
                                     clickOnCard(0)();
                                 }
                                 clickOnCard(ev.activeIndex)();
                             }}
                         >
                             {data.show_case.map((d, i) => <SwiperSlide key={d.url}>
-                                <div key={d.url} className='w-full flex items-center justify-center flex-col md:flex-row gap-4 md:gap-12'>
+                                <div key={d.url} className='w-full flex items-center justify-center flex-col md:flex-row gap-4 lg:gap-6'>
                                     <div className="md:hidden block w-[80%]">{i + 1}. {d.option}</div>
-                                    <div className='w-[80%] md:w-full md:px-6 relative h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[30rem] rounded-xl md:rounded-3xl overflow-hidden flex items-center'>
+                                    <div className='w-[80%] md:w-full md:px-6 relative h-[15rem] sm:h-[18rem] md:h-[20rem] lg:h-[29rem] rounded-xl md:rounded-3xl overflow-hidden flex items-center'>
                                         <Image src={d.url} layout='fill' alt='example' />
                                     </div>
 
@@ -106,8 +106,3 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     )
 }
 
-const choose = [
-    { id: '1Choose', image: SalesExample, title: 'Choose off-the-shelf Sales Actions', desc: 'description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.' },
-    { id: '2Choose', image: SalesExample, title: 'Choose off-the-shelf Sales Actions', desc: 'description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.' },
-    { id: '3Choose', image: SalesExample, title: 'Choose off-the-shelf Sales Actions', desc: 'description Send customers agreements for eSignatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.' }
-]

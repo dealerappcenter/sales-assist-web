@@ -29,7 +29,7 @@ export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
                                     delay: .7
                                 }}
                                 viewport={{ once: true }}
-                                className="relative h-full w-32 lg:w-3/4"
+                                className="relative h-full w-32 lg:w-[100%]"
                             >
                                 <Image placeholder='blur' blurDataURL={Mobile} src={Mobile} layout="responsive" alt='app' />
                             </motion.div>
