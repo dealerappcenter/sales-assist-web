@@ -11,7 +11,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       <Head>
         <title>SalesAssist</title>
         <meta name="description" content={hero.desc} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <Hero {...{heroData: hero}}/>
