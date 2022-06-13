@@ -16,7 +16,7 @@ export const Insight: React.FC<React.PropsWithChildren<InsightProp>> = ({ text, 
                 <h4 className="ml-3 font-bold">{text}</h4>
             </div>
             <div className="pl-12 md:p-0">
-                <p className="text-gray-secondary">{children}</p>
+                <p className="text-withe-normal">{children}</p>
             </div>
         </div>
     )

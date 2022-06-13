@@ -58,7 +58,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
 
                     <ul className='flex items-center gap-6'>
                         {/* if desktop else destroy it */}
-                        {/* {isDesktop && <>
+                        {isDesktop && <>
                             <li>
                                 <a href="https://app.salesassist.io/">
                                     <p>
@@ -74,16 +74,16 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
                                     </Button>
                                 </a>
                             </li>
-                        </>} */}
+                        </>}
 
                         {/* if tablet or mobile else destroy it */}
-                        {/* {!isDesktop && !isOpen &&
-                            <li className='flex items-center justify-center'>
+                        {!isDesktop && !isOpen &&
+                            <li className='flex items-center justify-center lg:hidden'>
                                 <button onClick={handleSideBar}>
                                     <MdMenu className='text-4xl' />
                                 </button>
                             </li>
-                        }  */}
+                        } 
                     </ul>
                 </div>
             </nav>

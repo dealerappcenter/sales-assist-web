@@ -6,8 +6,8 @@ import { calendlyLink } from '@src/utils/routes';
 
 export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
     return (
-        <section className='py-12 px-4 flex flex-col relative bg-white-normal'>
-            <div className='container gap-6 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-center items-center md:items-start px-4 lg:px-12 lg:py-12 h-full flex'>
+        <section className='py-12 px-4 flex flex-col relative bg-white-normal h-auto'>
+            <div className='container gap-12 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-start items-center md:items-start px-4 lg:px-12 lg:py-12 h-full flex'>
                 <div className='w-fit '>
                     <h1>{data.title}</h1>
 
@@ -17,9 +17,10 @@ export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
                         </Button>
                     </a>
                 </div>
-                <div className='md:flex-grow flex-grow-0 relative flex items-center justify-center  w-fit'>
+                <div className='md:flex-grow flex-grow-0 relative flex items-center justify-center w-fit'>
                     <div className='relative w-fit'>
-                        <div className='absolute z-10 bottom-0 -left-6 md:-left-16 w-20 h-32 md:w-48 md:h-auto'>
+                        {/* phone */}
+                        <div className='absolute z-10 bottom-0 -left-6 md:-left-16 w-44 h-40 md:w-48 md:h-auto hidden md:block'>
                             <motion.div
                                 initial={{ opacity: 0, x: -100, y: 100 }}
                                 whileInView={{ opacity: 1, x: 0, y: 0 }}
@@ -28,11 +29,15 @@ export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
                                     delay: .7
                                 }}
                                 viewport={{ once: true }}
-                                className="relative h-full w-20 md:w-3/4 "
+                                className="relative h-full w-32 lg:w-[100%]"
                             >
                                 <Image placeholder='blur' blurDataURL={Mobile} src={Mobile} layout="responsive" alt='app' />
                             </motion.div>
                         </div>
+                        <div className='md:hidden'>
+                            <Image placeholder='blur' blurDataURL={Mobile} src={Mobile} alt='app' />
+                        </div>
+                        {/* pc */}
                         <motion.div
                             initial={{ opacity: 0, y: 100 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +46,7 @@ export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
                             }}
                             viewport={{ once: true }}
                         >
-                            <div className='w-56 h-auto relative md:w-full md:h-full'>
+                            <div className='w-60 h-auto relative md:w-full md:h-full hidden md:block'>
                                 <Image src={Pc} alt='desktop' />
                             </div>
                         </motion.div>

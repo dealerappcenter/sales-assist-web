@@ -13,7 +13,7 @@ const PrivacyPolicy: NextPage = () => {
       <Head>
         <title>Privacy Policy</title>
         <meta name="description" content="we respect the privacy rights of our users and recognize the importance of protecting the personal information we collect about you. Our Privacy Policy is designed to help you understand what information we collect and how we use and share that information." />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <header>
         <Nav />

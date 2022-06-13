@@ -11,7 +11,7 @@ const Pricing: NextPage = () => {
         <Head>
             <title>Pricing</title>
             <meta name="description" content="Customers hate being bounced from phone call to inbox to branch, and your team hates wasting valuable time to complete the sale. SalesAssist helps you deliver a sleek, mobile experience that your customers start and finish from their phones, while giving valuable time back to your team." />
-            <link rel="icon" href="/favicon.ico" />
+            <link rel="icon" href="/favicon.png" />
         </Head>
         <PricingHero />
         <PricingPlans 

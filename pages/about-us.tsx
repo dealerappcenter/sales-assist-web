@@ -11,7 +11,7 @@ export const AboutUs: NextPage<AboutUsSections> = (props) => {
       <Head>
         <title>About us</title>
         <meta name="description" content={hero.desc} />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/favicon.png" />
       </Head>
       <AboutUsHero {...{ data: hero }}/>
       <AboutUsOurTeam {...{ data: ourTeam }}/>
