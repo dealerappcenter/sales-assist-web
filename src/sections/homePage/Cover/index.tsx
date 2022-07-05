@@ -15,7 +15,7 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
             <div className='flex-grow container mx-auto flex flex-col lg:flex-row w-full h-[65%] gap-6'>
                 <div className='lg:w-[40%] lg:p-12 flex flex-col justify-center h-full order-2 lg:order-1 items-center lg:items-start'>
                     <h1 className='text-4xl lg:text-5xl lg:leading-[3.5rem] font-bold mx-auto text-gray-primary mb-6'>{heroData.title}</h1>
-                    <p className='text-gray-secondary mb-6 w-full lg:w-[80%]'>{heroData.desc}</p>
+                    <p className='text-gray-secondary mb-6 w-full'>{heroData.desc}</p>
                     <a href={calendlyLink} target="_blank" rel="noreferrer">
                         <Button className='lg:text-lg'>{heroData.button}</Button>
                     </a>
@@ -27,7 +27,8 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
                 </div>
             </div>
             <div className='h-[35%] container mx-auto flex flex-col items-center py-12'>
-                <div className='flex justify-evenly w-full items-center flex-wrap'>
+                <h3>{heroData.trusted}</h3>
+                <div className='flex justify-center w-full items-center flex-wrap gap-16'>
                     {partners.map((t) => {
                         return <div key={t.id} className="p-4 w-40">
                             <Image className='m-12' alt={'trusted'} src={t.path}  />
