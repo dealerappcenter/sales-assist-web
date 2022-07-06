@@ -27,6 +27,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
       // startCount({ count: 590, startAt: 0 })
     } else {
       // stopCount()
+      currentCard.current = 10
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
