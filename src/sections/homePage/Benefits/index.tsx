@@ -16,51 +16,66 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
 
   const [ref, inView] = useInView();
 
-  const { count, startCount, stopCount } = useProgress();
+  // const { count, startCount, stopCount } = useProgress();
+  const { startProgress, progressLeft } = useProgress();
 
 
   useEffect(() => {
     if (isDesktop && inView) {
       currentCard.current = 0
-      startCount({ count: 590, startAt: 0 })
+      startProgress()
+      // startCount({ count: 590, startAt: 0 })
     } else {
-      stopCount()
+      // stopCount()
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [inView]);
-
   useEffect(() => {
-    // brake points
-    if (count === 168) {
-      currentCard.current = 1
-    } else if (count === 373) {
-      currentCard.current = 2
-    } else if (count === 590) {
-      currentCard.current = 0
-      startCount({ count: 590, startAt: 1 })
+    if (progressLeft === 0) {
+      startProgress()
+      if (currentCard.current >= 2) {
+        currentCard.current = 0
+      } else {
+        currentCard.current = currentCard.current + 1;
+      }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [count, currentCard])
+  }, [currentCard, progressLeft])
 
-  useEffect(() => {
-    // brake points
-    if (count >= 160 && count <= 200) {
-      currentStatus.current = 'one'
-    } else if (count >= 370 && count <= 410) {
-      currentStatus.current = 'two'
-    } else if (count >= 550 && count <= 590 || count >= 1 && count <= 40) {
-      currentStatus.current = 'tree'
-    } else {
-      currentStatus.current = 'idle'
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [count, currentCard])
+  // useEffect(() => {
+  //   // brake points
+  //   if (count === 168) {
+  //     currentCard.current = 1
+  //   } else if (count === 373) {
+  //     currentCard.current = 2
+  //   } else if (count === 590) {
+  //     currentCard.current = 0
+  //     startCount({ count: 590, startAt: 1 })
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [count, currentCard])
+
+  // useEffect(() => {
+  //   // brake points
+  //   if (count >= 160 && count <= 200) {
+  //     currentStatus.current = 'one'
+  //   } else if (count >= 370 && count <= 410) {
+  //     currentStatus.current = 'two'
+  //   } else if (count >= 550 && count <= 590 || count >= 1 && count <= 40) {
+  //     currentStatus.current = 'tree'
+  //   } else {
+  //     currentStatus.current = 'idle'
+  //   }
+  //   // eslint-disable-next-line react-hooks/exhaustive-deps
+  // }, [count, currentCard])
 
   function clickOnIcon(card: number, startAt: number) {
     return () => {
+      startProgress();
+
       currentCard.current = card
 
-      startCount({ count: 590, startAt })
+      // startCount({ count: 590, startAt })
     }
   }
 
@@ -81,6 +96,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
                 icon={Icons.Business}
                 isActive={isActive(0)}
                 onClick={clickOnIcon(0, 1)}
+                progress={progressLeft}
               />
             </div>
 
@@ -91,6 +107,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
                 isActive={isActive(1)}
                 onClick={clickOnIcon(1, 168)}
                 className='order-2 md:order-1'
+                progress={progressLeft}
               />
 
               {isTablet || isDesktop || isMobile && <IconBox
@@ -98,6 +115,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
                 icon={Icons.Costumer}
                 isActive={isActive(2)}
                 onClick={clickOnIcon(2, 373)}
+                progress={progressLeft}
               />}
             </div>
             {(isDesktop || isTablet) && <div className="w-full flex items-center">
@@ -106,6 +124,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
                 icon={Icons.Costumer}
                 isActive={isActive(2)}
                 onClick={clickOnIcon(2, 373)}
+                progress={progressLeft}
               />
             </div>}
           </div>
