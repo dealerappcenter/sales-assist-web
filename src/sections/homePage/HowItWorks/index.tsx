@@ -73,7 +73,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                                     isActive={currentCard.current === i}
                                     key={i}
                                     progress={progressLeft}
-                                    title={data.title}
+                                    title={k.title}
                                     sub={k.desc}
                                     code={k.code}
                                     onClick={clickOnCard(i)}

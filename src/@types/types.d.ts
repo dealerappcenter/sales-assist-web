@@ -1,18 +1,18 @@
 interface Plan {
-    name:           string;
-    desc:           string;
-    code:           string;
+    name: string;
+    desc: string;
+    code: string;
     price_per_user: PricePer;
-    starting_at:    PricePer;
-    perks:          Perk[];
-    features:       Features;
+    starting_at: PricePer;
+    perks: Perk[];
+    features: Features;
     custom?: Custom;
     users: number
     limit?: number
 }
 
 interface Features {
-    name:  string;
+    name: string;
     perks: string[];
 }
 
@@ -23,13 +23,13 @@ interface Perk {
 
 interface PricePer {
     name?: string,
-    year:  number;
+    year: number;
     month: number;
 }
 interface Custom {
     contact_us: string;
-    pricing:    string;
-    users:      string;
+    pricing: string;
+    users: string;
 }
 
 
@@ -45,51 +45,51 @@ interface Section<T> {
 type Kind = 'orange' | 'purple' | 'normal' | string
 
 type Hero = {
-    title:  string;
-    desc:   string;
+    title: string;
+    desc: string;
     button: string;
     trusted: string;
 }
 
 type HowItWorksSection = {
-    title:   string;
-    desc:    string;
+    title: string;
+    desc: string;
     actions: Action[];
 }
 
 type Action = {
-    code:  string;
+    code: string;
     title: string;
-    desc:  string;
-    kind:  Kind;
+    desc: string;
+    kind: Kind;
     delay: number;
 }
 
-type BenefitsSection  = {
-    title:    string;
+type BenefitsSection = {
+    title: string;
     benefits: Benefit[];
 }
 
-type Benefit  = {
-    kind:          string;
+type Benefit = {
+    kind: string;
     bullet_points: BulletPoint[];
 }
 
-type BulletPoint  = {
+type BulletPoint = {
     title: string;
-    desc:  string;
+    desc: string;
 }
 
 interface SalesTeamSection {
-    title:  string;
+    title: string;
     quotes: Quote[];
 }
 
 interface Quote {
     thoughts: string;
-    author:     string;
+    author: string;
     position: string;
-    url:      string;
+    url: string;
 }
 
 type SimplifySection = {
@@ -109,8 +109,8 @@ type HomePageSections = {
 /** Why sales assist page types */
 
 type WhySalesAssistHeroSection = {
-    title:   string;
-    desc:    string;
+    title: string;
+    desc: string;
     reasons: Reason[];
 }
 
@@ -120,65 +120,68 @@ type WhySalesAssistSalesProcessSection = {
 }
 
 interface WhySalesAssistActionsSection {
-    title:   string;
-    desc:    string;
+    title: string;
+    desc: string;
     actions: SalesAction[];
 }
 
 interface WhySalesAssistSimplifySalesSection {
-    title:     string;
-    desc:      string;
-    options:   Options;
+    title: string;
+    desc: string;
+    options: Options;
     show_case: ShowCase[];
 }
 
 interface Options {
-    select:    string;
+    select: string;
     customize: string;
-    add:       string;
+    add: string;
 }
 
 interface ShowCase {
-    url:   string;
+    url: string;
     title: string;
-    desc:  string;
+    desc: string;
     option: string;
 }
 
 
 
 interface SalesAction {
-    name:  string;
+    name: string;
     title: string;
-    desc:  string;
-    url:  null | string;
+    desc: string;
+    url: null | string;
     code: string;
     delay: number
 }
 
 
 type Reason = {
-    code:  string;
+    code: string;
     title: string;
-    desc:  string;
+    desc: string;
 }
 
 interface WhySalesAssistCompleteSalesFaster {
-    title:   string;
+    title: string;
     reasons: Reason[];
 }
 
 
 interface WhySalesAssistCompleteSalesPainlessSection {
-    title:         string;
-    cta:           string;
     bullet_points: Point[];
+    title: string;
+    banner: {
+        cta: string;
+        text: string;
+    }
 }
 
 interface Point {
-    code:  string;
+    code: string;
     title: string;
-    desc:  string;
+    desc: string;
 }
 
 
@@ -194,33 +197,33 @@ type WhySalesAssistSections = {
 /** about us sections */
 
 interface AboutUsHero {
-    title:      string;
-    desc:       string;
+    title: string;
+    desc: string;
     our_values: OurValues;
 }
 
 interface OurValues {
-    name:   string;
+    name: string;
     values: Point[];
 }
 
 interface AboutUsOurTeam {
-    title:     string;
-    desc:      string;
-    team:      Team;
-    founded:   Founded;
+    title: string;
+    desc: string;
+    team: Team;
+    founded: Founded;
     countries: Countries;
 }
 interface Countries {
-    title:     string;
+    title: string;
     countries: number;
 }
 interface Founded {
     title: string;
-    year:  number;
+    year: number;
 }
 interface Team {
-    title:   string;
+    title: string;
     members: number;
 }
 interface AboutUsTeamMembers {
@@ -228,10 +231,10 @@ interface AboutUsTeamMembers {
 }
 
 interface TeamMembers {
-    name:   string;
-    title:  string;
+    name: string;
+    title: string;
     social: string;
-    code?:  string;
+    code?: string;
 }
 
 

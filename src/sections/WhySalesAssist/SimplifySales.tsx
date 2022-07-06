@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as TSwiper } from 'swiper';
 
 export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplifySalesSection>> = ({ id, data }) => {
-    const [ref, inView] = useInView({ triggerOnce: true });
+    const [ref, inView] = useInView();
     const { progressLeft, startProgress } = useProgress();
     const currentStep = useRef<number>(0);
 
@@ -17,7 +17,10 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     const swipeInstance = currentSwiper.current;
 
     useEffect(() => {
-        startProgress()
+            if (inView && swipeInstance) {
+                swipeInstance.slideTo(0);
+                startProgress()
+            }            
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inView]);
 

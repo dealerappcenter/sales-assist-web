@@ -1,6 +1,9 @@
 {
     "title": "Completing Sales Should Be Painless",
-    "cta": "Book Demo",
+    "banner": {
+        "cta": "Book Demo",
+        "text": "Let’s Simplify Your Sales"
+    },
     "bullet_points": [
         {
             "code": "FI",
