@@ -24,7 +24,7 @@ export const Card: React.FC<React.PropsWithChildren<CardProps>> = (props) => {
           {props.children}
         <div className='flex p-2 bg-white-normal/20 h-[9rem]'>
           <div className='h-full py-2 px-4'>
-            <h3 className='text-sm font-semibold text-gray-primary'>{title}</h3>
+            <h3 className='text-base font-semibold text-gray-primary'>{title}</h3>
             <p className='text-gray-secondary text-sm'>{sub}</p>
           </div>
         </div>

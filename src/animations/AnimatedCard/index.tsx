@@ -35,7 +35,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
           </div>
         </div>
         <div className='h-full py-2 text-left'>
-          <h3 className='text-sm font-semibold text-gray-primary'>{title}</h3>
+          <h3 className=' text-gray-primary'>{title}</h3>
           <p className='text-sm text-gray-secondary'>{sub}</p>
         </div>
       </div>
