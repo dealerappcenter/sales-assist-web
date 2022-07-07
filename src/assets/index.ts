@@ -116,6 +116,7 @@ export const partners = [
     { id: uuid(), path: Alberic },
     { id: uuid(), path: CarAuto },
     { id: uuid(), path: Miracle },
+    { id: uuid(), path: MurphyAG },
 ]
 
 export const howItWorksIcons = [

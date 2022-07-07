@@ -40,7 +40,7 @@ export const routes: Routes = [
     }
 ]
 
-export const calendlyLink = 'https://calendly.com/salesasssit?primary_color=f1621a';
+export const calendlyLink = 'https://calendly.com/salesasssit/30min';
 
 const salesAssist = {
     title: 'SalesAssist',
