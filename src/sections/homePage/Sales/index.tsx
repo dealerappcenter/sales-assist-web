@@ -7,7 +7,7 @@ import { calendlyLink } from '@src/utils/routes';
 export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
     return (
         <section className='py-12 px-4 flex flex-col relative bg-white-normal h-auto'>
-            <div className='container gap-12 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-start items-center md:items-start px-4 lg:px-12 lg:py-12 h-full flex'>
+            <div className='container gap-12 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-start items-center md:items-start px-4 lg:py-12 h-full flex'>
                 <div className='w-fit '>
                     <h1>{data.title}</h1>
 

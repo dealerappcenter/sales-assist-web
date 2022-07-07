@@ -8,10 +8,10 @@ export const WhySalesAssistCompletingSalesIsPainless: React.FC<Section<WhySalesA
     return (
         <section className='py-12 px-4 flex flex-col relative bg-gray-primary text-white-normal'>
             <div className='container gap-6 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-center items-center md:items-start px-4 lg:py-12 h-full flex'>
-                <div className='w-full md:w-fit'>
+                <div className='w-full md:w-1/2'>
                     <h1>{data.title}</h1>
                 </div>
-                <div className='md:flex-grow flex-grow-0 relative flex items-center md:items-end justify-center w-fit flex-col gap-12'>
+                <div className='md:w-1/2 flex-grow-0 relative flex items-center md:items-start justify-center w-fit flex-col gap-12'>
                     {
                         data.bullet_points.map((k) => {
                             return <div key={k.code} className='flex flex-col w-full md:w-2/3 gap-4'>
@@ -19,7 +19,7 @@ export const WhySalesAssistCompletingSalesIsPainless: React.FC<Section<WhySalesA
                                     {buildIcon({ data: simplifySales, code: k.code, fallback: <BsBarChartFill />, size: { width: 56, height: 56 } })}
                                 </div>
                                 <div>
-                                    <h3 className="font-medium">{k.title}</h3>
+                                    <h3 className="">{k.title}</h3>
                                     <p className="">{k.desc}</p>
                                 </div>
                             </div>

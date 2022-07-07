@@ -49,7 +49,7 @@ export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
     <section ref={ref} className='flex flex-col relative text-white-normal py-32'>
       <div className='inset-0 bg-gray-primary clip absolute -z-[1]'></div>
       <div className='inset-0 bg-white-normal absolute -z-[2]'></div>
-      <div className='container py-6 mx-auto px-4 lg:px-12 lg:py-20 h-full flex flex-col gap-6'>
+      <div className='container py-6 mx-auto px-4 lg:py-20 h-full flex flex-col gap-6'>
         <h1 className='mb-6'>{data.title}</h1>
         <div className='relative flex items-center justify-center gap-6 w-full select-none'>
           <Swiper

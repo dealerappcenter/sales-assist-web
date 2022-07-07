@@ -26,12 +26,12 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
                     </div>
                 </div>
             </div>
-            <div className='h-[35%] container mx-auto flex flex-col items-center py-12'>
+            <div className='h-[35%] container mx-auto flex flex-col items-center py-12 gap-6'>
                 <h3>{heroData.trusted}</h3>
-                <div className='flex justify-center w-full items-center flex-wrap gap-16'>
+                <div className='flex justify-center w-full items-center flex-wrap gap-12'>
                     {partners.map((t) => {
-                        return <div key={t.id} className="p-4 w-40">
-                            <Image className='m-12' alt={'trusted'} src={t.path}  />
+                        return <div key={t.id} className="w-40 h-20">
+                            <Image alt={'trusted'} src={t.path}  />
                         </div>
                     })}
                 </div>

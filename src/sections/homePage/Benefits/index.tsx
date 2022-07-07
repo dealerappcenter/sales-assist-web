@@ -83,8 +83,8 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
   const isActive = (at: number) => currentCard.current === at;
 
   return (
-    <section id={id} ref={ref} className='px-4 py-6 lg:px-12 bg-gray-primary'>
-      <div className='container mx-auto text-white-normal'>
+    <section id={id} ref={ref} className='px-4 py-6 pt-16 lg:px-12 bg-gray-primary'>
+      <div className='container mx-auto text-white-normal px-4 md:px-0 mb-2'>
         <h1 className="mb-4">{data.title}</h1>
       </div>
       <div className="text-white-normal container mx-auto flex-grow flex gap-6 md:gap-2 flex-col md:flex-row md:px-12">
