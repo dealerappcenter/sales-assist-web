@@ -9,7 +9,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as TSwiper } from 'swiper';
 
 export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplifySalesSection>> = ({ id, data }) => {
-    const [ref, inView] = useInView();
+    const [ref, inView] = useInView({ initialInView: true });
     const { progressLeft, startProgress } = useProgress();
     const currentStep = useRef<number>(0);
 
