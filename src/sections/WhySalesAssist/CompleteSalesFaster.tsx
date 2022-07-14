@@ -1,30 +1,32 @@
 import { buildIcon } from '@src/utils/icons';
 import { easySteps } from '@src/assets';
+import { Section } from '@components/section';
 
 export const WhySalesAssistCompleteSalesFaster: React.FC<Section<WhySalesAssistCompleteSalesFaster>> = ({ data, id }) => {
     return (
-        <section id={id} className='py-12 px-4 flex flex-col relative'>
-            <div className='container gap-6 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-center items-center md:items-start px-4 lg:py-12 h-full flex'>
-                <div className='w-full md:w-1/2'>
-                    <h1>{data.title}</h1>
+        <section id={id} className="bg-white-normal section">
+            <Section className='overflow-x-auto'>
+                <div className='md-px-0 mb-2'>
+                    <h1 className="mb-4 text-gray-primary">{data.title}</h1>
+                    {/* <h4 className="text-gray-secondary">3 easy steps to unify and streamline every customer interaction throughout your sales process.</h4> */}
                 </div>
 
-                <div className='md:w-1/2 flex-grow-0 relative flex items-center md:items-start justify-center w-fit flex-col gap-12'>
-                    {
-                        data.reasons.map((k) => {
-                            return <div key={k.code} className='flex flex-col w-full md:w-2/3 gap-4'>
-                                <div>
-                                    {buildIcon({ data: easySteps, code: k.code, fallback: <div className='w-full h-full '></div>, size: { width: 56, height: 56 } })}
-                                </div>
-                                <div>
-                                    <h3 className="">{k.title}</h3>
-                                    <p className="">{k.desc}</p>
-                                </div>
+                <div className='relative overflow-x-auto overflow-y-hidden w-full flex gap-4 lg:gap-12 md:items-start md:justify-center px-4'>
+                    { data.reasons.map(data => {
+                        return <div key={data.code} className='block md:w-1/3 border md:border-none p-4 rounded-xl'>
+                         <div key={data.title} className='w-[16rem] md:w-full flex flex-col gap-6 items-start'>
+                            <div className="h-56 w-full rounded-xl flex items-end justify-center bg-[#ECECEC] border-b">
+                                {buildIcon({ data: easySteps, code: data.code, fallback: <div className='w-full h-full '></div>, size: { width: 800, height: 400 }})}
                             </div>
-                        })
-                    }
+                            <div className="text-gray-primary">
+                                <h3 className="font-bold mb-2">{data.title}</h3>
+                                <p className="text-gray-secondary text-sm">{data.desc}</p>
+                            </div>
+                        </div>
+                        </div>
+                    })}
                 </div>
-            </div>
+            </Section>
         </section>
     )
 }

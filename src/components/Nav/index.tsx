@@ -22,7 +22,7 @@ interface NavProps {
 export const Nav: React.FC<NavProps> = ({ className }) => {
     const { isDesktop } = useResponsive();
     const router = useRouter();
-    const classes = classNames('py-6 px-4 container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative', className)
+    const classes = classNames('py-6 container mx-auto lg:mb-[3em] flex-col lg:flex-row flex justify-between relative', className)
     const [isOpen, setIsOpen] = useState<boolean>(false);
     const handleSideBar = () => setIsOpen(!isOpen);
 

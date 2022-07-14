@@ -15,7 +15,7 @@ interface FooterProps {
 export const Footer: React.FC<FooterProps> = (props) => {
     const { className, kind = 'light' } = props;
     const baseClasses = classNames(
-        'md:py-12 duration-300',
+        'md:py-12 duration-300 py-6',
         { 'bg-white-soft': kind === 'light' },
         { 'bg-gray-primary': kind === 'dark' },
         { 'text-white-normal': kind === 'dark' },
@@ -26,7 +26,7 @@ export const Footer: React.FC<FooterProps> = (props) => {
 
     return (
         <footer className={baseClasses}>
-            <div className="h-full container mx-auto flex-grow flex gap-6 flex-col md:px-12 py-6 px-4">
+            <div className="h-full container mx-auto flex-grow flex gap-6 flex-col">
                 {/* footer left panel */}
                 <div className='h-1/2 w-full flex justify-between md:gap-4 md:items-center'>
                     <div className='w-full md:w-fit lg:w-1/2 h-full px-2 md:py-2 relative mb-auto'>

@@ -1,12 +1,10 @@
 import { useResponsive } from '@hooks/useResponsive';
-import { industries } from '@src/assets';
 import { IndustriesItem } from '@src/components';
-import { buildIcon } from '@src/utils/icons';
 
 export const WhySalesAssistSalesProcess: React.FC<Section<WhySalesAssistSalesProcessSection>> = ({ data }) => {
     const { isDesktop, isTablet, isMobile } = useResponsive();
     return (
-        <section className='bg-white-normal h-full px-4 pt-6 pb-12 '>
+        <section className='bg-white-normal h-full section lg:pt-0'>
             <div className='py-6 text-center'>
                 <h1 className='font-bold'>{data.title}</h1>
             </div>

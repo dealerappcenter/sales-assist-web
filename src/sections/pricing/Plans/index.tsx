@@ -9,6 +9,7 @@ import { buildIcon } from '@src/utils/icons';
 import { SiHackthebox } from "react-icons/si";
 import { plansIcons } from '@src/assets';
 import { Counter } from "@src/components/Counter";
+import { Section } from '../../../components/section/index';
 
 interface PricingHeroProps {
     isClicked: boolean,
@@ -73,7 +74,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
 
     return (
         <section className='h-full flex flex-col bg-white-normal md:bg-white-soft md:pb-12'>
-            <div className='flex-grow container flex items-center justify-start flex-col gap-5 mx-auto lg:px-12 md:px-6 px-4'>
+            <Section className='flex-grow items-center justify-start flex-col gap-5 mx-auto'>
                 <div className="flex items-center justify-center gap-6 py-6 md:py-0 h-[4rem]">
                     <button onClick={handleIsAnnually('year')} className={buttonClass(currentActive === 'year')}>
                         <span className="absolute -left-6 -top-4 bg-[#F2994A] px-3 rounded-lg text-white-normal text-sm font-normal">25% off</span>
@@ -154,10 +155,10 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
                 </div>
                 }
 
-                {!isClicked && <motion.button initial={{ translateY: 100, opacity: 0 }} transition={{ duration: .5, ease: 'linear', delay: 1 }} viewport={{ once: true }} animate={{ translateY: 0, opacity: 1 }} onClick={onClick} className="p-4 py-6 md:w-full bg-white-normal rounded-lg flex items-center justify-center gap-1 border md:border-none">
+                {!isClicked && <motion.button initial={{ translateY: 100, opacity: 0 }} transition={{ duration: .5, ease: 'linear', delay: 1 }} viewport={{ once: true }} animate={{ translateY: 0, opacity: 1 }} onClick={onClick} className="p-4 py-6 md:w-full bg-white-normal rounded-lg flex items-center justify-center gap-1 border md:border-none mt-6">
                     See Full Feature Comparison <MdArrowDropDown />
                 </motion.button>}
-            </div>
+            </Section>
         </section>
     )
 }

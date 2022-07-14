@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import { AnimatedCard, Card } from 'src/components';
 import { useResponsive } from '@hooks/useResponsive';
@@ -9,19 +9,42 @@ import { useInView } from 'react-intersection-observer'
 import { InteractAnimation } from '@src/components/HowitWorksAnimations/Interact';
 import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer';
 import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
+import { Section } from '@components/section';
 
+let timer: NodeJS.Timer;
 
 export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
     const currentCard = useRef(0);
     const [ref, inView] = useInView();
+    const [progressLeft, setProgress] = useState(1);
 
-    const { progressLeft, startProgress } = useProgress();
-
+    function startProgress() {
+        clearInterval(timer);
+    
+        let interval = 100;
+    
+        timer = setInterval(() => {
+    
+            interval--
+    
+            if (interval >= 0) {
+                setProgress(interval)
+                return
+            }
+    
+            clearInterval(timer)
+            interval = 100;
+        }, 100)
+    }
+    
+    // const { progressLeft, startProgress, stopProgress } = useProgress();
+    
     useEffect(() => {
         if (inView) {
-            startProgress()
-        }
+            currentCard.current = 0
+            startProgress();
+        } 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [inView]);
 
@@ -35,19 +58,19 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
             }
         }
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [progressLeft, currentCard]);
+    }, [progressLeft]);
 
     function clickOnCard(card: number) {
         return () => {
             currentCard.current = card
-
             startProgress();
         }
     }
 
+    
     return (
-        <main id={id} ref={ref} className='py-6 lg:px-12 lg:py-20 overflow-x-auto bg-white-normal'>
-            <div className='container mx-auto'>
+        <main id={id} ref={ref} className='section overflow-x-auto bg-white-normal'>
+            <Section>
                 <div className='px-4 md:px-0 mb-2'>
                     <h1 className="mb-4 text-gray-primary">{data.title}</h1>
                     <h4 className="text-gray-secondary">{data.desc}</h4>
@@ -80,7 +103,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                         }
                     </div>
 
-                    <div className='w-1/2 border'>
+                    <div className='w-1/2'>
                         <div className='bg-gray-disabled/20 h-full md:w-[20rem] max-w-md mx-auto rounded-lg flex items-center justify-center p-4'>
                             {inView && currentCard.current === 0 && <InteractAnimation />}
                             {inView && currentCard.current === 1 && <CustomerAnimation />}
@@ -106,7 +129,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                         </Card>
                     })}
                 </div>}
-            </div>
+            </Section>
         </main>
     )
 }
