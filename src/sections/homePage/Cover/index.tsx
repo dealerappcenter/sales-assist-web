@@ -11,11 +11,11 @@ interface HeroProps {
 }
 export const Hero: React.FC<HeroProps> = ({ heroData }) => {
     return (
-        <header className='flex flex-col bg-white-soft h-full lg:px-12'>
+        <header className='flex flex-col bg-white-soft h-full lg:px-12 pb-12'>
             <Nav />
             <Section>
-                <div className='flex-grow container mx-auto flex flex-col lg:flex-row w-full h-[65%] gap-6'>
-                    <div className='lg:w-[40%] md:pr-12 flex flex-col justify-center h-full order-2 lg:order-1 items-center lg:items-start'>
+                <div className='flex-grow container mx-auto flex flex-col lg:flex-row w-full gap-12'>
+                    <div className='lg:w-[40%] md:pr-12 flex flex-col justify-center h-full order-2 lg:order-1 items-center lg:items-start pb-12'>
                         <h1 className='text-4xl lg:text-5xl lg:leading-[3.5rem] font-bold mx-auto text-gray-primary mb-6'>{heroData.title}</h1>
                         <p className='text-gray-secondary mb-6 w-full'>{heroData.desc}</p>
                         <a href={calendlyLink} target="_blank" rel="noreferrer">
@@ -28,7 +28,7 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
                         </div>
                     </div>
                 </div>
-                <div className='h-[35%] container mx-auto flex flex-col items-center py-12 gap-6'>
+                <div className='h-[35%] container mx-auto flex flex-col items-center py-12 gap-6 pb-14'>
                     <h3>{heroData.trusted}</h3>
                     <div className='flex justify-center w-full items-center flex-wrap gap-12'>
                         {partners.map((t) => {
@@ -39,7 +39,6 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
                     </div>
                 </div>
             </Section>
-
         </header>
     )
 }
