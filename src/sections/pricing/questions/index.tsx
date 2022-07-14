@@ -5,7 +5,7 @@ import { Section } from '../../../components/section/index';
 export const PricingQuestions: React.FC<Section<any>> = ({ id }) => {
     return (
         <section id={id} className='bg-white-normal'>
-            <Section className='container mx-auto flex flex-col gap-6'>
+            <Section className='container mx-auto flex flex-col gap-6 py-6'>
                 <h1>{Questions.title}</h1>
 
                 <div className='flex flex-col gap-6 mb-6'>

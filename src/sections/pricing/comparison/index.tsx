@@ -5,7 +5,7 @@ import { Section } from '../../../components/section/index';
 export const PricingComparison = () => {
     return (
         <section className='bg-white-normal'>
-            <Section className=' text-gray-primary flex flex-col gap-12 mb-12'>
+            <Section className=' text-gray-primary flex flex-col gap-12 py-6'>
                 <div className=''>
                     <h1 className="mb-4">{PlansInfo.title}</h1>
                 </div>
