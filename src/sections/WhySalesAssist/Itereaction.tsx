@@ -6,6 +6,7 @@ import classNames from "classnames";
 import { useClickOutside } from '@hooks/useClickOutside';
 import { useResponsive } from '@hooks/useResponsive';
 import Image from 'next/image';
+import { Section } from '@src/components/section';
 
 export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSection>> = ({ id, data }) => {
     const [isActive, setIsActive] = useState<number>(0);
@@ -35,8 +36,8 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
     }
 
     return (
-        <section id={id} className='px-4 py-6 lg:px-12 lg:py-32 bg-gray-primary'>
-            <div className='container mx-auto text-white-normal flex flex-col gap-12'>
+        <section id={id} className='section bg-gray-primary'>
+            <Section className=' text-white-normal flex flex-col gap-12'>
                 <div>
                     <h1 className="mb-4">{data.title}</h1>
                     <h4 className="text-white-normal">{data.desc}</h4>
@@ -83,7 +84,7 @@ export const WhySalesAssistIteration:React.FC<Section<WhySalesAssistActionsSecti
                         )}
                     </div>
                 </div>
-            </div>
+            </Section>
         </section>
     )
 }

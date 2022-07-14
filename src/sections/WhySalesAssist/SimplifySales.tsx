@@ -7,6 +7,7 @@ import classNames from 'classnames';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Swiper as TSwiper } from 'swiper';
+import { Section } from '@src/components/section';
 
 export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplifySalesSection>> = ({ id, data }) => {
     const [ref, inView] = useInView({ initialInView: true });
@@ -54,8 +55,8 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
     }
 
     return (
-        <section id={id} className='overflow-hidden px-4 py-12 lg:px-12 lg:py-32 bg-gray-primary'>
-            <div className='container mx-auto text-white-normal flex flex-col gap-6 md:gap-12'>
+        <section id={id} className='overflow-hidden section bg-gray-primary'>
+            <Section className='container mx-auto text-white-normal flex flex-col gap-6 md:gap-12'>
                 <div className="">
                     <h1 className="mb-4">{data.title}</h1>
                     <h4 className="">{data.desc}</h4>
@@ -104,7 +105,7 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
                         </Swiper>
                     </div>
                 </div>
-            </div>
+            </Section>
         </section>
     )
 }

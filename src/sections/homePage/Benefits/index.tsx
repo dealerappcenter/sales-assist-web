@@ -1,7 +1,7 @@
 import { IconBox } from "@src/components/IconBox"
 import { Insight } from "@src/components/Insight";
 import { useResponsive, useProgress } from "@src/hooks";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from 'react';
 import { Icons } from 'src/assets'
 import { useInView } from 'react-intersection-observer'
 import { DashedAnimation } from "@src/animations/AnimatedTriangle";
@@ -9,15 +9,35 @@ import { motion } from 'framer-motion';
 import { fade } from '@src/utils/animations';
 import { Section } from "@src/components/section";
 
+let timer: NodeJS.Timer;
 
 export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
   const { isDesktop, isTablet, isMobile } = useResponsive();
   const currentCard = useRef(0);
   const currentStatus = useRef<'one' | 'two' | 'tree' | 'idle'>('idle');
+  const [progressLeft, setProgress] = useState(1);
 
+  function startProgress() {
+      clearInterval(timer);
+  
+      let interval = 100;
+  
+      timer = setInterval(() => {
+  
+          interval--
+  
+          if (interval >= 0) {
+              setProgress(interval)
+              return
+          }
+  
+          clearInterval(timer)
+          interval = 100;
+      }, 100)
+  }
   const [ref, inView] = useInView({ initialInView: true });
 
-  const { startProgress, progressLeft, stopProgress } = useProgress();
+  // const { startProgress, progressLeft, stopProgress } = useProgress();
 
 
   useEffect(() => {
@@ -46,11 +66,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
   function clickOnIcon(card: number, startAt: number) {
     return () => {
       currentCard.current = card
-      
-      stopProgress();
-
       startProgress();
-
     }
   }
 

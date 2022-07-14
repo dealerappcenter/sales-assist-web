@@ -4,6 +4,7 @@ import Head from "next/head"
 import PolicyData from '@src/mocks/PrivacyPolicy/policy.json';
 import classNames from 'classnames';
 import { GA } from "@src/components/Analitiycs";
+import { Section } from "@src/components/section";
 
 const PrivacyPolicy: NextPage = () => {
   const lastPayment = PolicyData?.data.payment.description.length - 1 || 0;
@@ -17,11 +18,11 @@ const PrivacyPolicy: NextPage = () => {
         <link rel="icon" href="/favicon.png" />
       </Head>
       <GA />
-      <header>
+      <header className="lg:px-12">
         <Nav />
       </header>
       <section id='policy'>
-        <div className="container mx-auto py-12 flex flex-col gap-6 lg:px-12 md:px-6 px-4 text-gray-primary">
+        <Section className="container mx-auto py-12 flex flex-col gap-6 text-gray-primary">
           {/*  */}
           <div className="flex flex-col gap-6">
             <div className="text-center">
@@ -108,9 +109,9 @@ const PrivacyPolicy: NextPage = () => {
               PolicyData?.data.contact.links.map((link) => <a href={'mailto:'+link} className="text-orange-link" key={link}>{link}</a>)
             }</p>)}
           </div>
-        </div>
+        </Section>
       </section>
-      {/* <Footer kind="dark" /> */}
+      <Footer kind="dark" />
     </>
   )
 }

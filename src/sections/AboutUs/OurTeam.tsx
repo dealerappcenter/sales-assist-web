@@ -2,12 +2,13 @@ import { WorldMap } from '@src/assets';
 import Image from 'next/image';
 import { useResponsive } from '@hooks/useResponsive';
 import { AnimatedWorldMap } from '../../animations/WorldMap/index';
+import { Section } from '@src/components/section';
 
 export const AboutUsOurTeam: React.FC<Section<AboutUsOurTeam>> = ({ data }) => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
     return (
-        <section className='px-4 pt-6 lg:px-12 lg:pt-32 bg-gray-primary'>
-            <div className='px-4 md:px-6 lg:px-12 flex-grow container mx-auto gap-6 flex flex-col'>
+        <section className='section bg-gray-primary'>
+            <Section className='flex-grow gap-6 flex flex-col'>
                 <h1 className='text-white-normal md:text-4xl font-semibold mb-4'>{data.title}</h1>
                 <h4 className='text-gray-secondary md:text-xl mb-4'>{data.desc}</h4>
                 <div className='w-full flex flex-col md:flex-row gap-4 md:gap-12 lg:gap-20 text-white-normal md:h-[30rem]'>
@@ -33,7 +34,7 @@ export const AboutUsOurTeam: React.FC<Section<AboutUsOurTeam>> = ({ data }) => {
                 <div className='w-full flex items-center justify-center mt-6'>
                     <div className='w-[20%] md:w-[12%] rounded-full bg-orange-normal p-1'></div>
                 </div>
-            </div>
+            </Section>
         </section>
     )
 }

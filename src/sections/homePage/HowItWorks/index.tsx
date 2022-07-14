@@ -11,24 +11,37 @@ import { CustomerAnimation } from '@src/components/HowitWorksAnimations/Customer
 import { SalesAnimation } from '@src/components/HowitWorksAnimations/Sales';
 import { Section } from '@components/section';
 
-import useCountDown from 'react-countdown-hook';
-
-const initialTime = 10 * 10000; // 10s
-const interval = 1000;
-
-
+let timer: NodeJS.Timer;
 
 export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) => {
     const { isDesktop, isMobile, isTablet } = useResponsive();
     const currentCard = useRef(0);
     const [ref, inView] = useInView();
+    const [progressLeft, setProgress] = useState(1);
 
+    function startProgress() {
+        clearInterval(timer);
     
-    const { progressLeft, startProgress, stopProgress } = useProgress();
+        let interval = 100;
+    
+        timer = setInterval(() => {
+    
+            interval--
+    
+            if (interval >= 0) {
+                setProgress(interval)
+                return
+            }
+    
+            clearInterval(timer)
+            interval = 100;
+        }, 100)
+    }
+    
+    // const { progressLeft, startProgress, stopProgress } = useProgress();
     
     useEffect(() => {
         if (inView) {
-            stopProgress()
             currentCard.current = 0
             startProgress();
         } 
@@ -50,7 +63,6 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
     function clickOnCard(card: number) {
         return () => {
             currentCard.current = card
-            stopProgress();
             startProgress();
         }
     }

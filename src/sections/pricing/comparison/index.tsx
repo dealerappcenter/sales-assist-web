@@ -1,10 +1,11 @@
 import PlansInfo from '@src/mocks/pricing/plans.json';
 import { MdCheck, MdRemove } from 'react-icons/md';
+import { Section } from '../../../components/section/index';
 
 export const PricingComparison = () => {
     return (
-        <section className='px- py-6 lg:px-12 lg:py-12 bg-white-normal'>
-            <div className='container mx-auto text-gray-primary flex flex-col gap-12 mb-6 lg:px-12 md:px-6 px-4'>
+        <section className='bg-white-normal'>
+            <Section className=' text-gray-primary flex flex-col gap-12 mb-12'>
                 <div className=''>
                     <h1 className="mb-4">{PlansInfo.title}</h1>
                 </div>
@@ -46,7 +47,7 @@ export const PricingComparison = () => {
                         </div>
                     })}
                 </div>
-            </div>
+            </Section>
             <hr />
         </section>
     )

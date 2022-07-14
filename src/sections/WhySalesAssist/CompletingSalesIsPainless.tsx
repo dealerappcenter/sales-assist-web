@@ -1,20 +1,20 @@
-import { Button } from "@src/components"
 import { BsBarChartFill } from 'react-icons/bs'
 import { buildIcon } from '@src/utils/icons';
 import { simplifySales } from '@src/assets/'
 import { calendlyLink } from "@src/utils/routes";
+import { Section } from '../../components/section/index';
 
 export const WhySalesAssistCompletingSalesIsPainless: React.FC<Section<WhySalesAssistCompleteSalesPainlessSection>> = ({ data }) => {
     return (
-        <section className='py-12 px-4 flex flex-col relative bg-gray-primary text-white-normal'>
-            <div className='container gap-6 md:gap-24 py-6 mx-auto flex-col md:flex-row justify-center items-center md:items-start px-4 lg:py-12 h-full flex'>
-                <div className='w-full md:w-1/2'>
+        <section className='section flex flex-col relative bg-gray-primary text-white-normal'>
+            <Section className='container gap-6 md:gap-12 py-6 mx-auto flex-col h-full flex'>
+                <div className='w-full'>
                     <h1>{data.title}</h1>
                 </div>
-                <div className='md:w-1/2 flex-grow-0 relative flex items-center md:items-start justify-center w-fit flex-col gap-12'>
+                <div className='flex-grow-0 relative flex items-center md:items-start justify-center w-fit flex-col gap-6'>
                     {
                         data.bullet_points.map((k) => {
-                            return <div key={k.code} className='flex flex-col w-full md:w-2/3 gap-4'>
+                            return <div key={k.code} className='flex flex-col w-full gap-4'>
                                 <div>
                                     {buildIcon({ data: simplifySales, code: k.code, fallback: <BsBarChartFill />, size: { width: 56, height: 56 } })}
                                 </div>
@@ -26,9 +26,7 @@ export const WhySalesAssistCompletingSalesIsPainless: React.FC<Section<WhySalesA
                         })
                     }
                 </div>
-            </div>
-            {/* banner */}
-            <div className='container gap-6 md:px-12 py-6 mx-auto flex-col md:flex-row justify-center items-center md:items-start px-4 lg:py-12 h-full flex'>
+                {/* banner */}
                 <div className='w-full px-6 flex-wrap md:px-12 py-8 flex items-center justify-between rounded-lg bg-gradient-to-br from-[#F87129] via-[#F87129] to-[#FFA742] text-white-normal'>
                     <h1 className='text-xl font-semibold'>{data.banner.text}</h1>
                     <div className='my-6 border-2 border-transparent'></div>
@@ -39,7 +37,7 @@ export const WhySalesAssistCompletingSalesIsPainless: React.FC<Section<WhySalesA
                         </button>
                     </a>
                 </div>
-            </div>
+            </Section>
         </section>
     )
 }

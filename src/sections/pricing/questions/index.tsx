@@ -1,10 +1,11 @@
 import Questions from '@src/mocks/pricing/questions.json';
 import { calendlyLink } from '@src/utils/routes';
+import { Section } from '../../../components/section/index';
 
 export const PricingQuestions: React.FC<Section<any>> = ({ id }) => {
     return (
         <section id={id} className='bg-white-normal'>
-            <div className='container mx-auto py-12 flex flex-col gap-6 lg:px-12 md:px-6 px-4'>
+            <Section className='container mx-auto flex flex-col gap-6'>
                 <h1>{Questions.title}</h1>
 
                 <div className='flex flex-col gap-6 mb-6'>
@@ -26,7 +27,7 @@ export const PricingQuestions: React.FC<Section<any>> = ({ id }) => {
                         </button>
                     </a>
                 </div>
-            </div>
+            </Section>
         </section>
     )
 }
