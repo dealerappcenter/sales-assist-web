@@ -11,7 +11,7 @@ interface HeroProps {
 }
 export const Hero: React.FC<HeroProps> = ({ heroData }) => {
     return (
-        <header className='flex flex-col bg-white-soft h-full lg:h-screen lg:px-12'>
+        <header className='flex flex-col bg-white-soft h-full lg:px-12'>
             <Nav />
             <Section>
                 <div className='flex-grow container mx-auto flex flex-col lg:flex-row w-full h-[65%] gap-6'>
