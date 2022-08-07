@@ -1,6 +1,25 @@
 {
-    "title": "The Sales Completion Platform",
-    "desc": "An easier, faster way to complete the sale by unifying every step of the process, with e-Signatures, document collection, ID verification, e-Forms, payments and more – right from your CRM.",
+    "hero": {
+        "upper_message": "Complete",
+        "lower_message": "Faster"
+    },
+    "desc": {
+        "message": "Complete the entire sales process from",
+        "highLight": "a single panel",
+        "message_end": "(within your CRM or SalesAssist mobile app), which connects all your sales tools with workflow automation and provides smart suggestions based on real time signals."
+    },
     "button": "See what we’re building - Book Demo!",
-    "trusted": "Trusted by"
+    "trusted": "Trusted by",
+    "modules": [
+        "The sale",
+        "Document Collection",
+        "e-Form Data Collection",
+        "Payment Authorization",
+        "Payment Collection",
+        "Paperwork & e-Signature",
+        "ID Verification",
+        "Product Sharing",
+        "Digital Consent"
+    ],
+    "meta": "Complete the entire sales process from a single panel (within your CRM or SalesAssist mobile app), which connects all your sales tools with workflow automation and provides smart suggestions based on real time signals."
 }
