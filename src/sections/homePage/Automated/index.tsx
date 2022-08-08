@@ -10,7 +10,7 @@ export const Automated: React.FC<Section<Automated>> = ({ id, data }) => {
           <h4 className="text-gray-secondary">{data.desc}</h4>
         </div>
 
-        <div className="relative w-full">
+        <div className="relative w-full h-[15rem] md:h-[25rem]">
           <Image src={data.asset} alt="automated" layout='fill' />
         </div>
       </Section>
