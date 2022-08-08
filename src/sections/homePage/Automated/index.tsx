@@ -1,5 +1,6 @@
 import { Section } from "@src/components/section"
 import Image from "next/image"
+import { AnimatedFlow } from '@src/animations/AnimatedFlow';
 
 export const Automated: React.FC<Section<Automated>> = ({ id, data }) => {
   return (
@@ -11,7 +12,7 @@ export const Automated: React.FC<Section<Automated>> = ({ id, data }) => {
         </div>
 
         <div className="relative w-full h-[15rem] md:h-[25rem]">
-          <Image src={data.asset} alt="automated" layout='fill' />
+          <AnimatedFlow />
         </div>
       </Section>
     </section>
