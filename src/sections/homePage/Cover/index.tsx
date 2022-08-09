@@ -54,8 +54,8 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
                             <Button className='font-light'>{heroData.button}</Button>
                         </a>
 
-                    <div className='pt-10 items-center flex flex-col'>
-                        <h3 className='pb-12 font-normal'>{heroData.trusted}</h3>
+                    <div className='pt-8 items-center flex flex-col'>
+                        <h3 className='pb-8 font-normal'>{heroData.trusted}</h3>
                         <div className='flex justify-center w-full items-center flex-wrap gap-12 lg:gap-24'>
                             {partners.map((t) => {
                                 return <div key={t.id} className="w-40 h-20 flex items-center">
