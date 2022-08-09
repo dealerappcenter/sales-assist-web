@@ -4,14 +4,14 @@
         "lower_message": "Faster"
     },
     "desc": {
-        "message": "Complete the entire sales process from",
+        "message": "Unify all your sales tools into",
         "highLight": "a single panel",
-        "message_end": "(within your CRM or SalesAssist mobile app), which connects all your sales tools with workflow automation and provides smart suggestions based on real time signals."
+        "message_end": "(within your CRM or SalesAssist mobile app), integrate them with workflow automation and receive smart suggestions based on real time signals."
     },
     "button": "See what we’re building - Book Demo!",
     "trusted": "Trusted by",
     "modules": [
-        "The sale",
+        "The Sale",
         "Document Collection",
         "e-Form Data Collection",
         "Payment Authorization",
