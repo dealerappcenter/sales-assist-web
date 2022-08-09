@@ -69,7 +69,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
 
     
     return (
-        <main id={id} ref={ref} className='section overflow-x-auto bg-white-soft'>
+        <main id={id} ref={ref} className='section overflow-x-auto bg-white-normal'>
             <Section>
                 <div className='px-4 md:px-0 mb-2'>
                     <h1 className="mb-4 text-gray-primary">{data.title}</h1>

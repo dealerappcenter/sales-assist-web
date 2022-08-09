@@ -21,9 +21,9 @@ const Home: NextPage<HomePageSections> = (props) => {
 
       <WhySalesAssistIteration {...{ data: actions }} id='actions' />
 
-      <Automated {...{data: automated }}/>
-
       <HowItWorks {...{data: HowItWork }} id='how-it-works' />
+
+      <Automated {...{data: automated }} className='bg-white-soft'/>
 
       <Benefits {...{ data: benefits }} id='benefits' />
 

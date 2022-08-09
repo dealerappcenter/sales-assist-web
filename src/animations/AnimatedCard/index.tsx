@@ -17,7 +17,7 @@ export const AnimatedCard: React.FC<AnimatedCardProps> = (props) => {
   const { title, sub, code, isActive, progress, onClick } = props;
   const baseClasses = classNames("group rounded-2xl cursor-pointer w-full md:w-[27rem] h-[8.5rem] flex overflow-hidden duration-400",
     {'bg-card-normal': isActive },
-    {'opacity-50': !isActive}
+    {'opacity-70 bg-white-soft': !isActive}
   );
   const progressClass = classNames("h-full  w-6 duration-300 rounded-bl rounded-br");
   return (

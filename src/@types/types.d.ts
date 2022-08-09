@@ -39,6 +39,7 @@ interface Industry {
 }
 interface Section<T> {
     id?: string,
+    className?: string,
     data: T
 }
 
