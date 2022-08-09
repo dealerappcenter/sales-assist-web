@@ -4,6 +4,7 @@ import actions from './actions.json';
 import simplifySales from './simplifySales.json';
 import completeSalesFaster from './completeSales.json';
 import completeSalesPainless from './completeSalesPainles.json'
+import automated from './automated.json';
 
 export function getWhySalesAssistSections(): WhySalesAssistSections {
     return {
@@ -12,6 +13,7 @@ export function getWhySalesAssistSections(): WhySalesAssistSections {
         actions,
         simplifySales,
         completeSalesFaster,
-        completeSalesPainless
+        completeSalesPainless,
+        automated
     }
 }

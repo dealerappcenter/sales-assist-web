@@ -16,7 +16,7 @@ export const DashedAnimation: React.FC<DashedAnimationsProps> = ({ active = 'idl
     return (<div className="absolute inset-0">
        {isDesktop && <svg viewBox="0 0 150 150" className='p-4'>
             <line className={lineOne} strokeDasharray={3} strokeWidth={.5} x1="55" y1="25" x2="115" y2="70" />
-            <line className={lineTow} strokeDasharray={3} strokeWidth={.5} x1="35" y1="120" x2="130" y2="65" />
+            <line className={lineTow} strokeDasharray={3} strokeWidth={.5} x1="30" y1="125" x2="110" y2="75" />
             <line className={lineThree} strokeDasharray={3} strokeWidth={.5} x1="15" y1="120" x2="35" y2="45" />
         </svg>}
 

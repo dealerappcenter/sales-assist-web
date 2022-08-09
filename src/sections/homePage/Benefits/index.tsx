@@ -41,7 +41,7 @@ export const Benefits: React.FC<Section<BenefitsSection>> = ({ id, data }) => {
 
 
   useEffect(() => {
-    if (isDesktop && inView) {
+    if (inView) {
       currentCard.current = 0
       startProgress()
     } else {

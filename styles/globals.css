@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap'); */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: 'Noto Sans', sans-serif;
+  /* font-family: 'Noto Sans', sans-serif; */
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -15,15 +16,19 @@ body {
 
 @layer base {
   h1 {
-    @apply text-3xl font-bold;
+    @apply text-2xl md:text-4xl font-bold;
   }
 
   h2 {
-    @apply text-2xl font-bold;
+    @apply text-xl md:text-3xl font-bold;
   }
 
   h3 {
-    @apply text-xl font-bold;
+    @apply text-base md:text-xl font-bold;
+  }
+
+  p {
+    @apply md:text-xl
   }
 
   *::-webkit-scrollbar {
@@ -108,4 +113,12 @@ body {
 
 .section {
   @apply py-6 lg:px-12 lg:py-20;
+}
+
+.slices {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+.slices > .slice {
+  scroll-snap-align: start;
 }

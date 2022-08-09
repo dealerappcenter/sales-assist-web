@@ -3,3 +3,4 @@ export * from './Cover'
 export * from './HowItWorks'
 export * from './Sales'
 export * from './SalesTeams'
+export * from './Automated';

@@ -39,17 +39,32 @@ interface Industry {
 }
 interface Section<T> {
     id?: string,
+    className?: string,
     data: T
 }
 
 type Kind = 'orange' | 'purple' | 'normal' | string
 
 type Hero = {
-    title: string;
-    desc: string;
-    button: string;
+    hero:    HeroClass;
+    desc:    Desc;
+    button:  string;
     trusted: string;
+    modules: string[];
+    meta: string;
 }
+
+type Desc = {
+    message:     string;
+    highLight:   string;
+    message_end: string;
+}
+
+type HeroClass = {
+    upper_message: string;
+    lower_message: string;
+}
+
 
 type HowItWorksSection = {
     title: string;
@@ -97,14 +112,25 @@ type SimplifySection = {
     cta: string
 }
 
+type Automated = {
+    title:     string;
+    highlight: string;
+    desc:      string;
+    asset:     string;
+}
+
 // home page types
 type HomePageSections = {
     hero: Hero,
     HowItWork: HowItWorksSection,
     benefits: BenefitsSection,
     salesTeam: SalesTeamSection,
-    simplifySales: SimplifySection
+    simplifySales: SimplifySection,
+    actions: WhySalesAssistActionsSection,
+    automated: Automated
 }
+
+
 
 /** Why sales assist page types */
 
@@ -191,7 +217,8 @@ type WhySalesAssistSections = {
     actions: WhySalesAssistActionsSection,
     simplifySales: WhySalesAssistSimplifySalesSection,
     completeSalesFaster: WhySalesAssistCompleteSalesFaster,
-    completeSalesPainless: WhySalesAssistCompleteSalesPainlessSection
+    completeSalesPainless: WhySalesAssistCompleteSalesPainlessSection,
+    automated: Automated
 }
 
 /** about us sections */

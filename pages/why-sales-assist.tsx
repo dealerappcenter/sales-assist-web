@@ -10,9 +10,10 @@ import {
 import { Footer } from "@src/components";
 import { getWhySalesAssistSections } from "@src/mocks/whySalesAssits";
 import { GA } from "@src/components/Analitiycs";
+import { Automated } from "@src/sections/homePage";
 
 const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
-    const { hero, salesProcess, actions, simplifySales, completeSalesFaster, completeSalesPainless } = props;
+    const { hero, salesProcess, actions, simplifySales, completeSalesFaster, completeSalesPainless, automated } = props;
     return (<>
         <Head>
             <title>Why SalesAssist</title>
@@ -27,6 +28,8 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
         <WhySalesAssistIteration {...{ data: actions }} id='actions' />
 
         <WhySalesAssistSimplifySales {...{ data: simplifySales }} />
+
+        <Automated {...{ data: automated }}/>
 
         <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }} id='complete-sales-faster-anywhere' />
 
