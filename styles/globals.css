@@ -26,9 +26,16 @@ body {
   h3 {
     @apply text-base md:text-xl font-bold;
   }
+  h4 {
+    @apply text-xl
+  }
+
+  h5 {
+    @apply text-[17px];
+  }
 
   p {
-    @apply md:text-xl
+    @apply md:text-2xl
   }
 
   *::-webkit-scrollbar {

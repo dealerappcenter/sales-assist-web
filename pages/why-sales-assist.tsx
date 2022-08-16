@@ -10,10 +10,10 @@ import {
 import { Footer } from "@src/components";
 import { getWhySalesAssistSections } from "@src/mocks/whySalesAssits";
 import { GA } from "@src/components/Analitiycs";
-import { Automated } from "@src/sections/homePage";
+import { Automated, Benefits, HowItWorks } from "@src/sections/homePage";
 
 const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
-    const { hero, salesProcess, actions, simplifySales, completeSalesFaster, completeSalesPainless, automated } = props;
+    const { hero, benefits, howItWorks, actions, simplifySales, automated, completeSalesPainless } = props;
     return (<>
         <Head>
             <title>Why SalesAssist</title>
@@ -22,16 +22,21 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
         </Head>
         <GA />
         <WhySalesAssistHero {...{ data: hero }} />
+     
+        <Benefits {...{ data: benefits }} id='benefits' />
+        
+        <HowItWorks {...{data: howItWorks }} id='how-it-works' />
 
-        <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
 
-        <WhySalesAssistIteration {...{ data: actions }} id='actions' />
+        {/* <WhySalesAssistSalesProcess {...{ data: salesProcess }} /> */}
+
+        {/* <WhySalesAssistIteration {...{ data: actions }} id='actions' /> */}
 
         <WhySalesAssistSimplifySales {...{ data: simplifySales }} />
 
-        <Automated {...{ data: automated }}/>
+        {/* <Automated {...{ data: automated }}/> */}
 
-        <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }} id='complete-sales-faster-anywhere' />
+        {/* <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }} id='complete-sales-faster-anywhere' /> */}
 
         <WhySalesAssistCompletingSalesIsPainless {...{ data: completeSalesPainless }} />
 

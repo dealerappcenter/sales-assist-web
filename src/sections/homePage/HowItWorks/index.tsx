@@ -76,7 +76,7 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                     <h4 className="text-gray-secondary">{data.desc}</h4>
                 </div>
 
-                {isDesktop && <div className='flex flex-col py-4 lg:flex-row md:px-4 lg:px-12 md:py-12 gap-12'>
+                {isDesktop && <div className='flex flex-col lg:flex-row py-6 gap-12'>
                     <div className='flex flex-col gap-6 w-1/2'>
                         {
                             data.actions.map((k, i) => {
@@ -103,8 +103,8 @@ export const HowItWorks: React.FC<Section<HowItWorksSection>> = ({ id, data }) =
                         }
                     </div>
 
-                    <div className='w-1/2'>
-                        <div className='bg-gray-disabled/20 h-full md:w-[20rem] max-w-md mx-auto rounded-lg flex items-center justify-center p-4'>
+                    <div className='w-1/2 flex items-center justify-start'>
+                        <div className='bg-gray-disabled/20 h-full md:w-[27rem] max-w-md mx-auto rounded-lg flex items-cente justify-start p-4'>
                             {inView && currentCard.current === 0 && <InteractAnimation />}
                             {inView && currentCard.current === 1 && <CustomerAnimation />}
                             {inView && currentCard.current === 2 && <SalesAnimation />}

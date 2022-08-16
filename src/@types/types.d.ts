@@ -127,7 +127,9 @@ type HomePageSections = {
     salesTeam: SalesTeamSection,
     simplifySales: SimplifySection,
     actions: WhySalesAssistActionsSection,
-    automated: Automated
+    automated: Automated,
+    completeSales: WhySalesAssistCompleteSalesFaster,
+    salesProcess: WhySalesAssistSalesProcessSection
 }
 
 
@@ -218,7 +220,9 @@ type WhySalesAssistSections = {
     simplifySales: WhySalesAssistSimplifySalesSection,
     completeSalesFaster: WhySalesAssistCompleteSalesFaster,
     completeSalesPainless: WhySalesAssistCompleteSalesPainlessSection,
-    automated: Automated
+    automated: Automated,
+    benefits: BenefitsSection,
+    howItWorks: HowItWorksSection,
 }
 
 /** about us sections */
