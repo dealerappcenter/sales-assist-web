@@ -4,10 +4,10 @@ import { Hero, HowItWorks, Benefits, SalesTeams, Sales, Automated } from '@src/s
 import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
-import { WhySalesAssistIteration } from '@src/sections/WhySalesAssist';
+import { WhySalesAssistCompleteSalesFaster, WhySalesAssistIteration, WhySalesAssistSalesProcess } from '@src/sections/WhySalesAssist';
 
 const Home: NextPage<HomePageSections> = (props) => {
-  const { hero, HowItWork, benefits, salesTeam, simplifySales, actions, automated } = props;
+  const { hero, salesProcess, completeSales, benefits, salesTeam, simplifySales, actions, automated } = props;
   return (
     <>
       <Head>
@@ -21,11 +21,15 @@ const Home: NextPage<HomePageSections> = (props) => {
 
       <WhySalesAssistIteration {...{ data: actions }} id='actions' />
 
-      <HowItWorks {...{data: HowItWork }} id='how-it-works' />
+      {/* <HowItWorks {...{data: HowItWork }} id='how-it-works' /> */}
 
       <Automated {...{data: automated }} className='bg-white-soft'/>
 
-      <Benefits {...{ data: benefits }} id='benefits' />
+      <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} />
+
+      <WhySalesAssistSalesProcess {...{data: salesProcess}} />
+
+      {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
 
       <SalesTeams {...{ data: salesTeam}} />
 

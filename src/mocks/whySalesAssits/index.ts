@@ -5,6 +5,8 @@ import simplifySales from './simplifySales.json';
 import completeSalesFaster from './completeSales.json';
 import completeSalesPainless from './completeSalesPainles.json'
 import automated from './automated.json';
+import benefits from './benefits.json';
+import howItWorks from './howItWorks.json';
 
 export function getWhySalesAssistSections(): WhySalesAssistSections {
     return {
@@ -14,6 +16,8 @@ export function getWhySalesAssistSections(): WhySalesAssistSections {
         simplifySales,
         completeSalesFaster,
         completeSalesPainless,
-        automated
+        automated,
+        benefits,
+        howItWorks
     }
 }

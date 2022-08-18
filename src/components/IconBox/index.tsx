@@ -20,7 +20,7 @@ export const IconBox: React.FC<IconBoxProps> = (props) => {
         'border-transparent': !isActive,
     });
 
-    const textClass = classNames('my-2 font-medium transition-all duration-500', { 'opacity-50': !isActive })
+    const textClass = classNames('my-2 transition-all duration-500', { 'opacity-50': !isActive })
 
     return (
         <button className={baseClass} onClick={onClick}>
@@ -42,7 +42,7 @@ export const IconBox: React.FC<IconBoxProps> = (props) => {
                     <Image width={64} height={64} src={icon} alt={text} />
                 </div>
             </div>
-            <p className={textClass}>{text}</p>
+            <h4 className={textClass}>{text}</h4>
         </button>
     )
 }
