@@ -33,12 +33,12 @@ const PrivacyPolicy: NextPage = () => {
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData?.data.information.name}</h1>
-            {PolicyData?.data.information.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.information.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData?.data.how.name}</h1>
-            {PolicyData?.data.how.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.how.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
             <ul className="list-disc pl-6 md:pl-12 flex flex-col gap-4">
               {PolicyData?.data.how.options.map(option => {
                 return <li key={option.desc}>
@@ -65,42 +65,42 @@ const PrivacyPolicy: NextPage = () => {
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.control.name}</h1>
-            {PolicyData?.data.control.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.control.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.personal.name}</h1>
-            {PolicyData?.data.personal.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.personal.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.personal.name}</h1>
-            {PolicyData?.data.personal.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.personal.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.changes.name}</h1>
-            {PolicyData?.data.changes.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.changes.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.under_age.name}</h1>
-            {PolicyData?.data.under_age.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.under_age.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.california.name}</h1>
-            {PolicyData?.data.california.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.california.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.security.name}</h1>
-            {PolicyData?.data.security.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.security.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
             <h1 className="font-bold text-xl">{PolicyData.data.transfer.name}</h1>
-            {PolicyData?.data.transfer.description.map(paragraph => <p className="" key={paragraph}>{paragraph}</p>)}
+            {PolicyData?.data.transfer.description.map(paragraph => <a className="" key={paragraph}>{paragraph}</a>)}
           </div>
           {/*  */}
           <div className="flex flex-col gap-6">
