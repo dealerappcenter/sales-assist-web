@@ -8,6 +8,7 @@ import { useState, useEffect, useRef } from 'react';
 interface HeroProps {
   heroData: Hero
 }
+
 export const Hero: React.FC<HeroProps> = ({ heroData }) => {
   const [currentModule, setCurrentModule] = useState(0);
   const divRef = useRef<HTMLDivElement | null>();
@@ -44,7 +45,10 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
           <div className='max-w-4xl'>
             <p className='text-gray-secondary text-justify'>
               {heroData.desc.message}{' '}
-              <span className='font-bold underline underline-offset-2 decoration-orange-normal'>{heroData.desc.highLight}</span>{' '}
+              <span className='font-bold underline underline-offset-2 decoration-orange-normal'>
+                {heroData.desc.highLight}
+              </span>
+              {' '}
               {heroData.desc.message_end}
             </p>
           </div>
