@@ -4,7 +4,7 @@ import { Hero, SalesTeams, Sales, Automated, TrustedPartners, CompletionTools } 
 import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
-import { WhySalesAssistCompleteSalesFaster, WhySalesAssistIteration, WhySalesAssistSalesProcess } from '@src/sections/WhySalesAssist';
+import { WhySalesAssistIteration, WhySalesAssistSalesProcess } from '@src/sections/WhySalesAssist';
 import { Nav } from 'src/components';
 
 const Home: NextPage<HomePageSections> = (props) => {
@@ -24,7 +24,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       <WhySalesAssistIteration {...{ data: actions }} id='actions' />
       {/* <HowItWorks {...{data: HowItWork }} id='how-it-works' /> */}
       <Automated {...{ data: automated }} className='bg-white-soft' />
-      <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} />
+      {/* <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} /> */}
       <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
       <TrustedPartners {...{ data: hero }} />
       {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
