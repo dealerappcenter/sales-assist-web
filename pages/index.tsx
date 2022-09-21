@@ -5,6 +5,7 @@ import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
 import { WhySalesAssistCompleteSalesFaster, WhySalesAssistIteration, WhySalesAssistSalesProcess } from '@src/sections/WhySalesAssist';
+import { Nav } from 'src/components';
 
 const Home: NextPage<HomePageSections> = (props) => {
   const { hero, salesProcess, completeSales, benefits, salesTeam, simplifySales, actions, automated } = props;
@@ -17,6 +18,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       </Head>
       <GA />
 
+      <Nav />
       <Hero {...{ heroData: hero }} />
       <WhySalesAssistIteration {...{ data: actions }} id='actions' />
       {/* <HowItWorks {...{data: HowItWork }} id='how-it-works' /> */}

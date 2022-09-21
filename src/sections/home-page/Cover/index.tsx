@@ -1,4 +1,4 @@
-import { Button, Nav } from 'src/components';
+import { Button } from 'src/components';
 import Image from 'next/image';
 import { partners } from '@src/assets';
 import { calendlyLink } from '@src/utils/routes';
@@ -31,7 +31,6 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
 
   return (
     <header className='flex flex-col bg-white-soft h-full lg:px-12 pb-12'>
-      <Nav />
       <Section className='container mx-auto'>
         <div className='flex items-center justify-center flex-col gap-6'>
           <div className='flex flex-col items-center gap-2 pb-6'>
