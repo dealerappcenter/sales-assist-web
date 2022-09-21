@@ -113,10 +113,10 @@ export const whySalesAssistHero = [
 ]
 
 export const partners = [
-    { id: uuid(), path: Alberic },
-    { id: uuid(), path: CarAuto },
-    { id: uuid(), path: Miracle },
-    { id: uuid(), path: MurphyAG },
+    { path: Alberic },
+    { path: CarAuto },
+    { path: Miracle },
+    { path: MurphyAG },
 ]
 
 export const howItWorksIcons = [
