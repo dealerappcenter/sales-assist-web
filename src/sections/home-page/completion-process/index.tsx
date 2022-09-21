@@ -12,7 +12,7 @@ export const CompletionProcess: React.FC = () => {
           </h1>
           <h4>
             Completing the sale is often the most time consuming, yet most important part of the business.
-            We&apos;ll assist your team with smart suggestions based on real time signals,
+            We&rsquo;ll assist your team with smart suggestions based on real time signals,
             so they know who, when, how and what to focus on to complete more sales.
           </h4>
         </div>
