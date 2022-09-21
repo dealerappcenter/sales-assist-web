@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { Hero, SalesTeams, Sales, Automated } from '@src/sections/home-page/';
+import { Hero, SalesTeams, Sales, Automated, TrustedPartners } from '@src/sections/home-page/';
 import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
@@ -25,6 +25,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       <Automated {...{ data: automated }} className='bg-white-soft' />
       <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} />
       <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
+      <TrustedPartners {...{ data: hero }} />
       {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
       <SalesTeams {...{ data: salesTeam }} />
       <Sales {...{ data: simplifySales }} />
