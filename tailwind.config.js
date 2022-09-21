@@ -42,7 +42,10 @@ module.exports = {
         'card': {
           'normal': '#F5F3EF'
         }
-      }
+      },
+      dropShadow: {
+        'sa': '0px 4px 12px rgba(0, 0, 0, 0.1)',
+      },
     },
   },
   plugins: [],
