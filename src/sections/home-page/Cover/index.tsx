@@ -1,6 +1,4 @@
 import { Button } from 'src/components';
-import Image from 'next/image';
-import { partners } from '@src/assets';
 import { calendlyLink } from '@src/utils/routes';
 import { Section } from '@components/section';
 import { useState, useEffect, useRef } from 'react';
@@ -54,17 +52,6 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
           <a href={calendlyLink} target="_blank" rel="noreferrer">
             <Button className='font-light'>{heroData.button}</Button>
           </a>
-
-          <div className='pt-8 items-center flex flex-col'>
-            <h3 className='pb-8 font-normal'>{heroData.trusted}</h3>
-            <div className='flex justify-center w-full items-center flex-wrap gap-12 lg:gap-24'>
-              {partners.map((t) => {
-                return <div key={t.id} className="w-40 h-20 flex items-center">
-                  <Image alt={'trusted'} src={t.path} />
-                </div>
-              })}
-            </div>
-          </div>
         </div>
       </Section>
     </header>
