@@ -47,6 +47,7 @@ import CarAuto from './support/CarAuto Logo.png';
 import Miracle from './support/Miracle Logo.png';
 import MurphyAG from './support/MurphyAG.png';
 
+import CompletionToolsScreenshot from './completion-tools-screenshot.png';
 // industries
 
 export * from './saless';
@@ -61,7 +62,8 @@ export {
     Mobile,
     SalesExample,
     WorldMap,
-    HeroImage
+    HeroImage,
+    CompletionToolsScreenshot,
 }
 
 export const logoVariants = {
