@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { Hero, HowItWorks, Benefits, SalesTeams, Sales, Automated } from '@src/sections/homePage/';
+import { Hero, SalesTeams, Sales, Automated } from '@src/sections/homePage/';
 import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
@@ -17,24 +17,15 @@ const Home: NextPage<HomePageSections> = (props) => {
       </Head>
       <GA />
 
-      <Hero {...{heroData: hero}}/>
-
+      <Hero {...{ heroData: hero }} />
       <WhySalesAssistIteration {...{ data: actions }} id='actions' />
-
       {/* <HowItWorks {...{data: HowItWork }} id='how-it-works' /> */}
-
-      <Automated {...{data: automated }} className='bg-white-soft'/>
-
+      <Automated {...{ data: automated }} className='bg-white-soft' />
       <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} />
-
-      <WhySalesAssistSalesProcess {...{data: salesProcess}} />
-
+      <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
       {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
-
-      <SalesTeams {...{ data: salesTeam}} />
-
-      <Sales {...{ data: simplifySales}} />
-
+      <SalesTeams {...{ data: salesTeam }} />
+      <Sales {...{ data: simplifySales }} />
       <Footer />
     </>
   )
@@ -42,7 +33,7 @@ const Home: NextPage<HomePageSections> = (props) => {
 
 export default Home
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async () => {
   const data = getHomePageSections();
   return {
     props: {
