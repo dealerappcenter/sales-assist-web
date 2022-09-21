@@ -6,7 +6,7 @@ export const WhySalesAssistSalesProcess: React.FC<Section<WhySalesAssistSalesPro
   return (
     <section className='bg-white-normal h-full section lg:pt-0'>
       <div className='py-6 text-center'>
-        <h1 className='font-bold'>{data.title}</h1>
+        <h1 className='font-bold text-2xl'>{data.title}</h1>
       </div>
       {isDesktop && <div className='slider-container container mx-auto'>
         <div className='slider-inside'>
