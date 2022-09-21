@@ -10,7 +10,7 @@ import {
 import { Footer } from "@src/components";
 import { getWhySalesAssistSections } from "@src/mocks/whySalesAssits";
 import { GA } from "@src/components/Analitiycs";
-import { Automated, Benefits, HowItWorks } from "@src/sections/homePage";
+import { Automated, Benefits, HowItWorks } from "@src/sections/home-page";
 
 const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
     const { hero, benefits, howItWorks, actions, simplifySales, automated, completeSalesPainless } = props;

@@ -1,6 +1,6 @@
 import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import { Hero, SalesTeams, Sales, Automated } from '@src/sections/homePage/';
+import { Hero, SalesTeams, Sales, Automated } from '@src/sections/home-page/';
 import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
