@@ -6,3 +6,4 @@ export * from './SalesTeams'
 export * from './Automated';
 export * from './trusted-partners';
 export * from './completion-tools';
+export * from './completion-process';

@@ -48,6 +48,7 @@ import Miracle from './support/Miracle Logo.png';
 import MurphyAG from './support/MurphyAG.png';
 
 import CompletionToolsScreenshot from './completion-tools-screenshot.png';
+import CompletionProcessExample from './completion-process-example.png';
 // industries
 
 export * from './saless';
@@ -64,6 +65,7 @@ export {
     WorldMap,
     HeroImage,
     CompletionToolsScreenshot,
+    CompletionProcessExample,
 }
 
 export const logoVariants = {
