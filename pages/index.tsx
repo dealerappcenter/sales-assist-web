@@ -8,7 +8,7 @@ import { WhySalesAssistIteration, WhySalesAssistSalesProcess } from '@src/sectio
 import { Nav } from 'src/components';
 
 const Home: NextPage<HomePageSections> = (props) => {
-  const { hero, salesProcess, completeSales, benefits, salesTeam, simplifySales, actions, automated } = props;
+  const { hero, salesProcess, salesTeam, simplifySales, actions, automated } = props;
   return (
     <>
       <Head>
