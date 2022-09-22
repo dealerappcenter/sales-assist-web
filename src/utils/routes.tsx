@@ -1,4 +1,4 @@
-import { BsLinkedin } from 'react-icons/bs';
+import { BsLinkedin, BsTwitter } from 'react-icons/bs';
 
 export enum Paths {
     whySalesAssist = '/why-sales-assist',
@@ -46,9 +46,8 @@ const salesAssist = {
     title: 'SalesAssist',
     links: [
         { path: '/#how-it-works', name: RouteNames.howItWorks },
-        { path: '/#benefits', name: RouteNames.Benefits },
-        { path: `${Paths.whySalesAssist}/#complete-sales-faster-anywhere`, name: 'Use Cases' },
-        { path: `${Paths.whySalesAssist}/#actions`, name: RouteNames.actions },
+        { path: `${Paths.whySalesAssist}/#benefits`, name: RouteNames.Benefits },
+        { path: '/#actions', name: RouteNames.actions },
         { path: Paths.pricing, name: RouteNames.pricing },
         { path: `${Paths.pricing}/#Q&A`, name: RouteNames.qAndA },
     ]
@@ -71,7 +70,8 @@ const contact = {
 }
 
 export const social = [
-    { url: 'https://www.linkedin.com/company/getsalesassist', icon: <BsLinkedin />}
+    { url: 'https://www.linkedin.com/company/getsalesassist', icon: <BsLinkedin />},
+    { url: 'https://twitter.com/SalesAssistSaaS', icon: <BsTwitter />}
 ]
 
 export const footerLinks = {
