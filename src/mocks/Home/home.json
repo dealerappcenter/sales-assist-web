@@ -12,12 +12,13 @@
     "trusted": "Trusted by",
     "modules": [
       "Time",
+      "Back-and-forth",
+      "Data entry",
+      "Follow-ups",
       "Efforts",
       "Opportunities",
       "Resources",
-      "Energy",
-      "Costs",
-      "Data Entry"
+      "Energy"
     ],
     "meta": "Complete the entire sales process from a single panel (within your CRM or SalesAssist mobile app), which connects all your sales tools with workflow automation and provides smart suggestions based on real time signals."
 }

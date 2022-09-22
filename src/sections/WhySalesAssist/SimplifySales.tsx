@@ -63,11 +63,11 @@ export const WhySalesAssistSimplifySales: React.FC<Section<WhySalesAssistSimplif
         <div className="flex-grow gap-6 md:gap-12 flex flex-col">
           <div className="p-2 flex w-full justify-between items-center gap-4">
             <button className={getClasses(0)} onClick={clickOnCard(0)}>1 <span className="hidden md:block">. {data.options.select}</span></button>
-            <div className="w-1/6 h-1 rounded-full bg-white-normal/25 overflow-hidden">
+            <div className="w-[10%] h-1 rounded-full bg-white-normal/25 overflow-hidden">
               {currentStep.current === 0 && <div style={{ transform: `translateX(${-progressLeft}%)` }} className='bg-orange-link w-full h-full rounded-full'></div>}
             </div>
             <button className={getClasses(1)} onClick={clickOnCard(1)}>2 <span className="hidden md:block">. {data.options.customize}</span></button>
-            <div className="w-1/6 h-1 rounded-full bg-white-normal/25 overflow-hidden">
+            <div className="w-[10%] h-1 rounded-full bg-white-normal/25 overflow-hidden">
               {currentStep.current === 1 && <div style={{ transform: `translateX(${-progressLeft}%)` }} className='bg-orange-link w-full h-full rounded-full'></div>}
             </div>
             <button className={getClasses(2)} onClick={clickOnCard(2)}>3 <span className="hidden md:block">. {data.options.add}</span></button>

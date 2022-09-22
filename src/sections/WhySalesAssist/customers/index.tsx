@@ -17,7 +17,7 @@ export const Customers: React.FC = () => {
             verify, pay, choose, etc., whatever is needed to complete the sale.
           </h4>
         </div>
-        <div className='shrink-0 w-96 h-96 md:w-[440px] md:h-[360px] rounded-lg drop-shadow-sa overflow-hidden'>
+        <div className='shrink-0 w-96 h-96 md:w-[440px] md:h-[345px] rounded-lg drop-shadow-sa overflow-hidden'>
           <Image alt='Simple to Use by Customers Example' src={SimpleToUseByCustomers} />
         </div>
       </Section>

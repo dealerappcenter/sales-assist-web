@@ -13,12 +13,12 @@ export const WhySalesAssistHero: React.FC<Section<WhySalesAssistHeroSection>> = 
           <h1 className='text-gray-primary md:text-4xl font-bold mb-6'>{data.title}</h1>
           <p className='mx-auto md:px-6 text-gray-secondary text-sm md:text-base max-w-5xl'>{data.desc}</p>
         </div>
-        <div className='relative overflow-x-auto overflow-y-hidden w-full flex gap-2 lg:items-center lg:justify-center pb-12'>
+        <div className='relative overflow-x-auto overflow-y-hidden w-full flex gap-5 lg:items-center lg:justify-center pb-12'>
           {/* list of things here */}
           {
             data.reasons.map(singleCard => {
-              return <div className='block lg:w-1/5' key={singleCard.code}>
-                <div className='p-4 rounded-md w-[15rem]  h-52 bg-white-normal'>
+              return <div key={singleCard.code}>
+                <div className='p-4 rounded-md w-[15rem] h-52 bg-white-normal'>
                   <div className='w-12 h-12 rounded-full'>
                     {buildIcon({ data: whySalesAssistHero, code: singleCard.code, fallback: <></> })}
                   </div>

@@ -13,30 +13,29 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
   const words = useRef<string[]>(heroData.modules);
 
   useEffect(() => {
-    const time = setTimeout(() => {
-      if (currentModule === (words.current.length - 3)) {
-        words.current = [...words.current, ...heroData.modules]
+    const time = setInterval(() => {
+      divRef.current?.scrollTo(0, (divRef.current?.children[currentModule] as any)?.offsetTop || 0);
+      setCurrentModule(currentModule + 1);
+      if (currentModule === heroData.modules.length - 1) {
+        setCurrentModule(0);
       }
-      setCurrentModule(currentModule + 1)
-      divRef.current?.scrollTo(0, (divRef.current?.children[currentModule] as any).offsetTop)
     }, 2000);
 
     return () => {
-      clearTimeout(time);
+      clearInterval(time);
     }
-  }, [currentModule, heroData.modules, words]);
-
+  });
 
   return (
-    <header className='flex flex-col bg-white-soft h-full mx-auto pb-12 max-w-4xl'>
+    <header className='flex flex-col bg-white-soft h-full mx-auto pb-20 max-w-4xl'>
       <Section className='px-0'>
         <div className='flex justify-center flex-col gap-6'>
           <div className='flex flex-col pb-6'>
             <h1 className='text-4xl md:text-6xl lg:text-7xl'>{heroData.hero.upper_message}</h1>
             <div className='flex flex-row gap-4'>
               <h1 className='text-4xl md:text-6xl lg:text-7xl text-orange-normal font-normal'>{heroData.hero.lower_message}</h1>
-              <div ref={el => divRef.current = el} className='overflow-hidden gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] slices'>
-                {words.current.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
+              <div ref={el => divRef.current = el} className='overflow-hidden relative gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] slices'>
+                {heroData.modules.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
               </div>
             </div>
           </div>
