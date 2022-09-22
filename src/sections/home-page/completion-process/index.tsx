@@ -5,7 +5,7 @@ import { CompletionProcessExample } from '@src/assets';
 export const CompletionProcess: React.FC = () => {
   return (
     <section className='section bg-white-normal'>
-      <Section className='flex flex-row gap-20 items-center'>
+      <Section className='flex flex-col md:flex-row gap-4 md:gap-20 items-center'>
         <div className='flex flex-col gap-6'>
           <h1>
             Let Us Assist and Guide Your Completion Process
@@ -16,7 +16,7 @@ export const CompletionProcess: React.FC = () => {
             so they know who, when, how and what to focus on to complete more sales.
           </h4>
         </div>
-        <div className='shrink-0 w-[27.5rem] h-[27.5rem] rounded-lg drop-shadow-sa overflow-hidden'>
+        <div className='shrink-0 w-96 h-96 md:w-[27.5rem] md:h-[27.5rem] rounded-lg drop-shadow-sa overflow-hidden'>
           <Image alt='Completion Process Example' src={CompletionProcessExample} />
         </div>
       </Section>
