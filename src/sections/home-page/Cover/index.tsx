@@ -42,7 +42,7 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
           </div>
 
           <div>
-            <p className='text-gray-secondary text-justify'>
+            <p className='text-gray-secondary'>
               {heroData.desc.message}{' '}
               <span className='font-bold underline underline-offset-2 decoration-orange-normal'>
                 {heroData.desc.highLight}
