@@ -13,7 +13,7 @@ export const CompletionTools: React.FC = () => {
           Have a complete arsenal of every possible sales completion tool in a single panel, right from your CRM.
           Whether you use our off-the-shelf completion tools, add your existing ones, or mix and match, we&rsquo;ve got you covered.
         </h4>
-        <Image alt='Completion Tools' src={CompletionToolsScreenshot} className='rounded-[20px] ' />
+        <Image alt='Completion Tools' src={CompletionToolsScreenshot} />
       </Section>
     </section>
   )
