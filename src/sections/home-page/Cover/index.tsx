@@ -32,7 +32,7 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
         <div className='flex justify-center flex-col gap-6'>
           <div className='flex flex-col pb-6'>
             <h1 className='text-4xl md:text-6xl lg:text-7xl'>{heroData.hero.upper_message}</h1>
-            <div className='flex flex-row gap-4'>
+            <div className='flex flex-row gap-2 md:gap-4'>
               <h1 className='text-4xl md:text-6xl lg:text-7xl text-orange-normal font-normal'>{heroData.hero.lower_message}</h1>
               <div ref={el => divRef.current = el} className='overflow-hidden relative gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] slices'>
                 {heroData.modules.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
