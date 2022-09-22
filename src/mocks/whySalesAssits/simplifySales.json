@@ -1,14 +1,29 @@
 {
-    "title": "Customize Your Own Sales Actions",
-    "desc": "SalesAssist aims to help businesses across all industries. We let businesses build customized, no-code workflow steps using our simple graphical user interface web portal, based on your own needs and logic.",
-    "options": {
-        "select": "Select a Sales Action template" ,
-        "customize": "Customize your own" ,
-        "add": "Add to your Action Panel" 
+  "title": "Simple to Manage by Leadership",
+  "desc": "We make it extremely easy for management to assemble the ideal Completion Panel for their sales team. On our web portal managers can easily select customizable off-the-shelf Completion Tools, integrate their existing ones, or mix and match.",
+  "options": {
+    "select": "Select a Completion Tool template",
+    "customize": "Customize your own",
+    "add": "Add to your Completion Panel"
+  },
+  "show_case": [
+    {
+      "option": "Select a Completion Tool template",
+      "url": "/assets/ActionBuilder/Step1.png",
+      "title": "Select off-the-shelf Completion Tools",
+      "desc": "Choose off-the-shelf Completion Tool templates from our ever-growing Template Library."
     },
-    "show_case": [
-        { "option": "Select a Sales Action template", "url": "/assets/ActionBuilder/Step1.png", "title": "Select a Sales Action template", "desc": "Choose off-the-shelf Sales Action templates from our evergrowing Template Library. " },
-        { "option": "Customize your own", "url": "/assets/ActionBuilder/Step2.png", "title": "Customize your own", "desc": "Modify texts, images, logos, documents, and page layout on the Sales Actions based on your needs." },
-        { "option": "Add to your Action Panel", "url": "/assets/ActionBuilder/Step3.png", "title": "Add to your Action Panel", "desc": "Turn on and off Sales Actions on the Action Panel and list them in the sequence you prefer." }
-    ]
+    {
+      "option": "Customize your own",
+      "url": "/assets/ActionBuilder/Step2.png",
+      "title": "Customize your own",
+      "desc": "Modify texts, images, logos, documents, and page layout on the Completion Tools based on your needs."
+    },
+    {
+      "option": "Add to your Completion Panel",
+      "url": "/assets/ActionBuilder/Step3.png",
+      "title": "Add to your Completion Panel",
+      "desc": "Turn on and off Completion Tools on the Completion Panel and list them in the sequence you prefer."
+    }
+  ]
 }
