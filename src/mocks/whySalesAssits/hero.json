@@ -1,26 +1,21 @@
 {
-    "title": "End Long and Painful Sales Completion Process",
-    "desc": "Customers hate being bounced from phone call to inbox to branch, and your team hates wasting valuable time to complete the sale. SalesAssist helps you deliver a sleek, mobile experience that your customers start and finish from their phones, while giving valuable time back to your team.",
-    "reasons": [
-        {
-            "code": "CSF",
-            "title": "Complete Sales Faster",
-            "desc": "Have customers complete the process in real time with mobile web apps shared via text/email."
-        },
-        {
-            "code": "CEW",
-            "title": "Cut Everyone’s Work",
-            "desc": "Reduce work and waiting time for both parties with our tightly integrated platform."
-        },
-        {
-            "code": "PBE",
-            "title": "Provide Better Experience",
-            "desc": "Allow customers to easily complete everything through personalized mobile web apps."
-        },
-        {
-            "code": "LOC",
-            "title": "Lower Operating Costs",
-            "desc": "Replace multiple SaaS and expensive enterprise solutions with one end-to-end sales completion platform."
-        }
-    ]
+  "title": "End Wasteful Sales Completion Processes",
+  "desc": "Customers hate being bounced from phone call to inbox to branch, and your team hates wasting valuable time to complete the sale. SalesAssist helps you deliver a sleek, mobile experience that your customers start and finish from their phones, while giving valuable time back to your team.",
+  "reasons": [
+    {
+      "code": "CSF",
+      "title": "Benefits Business",
+      "desc": "Increase the productivity of your sales team by shortening the sales completion process and boosting conversion rate."
+    },
+    {
+      "code": "CEW",
+      "title": "Benefits Salespeople",
+      "desc": "Free up your salespeople to do more value-added work by simplifying the sales completion process."
+    },
+    {
+      "code": "PBE",
+      "title": "Benefits Customers",
+      "desc": "Improve your customer's experience by streamlining the sales completion process."
+    }
+  ]
 }
