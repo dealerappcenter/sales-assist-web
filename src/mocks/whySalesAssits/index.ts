@@ -7,6 +7,7 @@ import completeSalesPainless from './completeSalesPainles.json'
 import automated from './automated.json';
 import benefits from './benefits.json';
 import howItWorks from './howItWorks.json';
+import salesTeam from '../Home/SalesTeam.json';
 
 export function getWhySalesAssistSections(): WhySalesAssistSections {
     return {
@@ -18,6 +19,7 @@ export function getWhySalesAssistSections(): WhySalesAssistSections {
         completeSalesPainless,
         automated,
         benefits,
-        howItWorks
+        howItWorks,
+        salesTeam
     }
 }

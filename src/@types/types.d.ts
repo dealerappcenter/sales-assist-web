@@ -98,6 +98,7 @@ type BulletPoint = {
 interface SalesTeamSection {
     title: string;
     quotes: Quote[];
+    slanted?: boolean;
 }
 
 interface Quote {
@@ -223,6 +224,7 @@ type WhySalesAssistSections = {
     automated: Automated,
     benefits: BenefitsSection,
     howItWorks: HowItWorksSection,
+    salesTeam: SalesTeamSection
 }
 
 /** about us sections */

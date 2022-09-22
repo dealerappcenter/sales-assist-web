@@ -49,6 +49,7 @@ import MurphyAG from './support/MurphyAG.png';
 
 import CompletionToolsScreenshot from './completion-tools-screenshot.png';
 import CompletionProcessExample from './completion-process-example.png';
+import SimpleToUseByCustomers from './simple-to-use-by-customers.jpg';
 // industries
 
 export * from './saless';
@@ -66,6 +67,7 @@ export {
     HeroImage,
     CompletionToolsScreenshot,
     CompletionProcessExample,
+    SimpleToUseByCustomers,
 }
 
 export const logoVariants = {

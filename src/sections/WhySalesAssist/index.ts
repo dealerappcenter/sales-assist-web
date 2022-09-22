@@ -4,3 +4,4 @@ export * from './Itereaction';
 export * from './SimplifySales';
 export * from './CompleteSalesFaster';
 export * from './CompletingSalesIsPainless';
+export * from './customers';

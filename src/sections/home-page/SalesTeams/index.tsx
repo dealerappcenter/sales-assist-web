@@ -14,6 +14,9 @@ export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
   const [ref, inView] = useInView({ triggerOnce: true });
   const { progressLeft, startProgress } = useProgress();
   const currentStep = useRef<number>(0);
+  const slantedClasses = classNames('inset-0 bg-gray-primary absolute -z-[1]',
+    {'clip': data.slanted !== false }
+  );
 
   useEffect(() => {
     startProgress()
@@ -48,7 +51,7 @@ export const SalesTeams: React.FC<Section<SalesTeamSection>> = ({ data }) => {
 
   return (
     <section ref={ref} className='flex flex-col relative text-white-normal section'>
-      <div className='inset-0 bg-gray-primary clip absolute -z-[1]'></div>
+      <div className={slantedClasses}></div>
       <div className='inset-0 bg-white-normal absolute -z-[2]'></div>
       <Section className='py-6 pb-14 md:pb-12 mx-auto h-full flex flex-col gap-6'>
           <h1 className='mb-6'>{data.title}</h1>

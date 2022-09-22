@@ -27,7 +27,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       {/* <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} /> */}
       <CompletionProcess />
       <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
-      <TrustedPartners {...{ data: hero }} />
+      <TrustedPartners />
       {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
       <SalesTeams {...{ data: salesTeam }} />
       <Sales {...{ data: simplifySales }} />
