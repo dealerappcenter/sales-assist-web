@@ -33,11 +33,11 @@ export const Sales: React.FC<Section<SimplifySection>> = ({ data }) => {
                   viewport={{ once: true }}
                   className="relative h-full w-32 lg:w-[100%]"
                 >
-                  <Image placeholder='blur' blurDataURL={Mobile} src={Mobile} layout="responsive" alt='app' />
+                  <Image placeholder='blur' src={Mobile} layout="responsive" alt='app' />
                 </motion.div>
               </div>
               <div className='md:hidden'>
-                <Image placeholder='blur' blurDataURL={Mobile} src={Mobile} alt='app' />
+                <Image placeholder='blur' src={Mobile} alt='app' />
               </div>
               {/* PC */}
               <motion.div
