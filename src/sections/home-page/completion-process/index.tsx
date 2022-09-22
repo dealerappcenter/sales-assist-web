@@ -16,7 +16,7 @@ export const CompletionProcess: React.FC = () => {
             so they know who, when, how and what to focus on to complete more sales.
           </h4>
         </div>
-        <div className='shrink-0 w-[27.5rem] rounded-lg drop-shadow-sa'>
+        <div className='shrink-0 w-[27.5rem] h-[27.5rem] rounded-lg drop-shadow-sa overflow-hidden'>
           <Image alt='Completion Process Example' src={CompletionProcessExample} />
         </div>
       </Section>

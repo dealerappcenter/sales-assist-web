@@ -28,18 +28,20 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
 
 
   return (
-    <header className='flex flex-col bg-white-soft h-full lg:px-12 pb-12'>
+    <header className='flex flex-col bg-white-soft h-full mx-auto pb-12 max-w-4xl'>
       <Section className='container mx-auto'>
-        <div className='flex items-center justify-center flex-col gap-6'>
-          <div className='flex flex-col items-center gap-2 pb-6'>
+        <div className='flex justify-center flex-col gap-6'>
+          <div className='flex flex-col gap-2 pb-6'>
             <h1 className='text-4xl md:text-6xl lg:text-7xl'>{heroData.hero.upper_message}</h1>
-            <div ref={el => divRef.current = el} className='text-center overflow-hidden gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] w-full slices'>
-              {words.current.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
+            <div className='flex flex-row gap-4'>
+              <h1 className='text-4xl md:text-6xl lg:text-7xl text-orange-normal font-normal'>{heroData.hero.lower_message}</h1>
+              <div ref={el => divRef.current = el} className='overflow-hidden gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] slices'>
+                {words.current.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
+              </div>
             </div>
-            <h1 className='text-4xl md:text-6xl lg:text-7xl'>{heroData.hero.lower_message}</h1>
           </div>
 
-          <div className='max-w-4xl'>
+          <div>
             <p className='text-gray-secondary text-justify'>
               {heroData.desc.message}{' '}
               <span className='font-bold underline underline-offset-2 decoration-orange-normal'>

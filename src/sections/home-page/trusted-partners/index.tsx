@@ -8,7 +8,7 @@ interface Props {
 
 export const TrustedPartners: React.FC<Props> = ({ data }) => {
   return (
-    <section className='flex flex-col bg-gray-primary text-white-normal h-full lg:px-12 pb-24'>
+    <section className='flex flex-col bg-white-normal h-full lg:px-12 pb-24'>
       <Section className='container mx-auto'>
         <div className='flex items-center justify-center flex-col gap-6'>
           <div className='pt-24 items-center flex flex-col'>

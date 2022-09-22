@@ -4,7 +4,7 @@ import { CompletionToolsScreenshot } from '@src/assets';
 
 export const CompletionTools: React.FC = () => {
   return (
-    <section className='section'>
+    <section className='section bg-white-normal'>
       <Section className='flex flex-col gap-6'>
         <h1>
           All the Sales Completion Tools Accessible Within Your CRM
