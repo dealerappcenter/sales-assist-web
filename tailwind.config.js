@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        screens: {
+          xl: '1100px'
+        }
+      },
       colors: {
         'orange': {
           'link': '#E75E18',
