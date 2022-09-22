@@ -42,14 +42,14 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
           </div>
 
           <div>
-            <p className='text-gray-secondary'>
+            <h4 className='text-gray-secondary md:text-2xl'>
               {heroData.desc.message}{' '}
               <span className='font-bold underline underline-offset-2 decoration-orange-normal'>
                 {heroData.desc.highLight}
               </span>
               {' '}
               {heroData.desc.message_end}
-            </p>
+            </h4>
           </div>
           <a href={calendlyLink} target="_blank" rel="noreferrer">
             <Button className='font-light'>{heroData.button}</Button>
