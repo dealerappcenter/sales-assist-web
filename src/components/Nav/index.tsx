@@ -57,7 +57,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
             {isDesktop && <>
               <li>
                 <a href="https://app.salesassist.io/">
-                  <p>
+                  <p className='text-base'>
                     Login
                   </p>
                 </a>
