@@ -5,8 +5,8 @@ import WLogo from './WLogo.svg';
 import Saleor from './saleor.svg';
 import Toyota from './toyota.svg';
 import QuoteMark from './quote.svg';
-import Pc from './Pc.png';
-import Mobile from './mobile.svg';
+import PC from './pc.png';
+import Mobile from './mobile.png';
 
 //icons
 import CompleteSales from './CompletSales_Icon.svg'
@@ -59,7 +59,7 @@ export {
     Saleor,
     Toyota,
     QuoteMark,
-    Pc,
+    PC,
     Mobile,
     SalesExample,
     WorldMap,
