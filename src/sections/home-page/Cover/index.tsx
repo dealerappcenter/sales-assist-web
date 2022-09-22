@@ -29,7 +29,7 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
 
   return (
     <header className='flex flex-col bg-white-soft h-full mx-auto pb-12 max-w-4xl'>
-      <Section className='container mx-auto'>
+      <Section className='px-0'>
         <div className='flex justify-center flex-col gap-6'>
           <div className='flex flex-col pb-6'>
             <h1 className='text-4xl md:text-6xl lg:text-7xl'>{heroData.hero.upper_message}</h1>
