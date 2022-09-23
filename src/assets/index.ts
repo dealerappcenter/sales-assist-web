@@ -5,8 +5,8 @@ import WLogo from './WLogo.svg';
 import Saleor from './saleor.svg';
 import Toyota from './toyota.svg';
 import QuoteMark from './quote.svg';
-import Pc from './Pc.png';
-import Mobile from './mobile.svg';
+import PC from './pc.png';
+import Mobile from './mobile.png';
 
 //icons
 import CompleteSales from './CompletSales_Icon.svg'
@@ -47,6 +47,9 @@ import CarAuto from './support/CarAuto Logo.png';
 import Miracle from './support/Miracle Logo.png';
 import MurphyAG from './support/MurphyAG.png';
 
+import CompletionToolsScreenshot from './completion-tools-screenshot.png';
+import CompletionProcessExample from './completion-process-example.png';
+import SimpleToUseByCustomers from './simple-to-use-by-customers.jpg';
 // industries
 
 export * from './saless';
@@ -57,11 +60,14 @@ export {
     Saleor,
     Toyota,
     QuoteMark,
-    Pc,
+    PC,
     Mobile,
     SalesExample,
     WorldMap,
-    HeroImage
+    HeroImage,
+    CompletionToolsScreenshot,
+    CompletionProcessExample,
+    SimpleToUseByCustomers,
 }
 
 export const logoVariants = {
@@ -113,10 +119,10 @@ export const whySalesAssistHero = [
 ]
 
 export const partners = [
-    { id: uuid(), path: Alberic },
-    { id: uuid(), path: CarAuto },
-    { id: uuid(), path: Miracle },
-    { id: uuid(), path: MurphyAG },
+    { path: Alberic },
+    { path: CarAuto },
+    { path: Miracle },
+    { path: MurphyAG },
 ]
 
 export const howItWorksIcons = [

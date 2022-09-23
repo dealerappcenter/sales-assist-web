@@ -1,25 +1,24 @@
 {
     "hero": {
-        "upper_message": "Complete",
-        "lower_message": "Faster"
+        "upper_message": "Complete Sales Without",
+        "lower_message": "Wasted"
     },
     "desc": {
-        "message": "Unify all your sales tools into",
-        "highLight": "a single panel",
-        "message_end": "(within your CRM or SalesAssist mobile app), integrate them with workflow automation and receive smart suggestions based on real time signals."
+        "message": "Complete sales faster with SalesAssist - the",
+        "highLight": "Sales Completion Platform",
+        "message_end": "that unifies all the sales completion tools into a single panel within your CRM, integrates them with workflow automation and assists your sales team with smart suggestions."
     },
-    "button": "See what we’re building - Book Demo!",
+    "button": "Your Ultimate Sales Completion Platform - Book Demo!",
     "trusted": "Trusted by",
     "modules": [
-        "The Sale",
-        "Document Collection",
-        "e-Form Data Collection",
-        "Payment Authorization",
-        "Payment Collection",
-        "Paperwork & e-Signature",
-        "ID Verification",
-        "Product Sharing",
-        "Digital Consent"
+      "Time",
+      "Back-and-forth",
+      "Data entry",
+      "Follow-ups",
+      "Efforts",
+      "Opportunities",
+      "Resources",
+      "Energy"
     ],
     "meta": "Complete the entire sales process from a single panel (within your CRM or SalesAssist mobile app), which connects all your sales tools with workflow automation and provides smart suggestions based on real time signals."
 }

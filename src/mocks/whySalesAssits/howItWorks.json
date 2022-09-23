@@ -1,9 +1,27 @@
 {
-    "title": "How It Works",
-    "desc": "3 easy steps to unify and streamline customer interactions throughout your sales process.",
-    "actions": [
-        { "code": "HIW-ASA", "title": "Add Sales Actions", "desc": "Create an Action Panel for your team on our web portal, by choosing from existing Sales Actions or customize your own.", "kind": "orange", "delay": 0 },
-        { "code": "HIW-IWC", "title": "Interact With Customer", "desc": "Text/email Sales Actions to customers from your CRM & from our Mobile App. Customers can easily review and submit info right from their mobile device.", "kind": "purple", "delay": 0.5 },
-        { "code": "HIW-CTS", "title": "Complete the Sale", "desc": "Automatically import everything directly into your CRM and other existing platforms. Close the deal & Onboard clients without any heavy lifting.", "kind": "normal", "delay": 0.8 }
-    ]   
+  "title": "Simple To Use By Sales Team",
+  "desc": "3 easy steps to transform your sales completion process without changing it – no retraining necessary.",
+  "actions": [
+    {
+      "code": "HIW-ASA",
+      "title": "Share Completion Tools",
+      "desc": "Salespeople simply tap on the relevant Completion Tool and text it to their customer, so they can easily review and submit the needed info right from their mobile devices.",
+      "kind": "orange",
+      "delay": 0
+    },
+    {
+      "code": "HIW-IWC",
+      "title": "Monitor Completion Status",
+      "desc": "Salespeople have complete visibility of the customer's completion status, easily seeing if they still haven't opened the completion tool, how many times they opened it, and when they complete it.",
+      "kind": "purple",
+      "delay": 0.5
+    },
+    {
+      "code": "HIW-CTS",
+      "title": "Receive Data",
+      "desc": "All the data and files collected from the customers automatically import directly into your CRM and other SOR based on the workflows established, then salespeople close the deal as usual.",
+      "kind": "normal",
+      "delay": 0.8
+    }
+  ]
 }

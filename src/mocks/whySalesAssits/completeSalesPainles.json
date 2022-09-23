@@ -1,24 +1,24 @@
 {
-    "title": "Completing Sales Should Be Painless",
-    "banner": {
-        "cta": "Book Demo",
-        "text": "Let’s Simplify Your Sales"
+  "title": "Completing Sales Should Be Painless",
+  "banner": {
+    "cta": "Book Demo",
+    "text": "Let’s Simplify Your Sales"
+  },
+  "bullet_points": [
+    {
+      "code": "FI",
+      "title": "Frictionless Interactions",
+      "desc": "Give customers what they expect, a seamless end-to-end journey."
     },
-    "bullet_points": [
-        {
-            "code": "FI",
-            "title": "Frictionless Interaction",
-            "desc": "Give customers what they have come to expect, a seamless end-to-end journey."
-        },
-        {
-            "code": "RLTN",
-            "title": "Real-time Notification",
-            "desc": "Have your salespeople take action at the precise moment, when customers are engaging."
-        },
-        {
-            "code": "CI",
-            "title": "Complete Integration",
-            "desc": "Let SalesAssist do all the heavy lifting and give back valuable time to your salespeople."
-        }
-    ]
+    {
+      "code": "CI",
+      "title": "End-to-End Integration",
+      "desc": "Let Salesassist do all the heavy lifting and give back valuable time to your salespeople."
+    },
+    {
+      "code": "RLTN",
+      "title": "Real-time Completion",
+      "desc": "Have your salespeople take timely actions, based on real-time suggestions."
+    }
+  ]
 }

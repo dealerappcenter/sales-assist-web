@@ -5,6 +5,11 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        screens: {
+          xl: '1100px'
+        }
+      },
       colors: {
         'orange': {
           'link': '#E75E18',
@@ -37,12 +42,16 @@ module.exports = {
         },
         'white': {
           'normal': '#fff',
-          'soft': '#f5f5f5'
+          'soft': '#f5f5f5',
+          '10': 'rgba(255, 255, 255, 0.1)'
         },
         'card': {
           'normal': '#F5F3EF'
-        }
-      }
+        },
+      },
+      dropShadow: {
+        'sa': '0px 4px 12px rgba(0, 0, 0, 0.1)',
+      },
     },
   },
   plugins: [],

@@ -10,10 +10,6 @@
             "name": "Medical Equipment"
         },
         {
-            "code": "SAAS",
-            "name": "SaaS"
-        },
-        {
             "code": "INSRC",
             "name": "Insurance"
         },
@@ -24,10 +20,6 @@
         {
             "code": "MCHRY",
             "name": "Machinery"
-        },
-        {
-            "code": "ADVRTNG",
-            "name": "Advertising"
         },
         {
             "code": "FNALSVC",

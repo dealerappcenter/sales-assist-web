@@ -9,7 +9,7 @@ export const Automated: React.FC<Section<Automated>> = ({ id, data, className })
     <section id={id} className={classes}>
       <Section className="flex flex-col gap-6">
         <div className="flex flex-col gap-4">
-          <h1 className=" text-gray-primary">{data.title} <span className="decoration-orange-normal underline">{data.highlight}</span></h1>
+          <h1 className=" text-gray-primary">{data.title} {data.highlight}</h1>
           <h4 className="text-gray-secondary">{data.desc}</h4>
         </div>
 
