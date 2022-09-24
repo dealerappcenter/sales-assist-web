@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import Logo from '@src/assets/logo.svg';
+import Logo from '@src/assets/logo.png';
 import Image from 'next/image'
 import { calendlyLink, routes } from '@src/utils/routes';
 import { NavLink } from '../NavLink';

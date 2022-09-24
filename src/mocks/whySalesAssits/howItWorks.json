@@ -4,22 +4,22 @@
   "actions": [
     {
       "code": "HIW-ASA",
-      "title": "Share Completion Tools",
-      "desc": "Salespeople simply tap on the relevant Completion Tool and text it to their customer, so they can easily review and submit the needed info right from their mobile devices.",
+      "title": "Share Completion Tasks",
+      "desc": "Salespeople simply share the relevant Completion Tasks with their customers to review, fill out, sign, and submit, right from their mobile devices.",
       "kind": "orange",
       "delay": 0
     },
     {
       "code": "HIW-IWC",
       "title": "Monitor Completion Status",
-      "desc": "Salespeople have complete visibility of the customer's completion status, easily seeing if they still haven't opened the completion tool, how many times they opened it, and when they complete it.",
+      "desc": "Salespeople have full visibility of the customers’ completion status - whether and when they have opened and completed the Action.",
       "kind": "purple",
       "delay": 0.5
     },
     {
       "code": "HIW-CTS",
       "title": "Receive Data",
-      "desc": "All the data and files collected from the customers automatically import directly into your CRM and other SOR based on the workflows established, then salespeople close the deal as usual.",
+      "desc": "All the data and files collected from the customers automatically import into your CRM and other SOR based on the workflows established.",
       "kind": "normal",
       "delay": 0.8
     }

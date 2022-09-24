@@ -14,7 +14,7 @@ const PrivacyPolicy: NextPage = () => {
     <>
       <Head>
         <title>Privacy Policy</title>
-        <meta name="description" content="we respect the privacy rights of our users and recognize the importance of protecting the personal information we collect about you. Our Privacy Policy is designed to help you understand what information we collect and how we use and share that information." />
+        <meta name="description" content="Complete sales faster with SalesAssist - the Sales Completion Platform that unifies all the sales completion tools into a single panel within your CRM, integrates them with workflow automation and assists your sales team with smart suggestions." />
         <link rel="icon" href="/favicon.png" />
       </Head>
       <GA />

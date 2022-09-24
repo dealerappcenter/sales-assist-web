@@ -16,7 +16,7 @@ body {
 
 @layer base {
   h1 {
-    @apply font-bold text-[2.125rem];
+    @apply font-bold text-[2.5rem];
   }
 
   h2 {
