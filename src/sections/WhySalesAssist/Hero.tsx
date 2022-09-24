@@ -10,7 +10,7 @@ export const WhySalesAssistHero: React.FC<Section<WhySalesAssistHeroSection>> = 
       <Nav />
       <Section className='flex-grow flex items-center justify-center flex-col gap-12'>
         <div className='text-center bold w-full'>
-          <h1 className='text-gray-primary md:text-4xl font-bold mb-6'>{data.title}</h1>
+          <h1 className='text-gray-primary font-bold mb-6'>{data.title}</h1>
           <p className='mx-auto md:px-6 text-gray-secondary text-sm md:text-xl max-w-5xl'>{data.desc}</p>
         </div>
         <div className='grid md:grid-cols-3 gap-5 pb-12'>
