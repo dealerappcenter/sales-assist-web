@@ -12,7 +12,7 @@
     {
       "code": "HIW-IWC",
       "title": "Monitor Completion Status",
-      "desc": "Salespeople have full visibility of the customers’ completion status - whether and when they have opened and completed the Action.",
+      "desc": "Salespeople have full visibility of the customers’ completion status - whether and when they have opened and completed the Tasks.",
       "kind": "purple",
       "delay": 0.5
     },

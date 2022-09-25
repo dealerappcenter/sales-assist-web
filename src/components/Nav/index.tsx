@@ -31,7 +31,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
             {/* logo */}
             <li className='flex items-center justify-center'>
               <NextLink href='/'>
-                <a className='mt-2 lg:mt-0 md:w-[10.25rem]'>
+                <a className='mt-2 lg:mt-0 w-44 md:w-[10.25rem]'>
                   <Image
                     src={Logo}
                     alt="logo"
