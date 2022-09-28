@@ -129,3 +129,8 @@ body {
 .slices > .slice {
   scroll-snap-align: start;
 }
+
+.inline-svg svg {
+  display: inline;
+  vertical-align: text-bottom;
+}
