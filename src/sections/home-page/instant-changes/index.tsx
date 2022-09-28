@@ -1,0 +1,29 @@
+import classNames from 'classnames';
+import { useResponsive } from '@hooks/useResponsive';
+import { Section } from '@components/section';
+import InstantChangesMobile from './mobile';
+import InstantChangesDesktop from './desktop';
+
+interface Props {
+  className?: string;
+}
+
+export const InstantChanges: React.FC<Props> = ({ className }) => {
+  const { isDesktop } = useResponsive();
+
+  return (
+    <section className={classNames('flex flex-col h-full lg:px-12 pb-6 lg:pb-20', className)}>
+      <Section className='container mx-auto'>
+        <div className='flex items-center justify-center flex-col gap-6'>
+          <div className='pt-6 lg:pt-20 items-center flex flex-col'>
+            <h3 className='pb-6 font-semibold text-2xl'>
+              Companies That Turn to SalesAssist See 3 Instant Changes
+            </h3>
+            { !isDesktop && <InstantChangesMobile /> }
+            { isDesktop && <InstantChangesDesktop />}
+          </div>
+        </div>
+      </Section>
+    </section>
+  )
+}

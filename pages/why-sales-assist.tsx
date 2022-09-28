@@ -9,7 +9,7 @@ import {
 import { Footer } from "@src/components";
 import { getWhySalesAssistSections } from "@src/mocks/whySalesAssits";
 import { GA } from "@src/components/Analitiycs";
-import { Benefits, HowItWorks, TrustedPartners, SalesTeams } from "@src/sections/home-page";
+import { Benefits, HowItWorks, TrustedPartners, SalesTeams, InstantChanges } from "@src/sections/home-page";
 
 const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
   const { hero, benefits, howItWorks, simplifySales, completeSalesPainless, salesTeam } = props;
@@ -28,6 +28,7 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
     {/* <WhySalesAssistIteration {...{ data: actions }} id='actions' /> */}
     <WhySalesAssistSimplifySales {...{ data: simplifySales }} />
     <Customers />
+    <InstantChanges />
     <TrustedPartners />
     <SalesTeams {...{ data: { ...salesTeam, slanted: false } }} />
     {/* <Automated {...{ data: automated }}/> */}
