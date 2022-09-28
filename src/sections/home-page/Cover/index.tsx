@@ -8,23 +8,25 @@ interface HeroProps {
 }
 
 export const Hero: React.FC<HeroProps> = ({ heroData }) => {
-  const [currentModule, setCurrentModule] = useState(0);
+  const [currentModule, setCurrentModule] = useState<HTMLDivElement | null>(null);
   const divRef = useRef<HTMLDivElement | null>();
-  const words = useRef<string[]>(heroData.modules);
+  const [words, setWords] = useState<string[]>(heroData.modules);
 
   useEffect(() => {
     const time = setInterval(() => {
-      divRef.current?.scrollTo(0, (divRef.current?.children[currentModule] as any)?.offsetTop || 0);
-      setCurrentModule(currentModule + 1);
-      if (currentModule === heroData.modules.length - 1) {
-        setCurrentModule(0);
-      }
+      const wordsEl = document.querySelector('#words') as HTMLDivElement;
+      wordsEl.scrollTo(0, (wordsEl.children[1] as any).offsetTop);
+      const wordsTimeout = setTimeout(() => {
+        wordsEl.appendChild(wordsEl.children[0].cloneNode(true));
+        wordsEl.removeChild(wordsEl.children[0]);
+        clearTimeout(wordsTimeout);
+      }, 1000);
     }, 2000);
 
     return () => {
       clearInterval(time);
     }
-  });
+  }, []);
 
   return (
     <header className='flex flex-col bg-white-soft h-full mx-auto pb-20 max-w-4xl'>
@@ -34,8 +36,8 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
             <h1 className='text-4xl md:text-6xl lg:text-7xl'>{heroData.hero.upper_message}</h1>
             <div className='flex flex-row gap-2 md:gap-4'>
               <h1 className='text-4xl md:text-6xl lg:text-7xl text-orange-normal font-normal'>{heroData.hero.lower_message}</h1>
-              <div ref={el => divRef.current = el} className='overflow-hidden relative gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] slices'>
-                {heroData.modules.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
+              <div id='words' ref={el => divRef.current = el} className='overflow-hidden relative gap-6 flex flex-col h-[40px] md:h-[65px] lg:h-[80px] slices'>
+                {words.map((m, i) => <h1 key={m + i} className='text-orange-normal text-4xl md:text-6xl lg:text-7xl slice'>{m}</h1>)}
               </div>
             </div>
           </div>
