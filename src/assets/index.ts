@@ -1,6 +1,6 @@
 import { v4 as uuid } from 'uuid';
 
-import Logo from './logo.svg';
+import Logo from './logo.png';
 import WLogo from './WLogo.svg';
 import Saleor from './saleor.svg';
 import Toyota from './toyota.svg';

@@ -16,7 +16,7 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
   return (<>
     <Head>
       <title>Why SalesAssist</title>
-      <meta name="description" content="Customers hate being bounced from phone call to inbox to branch, and your team hates wasting valuable time to complete the sale. SalesAssist helps you deliver a sleek, mobile experience that your customers start and finish from their phones, while giving valuable time back to your team." />
+      <meta name="description" content="Complete sales faster with SalesAssist - the Sales Completion Platform that unifies all the sales completion tools into a single panel within your CRM, integrates them with workflow automation and assists your sales team with smart suggestions." />
       <link rel="icon" href="/favicon.png" />
     </Head>
     <GA />
