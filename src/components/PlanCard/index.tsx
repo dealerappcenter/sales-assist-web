@@ -47,33 +47,33 @@ export const PlanCard: React.FC<PlanCardProps> = ({ plan, annually = true, }) =>
     return (
         <div key={plan.name} className='p-4 flex flex-col gap-4 bg-white-normal w-full h-full rounded-xl'>
             <div className="w-16 h-16">{buildIcon({ data: plansIcons, code: plan.code, fallback: <SiHackthebox className="text-xl" />, size: { width: 64, height: 64 } })}</div>
-            <div className="text-gray-secondary h-1/3 flex flex-col ">
-                <div className="h-1/2 ">
-                    <h1 className="text-gray-primary mb-1 font-semibold">{plan.name}</h1>
+            <div className="text-gray-secondary flex flex-col ">
+                <div className="mb-2.5">
+                    <h1 className="text-gray-primary font-bold text-[34px] leading-none">{plan.name}</h1>
                     <p className="text-sm">{plan.desc}</p>
                 </div>
                 <div className="w-10 h-[3px] bg-gray-placeholder/50 rounded-sm" />
-                <div className="flex items-start h-[7rem]">
-                    {!plan.custom && <div className="flex flex-col items-start gap-1 my-2 h-[45%] justify-between">
+                <div className="flex items-start">
+                    {!plan.custom && <div className="flex flex-col items-start gap-1 mt-5 h-[45%] justify-between">
                         <p className="text-sm">{plan.starting_at?.name}</p>
                         <span className="text-gray-primary flex items-end">
-                            <h3 className="font-semibold">${price}</h3>
+                            <h3 className="font-bold text-[34px]">${price}</h3>
                             /mo
                         </span>
                         <Counter
                             enable={{
-                                remove: plan.users === users,
-                                add: plan.limit === users
+                              remove: plan.users === users,
+                              add: plan.limit === users
                             }}
                             add={addUsers}
                             remove={removeUsers}
                         >{users} users</Counter>
                     </div>}
 
-                    {plan.custom && <div className="text-gray-primary my-2 h-[45%]">
+                    {plan.custom && <div className="text-gray-primary mt-5 h-[45%]">
                         <p className="text-gray-secondary text-sm">{plan.custom.contact_us}</p>
-                        <h3 className="font-semibold my-1">{plan.custom.pricing}</h3>
-                        <div className="h-[2rem] flex items-center">
+                        <h3 className="font-bold text-[34px]">{plan.custom.pricing}</h3>
+                        <div className="mt-3 flex items-center">
                             <p className="text-gray-secondary text-sm ">{plan.custom.users}</p>
                         </div>
                     </div>}
