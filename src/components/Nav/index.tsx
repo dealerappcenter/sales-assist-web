@@ -18,7 +18,7 @@ interface NavProps {
 export const Nav: React.FC<NavProps> = ({ className }) => {
   const { isDesktop } = useResponsive();
   const router = useRouter();
-  const classes = classNames('py-6 container max-w-[1200px] mx-auto lg:mb-[5em] flex-col lg:flex-row flex justify-between relative px-4 lg:px-0 text-[1.0625rem]', className)
+  const classes = classNames('py-10 container max-w-[1200px] mx-auto lg:mb-24 flex-col lg:flex-row flex justify-between relative px-4 lg:px-0 text-[1.0625rem]', className);
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const handleSideBar = () => setIsOpen(!isOpen);
 
@@ -27,11 +27,11 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
       <SideBar isOpen={isOpen && !isDesktop} onClose={handleSideBar} />
       <nav className={classes}>
         <div className='flex items-center justify-between w-full'>
-          <ul className='flex items-center gap-6'>
+          <ul className='flex items-center gap-[3.188rem]'>
             {/* logo */}
-            <li className='flex items-center justify-center'>
+            <li className='flex items-center justify-center mr-[0.313rem]'>
               <NextLink href='/'>
-                <a className='mt-2 lg:mt-0 w-44 md:w-[10.25rem]'>
+                <a className='mt-2 lg:mt-0 w-44 md:w-[10.25rem] md:h-[2.875rem]'>
                   <Image
                     src={Logo}
                     alt="logo"
@@ -44,7 +44,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
             {isDesktop && routes.map(route => {
               return <li key={route.path}>
                 <NextLink passHref href={route.path}>
-                  <NavLink isActive={route.path === router.asPath} className='font-semibold'>
+                  <NavLink isActive={route.path === router.asPath} className='font-semibold leading-5'>
                     {route.name}
                   </NavLink>
                 </NextLink>
@@ -57,7 +57,7 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
             {isDesktop && <>
               <li>
                 <a href="https://app.salesassist.io/">
-                  <p className='text-[1.0625rem] '>
+                  <p className='text-[1.0625rem]'>
                     Login
                   </p>
                 </a>

@@ -51,8 +51,8 @@ module.exports = {
         },
       },
       dropShadow: {
-        'sa': '0px 4px 12px rgba(0, 0, 0, 0.1)',
-      },
+        'sa': '0px 4px 12px rgba(0, 0, 0, 0.1)'
+      }
     },
   },
   plugins: [],
