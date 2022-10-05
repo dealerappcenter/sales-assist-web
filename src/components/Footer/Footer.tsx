@@ -30,7 +30,9 @@ export const Footer: React.FC<FooterProps> = (props) => {
         {/* footer left panel */}
         <div className='h-1/2 w-full flex justify-between md:gap-4 md:items-center'>
           <div className='w-full md:w-fit lg:w-1/2 h-full px-2 md:py-2 relative mb-auto'>
-            <Image src={logo} alt='logo' />
+            <div className='max-w-[164px]'>
+              <Image src={logo} alt='logo' />
+            </div>
             <h4 className='hidden md:block text-xs'>© Shiplove Inc. {new Date().getFullYear()} All Rights Reserved</h4>
             <FooterList
               kind={kind}
