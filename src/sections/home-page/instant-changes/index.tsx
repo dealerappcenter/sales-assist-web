@@ -16,7 +16,7 @@ export const InstantChanges: React.FC<Props> = ({ className }) => {
       <Section className='container mx-auto'>
         <div className='flex items-center justify-center flex-col gap-6'>
           <div className='pt-6 lg:pt-20 items-center flex flex-col'>
-            <h3 className='pb-6 font-semibold text-2xl'>
+            <h3 className='pb-6 md:pb-10 font-semibold text-2xl md:text-[34px] md:leading-10	self-start'>
               Companies That Turn to SalesAssist See 3 Instant Changes
             </h3>
             { !isDesktop && <InstantChangesMobile /> }

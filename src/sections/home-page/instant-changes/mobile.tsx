@@ -7,7 +7,7 @@ interface ColumnProps {
 const Column: React.FC<ColumnProps> = ({ amount, title, content }) => {
   return (
     <div className='flex gap-4'>
-      <div className='w-[92px] text-[28px] font-semibold text-orange-normal leading-[34px]'>
+      <div className='w-[92px] text-[28px] font-semibold text-orange-normal leading-[34px] shrink-0'>
         { amount }
       </div>
       <div>
@@ -23,7 +23,7 @@ const InstantChangesMobile: React.FC = () => {
     <div className='grid grid-cols-1 gap-6'>
       <Column amount='+23%' title='Closing Rate' content='by completing sales faster' />
       <Column amount='15hrs+' title='Saved Per Person/Mo' content='to do more value-added work' />
-      <Column amount='+15%' title='Positive reviews' content='by streamlining the sales compltion process' />
+      <Column amount='+15%' title='Positive Reviews' content='by streamlining the sales completion process' />
     </div>
   )
 }

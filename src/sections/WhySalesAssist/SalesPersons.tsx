@@ -4,7 +4,7 @@ import { IndustriesItem } from '@src/components';
 export const WhySalesAssistSalesProcess: React.FC<Section<WhySalesAssistSalesProcessSection>> = ({ data }) => {
   const { isDesktop, isTablet, isMobile } = useResponsive();
   return (
-    <section className='bg-white-normal h-full section lg:pt-0'>
+    <section className='bg-white-normal h-full section md:pt-6'>
       <div className='py-6 text-center'>
         <h1 className='font-semibold text-2xl'>{data.title}</h1>
       </div>
