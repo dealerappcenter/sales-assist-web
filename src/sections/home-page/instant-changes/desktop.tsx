@@ -16,7 +16,7 @@ interface RatesProps {
 }
 
 const InstantImage: React.FC<ImageProps> = ({ src }) => {
-  return <Image alt='' src={src} layout='fixed' width={340} height={240} />
+  return <Image alt='' src={src} layout='fixed' width={226} height={160} />
 }
 
 const Leading: React.FC<LeadingProps> = ({ title, content }) => {
@@ -40,7 +40,7 @@ const Rates: React.FC<RatesProps> = ({ rate, title }) => {
 const InstantChangesDesktop: React.FC = () => {
   return (
     <div className='text-center'>
-      <div className='grid grid-cols-3 gap-10 w-full mb-4'>
+      <div className='grid grid-cols-3 gap-10 w-full mb-4 justify-items-center'>
         <InstantImage src={Icons.Business} />
         <InstantImage src={Icons.Sales} />
         <InstantImage src={Icons.Costumer} />
