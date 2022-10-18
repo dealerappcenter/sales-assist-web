@@ -35,6 +35,7 @@ module.exports = {
         'gray': {
           'primary': '#212121',
           'secondary': '#666666',
+          'subtext': '#626262',
           'placeholder': '#8A8D91',
           'disabled': '#BCC0C4',
           'divider': '#E4E4E4',
@@ -50,8 +51,8 @@ module.exports = {
         },
       },
       dropShadow: {
-        'sa': '0px 4px 12px rgba(0, 0, 0, 0.1)',
-      },
+        'sa': '0px 4px 12px rgba(0, 0, 0, 0.1)'
+      }
     },
   },
   plugins: [],

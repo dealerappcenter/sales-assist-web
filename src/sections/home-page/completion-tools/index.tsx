@@ -6,7 +6,7 @@ export const CompletionTools: React.FC = () => {
   return (
     <section className='section bg-white-normal !pb-0'>
       <Section className='flex flex-col gap-6'>
-        <h1>
+        <h1 className='text-[2.125rem]'>
           All the Sales Completion Tools Accessible Within Your CRM
         </h1>
         <h4 className='mb-6'>

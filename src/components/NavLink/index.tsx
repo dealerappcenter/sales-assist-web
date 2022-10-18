@@ -14,13 +14,13 @@ interface NavLinkProps
  */
 export const NavLink = forwardRef<HTMLButtonElement,PropsWithChildren<NavLinkProps>>((props, ref) => {
   const { children, hideProgress, isActive, ...attributes } = props;
-  const baseClass = classNames('px-4 group hover:text-orange-link cursor-pointe text-left',
+  const baseClass = classNames('px-4 md:px-0 group hover:text-orange-link cursor-pointe text-left',
   {'mb-1': hideProgress, 'py-0': hideProgress },
   { 'text-orange-link': isActive },
   props.className);
-  const borderCLass = classNames("h-1 -mb-1 w-0 bg-orange-normal duration-300 rounded-tr rounded-br",
-    { 'group-hover:w-[75%]': !hideProgress },
-    { 'w-[75%]': isActive },
+  const borderCLass = classNames("h-1 -mb-1 w-0 mt-1.5 bg-orange-normal duration-300 rounded",
+    { 'group-hover:w-10': !hideProgress },
+    { 'w-10': isActive },
     { 'hidden': hideProgress },
   );
 
