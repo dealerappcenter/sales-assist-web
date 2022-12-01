@@ -4,7 +4,15 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['images.unsplash.com']
-  }
+  },
+  async rewrites() {
+    return [
+      {
+        source: '/griffin',
+        destination: '/onboarding/griffin',
+      },
+    ]
+  },
 }
 
 module.exports = nextConfig
