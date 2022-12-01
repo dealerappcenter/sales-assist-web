@@ -52,6 +52,9 @@ import CompletionProcessExample from './completion-process-example.png';
 import SimpleToUseByCustomers from './simple-to-use-by-customers.jpg';
 // industries
 
+// Onboarding
+export * from './onboarding';
+
 export * from './saless';
 export * from './team';
 
@@ -130,8 +133,6 @@ export const howItWorksIcons = [
     { "code": "HIW-IWC", path: Icons.Interact },
     { "code": "HIW-CTS", path: Icons.CompleteSales }
 ]
-
-
 
 export const plansIcons: { code: string, path: string }[] = [
     { code: "ADVC", path: plansIcon.AdvancePlan },
