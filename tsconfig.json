@@ -20,7 +20,8 @@
       "@components/*": ["src/components/*"],
       "@hooks/*": ["src/hooks/*"],
       "@sections/*": ["src/sections/*"],
-      "@utils/*": ["src/utils"],
+      "@utils/*": ["src/utils/*"],
+      "@assets/*": ["src/assets/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
