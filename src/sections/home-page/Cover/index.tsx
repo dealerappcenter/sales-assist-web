@@ -1,5 +1,5 @@
 import { Button } from 'src/components';
-import { calendlyLink } from '@src/utils/routes';
+import { calendlyLink } from '@utils/routes';
 import { Section } from '@components/section';
 import { useState, useEffect, useRef } from 'react';
 
