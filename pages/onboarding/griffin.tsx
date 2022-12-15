@@ -48,12 +48,25 @@ const OnboardingGriffin: NextPage = () => {
           </>
         }
         media={
-          <a href={Onboarding.Griffin.ChromeExtension} target="_blank" rel="noreferrer">
-            <Image alt='' src={Griffin.GriffinWebAppQR} />
-          </a>
+          <Image alt='' src={Griffin.GriffinWebAppQR} />
         }
         bgClassName='bg-white-soft'
         reverse={true}
+      />
+      <DoubleColumn
+        content={
+          <>
+            <h1>
+              Message SalesAssist Help Desk
+            </h1>
+            <h4>
+              To message SalesAssist Help Desk via Facebook Messenger, scan this QR code with your smartphone.
+            </h4>
+          </>
+        }
+        media={
+          <Image alt='' src={Griffin.GriffinFacebookQR} />
+        }
       />
       <DoubleColumn
         content={
@@ -67,10 +80,10 @@ const OnboardingGriffin: NextPage = () => {
           </>
         }
         media={
-          <a href={Onboarding.Griffin.ChromeExtension} target="_blank" rel="noreferrer">
-            <Image alt='' src={Griffin.GriffinWhatsappQR} />
-          </a>
+          <Image alt='' src={Griffin.GriffinWhatsappQR} />
         }
+        bgClassName='bg-white-soft'
+        reverse={true}
       />
       <Footer />
     </>
