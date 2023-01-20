@@ -30,7 +30,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
       <TrustedPartners />
       {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
-      <SalesTeams {...{ data: salesTeam }} />
+      {/* <SalesTeams {...{ data: salesTeam }} /> */}
       <Sales {...{ data: simplifySales }} />
       <Footer />
     </>
