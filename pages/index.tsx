@@ -28,7 +28,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       <CompletionProcess />
       <InstantChanges className='bg-white-soft' />
       <WhySalesAssistSalesProcess {...{ data: salesProcess }} />
-      <TrustedPartners />
+      {/* <TrustedPartners /> */}
       {/* <Benefits {...{ data: benefits }} id='benefits' /> */}
       {/* <SalesTeams {...{ data: salesTeam }} /> */}
       <Sales {...{ data: simplifySales }} />
