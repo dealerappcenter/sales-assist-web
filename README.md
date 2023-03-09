@@ -26,5 +26,3 @@ yarn dev
 to configure the theme, you can go to **`/<your user>/salesassist/tailwind.config.js`**,
 in there you will find everything related to colors, and all the other defaults styles will be placed
 on **`/<your user>/salesassist/styles/global.css`**,
-
-### More
