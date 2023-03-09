@@ -29,8 +29,8 @@ const WhySalesAssist: NextPage<WhySalesAssistSections> = (props) => {
     <WhySalesAssistSimplifySales {...{ data: simplifySales }} />
     <Customers />
     <InstantChanges />
-    <TrustedPartners />
-    <SalesTeams {...{ data: { ...salesTeam, slanted: false } }} />
+    {/* <TrustedPartners /> */}
+    {/* <SalesTeams {...{ data: { ...salesTeam, slanted: false } }} /> */}
     {/* <Automated {...{ data: automated }}/> */}
     {/* <WhySalesAssistCompleteSalesFaster {...{ data: completeSalesFaster }} id='complete-sales-faster-anywhere' /> */}
     <WhySalesAssistCompletingSalesIsPainless {...{ data: completeSalesPainless }} />

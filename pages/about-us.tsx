@@ -17,7 +17,7 @@ export const AboutUs: NextPage<AboutUsSections> = (props) => {
       <GA />
       <AboutUsHero {...{ data: hero }}/>
       <AboutUsOurTeam {...{ data: ourTeam }}/>
-      <AboutUsTeam  {...{ data: team }} />
+      {/* <AboutUsTeam  {...{ data: team }} /> */}
       <Footer kind="dark" />
     </>
   )
