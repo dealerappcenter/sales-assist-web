@@ -4,7 +4,7 @@
     "plans": [
         {
             "name": "Essential",
-            "desc": "For small teams with simple sales process",
+            "desc": "Perfect for small teams with simple sales process",
             "code": "ESS",
             "price_per_user": {
                 "year": 74,
@@ -24,8 +24,8 @@
             "features": {
                 "name": "Features",
                 "perks": [
-                    "Native mobile Android and iOS apps",
-                    "Web portal",
+                    "Native Mobile Android and iOS apps",
+                    "Web Portal",
                     "Sales Actions tracking",
                     "Digital Jacket",
                     "Template Gallery",
@@ -56,8 +56,8 @@
                 "name": "All features from Essential, plus:",
                 "perks": [
                     "CRM Embedded Extension",
-                    "Two-way CRM sync",
-                    "Autofilled forms and PDFs",
+                    "Two-way CRM Sync",
+                    "Autofilled Forms and PDFs",
                     "e-Sign Sales Widget",
                     "OCR Machine Learning",
                     "1:1 Team Trainings & Customer Success Manager"
