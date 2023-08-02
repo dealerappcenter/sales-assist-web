@@ -2,15 +2,11 @@
     "questions": [
         {
             "question": "Who is SalesAssist for?",
-            "answer": "Sales managers and AEs/CSMs who need to optimize their sales process to reach growing revenue targets. Those who value being efficient and providing an exceptional experience to their customers."
+            "answer": "Businesses who need to optimize their sales process to reach growing revenue targets. Those who value being efficient and providing an exceptional experience to their customers."
         },
         {
             "question": "Does SalesAssist integrate with my systems?",
-            "answer": "YES. We provide 300+ integrations out of the box with all of your favorite applications. For other applications that we don’t have in the integration marketplace, Salesassist can build a custom integration as an add-on service or $100/month per integration. Otherwise you can use our open API. See Integrations & API page for more details."
-        },
-        {
-            "question": "What's the difference between a marketplace integration and a custom integration?",
-            "answer": "A marketplace integration allows you to integrate SalesAssist with any of the 300+ existing integrations. For any other application that is not in the integration marketplace, our team can create a custom integration. There is no development cost to add a custom integration, just an add-on cost of $100/month per custom integration."
+            "answer": "YES. We integrate with major CRMs and DMSs."
         },
         {
             "question": "Can I see SalesAssist before buying? How much is it?",
@@ -27,7 +23,7 @@
     ],
     "title": "Frequently Asked Questions",
     "banner": {
-        "text": "Let’s Simplify Your Sales",
+        "text": "Let’s Simplify How You Gather Info from Customers",
         "button": "Book Demo"
     }
 }
