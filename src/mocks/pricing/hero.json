@@ -19,7 +19,7 @@
             "limit": 3,
             "perks": [
                 { "name": "users", "perk": "Up to 3"},
-                { "name": "Sales Widgets", "perk": 5},
+                { "name": "Sales Widgets", "perk": 5}
             ],
             "features": {
                 "name": "Features",
@@ -50,7 +50,7 @@
             },
             "perks": [
                 { "name": "users", "perk": "For 4-14"},
-                { "name": "Sales Widgets", "perk": 10},
+                { "name": "Sales Widgets", "perk": 10}
             ],
             "features": {
                 "name": "All features from Essential, plus:",
@@ -84,7 +84,7 @@
             },
             "perks": [
                 { "name": "users", "perk": "For 15+"},
-                { "name": "Sales Widgets", "perk": "Unlimited"},
+                { "name": "Sales Widgets", "perk": "Unlimited"}
             ],
             "features": {
                 "name": "All features from Advanced, plus:",
