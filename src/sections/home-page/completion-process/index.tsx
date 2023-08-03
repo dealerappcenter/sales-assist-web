@@ -8,10 +8,10 @@ export const CompletionProcess: React.FC = () => {
       <Section className='flex flex-col md:flex-row gap-4 md:gap-20 items-center'>
         <div className='flex flex-col gap-6'>
           <h1>
-            Let Us Assist and Guide Your Completion Process
+            Let Us Assist and Guide Your Info-Gathering Process
           </h1>
           <h4>
-            Completing the sale is often the most time consuming, yet most important part of the business.
+            Gathering information and documents from customers is often the most time consuming part of the business.
             We&rsquo;ll assist your team with smart suggestions based on real time signals,
             so they know who, when, how and what to focus on to complete more sales.
           </h4>

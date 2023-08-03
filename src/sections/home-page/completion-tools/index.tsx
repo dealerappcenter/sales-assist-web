@@ -7,11 +7,10 @@ export const CompletionTools: React.FC = () => {
     <section className='section bg-white-normal !pb-0'>
       <Section className='flex flex-col gap-6'>
         <h1 className='text-[2.125rem]'>
-          All the Sales Completion Tools Accessible Within Your CRM
+          Embedded In and Fully Integrated With Your CRM
         </h1>
         <h4 className='mb-6'>
-          Have a complete arsenal of every possible sales completion tool in a single panel, right from your CRM.
-          Whether you use our off-the-shelf completion tools, add your existing ones, or mix and match, we&rsquo;ve got you covered.
+          Have a complete arsenal of every possible info-gathering widget in a single panel, right from your CRM. All information and documents gathered enter your CRM in real time, with audit trail.
         </h4>
         <Image alt='Completion Tools' src={CompletionToolsScreenshot} />
       </Section>
