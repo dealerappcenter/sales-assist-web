@@ -4,7 +4,7 @@
     "plans": [
         {
             "name": "Essential",
-            "desc": "Perfect for small teams with simple sales process",
+            "desc": "Perfect solution for small teams with simple sales process",
             "code": "ESS",
             "price_per_user": {
                 "year": 74,
