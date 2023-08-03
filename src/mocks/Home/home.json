@@ -1,14 +1,14 @@
 {
     "hero": {
-        "upper_message": "Complete Sales Without",
-        "lower_message": "Wasted"
+        "upper_message": "Supercharge Your CRM",
+        "lower_message": "No More Wasted"
     },
     "desc": {
-        "message": "Complete sales faster with SalesAssist - the",
-        "highLight": "Sales Completion Platform",
-        "message_end": "that unifies all the sales completion tools into a single panel within your CRM, integrates them with workflow automation and assists your sales team with smart suggestions."
+        "message": "Gather information from customers securely and easily with SalesAssist, the",
+        "highLight": "Ultimate CRM Booster",
+        "message_end": "that streamlines your information collection process with data encryption and automation."
     },
-    "button": "Your Ultimate Sales Completion Platform - Book Demo!",
+    "button": "Your Ultimate CRM Booster - Book Demo!",
     "trusted": "Trusted by",
     "modules": [
       "Time",
@@ -20,5 +20,5 @@
       "Resources",
       "Energy"
     ],
-    "meta": "Complete sales faster with SalesAssist - the Sales Completion Platform that unifies all the sales completion tools into a single panel within your CRM, integrates them with workflow automation and assists your sales team with smart suggestions."
+    "meta": "Gather information from customers securely and easily with SalesAssist, the Ultimate CRM Booster that streamlines your information collection process with data encryption and automation."
 }

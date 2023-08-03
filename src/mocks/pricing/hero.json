@@ -4,7 +4,7 @@
     "plans": [
         {
             "name": "Essential",
-            "desc": "For small teams with simple sales completion process",
+            "desc": "Perfect for small teams with simple sales process",
             "code": "ESS",
             "price_per_user": {
                 "year": 74,
@@ -19,16 +19,15 @@
             "limit": 3,
             "perks": [
                 { "name": "users", "perk": "Up to 3"},
-                { "name": "Sales actions", "perk": 5},
-                { "name": "Marketplace integration", "perk": 1}
+                { "name": "Sales Widgets", "perk": 5}
             ],
             "features": {
                 "name": "Features",
                 "perks": [
-                    "Native mobile Android and iOS apps",
-                    "Web portal",
+                    "Native Mobile Android and iOS apps",
+                    "Web Portal",
                     "Sales Actions tracking",
-                    "Action Builder",
+                    "Digital Jacket",
                     "Template Gallery",
                     "Onboarding & Email Support"
                 ]
@@ -36,7 +35,7 @@
         },
         {
             "name": "Advanced",
-            "desc": "Everything you need to simplify and streamline any sales completion process",
+            "desc": "Everything you need to simplify and streamline any sales process",
             "code": "ADVC",
             "users": 4,
             "limit": 14,
@@ -51,16 +50,15 @@
             },
             "perks": [
                 { "name": "users", "perk": "For 4-14"},
-                { "name": "Sales actions", "perk": 10},
-                { "name": "Marketplace integrations", "perk": 3}
+                { "name": "Sales Widgets", "perk": 10}
             ],
             "features": {
                 "name": "All features from Essential, plus:",
                 "perks": [
                     "CRM Embedded Extension",
-                    "Two-way CRM sync",
-                    "Autofilled forms and PDFs",
-                    "e-Sign Sales Action",
+                    "Two-way CRM Sync",
+                    "Autofilled Forms and PDFs",
+                    "e-Sign Sales Widget",
                     "OCR Machine Learning",
                     "1:1 Team Trainings & Customer Success Manager"
                 ]
@@ -68,7 +66,7 @@
         },
         {
             "name": "Enterprise",
-            "desc": "Fully tailored solution for your sales completion needs and access to unrivaled support",
+            "desc": "Fully tailored solution for your sales needs and access to unrivaled support",
             "code": "ENTPRS",
             "users": 0,
             "price_per_user": {
@@ -86,8 +84,7 @@
             },
             "perks": [
                 { "name": "users", "perk": "For 15+"},
-                { "name": "Sales Actions", "perk": "Unlimited"},
-                { "name": "Marketplace integrations", "perk": "Unlimited"}
+                { "name": "Sales Widgets", "perk": "Unlimited"}
             ],
             "features": {
                 "name": "All features from Advanced, plus:",
