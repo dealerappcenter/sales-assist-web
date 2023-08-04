@@ -3,20 +3,12 @@
     "desc": "No matter what your sales process is, SalesAssist has a Sales Action to streamline your customer facing interactions, from e-Signatures to document collection to e-Forms.",
     "actions": [
         {
-            "name": "e-Signature",
-            "code": "e-Signature",
-            "title": "Make e-Signatures fast, easy, mobile",
-            "desc": "Send customers agreements for e-Signatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.",
-            "url": "/assets/actions/e-Signature.webp",
-            "delay": 0
-        },
-        {
             "name": "Get Docs",
             "code": "Get Docs",
             "title": "Collect documents in real-time",
             "desc": "Allow customers to upload documents on the spot with their mobile device. Stop chasing customers to scan and upload documents and increase the speed and completion rate.",
             "url": "/assets/actions/Get-Docs.webp",
-            "delay": 0.2
+            "delay": 0
         },
         {
             "name": "e-Form",
@@ -24,6 +16,14 @@
             "title": "Make all your forms smart",
             "desc": "Reduce unnecessary errors, increase the completion rate and shorten the form fill time, with forms that are made for mobile completion and are fully integrated with all of your existing systems.",
             "url": "/assets/actions/e-Forms.webp",
+            "delay": 0.2
+        },
+        {
+            "name": "e-Signature",
+            "code": "e-Signature",
+            "title": "Make e-Signatures fast, easy, mobile",
+            "desc": "Send customers agreements for e-Signatures that are designed for mobile completion. Complete sales agreements in real time, with much higher completion rates than legacy eSign.",
+            "url": "/assets/actions/e-Signature.webp",
             "delay": 0.4
         },
         {
@@ -35,20 +35,12 @@
             "delay": 0.6
         },
         {
-            "name": "Content Sharing",
-            "code": "Content Sharing",
-            "title": "Share images, videos, articles",
-            "desc": "Keep the conversation moving forward with focused content pages that share necessary information to complete the sale.",
-            "url": "/assets/actions/Content-Sharing.webp",
-            "delay": 0.8
-        },
-        {
             "code": "Request Referrals",
             "name": "Request Referrals",
             "title": "Maximize each relationship",
             "desc": "Make it easy for customers to refer friends and family. As soon as customers share a referral a new opportunity is created and assigned in your CRM.",
             "url": "/assets/actions/Request-Referrals.webp",
-            "delay": 1
+            "delay": 0.8
         },
         {
             "code": "Get Reviews",
@@ -56,7 +48,7 @@
             "title": "Easily collect reviews",
             "desc": "Make it extremely easy for your customers to leave a review. Send personalized text/email links that customers can tap and instantly leave reviews on their platform of choice.",
             "url": "/assets/actions/Get-Reviews.webp",
-            "delay": 1.2
+            "delay": 1
         },
         {
             "code": "Secure Payments",
@@ -64,7 +56,7 @@
             "title": "Collect payments seamlessly",
             "desc": "Collect payments in real-time without web redirects or inefficient IVR systems. Using personalized payment links, quickly and securely collect payments wherever your customers and salespeople are.",
             "url": "/assets/actions/Secure-Payments.webp",
-            "delay": 1.4
+            "delay": 1.2
         },
         {
             "code": "ID Verification",
@@ -72,7 +64,7 @@
             "title": "Add convenient security",
             "desc": "Stay secure without adding friction to your sales process. Use real-time ID verification straight from your customer's smartphones, eliminating the need for in-person visits or emailing of documents.",
             "url": "/assets/actions/ID-Verification.webp",
-            "delay": 1.6
+            "delay": 1.4
         },
         {
             "code": "Digital Consent",
@@ -80,7 +72,7 @@
             "title": "Gain fast, easy and compliant consent",
             "desc": "Eliminate the time consuming and error-prone script reading. Send customers a T&C they can accept immediately (e.g., through checkboxes) right from their mobile device.",
             "url": "/assets/actions/Digital Consent.webp",
-            "delay": 1.8
+            "delay": 1.6
         }
     ]
 }

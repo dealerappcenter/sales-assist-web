@@ -29,12 +29,12 @@ export const Hero: React.FC<HeroProps> = ({ heroData }) => {
   }, []);
 
   return (
-    <header className='flex flex-col bg-white-soft h-full mx-auto pb-20 max-w-4xl'>
+    <header className='flex flex-col bg-white-soft h-full mx-auto container pb-20'>
       <Section className='lg:px-0'>
         <div className='flex justify-center flex-col gap-6'>
           <div className='flex flex-col pb-12'>
             <h1 className='md:text-6xl lg:text-7xl lg:tracking-wide lg:leading-[5.375rem] lg:mb-1.5'>{heroData.hero.upper_message}</h1>
-            <div className='flex flex-row gap-2 md:gap-4 lg:tracking-wide lg:leading-[5.375rem]'>
+            <div className='flex flex-col lg:flex-row md:gap-4 lg:tracking-wide lg:leading-[5.375rem]'>
               <h1 className='md:text-6xl lg:text-7xl text-orange-normal font-normal'>{heroData.hero.lower_message}</h1>
               <div id='words' ref={el => divRef.current = el} className='overflow-hidden relative gap-6 flex flex-col h-[52px] md:h-[65px] lg:h-[80px] slices'>
                 {words.map((m, i) => <h1 key={m + i} className='text-orange-normal md:text-6xl lg:text-7xl slice'>{m}</h1>)}
