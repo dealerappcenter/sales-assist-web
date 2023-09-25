@@ -14,7 +14,7 @@
         { "name": "Action Open Tracking", "perks": [ "yes", "yes", "yes"]},
         { "name": "Action Submit Tracking", "perks": [ "yes", "yes", "yes"]},
         { "name": "Activity Timeline", "perks": [ "yes", "yes", "yes"]},
-        { "name": "Sales Actions", "perks": [ "5", "10", "unlimited"]},
+        { "name": "Sales Actions", "perks": [ "3", "10", "unlimited"]},
         { "name": "eSignatures", "perks": [ "no", "yes", "yes"]},
         { "name": "OCR Machine Learning", "perks": [ "no", "yes", "yes"]},
         { "name": "Autofilled Forms and PDFs", "perks": [ "no", "yes", "yes"]},
