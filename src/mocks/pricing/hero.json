@@ -7,6 +7,7 @@
             "desc": "Perfect solution for small teams with simple sales process",
             "code": "ESS",
             "users": 0,
+            "limit": 0,
             "price_per_user": {
                 "year": 0,
                 "month": 0
@@ -37,6 +38,7 @@
             "desc": "Everything you need to simplify and streamline any sales process",
             "code": "ADVC",
             "users": 0,
+            "limit": 0,
             "price_per_user": {
                 "year": 0,
                 "month": 0
@@ -66,6 +68,7 @@
             "desc": "Fully tailored solution for your sales needs and access to unrivaled support",
             "code": "ENTPRS",
             "users": 0,
+            "limit": 0,
             "price_per_user": {
                 "year": 0,
                 "month": 0
@@ -80,7 +83,6 @@
                 "users": "Unlimited users"
             },
             "perks": [
-                { "name": "users", "perk": "For 15+"},
                 { "name": "Sales Widgets", "perk": "Unlimited"}
             ],
             "features": {
