@@ -6,20 +6,20 @@
             "name": "Essential",
             "desc": "Perfect solution for small teams with simple sales process",
             "code": "ESS",
+            "users": 0,
+            "limit": 0,
             "price_per_user": {
-                "year": 74,
-                "month": 99
+                "year": 0,
+                "month": 0
             },
             "starting_at": {
                 "name": "Starting at",
-                "year": 149,
-                "month": 199
+                "year": 399,
+                "month": 499
             },
-            "users": 1,
-            "limit": 3,
             "perks": [
-                { "name": "users", "perk": "Up to 3"},
-                { "name": "Sales Widgets", "perk": 5}
+                
+                { "name": "Sales Widgets", "perk":3 }
             ],
             "features": {
                 "name": "Features",
@@ -37,19 +37,18 @@
             "name": "Advanced",
             "desc": "Everything you need to simplify and streamline any sales process",
             "code": "ADVC",
-            "users": 4,
-            "limit": 14,
+            "users": 0,
+            "limit": 0,
             "price_per_user": {
-                "year": 74,
-                "month": 99
+                "year": 0,
+                "month": 0
             },
             "starting_at": {
                 "name": "Starting at",
-                "year": 449,
-                "month": 599
+                "year": 799,
+                "month": 899
             },
             "perks": [
-                { "name": "users", "perk": "For 4-14"},
                 { "name": "Sales Widgets", "perk": 10}
             ],
             "features": {
@@ -69,6 +68,7 @@
             "desc": "Fully tailored solution for your sales needs and access to unrivaled support",
             "code": "ENTPRS",
             "users": 0,
+            "limit": 0,
             "price_per_user": {
                 "year": 0,
                 "month": 0
@@ -83,13 +83,13 @@
                 "users": "Unlimited users"
             },
             "perks": [
-                { "name": "users", "perk": "For 15+"},
                 { "name": "Sales Widgets", "perk": "Unlimited"}
             ],
             "features": {
                 "name": "All features from Advanced, plus:",
                 "perks": [
-                    "Dedicated Account Management"
+                    "Dedicated Account Management",
+                    "Custom-made Widgets"
                 ]
             }
         }
