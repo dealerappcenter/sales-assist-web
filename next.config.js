@@ -10,6 +10,9 @@ const nextConfig = {
       {
         source: '/griffin',
         destination: '/onboarding/griffin',
+      }, {
+        source: '/capital',
+        destination: '/onboarding/capital',
       },
     ]
   },
