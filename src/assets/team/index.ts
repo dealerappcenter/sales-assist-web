@@ -6,7 +6,7 @@ import SnowDong from './snow.jpg';
 import SamMan from './Samuel Mancebo.jpg';
 import SanMo from './Santo Mota.jpg'
 import YY from './YY.jpeg'
-import Scottie from './Scottie.jpeg'
+import Scottie from './Scottie.png'
 
 export const team = [
     { code: 'JowPerez', path: JowPerez as any },
