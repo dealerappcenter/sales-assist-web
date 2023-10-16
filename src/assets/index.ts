@@ -54,9 +54,11 @@ import SimpleToUseByCustomers from './simple-to-use-by-customers.jpg';
 
 // Onboarding
 export * from './onboarding';
-
 export * from './saless';
 export * from './team';
+
+// Events
+import DigitalDealerBanner from './events/digitaldealer/banner.png';
 
 export {
     Logo,
@@ -71,6 +73,7 @@ export {
     CompletionToolsScreenshot,
     CompletionProcessExample,
     SimpleToUseByCustomers,
+    DigitalDealerBanner,
 }
 
 export const logoVariants = {
