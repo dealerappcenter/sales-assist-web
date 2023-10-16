@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import NextLink from 'next/link';
-import { MdKeyboardArrowDown, MdMenu } from 'react-icons/md';
+import { MdMenu } from 'react-icons/md';
 import { calendlyLink, routes } from '@src/utils/routes';
 import { NavLink } from '@components/NavLink';
 import { Button } from '@components/Buttons';

@@ -13,6 +13,9 @@ const nextConfig = {
       }, {
         source: '/capital',
         destination: '/onboarding/capital',
+      }, {
+        source: '/digitaldealer',
+        destination: '/events/digitaldealer',
       },
     ]
   },
