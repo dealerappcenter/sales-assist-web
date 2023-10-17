@@ -12,7 +12,7 @@ import Logo from '@src/assets/logo.png';
 
 const Home: NextPage<HomePageSections> = (props) => {
   const { hero, simplifySales, actions, automated } = props;
-  const classes = classNames('py-10 container max-w-[1200px] mx-auto lg:mb-12 flex-col lg:flex-row flex justify-between relative px-4 xl:px-0 text-[1.0625rem]');
+  const classes = classNames('py-10 container mx-auto lg:mb-2 flex-col lg:flex-row flex justify-between relative px-4 xl:px-0 text-[1.0625rem]');
 
   return (
     <>
