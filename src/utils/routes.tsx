@@ -64,6 +64,7 @@ const company = {
 const contact = {
     title: 'Contact Us',
     links: [
+        { path: 'tel:404-490-2622', name: '404-490-2622' },
         { path: 'mailto:help@salesassist.io', name: 'help@salesassist.io' },
         { path: '#', name: '251 Little Falls Drive, Wilmington, Delaware 19808' },
     ]
