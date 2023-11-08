@@ -1,10 +1,10 @@
 {
     "title": "Find a Plan That Fits",
-    "description": "Simple pricing structure with no upfront commitment or implementation costs. Flexibility built for organizations of any industry, use case, and size.",
+    "description": "Simple pricing structure with no upfront commitment or implementation costs. Flexibility built for dealerships of all sizes.",
     "plans": [
         {
             "name": "Essential",
-            "desc": "Perfect solution for small teams with simple sales process",
+            "desc": "Perfect solution for small dealerships with simple sales process",
             "code": "ESS",
             "users": 0,
             "limit": 0,
@@ -19,23 +19,25 @@
             },
             "perks": [
                 
-                { "name": "Sales Widgets", "perk":3 }
+                { "name": "Core Widgets", "perk":4 }
             ],
             "features": {
                 "name": "Features",
                 "perks": [
+                    "CRM Embedded Extension",
                     "Native Mobile Android and iOS apps",
-                    "Web Portal",
-                    "Sales Actions tracking",
                     "Digital Jacket",
-                    "Template Gallery",
+                    "Two-way CRM Sync",
+		    "Unlimited Sales Actions",
+                    "Sales Actions tracking",
+                    "OCR Machine Learning",
                     "Onboarding & Email Support"
                 ]
             }
         },
         {
             "name": "Advanced",
-            "desc": "Everything you need to simplify and streamline any sales process",
+            "desc": "Everything you need to automate and modernize your sales process",
             "code": "ADVC",
             "users": 0,
             "limit": 0,
@@ -49,16 +51,14 @@
                 "month": 899
             },
             "perks": [
-                { "name": "Sales Widgets", "perk": 10}
+                { "name": "Sales Widgets", "perk": 12}
             ],
             "features": {
                 "name": "All features from Essential, plus:",
                 "perks": [
-                    "CRM Embedded Extension",
-                    "Two-way CRM Sync",
+                    "e-Signature",
+	 	    "ID Verification", 
                     "Autofilled Forms and PDFs",
-                    "e-Sign Sales Widget",
-                    "OCR Machine Learning",
                     "1:1 Team Trainings & Customer Success Manager"
                 ]
             }
@@ -88,8 +88,8 @@
             "features": {
                 "name": "All features from Advanced, plus:",
                 "perks": [
-                    "Dedicated Account Management",
-                    "Custom-made Widgets"
+                    "Custom-made Widgets",
+		    "Dedicated Account Management"
                 ]
             }
         }
