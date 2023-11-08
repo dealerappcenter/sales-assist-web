@@ -27,10 +27,10 @@
             "delay": 0.4
         },
         {
-            "name": "Product Sharing",
-            "code": "Product Sharing",
+            "name": "Vehicle Sharing",
+            "code": "Vehicle Sharing",
             "title": "Better remote sales",
-            "desc": "Share product visuals and details while speaking with customers to ensure they are fully informed and excited about what they're purchasing.",
+            "desc": "Share vehicle visuals and details while speaking with customers to ensure they are fully informed and excited about what they're purchasing.",
             "url": "/assets/actions/Product-Sharing.webp",
             "delay": 0.6
         },
