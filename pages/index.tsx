@@ -5,7 +5,8 @@ import { Footer } from '@src/components/Footer';
 import { getHomePageSections } from '@src/mocks/Home/index';
 import { GA } from '@src/components/Analitiycs';
 import { WhySalesAssistIteration, WhySalesAssistSalesProcess } from '@src/sections/WhySalesAssist';
-import { Nav } from 'src/components';
+import { Nav } from '@src/components';
+import Video from '@src/components/video';
 
 const Home: NextPage<HomePageSections> = (props) => {
   const { hero, salesProcess, salesTeam, simplifySales, actions, automated } = props;
@@ -23,6 +24,7 @@ const Home: NextPage<HomePageSections> = (props) => {
       <CompletionTools />
       <WhySalesAssistIteration {...{ data: actions }} id='actions' />
       {/* <HowItWorks {...{data: HowItWork }} id='how-it-works' /> */}
+      <Video />
       <Automated {...{ data: automated }} className='bg-white-soft' />
       {/* <WhySalesAssistCompleteSalesFaster {...{ data: completeSales }} /> */}
       <CompletionProcess />
