@@ -1,29 +1,29 @@
 {
   "title": "Simple to Manage by Leadership",
-  "desc": "We make it extremely easy for management to assemble the ideal Completion Panel for their sales team. On our web portal managers can easily select customizable off-the-shelf Completion Tools, integrate their existing ones, or mix and match.",
+  "desc": "We make it extremely easy for management to assemble the ideal Widget Panel for their sales team. On our web portal managers can easily select customizable off-the-shelf Info-gathering widgets.",
   "options": {
-    "select": "Select a Completion Tool template",
+    "select": "Select a Info-gathering Widget template",
     "customize": "Customize your own",
-    "add": "Add to your Completion Panel"
+    "add": "Add to your Widget Panel"
   },
   "show_case": [
     {
-      "option": "Select a Completion Tool template",
+      "option": "Select a Info-gathering Widget template",
       "url": "/assets/ActionBuilder/Step1.png",
-      "title": "Select off-the-shelf Completion Tools",
-      "desc": "Choose off-the-shelf Completion Tool templates from our ever-growing Template Library."
+      "title": "Select off-the-shelf Info-gathering Widgets",
+      "desc": "Choose off-the-shelf info-gathering widget templates from our ever-growing Template Library."
     },
     {
-      "option": "Customize your own",
+      "option": "Customize Your Wwn",
       "url": "/assets/ActionBuilder/Step2.png",
-      "title": "Customize your own",
-      "desc": "Modify texts, images, logos, documents, and page layout on the Completion Tools based on your needs."
+      "title": "Customize Your Own",
+      "desc": "Modify texts, images, logos, documents, and page layout on the widget templates based on your needs."
     },
     {
-      "option": "Add to your Completion Panel",
+      "option": "Add to your Widget Panel",
       "url": "/assets/ActionBuilder/Step3.png",
-      "title": "Add to your Completion Panel",
-      "desc": "Turn on and off Completion Tools on the Completion Panel and list them in the sequence you prefer."
+      "title": "Add to your Widget Panel",
+      "desc": "Turn on and off widgets on the Panel and order them in the sequence you prefer."
     }
   ]
 }
