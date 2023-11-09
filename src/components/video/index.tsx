@@ -2,7 +2,7 @@ import { Section } from '@components/section';
 
 export default function Video() {
   return (
-    <section className='section !pb-0'>
+    <section className='section bg-white-normal'>
       <Section>
         <div className="aspect-video w-full max-w-screen-xl">
           <iframe
