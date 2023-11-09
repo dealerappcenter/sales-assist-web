@@ -17,7 +17,7 @@ export const InstantChanges: React.FC<Props> = ({ className }) => {
         <div className='flex items-center justify-center flex-col gap-6'>
           <div className='pt-6 lg:pt-20 items-center flex flex-col'>
             <h1 className='pb-6 md:pb-10 font-semibold md:leading-10 tracking-tight	self-start'>
-              Companies That Turn to SalesAssist See 3 Instant Changes
+              Dealerships That Turn to SalesAssist See 3 Instant Changes
             </h1>
             { !isDesktop && <InstantChangesMobile /> }
             { isDesktop && <InstantChangesDesktop />}

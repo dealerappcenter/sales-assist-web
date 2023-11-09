@@ -2,11 +2,11 @@
     "questions": [
         {
             "question": "Who is SalesAssist for?",
-            "answer": "Businesses who need to optimize their sales process to reach growing revenue targets. Those who value being efficient and providing an exceptional experience to their customers."
+            "answer": "Dealerships who need to optimize their sales process to reach growing revenue targets. Those who value being efficient and providing an exceptional experience to their customers."
         },
         {
             "question": "Does SalesAssist integrate with my systems?",
-            "answer": "YES. We integrate with major CRMs and DMSs."
+            "answer": "YES. We integrate with major automotive CRMs and DMSs."
         },
         {
             "question": "Can I see SalesAssist before buying? How much is it?",
@@ -18,12 +18,12 @@
         },
         {
             "question": "Which payment methods do you accept?",
-            "answer": "There are different ways to pay for SalesAssist including major credit cards, debit cards and PayPal."
+            "answer": "There are different ways to pay for SalesAssist including major credit cards, debit cards, checks, and PayPal."
         }
     ],
     "title": "Frequently Asked Questions",
     "banner": {
-        "text": "Let’s Simplify How You Gather Info from Customers",
+        "text": "Let’s Simplify How Your Dealership Gathers Info from Customers",
         "button": "Book Demo"
     }
 }
