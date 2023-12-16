@@ -5,7 +5,7 @@ import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin } from '@src/assets';
+import { Griffin, Store } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -66,19 +66,35 @@ export default function Onboarding(props: Props) {
         content={
           <>
             <h1>
-              Add SalesAssist to your smartphone
+              Add SalesAssist mobile app to your iphone or ipad
             </h1>
             <h4>
               To add the SalesAssist mobile web app to your smartphone home screen,
-              scan this QR code with your smartphone.
+              scan this QR code with your iphone.
             </h4>
           </>
         }
         media={
-          <Image alt='' src={Griffin.GriffinWebAppQR} />
+          <Image alt='' src={Store.AppStoreQR} />
         }
         bgClassName='bg-white-soft'
         reverse={true}
+      />
+      <DoubleColumn
+        content={
+          <>
+            <h1>
+              Add SalesAssist mobile app to your Android phone
+            </h1>
+            <h4>
+              To add the SalesAssist mobile web app to your smartphone home screen,
+              scan this QR code with your Android phone.
+            </h4>
+          </>
+        }
+        media={
+          <Image alt='' src={Store.GooglePlayQR} />
+        }
       />
       <DoubleColumn
         content={
@@ -94,6 +110,8 @@ export default function Onboarding(props: Props) {
         media={
           <Image alt='' src={Griffin.GriffinFacebookQR} />
         }
+        bgClassName='bg-white-soft'
+        reverse
       />
       <DoubleColumn
         content={
@@ -109,8 +127,6 @@ export default function Onboarding(props: Props) {
         media={
           <Image alt='' src={Griffin.GriffinWhatsappQR} />
         }
-        bgClassName='bg-white-soft'
-        reverse={true}
       />
       <Footer />
     </>
