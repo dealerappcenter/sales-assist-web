@@ -14,6 +14,9 @@ const nextConfig = {
         source: '/capital',
         destination: '/onboarding/capital',
       }, {
+        source: '/hiline',
+        destination: '/onboarding/hiline',
+      }, {
         source: '/digitaldealer',
         destination: '/events/digitaldealer',
       },
