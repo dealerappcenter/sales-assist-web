@@ -48,7 +48,7 @@ export default function Onboarding(props: Props) {
         content={
           <>
             <h1>
-              Install your new eLead CRM Booster
+              Install your new CRM Booster
             </h1>
             <h4>
               Once you have installed the CRM Booster, refresh your browser and open your {crm} account in a new tab.
