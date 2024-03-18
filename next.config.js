@@ -19,6 +19,9 @@ const nextConfig = {
       }, {
         source: '/digitaldealer',
         destination: '/events/digitaldealer',
+      }, {
+        source: '/manly',
+        destination: '/onboarding/manly',
       },
     ]
   },
