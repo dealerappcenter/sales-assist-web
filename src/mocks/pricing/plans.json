@@ -1,8 +1,8 @@
 {
     "title": "Full Feature Comparison",
     "plans_names": [
-        { "name": "Essential", "price": "$600"},
-        { "name": "Advanced", "price": "$3600"},
+        { "name": "Essential", "price": "$899"},
+        { "name": "Advanced", "price": "$1299"},
         { "name": "Enterprise", "price": "$4800"}
     ], 
     "features": [
@@ -10,8 +10,8 @@
         { "name": "Action Open Tracking", "perks": [ "yes", "yes", "yes"]},
         { "name": "Action Submit Tracking", "perks": [ "yes", "yes", "yes"]},
         { "name": "Activity Timeline", "perks": [ "yes", "yes", "yes"]},
-        { "name": "Sales Widgets", "perks": [ "4", "12", "unlimited"]},
-        { "name": "eSignatures", "perks": [ "no", "yes", "yes"]},
+        { "name": "Sales Apps", "perks": [ "5", "16", "unlimited"]},
+        { "name": "ID Verification", "perks": [ "no", "yes", "yes"]},
         { "name": "OCR Machine Learning", "perks": [ "yes", "yes", "yes"]},
         { "name": "Autofilled Forms and PDFs", "perks": [ "yes", "yes", "yes"]},
         { "name": "Custom Widgets", "perks": [ "no", "no", "yes"]},
