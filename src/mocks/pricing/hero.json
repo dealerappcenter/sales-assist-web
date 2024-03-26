@@ -14,12 +14,12 @@
             },
             "starting_at": {
                 "name": "",
-                "year": 399,
-                "month": 499
+                "year": 719,
+                "month": 899
             },
             "perks": [
                 
-                { "name": "Core Widgets", "perk":4 }
+                { "name": "Core Apps", "perk":5 }
             ],
             "features": {
                 "name": "Features",
@@ -47,16 +47,15 @@
             },
             "starting_at": {
                 "name": "",
-                "year": 799,
-                "month": 899
+                "year": 1039,
+                "month": 1299
             },
             "perks": [
-                { "name": "Sales Widgets", "perk": 12}
+                { "name": "Sales Apps", "perk": 16}
             ],
             "features": {
                 "name": "All features from Essential, plus:",
                 "perks": [
-                    "e-Signature",
 	 	    "ID Verification", 
                     "Autofilled Forms and PDFs",
                     "1:1 Team Trainings & Customer Success Manager"
