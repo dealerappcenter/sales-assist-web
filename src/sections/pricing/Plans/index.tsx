@@ -20,7 +20,7 @@ export const PricingPlans: React.FC<PricingHeroProps> = ({ isClicked, onClick })
   const { isDesktop, isMobile, isTablet } = useResponsive();
   const [current, setCurrent] = useState<number>(0);
   const handleIsActive = (step: number) => () => setCurrent(step);
-  const [currentActive, setCurrentActive] = useState<'month' | 'year'>('year');
+  const [currentActive, setCurrentActive] = useState<'month' | 'year'>('month');
   const [price, setPrice] = useState<number>(PricingData.plans[current].starting_at.year);
   const [pricePerUser, setPricePerUser] = useState<number>(PricingData.plans[current].price_per_user.year)
   const [users, setUsers] = useState<number>(PricingData.plans[current].users)
