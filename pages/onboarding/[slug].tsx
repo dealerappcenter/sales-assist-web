@@ -36,6 +36,11 @@ const crmData: Record<string, Props> = {
     tempPassword: 'manly2024',
     crm: 'Vinsolutions',
   },
+  'darien': {
+    title: 'BMW Mini Darien',
+    tempPassword: 'darien2024',
+    crm: 'Vinsolutions',
+  },
 };
 
 export default function Onboarding(props: Props) {
