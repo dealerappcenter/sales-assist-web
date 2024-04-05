@@ -22,6 +22,9 @@ const nextConfig = {
       }, {
         source: '/manly',
         destination: '/onboarding/manly',
+      }, {
+        source: '/darien',
+        destination: '/onboarding/darien',
       },
     ]
   },
