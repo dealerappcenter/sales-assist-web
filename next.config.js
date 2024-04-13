@@ -25,7 +25,10 @@ const nextConfig = {
       }, {
         source: '/darien',
         destination: '/onboarding/darien',
-      },
+      }, {
+        source: '/tomgibbs',
+        destination: '/onboarding/tomgibbs',
+      }, 
     ]
   },
 }
