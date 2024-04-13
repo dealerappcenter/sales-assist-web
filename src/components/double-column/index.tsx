@@ -22,7 +22,7 @@ const DoubleColumn: React.FC<Props> = ({ content, media, bgClassName, reverse })
         </div>
         <div
           className={classNames(
-            'flex shrink-0 md:w-[440px] md:h-[345px] rounded-lg drop-shadow-sa overflow-hidden items-center',
+            'flex shrink-0 md:w-[440px] md:min-h-[345px] rounded-lg drop-shadow-sa overflow-hidden items-center',
             reverse ? 'md:order-1' : 'md:order-2'
           )}
         >
