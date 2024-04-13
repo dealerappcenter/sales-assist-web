@@ -5,7 +5,7 @@ import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, Store } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -13,6 +13,7 @@ type Props = {
   title: string;
   tempPassword: string;
   crm: 'eLead' | 'Vinsolutions';
+  images?: SocialMediaImages;
 }
 
 const crmData: Record<string, Props> = {
@@ -41,10 +42,21 @@ const crmData: Record<string, Props> = {
     tempPassword: 'darien2024',
     crm: 'Vinsolutions',
   },
+  'tomgibbs': {
+    title: 'Tom Gibbs Chevy',
+    tempPassword: 'tomgibbs2024',
+    crm: 'Vinsolutions',
+    images: TomGibbsChevy,
+  },
 };
 
 export default function Onboarding(props: Props) {
-  const { title, tempPassword, crm } = props;
+  const { title, tempPassword, crm, images } = props;
+
+  const currentImages = useMemo(() => {
+    if (images) return images;
+    return Griffin;
+  }, [images])
 
   return (
     <>
@@ -118,7 +130,7 @@ export default function Onboarding(props: Props) {
           </>
         }
         media={
-          <Image alt='' src={Griffin.GriffinFacebookQR} />
+          <Image alt='' src={currentImages.FacebookQR} />
         }
         bgClassName='bg-white-soft'
         reverse
@@ -135,7 +147,7 @@ export default function Onboarding(props: Props) {
           </>
         }
         media={
-          <Image alt='' src={Griffin.GriffinWhatsappQR} />
+          <Image alt='' src={currentImages.WhatsappQR} />
         }
       />
       <Footer />
