@@ -55,13 +55,13 @@ export const Nav: React.FC<NavProps> = ({ className }) => {
           <ul className='flex items-center gap-6 text-[1.0625rem] font-semibold'>
             {/* if desktop else destroy it */}
             {isDesktop && <>
-              <li>
+              {/* <li>
                 <a href="https://app.salesassist.io/">
                   <p className='text-[1.0625rem]'>
                     Login
                   </p>
                 </a>
-              </li>
+              </li> */}
 
               <li>
                 <a href={calendlyLink} target="_blank" rel="noreferrer">
