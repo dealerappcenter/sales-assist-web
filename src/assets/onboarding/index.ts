@@ -4,6 +4,8 @@ import GriffinFacebookQR from './griffin/facebook-support-qr.png';
 
 import TomGibbsWhatsappQR from './tomgibbs/whatsapp-support-qr.jpeg';
 
+import ManlyWhatsappQR from './manly/whatsapp-manly-qr.png';
+
 import GooglePlayQR from './google-play-qr.png';
 import AppStoreQR from './app-store-qr.png';
 import { StaticImageData } from 'next/image';
@@ -23,6 +25,12 @@ export const Griffin: SocialMediaImages = {
 export const TomGibbsChevy: SocialMediaImages = {
   WebAppQR: GriffinWebAppQR,
   WhatsappQR: TomGibbsWhatsappQR,
+  FacebookQR: GriffinFacebookQR,
+}
+
+export const ManlyImages: SocialMediaImages = {
+  WebAppQR: GriffinWebAppQR,
+  WhatsappQR: ManlyWhatsappQR,
   FacebookQR: GriffinFacebookQR,
 }
 
