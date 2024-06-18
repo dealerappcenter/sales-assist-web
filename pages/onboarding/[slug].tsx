@@ -1,11 +1,11 @@
-import type { GetServerSideProps, GetStaticPaths, GetStaticProps } from 'next';
+import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
 import Image from 'next/image';
 import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, TomGibbsChevy, SocialMediaImages, Store } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -36,6 +36,7 @@ const crmData: Record<string, Props> = {
     title: 'Manly Auto Group',
     tempPassword: 'manly2024',
     crm: 'Vinsolutions',
+    images: ManlyImages,
   },
   'darien': {
     title: 'BMW Mini Darien',
