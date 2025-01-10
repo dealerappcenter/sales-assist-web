@@ -44,10 +44,16 @@ const crmData: Record<string, Props> = {
     crm: 'Vinsolutions',
   },
   'tomgibbs': {
-    title: 'Tom Gibbs Chevy',
+    title: 'Tom Gibbs',
     tempPassword: 'tomgibbs2024',
     crm: 'Vinsolutions',
     images: TomGibbsChevy,
+  },
+  'tenafly': {
+    title: 'Honda of Tenafly',
+    tempPassword: 'tenafly2024',
+    crm: 'Vinsolutions',
+    // images: TomGibbsChevy,
   },
 };
 
