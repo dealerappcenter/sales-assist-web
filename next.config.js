@@ -28,6 +28,9 @@ const nextConfig = {
       }, {
         source: '/tomgibbs',
         destination: '/onboarding/tomgibbs',
+      }, {
+        source: '/tenafly',
+        destination: '/onboarding/tenafly',
       }, 
     ]
   },
