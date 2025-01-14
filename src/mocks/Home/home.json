@@ -1,14 +1,14 @@
 {
     "hero": {
-        "upper_message": "Supercharge Your CRM",
+        "upper_message": "Digitized Deal Jacket Process",
         "lower_message": "No More Wasted"
     },
     "desc": {
-        "message": "Gather information from customers securely and easily with SalesAssist, the",
-        "highLight": "Ultimate CRM Booster",
-        "message_end": "that automates and modernizes your sales process, right from your CRM."
+        "message": "Fully digitize your deal jacket process, and have your sales team effortlessly complete flawless, compliant deal hand-offs",
+        "highLight": "—faster than ever—",
+        "message_end": "both in the showroom and remote."
     },
-    "button": "Your Ultimate Automotive CRM Booster - Book Demo!",
+    "button": "Let us digitize your process - Book NADA Demo!",
     "trusted": "Trusted by",
     "modules": [
       "Time",
