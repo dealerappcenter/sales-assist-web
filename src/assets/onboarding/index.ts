@@ -6,6 +6,8 @@ import TomGibbsWhatsappQR from './tomgibbs/whatsapp-support-qr.jpeg';
 
 import ManlyWhatsappQR from './manly/whatsapp-manly-qr.png';
 
+import TenaflyWhatsappQR from './tenafly/whatsapp-tenafly-qr.png';
+
 import GooglePlayQR from './google-play-qr.png';
 import AppStoreQR from './app-store-qr.png';
 import { StaticImageData } from 'next/image';
@@ -31,6 +33,12 @@ export const TomGibbsChevy: SocialMediaImages = {
 export const ManlyImages: SocialMediaImages = {
   WebAppQR: GriffinWebAppQR,
   WhatsappQR: ManlyWhatsappQR,
+  FacebookQR: GriffinFacebookQR,
+}
+
+export const TenaflyImages: SocialMediaImages = {
+  WebAppQR: GriffinWebAppQR,
+  WhatsappQR: TenaflyWhatsappQR,
   FacebookQR: GriffinFacebookQR,
 }
 
