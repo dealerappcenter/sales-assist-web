@@ -30,10 +30,10 @@ export const routes: Routes = [
         path: Paths.whySalesAssist,
         name: RouteNames.whySalesAssist
     },
-    {
-        path: Paths.pricing,
-        name: RouteNames.pricing
-    },
+    // {
+    //     path: Paths.pricing,
+    //     name: RouteNames.pricing
+    // },
     {
         path: Paths.about,
         name: RouteNames.about
