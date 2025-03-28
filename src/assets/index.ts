@@ -48,6 +48,7 @@ import Miracle from './support/Miracle Logo.png';
 import MurphyAG from './support/MurphyAG.png';
 
 import CompletionToolsScreenshot from './completion-tools-screenshot.png';
+import ChecklistScreenshot from './checklist-screen.png'
 import CompletionProcessExample from './completion-process-example.png';
 import SimpleToUseByCustomers from './simple-to-use-by-customers.jpg';
 // industries
@@ -71,6 +72,7 @@ export {
     WorldMap,
     HeroImage,
     CompletionToolsScreenshot,
+    ChecklistScreenshot,
     CompletionProcessExample,
     SimpleToUseByCustomers,
     DigitalDealerBanner,
