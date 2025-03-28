@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { Section } from '@components/section';
-import { CompletionToolsScreenshot } from '@src/assets';
+import { ChecklistScreenshot } from '@src/assets';
 
 export const CompletionTools: React.FC = () => {
   return (
@@ -12,7 +12,7 @@ export const CompletionTools: React.FC = () => {
         <h4 className='mb-6'>
           Have a complete arsenal of every possible info-gathering widget in a single panel, right from your automotive CRM. All information and documents gathered enter your CRM in real time, with audit trail.
         </h4>
-        <Image alt='Completion Tools' src={CompletionToolsScreenshot} />
+        <Image alt='Completion Tools' src={ChecklistScreenshot} />
       </Section>
     </section>
   )
