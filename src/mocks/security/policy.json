@@ -1,0 +1,67 @@
+{
+  "title": "SalesAssist Security Policy",
+  "introduction": [
+    "At SalesAssist, protecting your data and ensuring the security of our platform are top priorities. We are committed to maintaining the highest standards of security and compliance to safeguard our customers’ information."
+  ],
+  "footer": {
+    "title": "Questions about our security practices?",
+    "text": "Contact our security team:",
+    "email": "help@salesassist.io"
+  },
+  "data": [
+    {
+      "title": "Data Protection and Encryption",
+      "text": [
+        "Data in Transit: All data transmitted between users and our servers is encrypted using industry-standard TLS (Transport Layer Security).",
+        "Data at Rest: Customer data stored on our servers is encrypted using AES-256 encryption.",
+        "Authentication: We support secure authentication practices, including strong password requirements and multi-factor authentication (MFA) for account access." 
+      ]
+    },
+    {
+      "title": "Platform and Infrastructure Security",
+      "text": [
+        "Cloud Infrastructure: SalesAssist is hosted on leading cloud providers with robust physical and network security controls.",
+        "Access Controls: Access to customer data is restricted to authorized personnel only, following the principle of least privilege (PoLP).",
+        "Monitoring and Logging: We maintain real-time monitoring of our systems and keep detailed audit logs to detect and respond to any unauthorized access attempts."
+      ]
+    },
+    {
+      "title": "Application Security",
+      "text": [
+        "Secure Development Practices: Our engineering team follows secure coding guidelines and best practices, including regular code reviews and vulnerability testing.",
+        "Regular Security Testing: We perform internal penetration tests and vulnerability scans regularly to identify and fix potential issues proactively.",
+        "Third-party Integrations: All integrations with CRMs and other systems are performed through secure APIs with strict access controls and auditability."
+      ]
+    },
+    {
+      "title": "Incident Response",
+      "text": [
+        "Rapid Response: In the event of a security incident, our dedicated security team is prepared to respond immediately.",
+        "Notification: If a data breach affecting your data occurs, you will be notified promptly in compliance with applicable laws and regulations."
+      ]
+    },
+    {
+      "title": "Compliance",
+      "text": [
+        "Data Privacy: We comply with applicable data protection regulations, including CCPA, GDPR, and other relevant standards.",
+        "User Control: You have full control over your data and can request access, correction, or deletion at any time."
+      ]
+    },
+    {
+      "title": "Business Continuity and Disaster Recovery",
+      "text": [
+        "Backup Strategy: Regular encrypted backups of critical data are performed to ensure quick recovery.",
+        "Disaster Recovery: We maintain disaster recovery plans to ensure service continuity in the event of major incidents."
+      ]
+    },
+    {
+      "title": "Your Responsibilities",
+      "subtext": ["While SalesAssist takes security seriously, customers also play a role in protecting their data. We encourage all users to:"],
+      "text": [
+        "Keep login credentials secure.",
+        "Enable two-factor authentication.",
+        "Report any suspicious activities immediately."
+      ]
+    }
+  ]
+}
