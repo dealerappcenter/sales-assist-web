@@ -32,13 +32,16 @@ export default function SecurityPolicy() {
               const key = item.title.toLowerCase().split(' ').join('-')
               return (
                 <div className="flex flex-col gap-6" key={key}>
-                  <h1 className="font-bold text-xl">{i + 1}. {item.title}</h1>
-                  {item.subtext?.map(function (text, index) {
-                    return <p className="text-base" key={`${key}subtext-${index}`}>{text}</p>
-                  })}
+                  <h1 className="font-bold text-xl">{item.title}</h1>
+
+                  <div className="flex flex-col gap-4">
+                    {item.text.map(function (text, index) {
+                      return <p key={`${key}-text-${index}`} className="text-base">{text}</p>
+                    })}
+                  </div> 
 
                   <ul className="list-disc pl-6 md:pl-12 flex flex-col gap-4">
-                    {item.text.map(function (text, index) {
+                    {item.bullets?.map(function (text, index) {
                       return <li key={`${key}-text-${index}`}>{text}</li>
                     })}
                   </ul>
@@ -48,8 +51,8 @@ export default function SecurityPolicy() {
             })
           }
           
-          <div>
-            <p className="text-base font-semibold">{policy.footer.title}</p>
+          <div className="flex flex-col gap-6">
+            <h1 className="font-bold text-xl">{policy.footer.title}</h1>
             <p className="text-base">{policy.footer.text} <a href={`mailto:${policy.footer.email}`} className="text-orange-600">{policy.footer.email}</a> </p>
           </div>
         </div>
