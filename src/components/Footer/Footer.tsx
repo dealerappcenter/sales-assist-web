@@ -70,7 +70,8 @@ export const Footer: React.FC<FooterProps> = (props) => {
             {
               [
                 { name: 'Privacy Policy', path: '/privacy-policy' },
-                { name: 'Terms of Service', path: '/terms-of-service' }
+                { name: 'Terms of Service', path: '/terms-of-service' },
+                { name: 'Security Policy', path: '/security-policy' }
               ].map((link) => <Link key={link.path} passHref href={link.path}>
                 <NavLink hideProgress
                   className='px-0'>
