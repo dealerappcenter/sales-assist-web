@@ -1,11 +1,11 @@
 import type { GetServerSideProps } from 'next';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -14,6 +14,11 @@ type Props = {
   tempPassword: string;
   crm: 'eLead' | 'Vinsolutions';
   images?: SocialMediaImages;
+  extensionUrl?: string,
+  storeImages?: {
+    GooglePlayQR: StaticImageData,
+    AppStoreQR: StaticImageData,   
+  }
 }
 
 const crmData: Record<string, Props> = {
@@ -55,15 +60,32 @@ const crmData: Record<string, Props> = {
     crm: 'Vinsolutions',
     images: TenaflyImages,
   },
+  'bmwsch': {
+    title: 'BMW of Schererville',
+    tempPassword: 'bmwsch2025',
+    crm: 'Vinsolutions',
+    storeImages: NewAppStore,
+    extensionUrl: OB.Bmwsch.ChromeExtension,
+  },
 };
 
 export default function Onboarding(props: Props) {
-  const { title, tempPassword, crm, images } = props;
+  const { title, tempPassword, crm, images, storeImages: sImages, extensionUrl } = props;
 
   const currentImages = useMemo(() => {
     if (images) return images;
     return Griffin;
   }, [images])
+
+  const storeImages = useMemo(function () {
+    if (sImages) return sImages;
+    return Store 
+  }, [sImages])
+
+  const url = useMemo(function () {
+    if (extensionUrl) return extensionUrl
+    return OB.Griffin.ChromeExtension
+  }, [extensionUrl])
 
   return (
     <>
@@ -86,7 +108,7 @@ export default function Onboarding(props: Props) {
           </>
         }
         media={
-          <a href={OB.Griffin.ChromeExtension} target="_blank" rel="noreferrer" className='my-3'>
+          <a href={url} target="_blank" rel="noreferrer" className='my-3'>
             <Button className='text-[1.063rem] font-semibold'>Install CRM Booster Now</Button>
           </a>
         }
@@ -104,7 +126,7 @@ export default function Onboarding(props: Props) {
           </>
         }
         media={
-          <Image alt='' src={Store.AppStoreQR} />
+          <Image alt='' width={300} height={300} src={storeImages.AppStoreQR} />
         }
         bgClassName='bg-white-soft'
         reverse={true}
@@ -122,7 +144,7 @@ export default function Onboarding(props: Props) {
           </>
         }
         media={
-          <Image alt='' src={Store.GooglePlayQR} />
+          <Image alt='' width={300} height={300} src={storeImages.GooglePlayQR} />
         }
       />
       <DoubleColumn
