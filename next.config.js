@@ -31,6 +31,9 @@ const nextConfig = {
       }, {
         source: '/tenafly',
         destination: '/onboarding/tenafly',
+      }, {
+        source: '/bmwsch',
+        destination: '/onboarding/bmwsch',
       }, 
     ]
   },
