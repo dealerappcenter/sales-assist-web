@@ -84,5 +84,8 @@ export const footerLinks = {
 export const Onboarding = {
   Griffin: {
     ChromeExtension: 'https://chrome.google.com/webstore/detail/salesassist/oehaiibnpneipeafkkhdiignfiopoknc'
+  },
+  Bmwsch: {
+    ChromeExtension: 'https://chromewebstore.google.com/detail/salesassist-crm-booster/iipjihhdccomeniabhcnfclnnhfbenfm'
   }
 }
