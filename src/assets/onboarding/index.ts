@@ -14,6 +14,8 @@ import AppStoreQR from './app-store-qr.png';
 import NewAppStoreQR from './new-app/app-store-qr.png'
 import NewGooglePlayQR from './new-app/android-store-qr.png'
 
+import BmwschWhatappQR from './bmwsch/whatapp.png'
+
 import { StaticImageData } from 'next/image';
 
 export type SocialMediaImages = {
@@ -48,7 +50,7 @@ export const TenaflyImages: SocialMediaImages = {
 
 export const Bmwsch: SocialMediaImages = {
   WebAppQR: GriffinWebAppQR,
-  WhatsappQR: GriffinWhatsappQR,
+  WhatsappQR: BmwschWhatappQr,
   FacebookQR: GriffinFacebookQR,
 }
 
