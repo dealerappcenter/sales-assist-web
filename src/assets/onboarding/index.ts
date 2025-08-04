@@ -50,7 +50,7 @@ export const TenaflyImages: SocialMediaImages = {
 
 export const Bmwsch: SocialMediaImages = {
   WebAppQR: GriffinWebAppQR,
-  WhatsappQR: BmwschWhatappQr,
+  WhatsappQR: BmwschWhatappQR,
   FacebookQR: GriffinFacebookQR,
 }
 
