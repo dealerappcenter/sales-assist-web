@@ -52,6 +52,19 @@
       "key": "customer-data"
     },
     {
+      "title": "SMS Messaging",
+      "text": [
+        "By opting in to receive SMS messages from SalesAssist, you agree to the following terms:",
+        "Types of Messages. You may receive messages related to customer support, account updates, service notifications, follow-ups, and other communications related to your use of the SalesAssist platform.",
+        "Message Frequency. Message frequency will vary depending on your inquiry or support request. In general, you may receive multiple messages per support interaction. Msg frequency varies.",
+        "Charges. Message and data rates may apply. Please check with your mobile carrier for details.",
+        "Help. For help, reply HELP to any SalesAssist message. You can also contact us at support@salesassist.io or by phone at 470-766-0783.",
+        "Opt-Out. To stop receiving messages, reply STOP at any time. You will receive a one-time confirmation message that you have been unsubscribed. After this, you will no longer receive SMS messages from SalesAssist unless you re-opt in.",
+        "Privacy. Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. For more information, please review our Privacy Policy."
+      ],
+      "key": "sms-messaging"
+    },
+    {
       "title": "Security",
       "text": [
         "SalesAssist agrees to use commercially reasonable technical and organizational measures designed to prevent unauthorized access, use, alteration or disclosure of any Service or Customer Data. However, SalesAssist will have no responsibility for errors in transmission, unauthorized third-party access or other causes beyond SalesAssist’s control."
