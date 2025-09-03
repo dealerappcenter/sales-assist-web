@@ -4,7 +4,7 @@ import Head from "next/head";
 import { Footer, Nav } from "@src/components";
 import tos from '@src/mocks/terms-of-service/terms.json';
 
-const paragraphNumber = (entryIndex: number, paragraphIndex: number): string => {
+const paragraphNumber = (entryIndex: number, paragraphIndex: number, entryKey?: string): string => {
   return `${entryIndex + 1}.${paragraphIndex + 1}. `;
 };
 
@@ -68,7 +68,7 @@ const TermsAndService: NextPage = () => {
                     } else {
                       return (
                         <p key={`${entry.key}-${paragraphIndex}`} className="text-base">
-                          { entry.text.length > 1 && paragraphNumber(entryIndex, paragraphIndex) }
+                          { entry.text.length > 1 && paragraphNumber(entryIndex, paragraphIndex, entry.key) }
                           { paragraph }
                         </p>
                       )
