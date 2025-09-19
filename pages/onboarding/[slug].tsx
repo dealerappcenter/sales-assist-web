@@ -5,7 +5,7 @@ import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -65,6 +65,14 @@ const crmData: Record<string, Props> = {
     tempPassword: 'bmwsch2025',
     crm: 'Vinsolutions',
     images: Bmwsch,
+    storeImages: NewAppStore,
+    extensionUrl: OB.Bmwsch.ChromeExtension,
+  },
+  'magicgmc': {
+    title: 'Magic GMC',
+    tempPassword: 'magic2025',
+    crm: 'eLead',
+    images: Magicgmc,
     storeImages: NewAppStore,
     extensionUrl: OB.Bmwsch.ChromeExtension,
   },
@@ -177,7 +185,7 @@ export default function Onboarding(props: Props) {
           </>
         }
         media={
-          <Image alt='' src={currentImages.WhatsappQR} />
+          <Image alt='' width={300} height={300} src={currentImages.WhatsappQR} />
         }
       />
       <Footer />

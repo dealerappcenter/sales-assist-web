@@ -34,6 +34,9 @@ const nextConfig = {
       }, {
         source: '/bmwsch',
         destination: '/onboarding/bmwsch',
+      }, {
+        source: '/magicgmc',
+        destination: '/onboarding/magicgmc',
       }, 
     ]
   },
