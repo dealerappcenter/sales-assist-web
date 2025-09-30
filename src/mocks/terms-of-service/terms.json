@@ -60,7 +60,7 @@
         "Charges. Message and data rates may apply. Please check with your mobile carrier for details.",
         "Help. For help, reply HELP to any SalesAssist message. You can also contact us at support@salesassist.io or by phone at 470-766-0783.",
         "Opt-Out. To stop receiving messages, reply STOP at any time. You will receive a one-time confirmation message that you have been unsubscribed. After this, you will no longer receive SMS messages from SalesAssist unless you re-opt in.",
-        "Privacy. Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. For more information, please review our Privacy Policy."
+        "Privacy. Mobile information will not be shared with third parties/affiliates for marketing/promotional purposes. All the categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties. For more information, please review our <a href='/privacy-policy' target='_blank' rel='noreferrer'>Privacy Policy</a>."
       ],
       "key": "sms-messaging"
     },

@@ -67,9 +67,9 @@ const TermsAndService: NextPage = () => {
                       return <RenderList entry={entry} paragraph={paragraph} entryIndex={entryIndex} paragraphIndex={paragraphIndex} />
                     } else {
                       return (
-                        <p key={`${entry.key}-${paragraphIndex}`} className="text-base">
+                        <p key={`${entry.key}-${paragraphIndex}`} className="text-base paragraph">
                           { entry.text.length > 1 && paragraphNumber(entryIndex, paragraphIndex, entry.key) }
-                          { paragraph }
+                          <span dangerouslySetInnerHTML={{ __html: paragraph }} />
                         </p>
                       )
                     }
