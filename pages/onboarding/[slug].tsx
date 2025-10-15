@@ -5,7 +5,7 @@ import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc, Ssjrl } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -73,6 +73,14 @@ const crmData: Record<string, Props> = {
     tempPassword: 'magic2025',
     crm: 'eLead',
     images: Magicgmc,
+    storeImages: NewAppStore,
+    extensionUrl: OB.Bmwsch.ChromeExtension,
+  },
+  'ssjlr': {
+    title: 'South Shore JLR',
+    tempPassword: 'ssjlr2025',
+    crm: 'Vinsolutions',
+    images: Ssjrl,
     storeImages: NewAppStore,
     extensionUrl: OB.Bmwsch.ChromeExtension,
   },
