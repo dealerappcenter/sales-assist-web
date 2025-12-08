@@ -37,6 +37,9 @@ const nextConfig = {
       }, {
         source: '/magicgmc',
         destination: '/onboarding/magicgmc',
+      }, {
+        source: '/ssjlr',
+        destination: '/onboarding/ssjlr',
       }, 
     ]
   },

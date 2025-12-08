@@ -1,14 +1,14 @@
 {
     "hero": {
-        "upper_message": "Digitized Deal Jacket Process",
+        "upper_message": "Digitized Deal Workflow Process",
         "lower_message": "No More Wasted"
     },
     "desc": {
-        "message": "Fully digitize your deal jacket process, and have your sales team effortlessly complete",
+        "message": "Fully digitize your deal workflow process, and have your sales team effortlessly complete",
         "highLight": "flawless, compliant deal hand-offs",
         "message_end": "both in the showroom and remote."
     },
-    "button": "Let us digitize your process - Book NADA Demo!",
+    "button": "Let us digitize your process",
     "trusted": "Trusted by",
     "modules": [
       "Time",
