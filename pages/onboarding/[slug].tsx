@@ -36,6 +36,8 @@ const crmData: Record<string, Props> = {
     title: 'Hi-Line Auto Group',
     tempPassword: 'hiline2023',
     crm: 'Vinsolutions',
+    storeImages: NewAppStore,
+    extensionUrl: OB.Bmwsch.ChromeExtension,
   },
   'manly': {
     title: 'Manly Auto Group',
