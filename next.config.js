@@ -40,7 +40,10 @@ const nextConfig = {
       }, {
         source: '/ssjlr',
         destination: '/onboarding/ssjlr',
-      }, 
+      }, {
+        source: '/ffsubaru',
+        destination: '/onboarding/ffsubaru',
+      },
     ]
   },
 }
