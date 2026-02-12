@@ -5,7 +5,7 @@ import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc, Ssjrl } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc, Ssjrl, Ffsubaru } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -83,6 +83,14 @@ const crmData: Record<string, Props> = {
     tempPassword: 'ssjlr2025',
     crm: 'Vinsolutions',
     images: Ssjrl,
+    storeImages: NewAppStore,
+    extensionUrl: OB.Bmwsch.ChromeExtension,
+  },
+  'ffsubaru': {
+    title: 'Frank Fletcher Subaru',
+    tempPassword: 'subaru2026',
+    crm: 'eLead',
+    images: Ffsubaru,
     storeImages: NewAppStore,
     extensionUrl: OB.Bmwsch.ChromeExtension,
   },
