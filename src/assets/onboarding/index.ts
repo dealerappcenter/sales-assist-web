@@ -20,7 +20,7 @@ import MagicGmcWhatsappQR from './magicgmc/whatsapp-support-qr.png'
 
 import SSLJLRWhatappQR from './ssjlr/whatsapp.png'
 
-import FfsubaruWhatsappQR from './ffsubaru/whatsapp-support-qr.jpg'
+import FfsubaruWhatsappQR from './ffsubaru/whatsapp-support-qr.jpeg'
 
 import { StaticImageData } from 'next/image';
 
