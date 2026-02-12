@@ -20,6 +20,8 @@ import MagicGmcWhatsappQR from './magicgmc/whatsapp-support-qr.png'
 
 import SSLJLRWhatappQR from './ssjlr/whatsapp.png'
 
+import FfsubaruWhatsappQR from './ffsubaru/whatsapp-support-qr.jpeg'
+
 import { StaticImageData } from 'next/image';
 
 export type SocialMediaImages = {
@@ -67,6 +69,12 @@ export const Magicgmc: SocialMediaImages = {
 export const Ssjrl: SocialMediaImages = {
   WebAppQR: GriffinWebAppQR,
   WhatsappQR: SSLJLRWhatappQR,
+  FacebookQR: GriffinFacebookQR,
+}
+
+export const Ffsubaru: SocialMediaImages = {
+  WebAppQR: GriffinWebAppQR,
+  WhatsappQR: FfsubaruWhatsappQR,
   FacebookQR: GriffinFacebookQR,
 }
 
