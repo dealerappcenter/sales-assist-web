@@ -197,6 +197,21 @@
                         subSource = 'Dealer Inspire/Save and Compare';
                     }
 
+                    const date = new Date();
+                    const formatter = new Intl.DateTimeFormat('en-US', {
+                        timeZone: 'America/Chicago',
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: false
+                    });
+                    const parts = formatter.formatToParts(date);
+                    const getPart = (type) => parts.find(p => p.type === type).value;
+                    const formattedDate = `${getPart('year')}-${getPart('month')}-${getPart('day')} ${getPart('hour')}:${getPart('minute')}:${getPart('second')}`;
+
                     const submissionData = {
                         title: `${this.formData.firstName} ${this.formData.lastName} — landing page`,
                         description: `Customer intent: ${this.formData.intent} for ${this.formData.vehicle.name}`,
@@ -211,7 +226,9 @@
                         },
                         custom_fields: [
                             { name: 'sub_source', value: subSource },
-                            { name: 'vehicle_of_interest', value: JSON.stringify(this.formData.vehicle.payload) }
+                            { name: 'vehicle_of_interest', value: JSON.stringify(this.formData.vehicle.payload) },
+                            { name: 'downloaded_from_vin_solution', value: 1 },
+                            { name: 'vin_solution_date_in', value: formattedDate }
                         ]
                     };
 
