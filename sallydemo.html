@@ -194,13 +194,15 @@
                     if (this.formData.intent === 'Book Test Drive') {
                         subSource = 'Autoleadstar/ Book Appointment';
                     } else if (this.formData.intent === 'Get Price & Confirm Availability') {
-                        subSource = 'Autoleadstar/Sms';
+                        subSource = 'Dealer Inspire/Save and Compare';
                     }
 
                     const submissionData = {
                         ...this.formData,
-                        source: 'Dealer Website',
-                        subSource: subSource
+                        source_id: 24863,
+                        custom_fields: [
+                            { name: 'sub_source', value: subSource }
+                        ]
                     };
 
                     try {
