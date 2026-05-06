@@ -182,7 +182,7 @@
                     this.dropdownOpen = false;
                     this.errorMsg = '';
                 },
-                submitForm() {
+                async submitForm() {
                     if (!this.formData.firstName || !this.formData.lastName || !this.formData.mobile || !this.formData.email || !this.formData.vehicle || !this.formData.intent) {
                         this.errorMsg = 'Please fill out all required fields before submitting.';
                         // Re-initialize icons for the new info element
@@ -203,10 +203,26 @@
                         subSource: subSource
                     };
 
-                    console.log("Sending Lead Data:", submissionData);
-                    this.isSubmitted = true;
-                    // Re-initialize icons for the success view
-                    setTimeout(() => lucide.createIcons(), 0);
+                    try {
+                        const response = await fetch('https://graphapi.kanvas.dev/v1/receiver/9004cb8e-df6f-4b3a-bd75-d6788fb6b082', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            body: JSON.stringify(submissionData)
+                        });
+                        
+                        if (!response.ok) throw new Error('Network response was not ok');
+                        
+                        console.log("Sending Lead Data:", submissionData);
+                        this.isSubmitted = true;
+                        // Re-initialize icons for the success view
+                        setTimeout(() => lucide.createIcons(), 0);
+                    } catch (error) {
+                        console.error('Error submitting form:', error);
+                        this.errorMsg = 'There was an error submitting your request. Please try again.';
+                        setTimeout(() => lucide.createIcons(), 0);
+                    }
                 },
                 resetForm() {
                     this.isSubmitted = false;
