@@ -198,8 +198,17 @@
                     }
 
                     const submissionData = {
-                        ...this.formData,
+                        title: `${this.formData.firstName} ${this.formData.lastName} — landing page`,
+                        description: `Customer intent: ${this.formData.intent} for ${this.formData.vehicle.name}`,
                         source_id: 24863,
+                        people: {
+                            firstname: this.formData.firstName,
+                            lastname: this.formData.lastName,
+                            contacts: [
+                                { value: this.formData.email, contacts_types_id: 1 },
+                                { value: this.formData.mobile, contacts_types_id: 2 }
+                            ]
+                        },
                         custom_fields: [
                             { name: 'sub_source', value: subSource },
                             { name: 'vehicle_of_interest', value: JSON.stringify(this.formData.vehicle.payload) }
