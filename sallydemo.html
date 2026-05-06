@@ -173,9 +173,9 @@
                 dropdownOpen: false,
                 errorMsg: '',
                 vehicles: [
-                    { id: 1, name: 'BMW X1 2026 xDrive28i', details: '2026 | 1,112 mi | Stock: D26099', price: '$48,725', image: 'https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=300&h=200' },
-                    { id: 2, name: 'BMW X3 2026 30 xDrive', details: '2026 | 1,112 mi | Stock: D26124', price: '$57,325', image: 'https://images.unsplash.com/photo-1603584173870-7f23fdae1b7a?auto=format&fit=crop&q=80&w=300&h=200' },
-                    { id: 3, name: 'BMW X5 2026 xDrive40i', details: '2026 | 18 mi | Stock: 26217', price: '$82,750', image: 'https://images.unsplash.com/photo-1616422285623-13ff0162193c?auto=format&fit=crop&q=80&w=300&h=200' }
+                    { id: 1, name: '2024 BMW X5 xDrive40i', details: '2024 | 29,470 mi | Stock: P7210', price: '$53,345', image: 'https://assets.cai-media-management.com/resize/1024x1024/common-vehicle-media/f302cbb0-1486-402f-9556-445c53e4bba8.jpg', payload: { make: "BMW", model: "X5", trim: "xDrive40i", vin: "5UX23EU03R9V93979", year: "2024", stockNumber: "P7210", isPrimary: true } },
+                    { id: 2, name: '2023 BMW X3 xDrive30i', details: '2023 | 24,463 mi | Stock: P7264', price: '$37,980', image: 'https://assets.cai-media-management.com/resize/1024x1024/common-vehicle-media/f882e491-5526-41c6-9c7d-27335ed9f44c.jpg', payload: { make: "BMW", model: "X3", trim: "xDrive30i", vin: "5UX53DP06P9S73989", year: "2023", stockNumber: "P7264", isPrimary: true } },
+                    { id: 3, name: '2021 BMW X1 sDrive28i', details: '2021 | 103,658 mi | Stock: P7265', price: '$14,980', image: 'https://assets.cai-media-management.com/resize/1024x1024/common-vehicle-media/de47866f-48be-4949-a56d-1d76f2e023a1.jpg', payload: { make: "BMW", id: "2e7b157f-7683-4dcb-8b24-f622e937d973", model: "X1", trim: "sDrive28i", vin: "WBXJG7C04M5S95684", year: "2021", stockNumber: "P7265", isPrimary: true } }
                 ],
                 selectVehicle(v) {
                     this.formData.vehicle = v;
@@ -201,7 +201,8 @@
                         ...this.formData,
                         source_id: 24863,
                         custom_fields: [
-                            { name: 'sub_source', value: subSource }
+                            { name: 'sub_source', value: subSource },
+                            { name: 'vehicle_of_interest', value: JSON.stringify(this.formData.vehicle.payload) }
                         ]
                     };
 
