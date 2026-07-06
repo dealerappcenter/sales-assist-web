@@ -22,6 +22,8 @@ import SSLJLRWhatappQR from './ssjlr/whatsapp.png'
 
 import FfsubaruWhatsappQR from './ffsubaru/whatsapp-support-qr.jpeg'
 
+import SerratoyotaWhatsappQR from './serratoyota/whatsapp.jpeg'
+
 import { StaticImageData } from 'next/image';
 
 export type SocialMediaImages = {
@@ -75,6 +77,12 @@ export const Ssjrl: SocialMediaImages = {
 export const Ffsubaru: SocialMediaImages = {
   WebAppQR: GriffinWebAppQR,
   WhatsappQR: FfsubaruWhatsappQR,
+  FacebookQR: GriffinFacebookQR,
+}
+
+export const Serratoyota: SocialMediaImages = {
+  WebAppQR: GriffinWebAppQR,
+  WhatsappQR: SerratoyotaWhatsappQR,
   FacebookQR: GriffinFacebookQR,
 }
 

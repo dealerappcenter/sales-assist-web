@@ -5,7 +5,7 @@ import { Nav, Button } from '@components/index';
 import Header from '@components/header';
 import { Footer } from '@components/Footer';
 import DoubleColumn from '@components/double-column';
-import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc, Ssjrl, Ffsubaru } from '@src/assets';
+import { Griffin, TomGibbsChevy, SocialMediaImages, Store, ManlyImages, TenaflyImages, NewAppStore, Bmwsch, Magicgmc, Ssjrl, Ffsubaru, Serratoyota } from '@src/assets';
 import { Onboarding as OB } from '@utils/routes';
 import { useMemo } from 'react';
 
@@ -91,6 +91,14 @@ const crmData: Record<string, Props> = {
     tempPassword: 'subaru2026',
     crm: 'eLead',
     images: Ffsubaru,
+    storeImages: NewAppStore,
+    extensionUrl: OB.Bmwsch.ChromeExtension,
+  },
+  'serratoyota': {
+    title: 'Serra Toyota of Lincolnwood',
+    tempPassword: 'toyota2026',
+    crm: 'Vinsolutions',
+    images: Serratoyota,
     storeImages: NewAppStore,
     extensionUrl: OB.Bmwsch.ChromeExtension,
   },
